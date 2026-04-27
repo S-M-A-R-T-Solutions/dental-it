@@ -1,0 +1,346 @@
+---
+import { ChevronDown, Menu, X, ArrowRight, Sun, Moon } from "lucide-astro";
+
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  {
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: "Tech Support",
+    href: "/tech-support",
+    children: [
+      { label: "Managed IT Support", href: "/tech-support/managed-it-support" },
+      {
+        label: "Dental Cloud Backups",
+        href: "/tech-support/dental-cloud-backups",
+      },
+      { label: "Cloud Solutions", href: "/tech-support/cloud-solutions" },
+      {
+        label: "Endpoint Detection Response",
+        href: "/tech-support/endpoint-detection-response",
+      },
+      { label: "HIPAA Consulting", href: "/tech-support/hipaa-consulting" },
+      {
+        label: "Dental Cybersecurity",
+        href: "/tech-support/dental-cybersecurity",
+      },
+      {
+        label: "Proactive Maintenance",
+        href: "/tech-support/proactive-maintenance",
+      },
+    ],
+  },
+  {
+    label: "Deployments",
+    href: "/deployments",
+    children: [
+      { label: "Practice Startups", href: "/deployments/practice-startups" },
+      { label: "Practice Growth", href: "/deployments/practice-growth" },
+      { label: "Tech Refresh", href: "/deployments/tech-refresh" },
+      { label: "Tech Enhancement", href: "/deployments/tech-enhancement" },
+      {
+        label: "Practice Renovation",
+        href: "/deployments/practice-renovation",
+      },
+      { label: "Tech Assessment", href: "/deployments/tech-assessment" },
+      { label: "VoIP Phone Systems", href: "/deployments/voip-phone-systems" },
+    ],
+  },
+  {
+    label: "Dental Practice Solutions",
+    href: "/dental-practice-solutions",
+    children: [
+      {
+        label: "Web Design for Dental Practices",
+        href: "/dental-practice-solutions/web-design-for-dental-practices",
+      },
+      {
+        label: "Dental SEO Service",
+        href: "/dental-practice-solutions/dental-seo-service",
+      },
+      {
+        label: "Dental Social Media",
+        href: "/dental-practice-solutions/dental-social-media",
+      },
+      {
+        label: "Custom Software Development",
+        href: "/dental-practice-solutions/custom-software-development",
+      },
+    ],
+  },
+];
+
+const isActive = (href: string) => {
+  if (href === "/") return currentPath === "/";
+  return currentPath.startsWith(href);
+};
+---
+
+<header
+  class="site-header sticky top-0 z-50 border-b border-[var(--header-border)] bg-[var(--header-background)]/95 backdrop-blur-xl"
+>
+  <div class="site-container">
+    <div class="flex min-h-20 items-center justify-between gap-5 lg:min-h-24">
+      <a href="/" class="relative z-10 shrink-0" aria-label="Dental IT home page">
+        <img
+          src="/logo/logo-light-mode.webp"
+          alt="Dental IT powered by SMART Solutions"
+          class="h-11 w-auto dark:hidden md:h-14 lg:h-14"
+          loading="eager"
+          decoding="async"
+        />
+
+        <img
+          src="/logo/logo-dark-mode.webp"
+          alt="Dental IT powered by SMART Solutions"
+          class="hidden h-11 w-auto dark:block md:h-14 lg:h-14"
+          loading="eager"
+          decoding="async"
+        />
+      </a>
+
+      <nav class="hidden items-center gap-1 xl:flex" aria-label="Main navigation">
+        {
+          navItems.map((item) =>
+            item.children ? (
+              <div class="group relative">
+                <a
+                  href={item.href}
+                  class:list={[
+                    "inline-flex items-center gap-1.5 rounded-full px-4 py-2.5 text-sm font-black text-[var(--header-muted)] transition duration-200 hover:bg-[var(--header-surface-alt)] hover:text-[var(--header-foreground)]",
+                    isActive(item.href) &&
+                      "bg-[var(--header-surface-alt)] text-[var(--header-foreground)]",
+                  ]}
+                >
+                  {item.label}
+                  <ChevronDown class="size-4 text-[var(--header-muted)] transition-transform duration-200 group-hover:rotate-180 group-hover:text-[var(--primary)]" />
+                </a>
+
+                <div class="pointer-events-none absolute left-1/2 top-full w-[23rem] -translate-x-1/2 translate-y-4 pt-5 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
+                  <div class="overflow-hidden rounded-2xl border border-[var(--header-border)] bg-[var(--header-surface)]/95 shadow-[0_24px_70px_rgba(0,0,0,0.18)] backdrop-blur-xl">
+                    <div class="border-b border-[var(--header-border)] bg-[var(--header-surface-alt)] px-5 py-4">
+                      <p class="text-xs font-black uppercase tracking-[0.2em] text-[var(--primary)]">
+                        {item.label}
+                      </p>
+                    </div>
+
+                    <div class="grid gap-1 p-3">
+                      {
+                        item.children.map((child) => (
+                          <a
+                            href={child.href}
+                            class:list={[
+                              "group/item flex items-center justify-between rounded-xl px-4 py-3 text-sm font-bold text-[var(--header-muted)] transition duration-200 hover:bg-[var(--primary)] hover:text-white",
+                              isActive(child.href) &&
+                                "bg-[var(--primary)] text-white",
+                            ]}
+                          >
+                            <span>{child.label}</span>
+                            <ArrowRight class="size-4 opacity-0 transition duration-200 group-hover/item:translate-x-1 group-hover/item:opacity-100" />
+                          </a>
+                        ))
+                      }
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <a
+                href={item.href}
+                class:list={[
+                  "rounded-full px-4 py-2.5 text-sm font-black text-[var(--header-muted)] transition duration-200 hover:bg-[var(--header-surface-alt)] hover:text-[var(--header-foreground)]",
+                  isActive(item.href) &&
+                    "bg-[var(--header-surface-alt)] text-[var(--header-foreground)]",
+                ]}
+              >
+                {item.label}
+              </a>
+            )
+          )
+        }
+      </nav>
+
+      <div class="hidden items-center gap-3 md:flex">
+        <button
+          type="button"
+          class="theme-toggle inline-flex size-12 items-center justify-center rounded-full border border-[var(--header-border)] bg-[var(--header-surface-alt)] text-[var(--header-foreground)] transition duration-200 hover:border-[var(--primary)] hover:text-[var(--primary)]"
+          aria-label="Switch to light mode"
+          aria-pressed="false"
+        >
+          <Sun class="theme-icon-sun hidden size-5" />
+          <Moon class="theme-icon-moon size-5" />
+        </button>
+
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-black uppercase tracking-wide text-white shadow-[0_16px_36px_rgba(239,35,49,0.28)] transition duration-200 hover:-translate-y-0.5 hover:bg-[var(--primary-hover)] hover:shadow-[0_20px_45px_rgba(239,35,49,0.38)]"
+        >
+          Get Free IT Assessment
+          <ArrowRight class="size-4" />
+        </a>
+      </div>
+
+      <div class="flex items-center gap-3 xl:hidden">
+        <button
+          type="button"
+          class="theme-toggle inline-flex size-12 items-center justify-center rounded-full border border-[var(--header-border)] bg-[var(--header-surface-alt)] text-[var(--header-foreground)] transition duration-200 hover:border-[var(--primary)] hover:text-[var(--primary)] md:hidden"
+          aria-label="Switch to light mode"
+          aria-pressed="false"
+        >
+          <Sun class="theme-icon-sun hidden size-5" />
+          <Moon class="theme-icon-moon size-5" />
+        </button>
+
+        <button
+          id="mobile-menu-button"
+          class="inline-flex size-12 items-center justify-center rounded-full bg-[var(--primary)] text-white shadow-[0_14px_30px_rgba(239,35,49,0.25)] transition hover:bg-[var(--primary-hover)]"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <Menu id="menu-icon" class="size-6" />
+          <X id="close-icon" class="hidden size-6" />
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    id="mobile-menu"
+    class="hidden border-t border-[var(--header-border)] bg-[var(--header-background)]/98 shadow-2xl backdrop-blur-xl xl:hidden"
+  >
+    <div class="site-container py-5">
+      <nav class="space-y-2" aria-label="Mobile navigation">
+        {
+          navItems.map((item) =>
+            item.children ? (
+              <details class="group overflow-hidden rounded-2xl border border-[var(--header-border)] bg-[var(--header-surface-alt)]">
+                <summary class="flex cursor-pointer list-none items-center justify-between px-5 py-4 text-base font-black text-[var(--header-foreground)]">
+                  <span>{item.label}</span>
+                  <ChevronDown class="size-5 text-[var(--primary)] transition-transform group-open:rotate-180" />
+                </summary>
+
+                <div class="border-t border-[var(--header-border)] bg-[var(--header-surface)] px-3 py-3">
+                  <a
+                    href={item.href}
+                    class="mb-1 flex items-center justify-between rounded-xl px-4 py-3 text-sm font-black text-[var(--primary)] transition hover:bg-[var(--header-surface-alt)]"
+                  >
+                    View All {item.label}
+                    <ArrowRight class="size-4" />
+                  </a>
+
+                  {
+                    item.children.map((child) => (
+                      <a
+                        href={child.href}
+                        class:list={[
+                          "block rounded-xl px-4 py-3 text-sm font-bold text-[var(--header-muted)] transition hover:bg-[var(--primary)] hover:text-white",
+                          isActive(child.href) &&
+                            "bg-[var(--primary)] text-white",
+                        ]}
+                      >
+                        {child.label}
+                      </a>
+                    ))
+                  }
+                </div>
+              </details>
+            ) : (
+              <a
+                href={item.href}
+                class:list={[
+                  "block rounded-2xl border border-[var(--header-border)] bg-[var(--header-surface-alt)] px-5 py-4 text-base font-black text-[var(--header-foreground)] transition hover:border-[var(--primary)] hover:text-[var(--primary)]",
+                  isActive(item.href) &&
+                    "border-[var(--primary)] text-[var(--primary)]",
+                ]}
+              >
+                {item.label}
+              </a>
+            )
+          )
+        }
+      </nav>
+
+      <div class="mt-5">
+        <a
+          href="/contact"
+          class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[var(--primary)] px-5 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_16px_36px_rgba(239,35,49,0.28)] transition hover:bg-[var(--primary-hover)]"
+        >
+          Get Free IT Assessment
+          <ArrowRight class="size-4" />
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const root = document.documentElement;
+  const themeButtons = document.querySelectorAll(".theme-toggle");
+
+  const setTheme = (theme) => {
+    const isDark = theme === "dark";
+
+    root.classList.toggle("dark", isDark);
+    localStorage.setItem("theme", theme);
+
+    themeButtons.forEach((button) => {
+      const sunIcon = button.querySelector(".theme-icon-sun");
+      const moonIcon = button.querySelector(".theme-icon-moon");
+
+      button.setAttribute(
+        "aria-label",
+        isDark ? "Switch to light mode" : "Switch to dark mode"
+      );
+
+      button.setAttribute("aria-pressed", String(isDark));
+
+      sunIcon?.classList.toggle("hidden", !isDark);
+      moonIcon?.classList.toggle("hidden", isDark);
+    });
+  };
+
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "light" || savedTheme === "dark") {
+    setTheme(savedTheme);
+  } else {
+    setTheme(root.classList.contains("dark") ? "dark" : "light");
+  }
+
+  themeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const nextTheme = root.classList.contains("dark") ? "light" : "dark";
+      setTheme(nextTheme);
+    });
+  });
+
+  const button = document.querySelector("#mobile-menu-button");
+  const menu = document.querySelector("#mobile-menu");
+  const menuIcon = document.querySelector("#menu-icon");
+  const closeIcon = document.querySelector("#close-icon");
+
+  button?.addEventListener("click", () => {
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+
+    button.setAttribute("aria-expanded", String(!isOpen));
+    menu?.classList.toggle("hidden");
+    menuIcon?.classList.toggle("hidden");
+    closeIcon?.classList.toggle("hidden");
+  });
+
+  const mobileLinks = menu?.querySelectorAll("a");
+
+  mobileLinks?.forEach((link) => {
+    link.addEventListener("click", () => {
+      button?.setAttribute("aria-expanded", "false");
+      menu?.classList.add("hidden");
+      menuIcon?.classList.remove("hidden");
+      closeIcon?.classList.add("hidden");
+    });
+  });
+</script>
