@@ -201,6 +201,7 @@
         font-weight: 900;
         line-height: 1.05;
         letter-spacing: -0.035em;
+        text-transform: none;
     }
 
     h1 {
@@ -286,7 +287,6 @@
     font-size: clamp(0.85rem, 1.5vw, 1rem);
     font-weight: 900;
     letter-spacing: 0.16em;
-    text-transform: uppercase;
 }
 
 .section-title {
@@ -294,7 +294,6 @@
     margin-top: 0.75rem;
     color: var(--foreground);
     font-weight: 900;
-    text-transform: uppercase;
 }
 
 .section-title .text-red,
