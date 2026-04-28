@@ -1,913 +1,1313 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import {
-  ArrowRight,
-  ShieldCheck,
-  ServerCog,
-  Cloud,
-  Activity,
-  LockKeyhole,
-  Stethoscope,
-  Cpu,
-  PhoneCall,
-  Search,
-  MonitorSmartphone,
-  DatabaseBackup,
-  CheckCircle2,
-  Sparkles,
-  Radar,
-  Zap,
-  Building2,
-  Globe2,
-  Users,
-  Laptop,
+	ArrowRight,
+	ShieldCheck,
+	ServerCog,
+	Cloud,
+	Activity,
+	LockKeyhole,
+	Stethoscope,
+	Cpu,
+	PhoneCall,
+	Search,
+	MonitorSmartphone,
+	DatabaseBackup,
+	CheckCircle2,
+	Sparkles,
+	Radar,
+	Zap,
+	Building2,
+	Globe2,
+	Users,
+	Laptop,
 } from "lucide-astro";
 
 const stats = [
-  {
-    value: "60+",
-    label: "hours of dedicated support available every week",
-  },
-  {
-    value: "24/7",
-    label: "software, hardware, network, and system monitoring",
-  },
-  {
-    value: "0.99",
-    prefix: "$",
-    suffix: "/day",
-    label: "starting proactive maintenance per workstation",
-  },
-  {
-    value: "100%",
-    label: "dental-focused IT solutions for modern practices",
-  },
+	{
+		value: "60+",
+		label: "hours of dedicated support available every week",
+	},
+	{
+		value: "24/7",
+		label: "software, hardware, network, and system monitoring",
+	},
+	{
+		value: "0.99",
+		prefix: "$",
+		suffix: "/day",
+		label: "starting proactive maintenance per workstation",
+	},
+	{
+		value: "100%",
+		label: "dental-focused IT solutions for modern practices",
+	},
 ];
 
 const techSupportServices = [
-  {
-    title: "Managed IT Support",
-    href: "/tech-support/managed-it-support",
-    description:
-      "Fast, dependable IT support tailored for dental offices, imaging systems, practice management software, and daily clinical workflows.",
-    icon: ServerCog,
-  },
-  {
-    title: "Dental Cloud Backups",
-    href: "/tech-support/dental-cloud-backups",
-    description:
-      "Protect patient data, imaging files, and business-critical systems with secure cloud backup and recovery planning.",
-    icon: DatabaseBackup,
-  },
-  {
-    title: "Cloud Solutions",
-    href: "/tech-support/cloud-solutions",
-    description:
-      "Move your practice toward reliable cloud infrastructure designed to reduce downtime and improve accessibility.",
-    icon: Cloud,
-  },
-  {
-    title: "Endpoint Detection Response",
-    href: "/tech-support/endpoint-detection-response",
-    description:
-      "Strengthen every workstation with advanced endpoint protection, monitoring, and rapid response capabilities.",
-    icon: Radar,
-  },
-  {
-    title: "HIPAA Consulting",
-    href: "/tech-support/hipaa-consulting",
-    description:
-      "Get practical guidance to help your dental practice align technology, security, and workflows with HIPAA requirements.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Dental Cybersecurity",
-    href: "/tech-support/dental-cybersecurity",
-    description:
-      "Defend your practice from malware, phishing, ransomware, unauthorized access, and preventable security risks.",
-    icon: LockKeyhole,
-  },
-  {
-    title: "Proactive Maintenance",
-    href: "/tech-support/proactive-maintenance",
-    description:
-      "Keep systems updated, monitored, optimized, and ready before small issues become costly downtime.",
-    icon: Activity,
-  },
+	{
+		title: "Managed IT Support",
+		href: "/tech-support/managed-it-support",
+		description:
+		"Fast, dependable IT support tailored for dental offices, imaging systems, practice management software, and daily clinical workflows.",
+		icon: ServerCog,
+	},
+	{
+		title: "Dental Cloud Backups",
+		href: "/tech-support/dental-cloud-backups",
+		description:
+		"Protect patient data, imaging files, and business-critical systems with secure cloud backup and recovery planning.",
+		icon: DatabaseBackup,
+	},
+	{
+		title: "Cloud Solutions",
+		href: "/tech-support/cloud-solutions",
+		description:
+		"Move your practice toward reliable cloud infrastructure designed to reduce downtime and improve accessibility.",
+		icon: Cloud,
+	},
+	{
+		title: "Endpoint Detection Response",
+		href: "/tech-support/endpoint-detection-response",
+		description:
+		"Strengthen every workstation with advanced endpoint protection, monitoring, and rapid response capabilities.",
+		icon: Radar,
+	},
+	{
+		title: "HIPAA Consulting",
+		href: "/tech-support/hipaa-consulting",
+		description:
+		"Get practical guidance to help your dental practice align technology, security, and workflows with HIPAA requirements.",
+		icon: ShieldCheck,
+	},
+	{
+		title: "Dental Cybersecurity",
+		href: "/tech-support/dental-cybersecurity",
+		description:
+		"Defend your practice from malware, phishing, ransomware, unauthorized access, and preventable security risks.",
+		icon: LockKeyhole,
+	},
+	{
+		title: "Proactive Maintenance",
+		href: "/tech-support/proactive-maintenance",
+		description:
+		"Keep systems updated, monitored, optimized, and ready before small issues become costly downtime.",
+		icon: Activity,
+	},
 ];
 
 const deploymentServices = [
-  {
-    title: "Practice Startups",
-    href: "/deployments/practice-startups",
-    description:
-      "Build your new dental practice with a technology foundation designed for growth, security, and efficiency.",
-    icon: Building2,
-  },
-  {
-    title: "Practice Growth",
-    href: "/deployments/practice-growth",
-    description:
-      "Scale your technology as your practice adds providers, chairs, operatories, workstations, and new services.",
-    icon: Users,
-  },
-  {
-    title: "Tech Refresh",
-    href: "/deployments/tech-refresh",
-    description:
-      "Modernize outdated hardware, workstations, network devices, and systems to improve speed and reliability.",
-    icon: Cpu,
-  },
-  {
-    title: "Tech Enhancement",
-    href: "/deployments/tech-enhancement",
-    description:
-      "Upgrade key technology areas to boost performance, patient care, security, and team productivity.",
-    icon: Zap,
-  },
-  {
-    title: "Practice Renovation",
-    href: "/deployments/practice-renovation",
-    description:
-      "Coordinate technology planning during renovations, expansions, room changes, and equipment upgrades.",
-    icon: MonitorSmartphone,
-  },
-  {
-    title: "Tech Assessment",
-    href: "/deployments/tech-assessment",
-    description:
-      "Evaluate your practice technology, identify risk, document assets, and create a clear improvement roadmap.",
-    icon: Search,
-  },
-  {
-    title: "VoIP Phone Systems",
-    href: "/deployments/voip-phone-systems",
-    description:
-      "Improve front desk communication, call handling, patient experience, and office phone workflows.",
-    icon: PhoneCall,
-  },
+	{
+		title: "Practice Startups",
+		href: "/deployments/practice-startups",
+		description:
+		"Build your new dental practice with a technology foundation designed for growth, security, and efficiency.",
+		icon: Building2,
+	},
+	{
+		title: "Practice Growth",
+		href: "/deployments/practice-growth",
+		description:
+		"Scale your technology as your practice adds providers, chairs, operatories, workstations, and new services.",
+		icon: Users,
+	},
+	{
+		title: "Tech Refresh",
+		href: "/deployments/tech-refresh",
+		description:
+		"Modernize outdated hardware, workstations, network devices, and systems to improve speed and reliability.",
+		icon: Cpu,
+	},
+	{
+		title: "Tech Enhancement",
+		href: "/deployments/tech-enhancement",
+		description:
+		"Upgrade key technology areas to boost performance, patient care, security, and team productivity.",
+		icon: Zap,
+	},
+	{
+		title: "Practice Renovation",
+		href: "/deployments/practice-renovation",
+		description:
+		"Coordinate technology planning during renovations, expansions, room changes, and equipment upgrades.",
+		icon: MonitorSmartphone,
+	},
+	{
+		title: "Tech Assessment",
+		href: "/deployments/tech-assessment",
+		description:
+		"Evaluate your practice technology, identify risk, document assets, and create a clear improvement roadmap.",
+		icon: Search,
+	},
+	{
+		title: "VoIP Phone Systems",
+		href: "/deployments/voip-phone-systems",
+		description:
+		"Improve front desk communication, call handling, patient experience, and office phone workflows.",
+		icon: PhoneCall,
+	},
 ];
 
 const practiceSolutions = [
-  {
-    title: "Web Design for Dental Practices",
-    href: "/dental-practice-solutions/web-design-for-dental-practices",
-    description:
-      "Modern, conversion-focused dental websites designed to support trust, speed, mobile performance, and local SEO.",
-    icon: Globe2,
-  },
-  {
-    title: "Dental SEO Service",
-    href: "/dental-practice-solutions/dental-seo-service",
-    description:
-      "Improve visibility for local dental searches with optimized content, technical SEO, and service-focused landing pages.",
-    icon: Search,
-  },
-  {
-    title: "Dental Social Media",
-    href: "/dental-practice-solutions/dental-social-media",
-    description:
-      "Build a stronger online presence with content planning, community engagement, and practice-focused campaigns.",
-    icon: Sparkles,
-  },
-  {
-    title: "Custom Software Development",
-    href: "/dental-practice-solutions/custom-software-development",
-    description:
-      "Create custom tools and workflows that help your team operate faster, smarter, and more efficiently.",
-    icon: Laptop,
-  },
+	{
+		title: "Web Design for Dental Practices",
+		href: "/dental-practice-solutions/web-design-for-dental-practices",
+		description:
+		"Modern, conversion-focused dental websites designed to support trust, speed, mobile performance, and local SEO.",
+		icon: Globe2,
+	},
+	{
+		title: "Dental SEO Service",
+		href: "/dental-practice-solutions/dental-seo-service",
+		description:
+		"Improve visibility for local dental searches with optimized content, technical SEO, and service-focused landing pages.",
+		icon: Search,
+	},
+	{
+		title: "Dental Social Media",
+		href: "/dental-practice-solutions/dental-social-media",
+		description:
+		"Build a stronger online presence with content planning, community engagement, and practice-focused campaigns.",
+		icon: Sparkles,
+	},
+	{
+		title: "Custom Software Development",
+		href: "/dental-practice-solutions/custom-software-development",
+		description:
+		"Create custom tools and workflows that help your team operate faster, smarter, and more efficiently.",
+		icon: Laptop,
+	},
 ];
 
 const trustItems = [
-  "Dental software, imaging, and workstation expertise",
-  "HIPAA-conscious IT planning and documentation",
-  "Cloud backup and disaster recovery strategy",
-  "Cybersecurity-first support for patient data protection",
-  "Technology deployments for startups, expansions, and renovations",
-  "Local support for Miami and South Florida dental practices",
+	"Dental software, imaging, and workstation expertise",
+	"HIPAA-conscious IT planning and documentation",
+	"Cloud backup and disaster recovery strategy",
+	"Cybersecurity-first support for patient data protection",
+	"Technology deployments for startups, expansions, and renovations",
+	"Local support for Miami and South Florida dental practices",
 ];
 
 const whyChoose = [
-  {
-    title: "Dental-Focused Expertise",
-    description:
-      "We understand dental workflows, front desk needs, imaging stations, operatories, servers, backups, and the systems your team depends on daily.",
-    icon: Stethoscope,
-  },
-  {
-    title: "Security Without Guesswork",
-    description:
-      "From endpoint protection to backup planning, we help reduce security risks and strengthen the technology protecting your practice.",
-    icon: LockKeyhole,
-  },
-  {
-    title: "Proactive, Not Reactive",
-    description:
-      "Monitoring, maintenance, updates, and reporting help catch issues before they interrupt patient care.",
-    icon: Activity,
-  },
-  {
-    title: "Built for Growth",
-    description:
-      "Whether you are opening, expanding, renovating, or refreshing your technology, we design systems that can scale with your practice.",
-    icon: Building2,
-  },
+	{
+		title: "Dental-Focused Expertise",
+		description:
+		"We understand dental workflows, front desk needs, imaging stations, operatories, servers, backups, and the systems your team depends on daily.",
+		icon: Stethoscope,
+	},
+	{
+		title: "Security Without Guesswork",
+		description:
+		"From endpoint protection to backup planning, we help reduce security risks and strengthen the technology protecting your practice.",
+		icon: LockKeyhole,
+	},
+	{
+		title: "Proactive, Not Reactive",
+		description:
+		"Monitoring, maintenance, updates, and reporting help catch issues before they interrupt patient care.",
+		icon: Activity,
+	},
+	{
+		title: "Built for Growth",
+		description:
+		"Whether you are opening, expanding, renovating, or refreshing your technology, we design systems that can scale with your practice.",
+		icon: Building2,
+	},
 ];
 
 const process = [
-  {
-    step: "01",
-    title: "Assess",
-    description:
-      "We review your current technology, risks, workstations, network, backups, security, and daily pain points.",
-  },
-  {
-    step: "02",
-    title: "Plan",
-    description:
-      "We create a clear roadmap focused on uptime, security, compliance support, performance, and budget.",
-  },
-  {
-    step: "03",
-    title: "Deploy",
-    description:
-      "We implement the right solutions with minimal disruption to your team and patient schedule.",
-  },
-  {
-    step: "04",
-    title: "Monitor",
-    description:
-      "We keep watching, maintaining, updating, and supporting your environment so your practice can keep moving.",
-  },
+	{
+		step: "01",
+		title: "Assess",
+		description:
+		"We review your current technology, risks, workstations, network, backups, security, and daily pain points.",
+		image: "/images/home/process-dental-it-assessment-miami.webp",
+		alt: "Dental IT assessment for a Miami dental practice",
+	},
+	{
+		step: "02",
+		title: "Plan",
+		description:
+		"We create a clear roadmap focused on uptime, security, compliance support, performance, and budget.",
+		image: "/images/home/process-dental-it-planning-miami.webp",
+		alt: "Dental IT planning for a dental practice in Miami",
+	},
+	{
+		step: "03",
+		title: "Deploy",
+		description:
+		"We implement the right solutions with minimal disruption to your team and patient schedule.",
+		image: "/images/home/process-dental-technology-deployment-miami.webp",
+		alt: "Dental technology deployment for a Miami dental office",
+	},
+	{
+		step: "04",
+		title: "Monitor",
+		description:
+		"We keep watching, maintaining, updating, and supporting your environment so your practice can keep moving.",
+		image: "/images/home/process-dental-it-monitoring-miami.webp",
+		alt: "Dental IT monitoring for a Miami dental practice",
+	},
 ];
 ---
 
 <MainLayout
-  title="Dental IT Services in Miami, FL | Managed IT, Cybersecurity & HIPAA Support"
-  description="Dental IT provides managed IT support, cybersecurity, HIPAA consulting, cloud backups, proactive maintenance, deployments, VoIP, web design, and SEO services for dental practices in Miami and South Florida."
-  image="/images/og/dental-it-miami-home-og.jpg"
+	title="Dental IT Services in Miami, FL | Managed IT, Cybersecurity & HIPAA Support"
+	description="Dental IT provides managed IT support, cybersecurity, HIPAA consulting, cloud backups, proactive maintenance, deployments, VoIP, web design, and SEO services for dental practices in Miami and South Florida."
+	image="/images/og/dental-it-miami-home-og.jpg"
 >
-  <main class="overflow-hidden">
-    <!-- HERO -->
-    <section class="relative isolate overflow-hidden bg-site">
-      <div class="pointer-events-none absolute inset-0 -z-10">
-        <div
-          class="absolute left-1/2 top-0 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-[var(--primary)]/10 blur-[140px]"
-        >
-        </div>
+	<main class="overflow-hidden">
+		<!-- HERO -->
+		<section class="relative isolate overflow-hidden bg-site">
+		<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+			<div
+			class="diffuse-sphere absolute -left-52 top-16 h-[34rem] w-[34rem] rounded-full bg-[var(--primary)]/18 blur-[150px]"
+			aria-hidden="true"
+			>
+			</div>
 
-        <div
-          class="absolute -left-36 top-40 h-80 w-80 rounded-full bg-[var(--primary)]/10 blur-[120px]"
-        >
-        </div>
+			<div
+			class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-[38rem] w-[38rem] rounded-full bg-[var(--primary)]/14 blur-[170px]"
+			aria-hidden="true"
+			>
+			</div>
 
-        <div
-          class="absolute -right-40 bottom-10 h-[26rem] w-[26rem] rounded-full bg-[var(--primary)]/10 blur-[140px]"
-        >
-        </div>
+			<div
+			class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.08)_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30"
+			>
+			</div>
 
-        <div
-          class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.08)_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30"
-        >
-        </div>
-      </div>
+			<div
+			class="parallax-layer absolute top-40 w-full max-w-none opacity-[0.45] blur"
+			data-parallax-speed="-0.015"
+			aria-hidden="true"
+			>
+			<img
+				src="/images/backgrounds/dental-it-network-bg.png"
+				alt=""
+				class="w-full min-w-[70rem]"
+				loading="eager"
+				decoding="async"
+			/>
+			</div>
 
-      <div
-        class="site-container grid min-h-[calc(100vh-5rem)] items-center gap-12 py-16 md:py-20 lg:grid-cols-[1.02fr_0.98fr] lg:py-24"
-      >
-        <div class="relative z-10">
-          <div
-            class="glass-panel inline-flex max-w-full items-center gap-3 rounded-full px-4 py-2"
-          >
-            <span
-              class="inline-flex size-2.5 shrink-0 rounded-full bg-[var(--primary)] shadow-[0_0_18px_rgba(239,35,49,0.95)]"
-            ></span>
-            <span
-              class="text-xs font-black uppercase tracking-[0.18em] text-[var(--foreground)] sm:tracking-[0.22em]"
-            >
-              Dental IT Services in Miami, FL
-            </span>
-          </div>
+			<div
+			class="parallax-layer network-float absolute bottom-[1rem] w-full max-w-none -translate-x-1/2 opacity-[0.45]"
+			data-parallax-speed="0.025"
+			aria-hidden="true"
+			>
+			<img
+				src="/images/backgrounds/dental-it-network-bg.png"
+				alt=""
+				class="w-full min-w-[70rem]"
+				loading="eager"
+				decoding="async"
+			/>
+			</div>
 
-          <h1
-            class="mt-7 max-w-5xl text-balance text-[clamp(2.35rem,5.5vw,4.75rem)] font-black leading-[0.95] tracking-[-0.05em]"
-          >
-            Reliable IT for dental practices that cannot afford downtime.
-          </h1>
+			<div
+			class="parallax-layer network-float-soft network-float-delay absolute top-10 w-full max-w-none opacity-[0.08] blur"
+			data-parallax-speed="-0.018"
+			aria-hidden="true"
+			>
+			<img
+				src="/images/backgrounds/dental-it-network-bg.png"
+				alt=""
+				class="w-full"
+				loading="eager"
+				decoding="async"
+			/>
+			</div>
 
-          <p
-            class="mt-7 max-w-2xl text-base leading-8 text-[var(--muted-foreground)] sm:text-lg md:text-xl"
-          >
-            Dental IT helps Miami and South Florida dental offices stay secure,
-            backed up, compliant, monitored, and supported — so your team can
-            focus on patients instead of technology problems.
-          </p>
+			<div
+			class="absolute inset-0 bg-gradient-to-b from-[var(--background)]/92 via-[var(--background)]/50 to-[var(--background)]/92"
+			>
+			</div>
+		</div>
 
-          <div class="mt-9 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="/contact"
-              class="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--primary)] px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-[var(--primary-hover)]"
-            >
-              Get Free IT Assessment
-              <ArrowRight class="size-4" />
-            </a>
+		<div
+			class="site-container grid min-h-[calc(100vh-5rem)] items-center gap-12 py-16 md:py-20 lg:grid-cols-[1.02fr_0.98fr] lg:py-24"
+		>
+			<div class="relative z-10">
+			<div
+				class="glass-panel inline-flex max-w-full items-center gap-3 rounded-full px-4 py-2"
+			>
+				<span
+				class="inline-flex size-2.5 shrink-0 rounded-full bg-[var(--primary)] shadow-[0_0_18px_rgba(239,35,49,0.95)]"
+				></span>
 
-            <a
-              href="/tech-support/managed-it-support"
-              class="glass-panel inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-sm font-black uppercase tracking-wide text-[var(--foreground)] transition hover:-translate-y-1 hover:border-[var(--primary)] hover:text-[var(--primary)]"
-            >
-              Explore Services
-              <ArrowRight class="size-4" />
-            </a>
-          </div>
+				<span
+				class="text-xs font-black uppercase tracking-[0.18em] text-[var(--foreground)] sm:tracking-[0.22em]"
+				>
+				Dental IT Services in Miami, FL
+				</span>
+			</div>
 
-          <div class="mt-10 grid gap-3 sm:grid-cols-2">
-            {
-              trustItems.slice(0, 4).map((item) => (
-                <div class="flex items-start gap-3">
-                  <CheckCircle2 class="mt-1 size-5 shrink-0 text-[var(--primary)]" />
-                  <p class="text-sm font-bold leading-6 text-[var(--muted-foreground)]">
-                    {item}
-                  </p>
-                </div>
-              ))
-            }
-          </div>
-        </div>
+			<h1
+				class="mt-7 max-w-5xl text-balance text-[clamp(2.35rem,5.5vw,4.75rem)] font-black leading-[0.95] tracking-[-0.05em]"
+			>
+				Reliable IT for dental practices that cannot afford downtime.
+			</h1>
 
-        <div class="relative mx-auto w-full max-w-xl lg:max-w-none">
-          <div class="relative">
-            <div class="parallax-layer" data-parallax-speed="0.035">
-              <div
-                class="glass-panel glass-highlight relative overflow-hidden rounded-[2rem] p-3 sm:rounded-[2.5rem] sm:p-4"
-              >
-                <!-- SEO image recommendation:
-					Replace with a local image like:
+			<p
+				class="mt-7 max-w-2xl text-base leading-8 text-[var(--muted-foreground)] sm:text-lg md:text-xl"
+			>
+				Dental IT helps Miami and South Florida dental offices stay secure,
+				backed up, compliant, monitored, and supported — so your team can
+				focus on patients instead of technology problems.
+			</p>
+
+			<div class="mt-9 flex flex-col gap-4 sm:flex-row">
+				<a
+				href="/contact"
+				class="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--primary)] px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-[var(--primary-hover)]"
+				>
+				Get Free IT Assessment
+				<ArrowRight class="size-4" />
+				</a>
+
+				<a
+				href="/tech-support/managed-it-support"
+				class="glass-panel inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-sm font-black uppercase tracking-wide text-[var(--foreground)] transition hover:-translate-y-1 hover:border-[var(--primary)] hover:text-[var(--primary)]"
+				>
+				Explore Services
+				<ArrowRight class="size-4" />
+				</a>
+			</div>
+
+			<div class="mt-10 grid gap-3 sm:grid-cols-2">
+				{
+				trustItems.slice(0, 4).map((item) => (
+					<div class="flex items-start gap-3">
+					<CheckCircle2 class="mt-1 size-5 shrink-0 text-[var(--primary)]" />
+					<p class="text-sm font-bold leading-6 text-[var(--muted-foreground)]">
+						{item}
+					</p>
+					</div>
+				))
+				}
+			</div>
+			</div>
+
+			<div class="relative mx-auto w-full max-w-xl lg:max-w-none">
+			<div class="relative">
+				<div class="parallax-layer" data-parallax-speed="0.035">
+				<div
+					class="glass-panel glass-highlight relative overflow-hidden rounded-[2rem] p-3 sm:rounded-[2.5rem] sm:p-4"
+				>
+					<!-- SEO image recommendation:
+					Replace with:
 					src="/images/home/dental-it-services-miami-dental-office-dashboard.webp"
-					Alt should describe the image and location/service:
+					Alt:
 					"Dental IT services dashboard for a Miami dental practice"
 					-->
-                <img
-                  src="/images/home/dental-it-services-miami-dental-office-dashboard.webp"
-                  alt="Dental IT services dashboard for a Miami dental practice"
-                  class="aspect-[4/4.8] w-full rounded-[1.5rem] object-cover sm:rounded-[2rem] lg:aspect-[4/5]"
-                  loading="eager"
-                  decoding="async"
-                />
+					<img
+					src="/images/home/dental-it-services-miami-dental-office-dashboard.webp"
+					alt="Dental IT services dashboard for a Miami dental practice"
+					class="aspect-[4/4.8] w-full rounded-[1.5rem] object-cover sm:rounded-[2rem] lg:aspect-[4/5]"
+					loading="eager"
+					decoding="async"
+					/>
 
-                <div
-                  class="absolute inset-x-5 bottom-5 rounded-2xl border border-white/15 bg-black/55 p-4 text-white shadow-2xl backdrop-blur-2xl sm:inset-x-8 sm:bottom-8 sm:rounded-3xl sm:p-5"
-                >
-                  <p
-                    class="text-xs font-black uppercase tracking-[0.2em] text-[var(--primary)]"
-                  >
-                    Live Monitoring
-                  </p>
-                  <div class="mt-4 grid grid-cols-3 gap-3">
-                    <div>
-                      <p class="text-xl font-black text-white sm:text-2xl">
-                        24/7
-                      </p>
-                      <p class="mt-1 text-[0.7rem] text-white/65 sm:text-xs">
-                        Monitoring
-                      </p>
-                    </div>
-                    <div>
-                      <p class="text-xl font-black text-white sm:text-2xl">
-                        EDR
-                      </p>
-                      <p class="mt-1 text-[0.7rem] text-white/65 sm:text-xs">
-                        Security
-                      </p>
-                    </div>
-                    <div>
-                      <p class="text-xl font-black text-white sm:text-2xl">
-                        HIPAA
-                      </p>
-                      <p class="mt-1 text-[0.7rem] text-white/65 sm:text-xs">
-                        Support
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+					<div
+					class="absolute inset-x-5 bottom-5 rounded-2xl border border-white/15 bg-black/55 p-4 text-white shadow-2xl backdrop-blur-2xl sm:inset-x-8 sm:bottom-8 sm:rounded-3xl sm:p-5"
+					>
+					<p
+						class="text-xs font-black uppercase tracking-[0.2em] text-[var(--primary)]"
+					>
+						Live Monitoring
+					</p>
+
+					<div class="mt-4 grid grid-cols-3 gap-3">
+						<div>
+						<p class="text-xl font-black text-white sm:text-2xl">
+							24/7
+						</p>
+						<p class="mt-1 text-[0.7rem] text-white/65 sm:text-xs">
+							Monitoring
+						</p>
+						</div>
+
+						<div>
+						<p class="text-xl font-black text-white sm:text-2xl">
+							EDR
+						</p>
+						<p class="mt-1 text-[0.7rem] text-white/65 sm:text-xs">
+							Security
+						</p>
+						</div>
+
+						<div>
+						<p class="text-xl font-black text-white sm:text-2xl">
+							HIPAA
+						</p>
+						<p class="mt-1 text-[0.7rem] text-white/65 sm:text-xs">
+							Support
+						</p>
+						</div>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		</section>
+
+		<!-- STATS -->
+		<section class="relative border-y border-[var(--border)] bg-surface">
+		<div
+			class="site-container grid gap-px overflow-hidden py-8 sm:grid-cols-2 lg:grid-cols-4 lg:py-10"
+		>
+			{
+			stats.map((stat) => (
+				<div class="group relative row-5 p-5 sm:p-6 lg:p-8">
+					<div class="absolute inset-0 bg-(--primary) opacity-0 transition group-hover:opacity-[0.06] rounded-2xl" />
+					<p class="relative text-[clamp(2.4rem,5vw,3.25rem)] font-black tracking-[-0.05em] text-[var(--foreground)]">
+						{stat.prefix}
+						<span class="text-[var(--primary)]">{stat.value}</span>
+						{stat.suffix}
+					</p>
+					<p class="relative mt-3 max-w-xs text-sm font-bold leading-6 text-[var(--muted-foreground)]">
+						{stat.label}
+					</p>
+				</div>
+			))
+			}
+		</div>
+		</section>
+
+		<!-- INTRO -->
+		<section class="section-padding relative overflow-hidden bg-site">
+		<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+			<div
+			class="diffuse-sphere absolute -left-48 top-10 h-[28rem] w-[28rem] rounded-full bg-[var(--primary)]/12 blur-[145px]"
+			aria-hidden="true"
+			>
+			</div>
+
+			<div
+			class="diffuse-sphere diffuse-sphere-delay absolute right-[-14rem] bottom-10 h-[32rem] w-[32rem] rounded-full bg-[var(--primary)]/10 blur-[160px]"
+			aria-hidden="true"
+			>
+			</div>
+
+			<div
+			class="absolute inset-0 bg-gradient-to-b from-[var(--background)]/86 via-[var(--background)]/45 to-[var(--background)]/92"
+			>
+			</div>
+		</div>
+
+		<div class="site-container relative">
+			<div
+			class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start xl:gap-10"
+			>
+			<div class="lg:sticky lg:top-32">
+				<div class="max-w-4xl text-left">
+				<p class="section-eyebrow">
+					Custom IT Solutions for Dental Practices
+				</p>
+
+				<h2
+					class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-[1]"
+				>
+					Built for the way dental offices actually work.
+				</h2>
+
+				<div
+					class="site-card mt-8 rounded-[2rem] p-6 text-left md:p-8 lg:p-9"
+				>
+					<h3 class="text-xl font-black sm:text-2xl">
+					Dental IT support that understands your environment.
+					</h3>
+
+					<p class="mt-4 text-base leading-8">
+					Your dental practice depends on technology across every part
+					of the day: front desk communication, workstations, imaging,
+					servers, backups, cybersecurity, cloud systems, and patient
+					data security. Dental IT brings those needs into one
+					specialized support strategy.
+					</p>
+				</div>
+				</div>
+			</div>
+
+			<div class="grid gap-5 md:grid-cols-2">
+				<div class="site-card rounded-[2rem] p-6 md:p-7">
+				<Activity class="size-9 text-[var(--primary)]" />
+
+				<h3 class="mt-5 text-lg font-black sm:text-xl">
+					24/7 Software & Hardware Monitoring
+				</h3>
+
+				<p class="mt-4 text-sm leading-7">
+					Continuous visibility into system health helps detect CPU,
+					memory, disk, network, and workstation issues before they become
+					operational problems.
+				</p>
+				</div>
+
+				<div class="site-card rounded-[2rem] p-6 md:p-7">
+				<Sparkles class="size-9 text-[var(--primary)]" />
+
+				<h3 class="mt-5 text-lg font-black sm:text-xl">
+					Peace of Mind Starting at $0.99/Day
+				</h3>
+
+				<p class="mt-4 text-sm leading-7">
+					Proactive maintenance helps keep workstations updated,
+					protected, monitored, and performing at the level your team
+					needs.
+				</p>
+				</div>
+
+				<div class="site-card rounded-[2rem] p-6 md:p-7">
+				<ShieldCheck class="size-9 text-[var(--primary)]" />
+
+				<h3 class="mt-5 text-lg font-black sm:text-xl">
+					Security-First Dental IT Support
+				</h3>
+
+				<p class="mt-4 text-sm leading-7">
+					Protect your practice with cybersecurity-focused support
+					designed to help reduce risks around workstations, patient data,
+					backups, and daily dental technology workflows.
+				</p>
+				</div>
+
+				<div class="site-card rounded-[2rem] p-6 md:p-7">
+				<DatabaseBackup class="size-9 text-[var(--primary)]" />
+
+				<h3 class="mt-5 text-lg font-black sm:text-xl">
+					Cloud Backup & Recovery Planning
+				</h3>
+
+				<p class="mt-4 text-sm leading-7">
+					Keep patient data, imaging files, and business-critical systems
+					protected with backup strategies designed to support fast
+					recovery and minimize practice downtime.
+				</p>
+				</div>
+			</div>
+			</div>
+		</div>
+		</section>
+
+		<!-- SERVICES -->
+		<section class="section-padding relative overflow-hidden bg-surface">
+		<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+			<div
+			class="diffuse-sphere absolute -left-44 top-10 h-[30rem] w-[30rem] rounded-full bg-[var(--primary)]/16 blur-[150px]"
+			aria-hidden="true"
+			>
+			</div>
+
+			<div
+			class="diffuse-sphere diffuse-sphere-delay absolute -right-48 top-[35%] h-[34rem] w-[34rem] rounded-full bg-[var(--primary)]/10 blur-[160px]"
+			aria-hidden="true"
+			>
+			</div>
+
+			<div
+			class="absolute left-1/2 top-0 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-[var(--primary)]/10 blur-[130px]"
+			>
+			</div>
+
+			<div
+			class="parallax-layer absolute w-full max-w-none opacity-[0.10] blur"
+			data-parallax-speed="-0.012"
+			aria-hidden="true"
+			>
+			<img
+				src="/images/backgrounds/dental-it-network-bg.png"
+				alt=""
+				class="w-full min-w-[70rem]"
+				loading="lazy"
+				decoding="async"
+			/>
+			</div>
+
+			<div
+			class="parallax-layer network-float absolute left-1/2 top-[13rem] w-[108rem] max-w-none -translate-x-1/2 opacity-[0.28]"
+			data-parallax-speed="0.018"
+			aria-hidden="true"
+			>
+			<img
+				src="/images/backgrounds/dental-it-network-bg.png"
+				alt=""
+				class="w-full min-w-[70rem]"
+				loading="lazy"
+				decoding="async"
+			/>
+			</div>
+
+			<div
+			class="parallax-layer network-float-soft network-float-delay absolute -right-32 top-[28rem] w-[58rem] max-w-none opacity-[0.20]"
+			data-parallax-speed="-0.016"
+			aria-hidden="true"
+			>
+			<img
+				src="/images/backgrounds/dental-it-network-bg.png"
+				alt=""
+				class="w-full"
+				loading="lazy"
+				decoding="async"
+			/>
+			</div>
+
+			<div
+			class="absolute inset-0 bg-gradient-to-b from-[var(--surface)]/88 via-[var(--surface)]/48 to-[var(--surface)]/94"
+			>
+			</div>
+		</div>
+
+		<div class="site-container relative">
+			<div class="mx-auto max-w-3xl text-center">
+			<p class="section-eyebrow">Our Services</p>
+
+			<h2
+				class="section-title mx-auto normal-case text-[clamp(2rem,4.2vw,3.8rem)] leading-[1]"
+			>
+				We got your practice covered.
+			</h2>
+
+			<p class="section-description mx-auto">
+				From managed IT support and cybersecurity to practice deployments,
+				cloud backups, VoIP, web design, SEO, and custom software, Dental IT
+				gives dental practices one expert technology partner.
+			</p>
+			</div>
+
+			<div class="mt-14 lg:mt-16">
+			<div class="mb-7 flex items-center gap-4">
+				<div class="h-px flex-1 bg-[var(--border)]"></div>
+				<h3
+				class="text-center text-xs font-black uppercase tracking-[0.2em] text-[var(--primary)] sm:text-sm sm:tracking-[0.22em]"
+				>
+				Tech Support
+				</h3>
+				<div class="h-px flex-1 bg-[var(--border)]"></div>
+			</div>
+
+			<div class="flex flex-wrap justify-center gap-5">
+				{
+				techSupportServices.map(
+					({ title, href, description, icon: Icon }) => (
+					<a
+						href={href}
+						class="service-card group relative flex w-full flex-col overflow-hidden rounded-[2rem] p-6 transition hover:-translate-y-1 hover:border-[var(--primary)] md:w-[calc(50%-0.625rem)] md:p-7 xl:w-[calc(25%-0.9375rem)]"
+					>
+						<div class="absolute -right-12 -top-12 size-32 rounded-full bg-[var(--primary)]/10 blur-2xl transition group-hover:bg-[var(--primary)]/20" />
+						<Icon class="relative size-10 text-[var(--primary)]" />
+						<h4 class="relative mt-6 text-lg font-black sm:text-xl">
+						{title}
+						</h4>
+						<p class="relative mt-4 text-sm leading-7">{description}</p>
+						<span class="relative mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-[var(--primary)]">
+						Learn More
+						<ArrowRight class="size-4 transition group-hover:translate-x-1" />
+						</span>
+					</a>
+					),
+				)
+				}
+			</div>
+			</div>
+
+			<div class="mt-16 lg:mt-20">
+			<div class="mb-7 flex items-center gap-4">
+				<div class="h-px flex-1 bg-[var(--border)]"></div>
+				<h3
+				class="text-center text-xs font-black uppercase tracking-[0.2em] text-[var(--primary)] sm:text-sm sm:tracking-[0.22em]"
+				>
+				Deployments
+				</h3>
+				<div class="h-px flex-1 bg-[var(--border)]"></div>
+			</div>
+
+			<div class="flex flex-wrap justify-center gap-5">
+				{
+				deploymentServices.map(
+					({ title, href, description, icon: Icon }) => (
+					<a
+						href={href}
+						class="service-card group relative flex w-full flex-col overflow-hidden rounded-[2rem] p-6 transition hover:-translate-y-1 hover:border-[var(--primary)] md:w-[calc(50%-0.625rem)] md:p-7 xl:w-[calc(25%-0.9375rem)]"
+					>
+						<Icon class="size-10 text-[var(--primary)]" />
+						<h4 class="mt-6 text-lg font-black sm:text-xl">{title}</h4>
+						<p class="mt-4 text-sm leading-7">{description}</p>
+						<span class="mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-[var(--primary)]">
+						Learn More
+						<ArrowRight class="size-4 transition group-hover:translate-x-1" />
+						</span>
+					</a>
+					),
+				)
+				}
+			</div>
+			</div>
+
+			<div class="mt-16 lg:mt-20">
+			<div class="mb-7 flex items-center gap-4">
+				<div class="h-px flex-1 bg-[var(--border)]"></div>
+				<h3
+				class="text-center text-xs font-black uppercase tracking-[0.2em] text-[var(--primary)] sm:text-sm sm:tracking-[0.22em]"
+				>
+				Dental Practice Solutions
+				</h3>
+				<div class="h-px flex-1 bg-[var(--border)]"></div>
+			</div>
+
+			<div class="flex flex-wrap justify-center gap-5">
+				{
+				practiceSolutions.map(
+					({ title, href, description, icon: Icon }) => (
+					<a
+						href={href}
+						class="service-card group relative flex w-full flex-col overflow-hidden rounded-[2rem] p-6 transition hover:-translate-y-1 hover:border-[var(--primary)] md:w-[calc(50%-0.625rem)] md:p-7 xl:w-[calc(25%-0.9375rem)]"
+					>
+						<Icon class="relative size-10 text-[var(--primary)]" />
+						<h4 class="relative mt-6 text-base font-black sm:text-lg">
+						{title}
+						</h4>
+						<p class="relative mt-4 text-sm leading-7 text-[var(--muted-foreground)]">
+						{description}
+						</p>
+						<span class="mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-[var(--primary)]">
+						Learn More
+						<ArrowRight class="size-4 transition group-hover:translate-x-1" />
+						</span>
+					</a>
+					),
+				)
+				}
+			</div>
+			</div>
+		</div>
+		</section>
+
+		<!-- PARALLAX FEATURE -->
+<section
+  class="relative overflow-hidden bg-site py-20 lg:py-28 xl:py-32"
+  style="
+    background-image: url('/images/home/dental-practice-bg.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  "
+>
+  <!-- Background overlays -->
+  <div class="pointer-events-none absolute inset-0 -z-0 overflow-hidden">
+    <!-- Main contrast overlay -->
+    <div
+      class="absolute inset-0 bg-[var(--background)]/50 dark:bg-black/78"
+      aria-hidden="true"
+    >
+    </div>
+
+    <!-- Gradient depth overlay -->
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-[var(--background)]/95 via-[var(--background)]/72 to-[var(--background)]/88 dark:from-black/92 dark:via-black/70 dark:to-black/90"
+      aria-hidden="true"
+    >
+    </div>
+
+    <!-- Red brand glow -->
+    <div
+      class="diffuse-sphere absolute -left-44 top-20 h-[30rem] w-[30rem] rounded-full bg-[var(--primary)]/20 blur-[150px]"
+      aria-hidden="true"
+    >
+    </div>
+
+    <!-- <div
+      class="diffuse-sphere diffuse-sphere-delay absolute -right-56 bottom-0 h-[36rem] w-[36rem] rounded-full bg-[var(--primary)]/16 blur-[170px]"
+      aria-hidden="true"
+    >
+    </div> -->
+
+    <!-- Blurred network depth layer -->
+    <div
+      class="parallax-layer absolute left-1/2 bottom-[4rem] w-[105rem] max-w-none -translate-x-1/2 opacity-[0.12] blur-2xl"
+      data-parallax-speed="-0.014"
+      aria-hidden="true"
+    >
+      <img
+        src="/images/backgrounds/dental-it-network-bg.png"
+        alt=""
+        class="w-full min-w-[65rem]"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+
+    <!-- Sharper animated network layer -->
+    <div
+      class="parallax-layer network-float absolute left-1/2 bottom-[8rem] w-[100rem] max-w-none -translate-x-1/2 opacity-[0.24]"
+      data-parallax-speed="0.02"
+      aria-hidden="true"
+    >
+      <img
+        src="/images/backgrounds/dental-it-network-bg.png"
+        alt=""
+        class="w-full min-w-[65rem]"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+
+    <!-- Side network detail -->
+    <div
+      class="parallax-layer network-float-soft network-float-delay absolute -left-32 top-20 w-[56rem] max-w-none opacity-[0.18]"
+      data-parallax-speed="-0.018"
+      aria-hidden="true"
+    >
+      <img
+        src="/images/backgrounds/dental-it-network-bg.png"
+        alt=""
+        class="w-full"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  </div>
+
+  <div class="site-container relative z-10 grid gap-12 lg:grid-cols-2 lg:items-center">
+    <div class="relative mx-auto w-full max-w-xl lg:max-w-none">
+      <div
+        class="grid gap-5 sm:grid-cols-2 lg:block lg:min-h-[34rem] xl:min-h-[38rem]"
+      >
+        <div
+          class="parallax-layer lg:absolute lg:left-0 lg:top-0 lg:w-[80%]"
+          data-parallax-speed="0.04"
+        >
+          <div class="glass-panel rounded-[2rem] p-3">
+            <!-- SEO image recommendation:
+              Replace with:
+              src="/images/home/miami-dental-practice-it-support-team.webp"
+              Suggested alt:
+              "Dental IT support team helping a Miami dental practice"
+            -->
+            <img
+              src="/images/home/miami-dental-practice-it-support-team.webp"
+              alt="Dental IT support team helping a Miami dental practice"
+              class="aspect-[4/5] w-full rounded-[1.5rem] object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+
+        <div
+          class="parallax-layer lg:absolute lg:bottom-0 lg:right-0 lg:w-[80%]"
+          data-parallax-speed="-0.035"
+        >
+          <div class="glass-panel rounded-[2rem] p-3">
+            <!-- SEO image recommendation:
+              Replace with:
+              src="/images/home/dental-office-cybersecurity-monitoring-miami.webp"
+              Suggested alt:
+              "Cybersecurity and monitoring for a dental office in Miami"
+            -->
+            <img
+              src="/images/home/dental-office-cybersecurity-monitoring-miami.webp"
+              alt="Cybersecurity and monitoring for a dental office in Miami"
+              class="aspect-[4/5] w-full rounded-[1.5rem] object-cover"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- STATS -->
-    <section class="relative border-y border-[var(--border)] bg-surface">
-      <div
-        class="site-container grid gap-px overflow-hidden py-8 sm:grid-cols-2 lg:grid-cols-4 lg:py-10"
+    <div>
+      <p class="section-eyebrow">Why Dental Clinics Trust Us</p>
+
+      <h2
+        class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-[1]"
       >
+        Technology support designed around patient care.
+      </h2>
+
+      <p class="section-description">
+        Downtime, security incidents, slow workstations, failed backups, and
+        disconnected systems can interrupt the patient experience. Dental IT
+        helps your team stay focused, productive, and protected.
+      </p>
+
+      <div class="mt-9 grid gap-4">
         {
-          stats.map((stat) => (
-            <div class="group relative p-5 sm:p-6">
-              <div class="absolute inset-0 bg-[var(--primary)] opacity-0 transition group-hover:opacity-[0.06]" />
-              <p class="relative text-[clamp(2.4rem,5vw,3.25rem)] font-black tracking-[-0.05em] text-[var(--foreground)]">
-                {stat.prefix}
-                <span class="text-[var(--primary)]">{stat.value}</span>
-                {stat.suffix}
-              </p>
-              <p class="relative mt-3 max-w-xs text-sm font-bold leading-6 text-[var(--muted-foreground)]">
-                {stat.label}
-              </p>
+          whyChoose.map(({ title, description, icon: Icon }) => (
+            <div class="glass-panel glass-highlight flex gap-5 rounded-[2rem] p-5 sm:p-6">
+              <div class="relative flex size-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--primary)] text-white">
+                <Icon class="size-6" />
+              </div>
+
+              <div class="relative">
+                <h3 class="text-base font-black text-[var(--foreground)] sm:text-lg">
+                  {title}
+                </h3>
+                <p class="mt-2 text-sm leading-7 text-[var(--muted-foreground)]">
+                  {description}
+                </p>
+              </div>
             </div>
           ))
         }
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- INTRO -->
-    <section class="section-padding relative bg-site">
-      <div class="pointer-events-none absolute inset-0 -z-10">
-        <div
-          class="absolute right-0 top-10 h-80 w-80 rounded-full bg-[var(--primary)]/10 blur-[120px]"
-        >
-        </div>
-      </div>
+		<!-- PROCESS -->
+		<section class="section-padding relative overflow-hidden bg-surface">
+		<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+			<div
+			class="diffuse-sphere absolute -left-52 top-10 h-[32rem] w-[32rem] rounded-full bg-[var(--primary)]/14 blur-[150px]"
+			aria-hidden="true"
+			>
+			</div>
 
-      <div class="site-container">
-        <div
-          class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start xl:gap-10"
-        >
-          <!-- Left column -->
-          <div class="lg:sticky lg:top-32">
-            <div class="max-w-4xl text-left">
-              <p class="section-eyebrow">
-                Custom IT Solutions for Dental Practices
-              </p>
+			<div
+			class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-[34rem] w-[34rem] rounded-full bg-[var(--primary)]/10 blur-[160px]"
+			aria-hidden="true"
+			>
+			</div>
 
-              <h2
-                class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-[1]"
-              >
-                Built for the way dental offices actually work.
-              </h2>
+			<div
+			class="parallax-layer absolute left-1/2 top-[6rem] w-[112rem] max-w-none -translate-x-1/2 opacity-[0.10] blur-3xl"
+			data-parallax-speed="-0.015"
+			aria-hidden="true"
+			>
+			<img
+				src="/images/backgrounds/dental-it-network-bg.png"
+				alt=""
+				class="w-full min-w-[70rem]"
+				loading="lazy"
+				decoding="async"
+			/>
+			</div>
 
-              <div
-                class="site-card mt-8 rounded-[2rem] p-6 text-left md:p-8 lg:p-9"
-              >
-                <h3 class="text-xl font-black sm:text-2xl">
-                  Dental IT support that understands your environment.
-                </h3>
+			<div
+			class="parallax-layer network-float absolute left-1/2 bottom-[2rem] w-[104rem] max-w-none -translate-x-1/2 opacity-[0.20]"
+			data-parallax-speed="0.018"
+			aria-hidden="true"
+			>
+			<img
+				src="/images/backgrounds/dental-it-network-bg.png"
+				alt=""
+				class="w-full min-w-[65rem]"
+				loading="lazy"
+				decoding="async"
+			/>
+			</div>
 
-                <p class="mt-4 text-base leading-8">
-                  Your dental practice depends on technology across every part
-                  of the day: front desk communication, workstations, imaging,
-                  servers, backups, cybersecurity, cloud systems, and patient
-                  data security. Dental IT brings those needs into one
-                  specialized support strategy.
-                </p>
-              </div>
-            </div>
-          </div>
+			<div
+			class="parallax-layer network-float-soft network-float-delay absolute -right-32 top-[8rem] w-[54rem] max-w-none opacity-[0.16]"
+			data-parallax-speed="-0.016"
+			aria-hidden="true"
+			>
+			<img
+				src="/images/backgrounds/dental-it-network-bg.png"
+				alt=""
+				class="w-full"
+				loading="lazy"
+				decoding="async"
+			/>
+			</div>
 
-          <!-- Right column -->
-          <div class="grid gap-5 md:grid-cols-2">
-            <div class="site-card rounded-[2rem] p-6 md:p-7">
-              <Activity class="size-9 text-[var(--primary)]" />
+			<div
+			class="absolute inset-0 bg-gradient-to-b from-[var(--surface)]/88 via-[var(--surface)]/48 to-[var(--surface)]/94"
+			>
+			</div>
+		</div>
 
-              <h3 class="mt-5 text-lg font-black sm:text-xl">
-                24/7 Software & Hardware Monitoring
-              </h3>
+		<div class="site-container relative">
+			<div class="mx-auto max-w-3xl text-center">
+			<p class="section-eyebrow justify-center">How We Work</p>
 
-              <p class="mt-4 text-sm leading-7">
-                Continuous visibility into system health helps detect CPU,
-                memory, disk, network, and workstation issues before they become
-                operational problems.
-              </p>
-            </div>
+			<h2
+				class="section-title mx-auto normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
+			>
+				From assessment to always-on support.
+			</h2>
 
-            <div class="site-card rounded-[2rem] p-6 md:p-7">
-              <Sparkles class="size-9 text-[var(--primary)]" />
+			<p class="section-description mx-auto">
+				A simple, structured process to help your dental practice improve
+				uptime, security, backups, performance, and long-term technology
+				planning.
+			</p>
+			</div>
 
-              <h3 class="mt-5 text-lg font-black sm:text-xl">
-                Peace of Mind Starting at $0.99/Day
-              </h3>
+			<div class="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+			{
+				process.map((item) => (
+				<article class="site-card group relative overflow-hidden rounded-[2rem] p-3 transition hover:-translate-y-1 hover:border-[var(--primary)]">
+					<div class="relative overflow-hidden rounded-[1.5rem]">
+					<img
+						src={item.image}
+						alt={item.alt}
+						class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
+						loading="lazy"
+						decoding="async"
+					/>
 
-              <p class="mt-4 text-sm leading-7">
-                Proactive maintenance helps keep workstations updated,
-                protected, monitored, and performing at the level your team
-                needs.
-              </p>
-            </div>
+					<div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
 
-            <div class="site-card rounded-[2rem] p-6 md:p-7">
-              <ShieldCheck class="size-9 text-[var(--primary)]" />
+					<div class="absolute bottom-4 left-4">
+						<span class="inline-flex rounded-full bg-[var(--primary)] px-3 py-1 text-xs font-black tracking-wide text-white">
+						{item.step}
+						</span>
+					</div>
+					</div>
 
-              <h3 class="mt-5 text-lg font-black sm:text-xl">
-                Security-First Dental IT Support
-              </h3>
+					<div class="p-4">
+					<h3 class="text-xl font-black sm:text-2xl">{item.title}</h3>
 
-              <p class="mt-4 text-sm leading-7">
-                Protect your practice with cybersecurity-focused support
-                designed to help reduce risks around workstations, patient data,
-                backups, and daily dental technology workflows.
-              </p>
-            </div>
+					<p class="mt-3 text-sm leading-7">{item.description}</p>
+					</div>
+				</article>
+				))
+			}
+			</div>
+		</div>
+		</section>
 
-            <div class="site-card rounded-[2rem] p-6 md:p-7">
-              <DatabaseBackup class="size-9 text-[var(--primary)]" />
+		<!-- FINAL CTA -->
+		<section
+		class="relative overflow-hidden bg-footer py-16 text-[var(--footer-foreground)] md:py-20 lg:py-28"
+		>
+		<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+			<div
+			class="diffuse-sphere absolute -left-48 top-0 h-[30rem] w-[30rem] rounded-full bg-[var(--primary)]/18 blur-[150px]"
+			aria-hidden="true"
+			>
+			</div>
 
-              <h3 class="mt-5 text-lg font-black sm:text-xl">
-                Cloud Backup & Recovery Planning
-              </h3>
+			<div
+			class="diffuse-sphere diffuse-sphere-delay absolute -right-48 bottom-0 h-[34rem] w-[34rem] rounded-full bg-[var(--primary)]/14 blur-[160px]"
+			aria-hidden="true"
+			>
+			</div>
 
-              <p class="mt-4 text-sm leading-7">
-                Keep patient data, imaging files, and business-critical systems
-                protected with backup strategies designed to support fast
-                recovery and minimize practice downtime.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+			<div
+			class="parallax-layer absolute left-1/2 bottom-[-4rem] w-[108rem] max-w-none -translate-x-1/2 opacity-[0.10] blur-2xl"
+			data-parallax-speed="-0.012"
+			aria-hidden="true"
+			>
+			<img
+				src="/images/backgrounds/dental-it-network-bg.png"
+				alt=""
+				class="w-full min-w-[65rem]"
+				loading="lazy"
+				decoding="async"
+			/>
+			</div>
 
-    <!-- SERVICES -->
-    <section class="section-padding relative overflow-hidden bg-surface">
-      <div class="pointer-events-none absolute inset-0">
-        <div
-          class="absolute left-1/2 top-0 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-[var(--primary)]/10 blur-[130px]"
-        >
-        </div>
-      </div>
+			<div
+			class="parallax-layer network-float absolute left-1/2 bottom-[-3rem] w-[100rem] max-w-none -translate-x-1/2 opacity-[0.20] blur-xl"
+			data-parallax-speed="0.015"
+			aria-hidden="true"
+			>
+			<img
+				src="/images/backgrounds/dental-it-network-bg.png"
+				alt=""
+				class="w-full min-w-[65rem]"
+				loading="lazy"
+				decoding="async"
+			/>
+			</div>
 
-      <div class="site-container relative">
-        <div class="mx-auto max-w-3xl text-center">
-          <p class="section-eyebrow">Our Services</p>
-          <h2
-            class="section-title mx-auto normal-case text-[clamp(2rem,4.2vw,3.8rem)] leading-[1]"
-          >
-            We got your practice covered.
-          </h2>
-          <p class="section-description mx-auto">
-            From managed IT support and cybersecurity to practice deployments,
-            cloud backups, VoIP, web design, SEO, and custom software, Dental IT
-            gives dental practices one expert technology partner.
-          </p>
-        </div>
+			<div
+			class="parallax-layer network-float-soft network-float-delay absolute right-[-16rem] top-6 w-[54rem] max-w-none opacity-[0.18]"
+			data-parallax-speed="-0.014"
+			aria-hidden="true"
+			>
+			<img
+				src="/images/backgrounds/dental-it-network-bg.png"
+				alt=""
+				class="w-full"
+				loading="lazy"
+				decoding="async"
+			/>
+			</div>
 
-        <div class="mt-14 lg:mt-16">
-          <div class="mb-7 flex items-center gap-4">
-            <div class="h-px flex-1 bg-[var(--border)]"></div>
-            <h3
-              class="text-center text-xs font-black uppercase tracking-[0.2em] text-[var(--primary)] sm:text-sm sm:tracking-[0.22em]"
-            >
-              Tech Support
-            </h3>
-            <div class="h-px flex-1 bg-[var(--border)]"></div>
-          </div>
+			<div
+			class="absolute inset-0 bg-gradient-to-b from-[var(--footer-background)]/88 via-[var(--footer-background)]/45 to-[var(--footer-background)]/95"
+			>
+			</div>
+		</div>
 
-          <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {
-              techSupportServices.map(
-                ({ title, href, description, icon: Icon }) => (
-                  <a
-                    href={href}
-                    class="service-card group relative overflow-hidden rounded-[2rem] p-6 transition hover:-translate-y-1 hover:border-[var(--primary)] md:p-7"
-                  >
-                    <div class="absolute -right-12 -top-12 size-32 rounded-full bg-[var(--primary)]/10 blur-2xl transition group-hover:bg-[var(--primary)]/20" />
-                    <Icon class="relative size-10 text-[var(--primary)]" />
-                    <h4 class="relative mt-6 text-lg font-black sm:text-xl">
-                      {title}
-                    </h4>
-                    <p class="relative mt-4 text-sm leading-7">{description}</p>
-                    <span class="relative mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-[var(--primary)]">
-                      Learn More
-                      <ArrowRight class="size-4 transition group-hover:translate-x-1" />
-                    </span>
-                  </a>
-                ),
-              )
-            }
-          </div>
-        </div>
+		<div class="site-container relative">
+			<div
+			class="glass-panel glass-highlight mx-auto max-w-5xl rounded-[2rem] p-6 text-center sm:p-8 md:rounded-[2.5rem] md:p-12 lg:p-16"
+			>
+			<p class="section-eyebrow justify-center">
+				Ready to Improve Your Dental IT?
+			</p>
 
-        <div class="mt-16 lg:mt-20">
-          <div class="mb-7 flex items-center gap-4">
-            <div class="h-px flex-1 bg-[var(--border)]"></div>
-            <h3
-              class="text-center text-xs font-black uppercase tracking-[0.2em] text-[var(--primary)] sm:text-sm sm:tracking-[0.22em]"
-            >
-              Deployments
-            </h3>
-            <div class="h-px flex-1 bg-[var(--border)]"></div>
-          </div>
+			<h2
+				class="mt-5 text-[clamp(2rem,4.2vw,3.75rem)] font-black leading-[1] tracking-[-0.05em] text-[var(--footer-foreground)]"
+			>
+				Get a free IT assessment for your dental practice.
+			</h2>
 
-          <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {
-              deploymentServices.map(
-                ({ title, href, description, icon: Icon }) => (
-                  <a
-                    href={href}
-                    class="site-card group relative overflow-hidden rounded-[2rem] p-6 transition hover:-translate-y-1 hover:border-[var(--primary)] md:p-7"
-                  >
-                    <Icon class="size-10 text-[var(--primary)]" />
-                    <h4 class="mt-6 text-lg font-black sm:text-xl">{title}</h4>
-                    <p class="mt-4 text-sm leading-7">{description}</p>
-                    <span class="mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-[var(--primary)]">
-                      Learn More
-                      <ArrowRight class="size-4 transition group-hover:translate-x-1" />
-                    </span>
-                  </a>
-                ),
-              )
-            }
-          </div>
-        </div>
+			<p
+				class="mx-auto mt-6 max-w-3xl text-base leading-8 text-[var(--footer-muted)] md:text-lg"
+			>
+				Let Dental IT review your current technology, identify risk, and
+				create a clear plan to improve security, backups, performance, and
+				support.
+			</p>
 
-        <div class="mt-16 lg:mt-20">
-          <div class="mb-7 flex items-center gap-4">
-            <div class="h-px flex-1 bg-[var(--border)]"></div>
-            <h3
-              class="text-center text-xs font-black uppercase tracking-[0.2em] text-[var(--primary)] sm:text-sm sm:tracking-[0.22em]"
-            >
-              Dental Practice Solutions
-            </h3>
-            <div class="h-px flex-1 bg-[var(--border)]"></div>
-          </div>
+			<div class="mt-9 flex justify-center">
+				<a
+				href="/contact"
+				class="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--primary)] px-8 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-[var(--primary-hover)]"
+				>
+				Schedule Free Assessment
+				<ArrowRight class="size-4" />
+				</a>
+			</div>
+			</div>
+		</div>
+		</section>
+	</main>
 
-          <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {
-              practiceSolutions.map(
-                ({ title, href, description, icon: Icon }) => (
-                  <a
-                    href={href}
-                    class="glass-panel glass-highlight group rounded-[2rem] p-6 transition hover:-translate-y-1 hover:border-[var(--primary)] md:p-7"
-                  >
-                    <Icon class="relative size-10 text-[var(--primary)]" />
-                    <h4 class="relative mt-6 text-base font-black sm:text-lg">
-                      {title}
-                    </h4>
-                    <p class="relative mt-4 text-sm leading-7 text-[var(--muted-foreground)]">
-                      {description} {description.length > 100 && <span class="text-[var(--primary)]">Learn more about this service.</span>}
-                    </p>
-                  </a>
-                ),
-              )
-            }
-          </div>
-        </div>
-      </div>
-    </section>
+	<style>
+		@keyframes floatY {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
 
-    <!-- PARALLAX FEATURE -->
-    <section class="relative overflow-hidden bg-site py-20 lg:py-28 xl:py-32">
-      <div class="pointer-events-none absolute inset-0 -z-10">
-        <div
-          class="absolute left-10 top-20 h-72 w-72 rounded-full bg-[var(--primary)]/10 blur-[110px]"
-        >
-        </div>
-        <div
-          class="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-[var(--primary)]/10 blur-[130px]"
-        >
-        </div>
-      </div>
+		50% {
+			transform: translateY(-14px);
+		}
+		}
 
-      <div class="site-container grid gap-12 lg:grid-cols-2 lg:items-center">
-        <div class="relative mx-auto w-full max-w-xl lg:max-w-none">
-          <div
-            class="grid gap-5 sm:grid-cols-2 lg:block lg:min-h-[34rem] xl:min-h-[38rem]"
-          >
-            <div
-              class="parallax-layer lg:absolute lg:left-0 lg:top-0 lg:w-[80%]"
-              data-parallax-speed="0.04"
-            >
-              <div class="glass-panel rounded-[2rem] p-3">
-                <!-- SEO image recommendation:
-					Replace with:
-					src="/images/home/miami-dental-practice-it-support-team.webp"
-					Suggested alt:
-					"Dental IT support team helping a Miami dental practice"
-					-->
-                <img
-                  src="/images/home/miami-dental-practice-it-support-team.webp"
-                  alt="Dental IT support team helping a Miami dental practice"
-                  class="aspect-[4/3] w-full rounded-[1.5rem] object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            </div>
+		@keyframes networkFloat {
+		0%,
+		100% {
+			translate: 0 0;
+		}
 
-            <div
-              class="parallax-layer lg:absolute lg:bottom-0 lg:right-0 lg:w-[72%]"
-              data-parallax-speed="-0.035"
-            >
-              <div class="glass-panel rounded-[2rem] p-3">
-                <!-- SEO image recommendation:
-					Replace with:
-					src="/images/home/dental-office-cybersecurity-monitoring-miami.webp"
-					Suggested alt:
-					"Cybersecurity and monitoring for a dental office in Miami"
-					-->
-                <img
-                  src="/images/home/dental-office-cybersecurity-monitoring-miami.webp"
-                  alt="Cybersecurity and monitoring for a dental office in Miami"
-                  class="aspect-[4/3] w-full rounded-[1.5rem] object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            </div>
+		50% {
+			translate: 0 -22px;
+		}
+		}
 
-            <div
-              class="floating-card hidden xl:absolute xl:left-1/2 xl:top-1/2 xl:block xl:w-64 xl:-translate-x-1/2 xl:-translate-y-1/2 xl:rounded-3xl xl:border xl:border-[var(--border)] xl:bg-[var(--card)] xl:p-6 xl:shadow-card"
-            >
-              <ShieldCheck class="size-10 text-[var(--primary)]" />
-              <p class="mt-4 text-sm font-black tracking-wide">
-                Secure. Monitored. Supported.
-              </p>
-              <p class="mt-3 text-sm leading-6">
-                A better IT experience for modern dental practices.
-              </p>
-            </div>
-          </div>
-        </div>
+		@keyframes networkFloatSoft {
+		0%,
+		100% {
+			translate: 0 0;
+			opacity: 0.16;
+		}
 
-        <div>
-          <p class="section-eyebrow">Why Dental Clinics Trust Us</p>
-          <h2
-            class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-[1]"
-          >
-            Technology support designed around patient care.
-          </h2>
-          <p class="section-description">
-            Downtime, security incidents, slow workstations, failed backups, and
-            disconnected systems can interrupt the patient experience. Dental IT
-            helps your team stay focused, productive, and protected.
-          </p>
+		50% {
+			translate: 0 -18px;
+			opacity: 0.28;
+		}
+		}
 
-          <div class="mt-9 grid gap-4">
-            {
-              whyChoose.map(({ title, description, icon: Icon }) => (
-                <div class="site-card flex gap-5 rounded-[2rem] p-5 sm:p-6">
-                  <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--primary)] text-white">
-                    <Icon class="size-6" />
-                  </div>
-                  <div>
-                    <h3 class="text-base font-black sm:text-lg">{title}</h3>
-                    <p class="mt-2 text-sm leading-7">{description}</p>
-                  </div>
-                </div>
-              ))
-            }
-          </div>
-        </div>
-      </div>
-    </section>
+		@keyframes diffusePulse {
+		0%,
+		100% {
+			transform: scale(1);
+			opacity: 0.75;
+		}
 
-    <!-- PROCESS -->
-    <section class="section-padding bg-surface">
-      <div class="site-container">
-        <div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
-          <div>
-            <p class="section-eyebrow">How We Work</p>
-            <h2
-              class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-[1]"
-            >
-              From assessment to always-on support.
-            </h2>
-          </div>
+		50% {
+			transform: scale(1.08);
+			opacity: 1;
+		}
+		}
 
-          <div class="grid gap-4">
-            {
-              process.map((item) => (
-                <div class="group grid gap-5 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-5 shadow-soft transition hover:-translate-y-1 hover:border-[var(--primary)] sm:p-6 md:grid-cols-[5rem_1fr] lg:grid-cols-[6rem_1fr]">
-                  <div class="text-4xl font-black tracking-[-0.05em] text-[var(--primary)] sm:text-5xl">
-                    {item.step}
-                  </div>
-                  <div>
-                    <h3 class="text-xl font-black sm:text-2xl">{item.title}</h3>
-                    <p class="mt-3 leading-7">{item.description}</p>
-                  </div>
-                </div>
-              ))
-            }
-          </div>
-        </div>
-      </div>
-    </section>
+		.floating-card {
+		animation: floatY 6s ease-in-out infinite;
+		}
 
-    <!-- FINAL CTA -->
-    <section
-      class="relative overflow-hidden bg-footer py-16 text-[var(--footer-foreground)] md:py-20 lg:py-28"
-    >
-      <div class="pointer-events-none absolute inset-0">
-        <div
-          class="absolute left-1/2 top-0 h-[26rem] w-[26rem] -translate-x-1/2 rounded-full bg-[var(--primary)]/20 blur-[140px]"
-        >
-        </div>
-      </div>
+		.floating-card-delay {
+		animation-delay: -2.5s;
+		}
 
-      <div class="site-container relative">
-        <div
-          class="glass-panel glass-highlight mx-auto max-w-5xl rounded-[2rem] p-6 text-center sm:p-8 md:rounded-[2.5rem] md:p-12 lg:p-16"
-        >
-          <p class="section-eyebrow justify-center">
-            Ready to Improve Your Dental IT?
-          </p>
-          <h2
-            class="mt-5 text-[clamp(2rem,4.2vw,3.75rem)] font-black leading-[1] tracking-[-0.05em] text-[var(--footer-foreground)]"
-          >
-            Get a free IT assessment for your dental practice.
-          </h2>
-          <p
-            class="mx-auto mt-6 max-w-3xl text-base leading-8 text-[var(--footer-muted)] md:text-lg"
-          >
-            Let Dental IT review your current technology, identify risk, and
-            create a clear plan to improve security, backups, performance, and
-            support.
-          </p>
+		.network-float {
+		animation: networkFloat 9s ease-in-out infinite;
+		will-change: translate, transform;
+		}
 
-          <div class="mt-9 flex justify-center">
-            <a
-              href="/contact"
-              class="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--primary)] px-8 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-[var(--primary-hover)]"
-            >
-              Schedule Free Assessment
-              <ArrowRight class="size-4" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+		.network-float-soft {
+		animation: networkFloatSoft 11s ease-in-out infinite;
+		will-change: translate, opacity, transform;
+		}
 
-  <style>
-    @keyframes floatY {
-      0%,
-      100% {
-        transform: translateY(0);
-      }
+		.network-float-delay {
+		animation-delay: -4s;
+		}
 
-      50% {
-        transform: translateY(-14px);
-      }
-    }
+		.diffuse-sphere {
+		animation: diffusePulse 10s ease-in-out infinite;
+		will-change: transform, opacity;
+		}
 
-    .floating-card {
-      animation: floatY 6s ease-in-out infinite;
-    }
+		.diffuse-sphere-delay {
+		animation-delay: -5s;
+		}
 
-    .floating-card-delay {
-      animation-delay: -2.5s;
-    }
+		@media (max-width: 1279px) {
+		.floating-card {
+			animation: none;
+		}
+		}
 
-    @media (max-width: 1279px) {
-      .floating-card {
-        animation: none;
-      }
-    }
+		@media (prefers-reduced-motion: reduce) {
+		.floating-card,
+		.network-float,
+		.network-float-soft,
+		.diffuse-sphere {
+			animation: none;
+		}
+		}
+	</style>
 
-    @media (prefers-reduced-motion: reduce) {
-      .floating-card {
-        animation: none;
-      }
-    }
-  </style>
+	<script>
+		const parallaxLayers = document.querySelectorAll("[data-parallax-speed]");
+		const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-  <script>
-    const parallaxLayers = document.querySelectorAll("[data-parallax-speed]");
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+		const updateParallax = () => {
+		if (reduceMotion.matches || window.innerWidth < 1024) return;
 
-    const updateParallax = () => {
-      if (reduceMotion.matches || window.innerWidth < 1024) return;
+		const scrollY = window.scrollY;
 
-      const scrollY = window.scrollY;
+		parallaxLayers.forEach((layer) => {
+			const speed = Number(layer.getAttribute("data-parallax-speed") || 0);
+			const y = scrollY * speed;
 
-      parallaxLayers.forEach((layer) => {
-        const speed = Number(layer.getAttribute("data-parallax-speed") || 0);
-        const y = scrollY * speed;
+			layer.style.setProperty("--parallax-y", `${y}px`);
+			layer.style.transform = `translate3d(0, var(--parallax-y), 0)`;
+		});
+		};
 
-        layer.style.setProperty("--parallax-y", `${y}px`);
-        layer.style.transform = `translate3d(0, var(--parallax-y), 0)`;
-      });
-    };
+		const resetParallax = () => {
+		parallaxLayers.forEach((layer) => {
+			layer.style.removeProperty("--parallax-y");
+			layer.style.transform = "";
+		});
+		};
 
-    const resetParallax = () => {
-      parallaxLayers.forEach((layer) => {
-        layer.style.removeProperty("--parallax-y");
-        layer.style.transform = "";
-      });
-    };
+		const handleParallax = () => {
+		if (reduceMotion.matches || window.innerWidth < 1024) {
+			resetParallax();
+			return;
+		}
 
-    const handleParallax = () => {
-      if (reduceMotion.matches || window.innerWidth < 1024) {
-        resetParallax();
-        return;
-      }
+		updateParallax();
+		};
 
-      updateParallax();
-    };
+		handleParallax();
 
-    handleParallax();
-
-    window.addEventListener("scroll", handleParallax, { passive: true });
-    window.addEventListener("resize", handleParallax);
-  </script>
+		window.addEventListener("scroll", handleParallax, { passive: true });
+		window.addEventListener("resize", handleParallax);
+	</script>
 </MainLayout>
