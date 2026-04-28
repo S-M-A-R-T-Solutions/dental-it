@@ -7,6 +7,8 @@ import {
 	DatabaseBackup,
 	CheckCircle2,
 	Sparkles,
+	ChevronLeft,
+	ChevronRight,
 } from "lucide-astro";
 
 import {
@@ -17,7 +19,30 @@ import {
 	trustItems,
 	whyChoose,
 	process,
-} from "../data/home";
+} from "../data/home.ts";
+
+const heroSlides = [
+	{
+		src: "/images/home/hero-dental-it-dashboard-miami-01.webp",
+		alt: "Dental IT services dashboard for a Miami dental practice",
+	},
+	{
+		src: "/images/home/hero-dental-office-monitoring-miami-02.webp",
+		alt: "Dental office technology monitoring in Miami",
+	},
+	{
+		src: "/images/home/hero-dental-cybersecurity-miami-03.webp",
+		alt: "Dental cybersecurity protection for a Miami dental office",
+	},
+	{
+		src: "/images/home/hero-dental-cloud-backup-miami-04.webp",
+		alt: "Cloud backup and recovery planning for a Miami dental practice",
+	},
+	{
+		src: "/images/home/hero-dental-it-support-team-miami-05.webp",
+		alt: "Dental IT support team helping a Miami dental practice",
+	},
+];
 ---
 
 <MainLayout
@@ -28,1015 +53,1081 @@ import {
 	<main class="overflow-hidden">
 		<!-- HERO -->
 		<section class="relative isolate overflow-hidden bg-site">
-		<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-			<div
-			class="diffuse-sphere absolute -left-52 top-16 h-136 w-136 rounded-full bg-(--primary)/18 blur-[150px]"
-			aria-hidden="true"
-			>
-			</div>
-
-			<div
-			class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-152 w-152 rounded-full bg-(--primary)/14 blur-[170px]"
-			aria-hidden="true"
-			>
-			</div>
-
-			<div
-			class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.08)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-30"
-			>
-			</div>
-
-			<div
-			class="parallax-layer absolute top-40 w-full max-w-none opacity-[0.45] blur"
-			data-parallax-speed="-0.015"
-			aria-hidden="true"
-			>
-			<img
-				src="/images/backgrounds/dental-it-network-bg.png"
-				alt=""
-				class="w-full min-w-280"
-				loading="eager"
-				decoding="async"
-			/>
-			</div>
-
-			<div
-			class="parallax-layer network-float absolute bottom-4 w-full max-w-none -translate-x-1/2 opacity-[0.45]"
-			data-parallax-speed="0.025"
-			aria-hidden="true"
-			>
-			<img
-				src="/images/backgrounds/dental-it-network-bg.png"
-				alt=""
-				class="w-full min-w-280"
-				loading="eager"
-				decoding="async"
-			/>
-			</div>
-
-			<div
-			class="parallax-layer network-float-soft network-float-delay absolute top-10 w-full max-w-none opacity-[0.08] blur"
-			data-parallax-speed="-0.018"
-			aria-hidden="true"
-			>
-			<img
-				src="/images/backgrounds/dental-it-network-bg.png"
-				alt=""
-				class="w-full"
-				loading="eager"
-				decoding="async"
-			/>
-			</div>
-
-			<div
-			class="absolute inset-0 bg-linear-to-b from-(--background)/92 via-(--background)/50 to-(--background)/92"
-			>
-			</div>
-		</div>
-
-		<div
-			class="site-container grid min-h-[calc(100vh-5rem)] items-center gap-12 py-16 md:py-20 lg:grid-cols-[1.02fr_0.98fr] lg:py-24"
-		>
-			<div class="relative z-10">
-			<div
-				class="glass-panel inline-flex max-w-full items-center gap-3 rounded-full px-4 py-2"
-			>
-				<span
-				class="inline-flex size-2.5 shrink-0 rounded-full bg-(--primary) shadow-[0_0_18px_rgba(239,35,49,0.95)]"
-				></span>
-
-				<span
-				class="text-xs font-black uppercase tracking-[0.18em] text-(--foreground) sm:tracking-[0.22em]"
-				>
-				Dental IT Services in Miami, FL
-				</span>
-			</div>
-
-			<h1
-				class="mt-7 max-w-5xl text-balance text-[clamp(2.35rem,5.5vw,4.75rem)] font-black leading-[0.95] tracking-tighter"
-			>
-				Reliable IT for dental practices that cannot afford downtime.
-			</h1>
-
-			<p
-				class="mt-7 max-w-2xl text-base leading-8 text-(--muted-foreground) sm:text-lg md:text-xl"
-			>
-				Dental IT helps Miami and South Florida dental offices stay secure,
-				backed up, compliant, monitored, and supported — so your team can
-				focus on patients instead of technology problems.
-			</p>
-
-			<div class="mt-9 flex flex-col gap-4 sm:flex-row">
-				<a
-				href="/contact"
-				class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
-				>
-				Get Free IT Assessment
-				<ArrowRight class="size-4" />
-				</a>
-
-				<a
-				href="/tech-support/managed-it-support"
-				class="glass-panel inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-sm font-black uppercase tracking-wide text-(--foreground) transition hover:-translate-y-1 hover:border-(--primary) hover:text-(--primary)"
-				>
-				Explore Services
-				<ArrowRight class="size-4" />
-				</a>
-			</div>
-
-			<div class="mt-10 grid gap-3 sm:grid-cols-2">
-				{
-				trustItems.slice(0, 4).map((item) => (
-					<div class="flex items-start gap-3">
-					<CheckCircle2 class="mt-1 size-5 shrink-0 text-(--primary)" />
-					<p class="text-sm font-bold leading-6 text-(--muted-foreground)">
-						{item}
-					</p>
-					</div>
-				))
-				}
-			</div>
-			</div>
-
-			<div class="relative mx-auto w-full max-w-xl lg:max-w-none">
-			<div class="relative">
-				<div class="parallax-layer" data-parallax-speed="0.035">
+			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
 				<div
-					class="glass-panel glass-highlight relative overflow-hidden rounded-4xl p-3 sm:rounded-[2.5rem] sm:p-4"
+					class="diffuse-sphere absolute -left-52 top-16 h-136 w-136 rounded-full bg-(--primary)/18 blur-[150px]"
+					aria-hidden="true"
 				>
-					<!-- SEO image recommendation:
-					Replace with:
-					src="/images/home/dental-it-services-miami-dental-office-dashboard.webp"
-					Alt:
-					"Dental IT services dashboard for a Miami dental practice"
-					-->
-					<img
-					src="/images/home/dental-it-services-miami-dental-office-dashboard.webp"
-					alt="Dental IT services dashboard for a Miami dental practice"
-					class="aspect-[4/4.8] w-full rounded-3xl object-cover sm:rounded-4xl lg:aspect-4/5"
-					loading="eager"
-					decoding="async"
-					/>
+				</div>
 
+				<div
+					class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-152 w-152 rounded-full bg-(--primary)/14 blur-[170px]"
+					aria-hidden="true"
+				>
+				</div>
+
+				<div
+					class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.08)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-30"
+				>
+				</div>
+
+				<div
+					class="parallax-layer absolute top-40 w-full max-w-none opacity-[0.45] blur"
+					data-parallax-speed="-0.015"
+					aria-hidden="true"
+				>
+					<img
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						class="w-full min-w-280"
+						loading="eager"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="parallax-layer network-float absolute bottom-4 w-full max-w-none -translate-x-1/2 opacity-[0.45]"
+					data-parallax-speed="0.025"
+					aria-hidden="true"
+				>
+					<img
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						class="w-full min-w-280"
+						loading="eager"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="parallax-layer network-float-soft network-float-delay absolute top-10 w-full max-w-none opacity-[0.08] blur"
+					data-parallax-speed="-0.018"
+					aria-hidden="true"
+				>
+					<img
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						class="w-full"
+						loading="eager"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="absolute inset-0 bg-linear-to-b from-(--background)/92 via-(--background)/50 to-(--background)/92"
+				>
+				</div>
+			</div>
+
+			<div
+				class="site-container grid min-h-[calc(100vh-5rem)] items-center gap-12 py-16 md:py-20 lg:grid-cols-[1.02fr_0.98fr] lg:py-24"
+			>
+				<div class="relative z-10">
 					<div
-					class="absolute inset-x-5 bottom-5 rounded-2xl border border-white/15 bg-black/55 p-4 text-white shadow-2xl backdrop-blur-2xl sm:inset-x-8 sm:bottom-8 sm:rounded-3xl sm:p-5"
+						class="glass-panel inline-flex max-w-full items-center gap-3 rounded-full px-4 py-2"
 					>
+						<span
+							class="inline-flex size-2.5 shrink-0 rounded-full bg-(--primary) shadow-[0_0_18px_rgba(239,35,49,0.95)]"
+						></span>
+
+						<span
+							class="text-xs font-black uppercase tracking-[0.18em] text-(--foreground) sm:tracking-[0.22em]"
+						>
+							Dental IT Services in Miami, FL
+						</span>
+					</div>
+
+					<h1
+						class="mt-7 max-w-5xl text-balance text-[clamp(2.35rem,5.5vw,4.75rem)] font-black leading-[0.95] tracking-tighter"
+					>
+						Reliable IT for dental practices that cannot afford downtime.
+					</h1>
+
 					<p
-						class="text-xs font-black uppercase tracking-[0.2em] text-(--primary)"
+						class="mt-7 max-w-2xl text-base leading-8 text-(--muted-foreground) sm:text-lg md:text-xl"
 					>
-						Live Monitoring
+						Dental IT helps Miami and South Florida dental offices stay secure,
+						backed up, compliant, monitored, and supported — so your team can
+						focus on patients instead of technology problems.
 					</p>
 
-					<div class="mt-4 grid grid-cols-3 gap-3">
-						<div>
-						<p class="text-xl font-black text-white sm:text-2xl">
-							24/7
-						</p>
-						<p class="mt-1 text-[0.7rem] text-white/65 sm:text-xs">
-							Monitoring
-						</p>
-						</div>
+					<div class="mt-9 flex flex-col gap-4 sm:flex-row">
+						<a
+							href="/contact"
+							class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
+						>
+							Get Free IT Assessment
+							<ArrowRight class="size-4" />
+						</a>
 
-						<div>
-						<p class="text-xl font-black text-white sm:text-2xl">
-							EDR
-						</p>
-						<p class="mt-1 text-[0.7rem] text-white/65 sm:text-xs">
-							Security
-						</p>
-						</div>
-
-						<div>
-						<p class="text-xl font-black text-white sm:text-2xl">
-							HIPAA
-						</p>
-						<p class="mt-1 text-[0.7rem] text-white/65 sm:text-xs">
-							Support
-						</p>
-						</div>
+						<a
+							href="/tech-support/managed-it-support"
+							class="glass-panel inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-sm font-black uppercase tracking-wide text-(--foreground) transition hover:-translate-y-1 hover:border-(--primary) hover:text-(--primary)"
+						>
+							Explore Services
+							<ArrowRight class="size-4" />
+						</a>
 					</div>
+
+					<div class="mt-10 grid gap-3 sm:grid-cols-2">
+						{
+							trustItems.slice(0, 4).map((item) => (
+								<div class="flex items-start gap-3">
+									<CheckCircle2 class="mt-1 size-5 shrink-0 text-(--primary)" />
+									<p class="text-sm font-bold leading-6 text-(--muted-foreground)">
+										{item}
+									</p>
+								</div>
+							))
+						}
 					</div>
 				</div>
+
+				<div class="relative mx-auto w-full max-w-xl lg:max-w-none">
+					<div class="relative">
+						<div class="parallax-layer" data-parallax-speed="0.035">
+							<div
+								id="hero-slideshow"
+								class="glass-panel glass-highlight relative overflow-hidden rounded-4xl p-3 sm:rounded-[2.5rem] sm:p-4"
+								data-current-slide="0"
+							>
+								<!-- SEO image recommendation:
+									Place these local images in:
+									public/images/home/
+
+									Recommended filenames:
+									hero-dental-it-dashboard-miami-01.webp
+									hero-dental-office-monitoring-miami-02.webp
+									hero-dental-cybersecurity-miami-03.webp
+									hero-dental-cloud-backup-miami-04.webp
+									hero-dental-it-support-team-miami-05.webp
+								-->
+
+								<div
+									class="relative aspect-[4/4.8] overflow-hidden rounded-3xl sm:rounded-4xl lg:aspect-4/5"
+								>
+									{
+										heroSlides.map((slide, index) => (
+											<img
+												src={slide.src}
+												alt={slide.alt}
+												class:list={[
+													"hero-slide absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700",
+													index === 0 && "is-active",
+												]}
+												data-hero-slide
+												data-active={index === 0 ? "true" : "false"}
+												loading={index === 0 ? "eager" : "lazy"}
+												decoding="async"
+											/>
+										))
+									}
+								</div>
+
+								<button
+									type="button"
+									class="hero-slide-prev absolute left-6 top-1/2 z-20 inline-flex size-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-black/45 text-white shadow-xl backdrop-blur-xl transition hover:bg-(--primary) sm:left-8"
+									aria-label="Previous hero image"
+								>
+									<ChevronLeft class="size-5" />
+								</button>
+
+								<button
+									type="button"
+									class="hero-slide-next absolute right-6 top-1/2 z-20 inline-flex size-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-black/45 text-white shadow-xl backdrop-blur-xl transition hover:bg-(--primary) sm:right-8"
+									aria-label="Next hero image"
+								>
+									<ChevronRight class="size-5" />
+								</button>
+
+								<div
+									class="absolute inset-x-5 bottom-5 z-20 rounded-2xl border border-white/15 bg-black/55 p-4 text-white shadow-2xl backdrop-blur-2xl sm:inset-x-8 sm:bottom-8 sm:rounded-3xl sm:p-5"
+								>
+									<p
+										class="text-xs font-black uppercase tracking-[0.2em] text-(--primary)"
+									>
+										Live Monitoring
+									</p>
+
+									<div class="mt-4 grid grid-cols-3 gap-3">
+										<div>
+											<p class="text-xl font-black text-white sm:text-2xl">
+												24/7
+											</p>
+											<p class="mt-1 text-[0.7rem] text-white/65 sm:text-xs">
+												Monitoring
+											</p>
+										</div>
+
+										<div>
+											<p class="text-xl font-black text-white sm:text-2xl">
+												EDR
+											</p>
+											<p class="mt-1 text-[0.7rem] text-white/65 sm:text-xs">
+												Security
+											</p>
+										</div>
+
+										<div>
+											<p class="text-xl font-black text-white sm:text-2xl">
+												HIPAA
+											</p>
+											<p class="mt-1 text-[0.7rem] text-white/65 sm:text-xs">
+												Support
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div
+									class="absolute bottom-32 left-1/2 z-20 hidden -translate-x-1/2 items-center gap-2 sm:flex"
+								>
+									{
+										heroSlides.map((_, index) => (
+											<span
+												class:list={[
+													"hero-slide-dot size-2 rounded-full bg-white/35 transition-all duration-300",
+													index === 0 && "is-active",
+												]}
+												data-hero-dot
+												aria-hidden="true"
+											/>
+										))
+									}
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			</div>
-		</div>
 		</section>
 
 		<!-- STATS -->
 		<section class="relative border-y border-(--border) bg-surface">
-		<div
-			class="site-container grid gap-px overflow-hidden py-8 sm:grid-cols-2 lg:grid-cols-4 lg:py-10"
-		>
-			{
-			stats.map((stat) => (
-				<div class="group relative row-5 p-5 sm:p-6 lg:p-8">
-					<div class="absolute inset-0 rounded-2xl bg-(--primary) opacity-0 transition group-hover:opacity-[0.06]" />
-					<p class="relative text-[clamp(2.4rem,5vw,3.25rem)] font-black tracking-tighter text-(--foreground)">
-						{stat.prefix}
-						<span class="text-(--primary)">{stat.value}</span>
-						{stat.suffix}
-					</p>
-					<p class="relative mt-3 max-w-xs text-sm font-bold leading-6 text-(--muted-foreground)">
-						{stat.label}
-					</p>
-				</div>
-			))
-			}
-		</div>
+			<div
+				class="site-container grid gap-px overflow-hidden py-8 sm:grid-cols-2 lg:grid-cols-4 lg:py-10"
+			>
+				{
+					stats.map((stat) => (
+						<div class="group relative row-5 p-5 sm:p-6 lg:p-8">
+							<div class="absolute inset-0 rounded-2xl bg-(--primary) opacity-0 transition group-hover:opacity-[0.06]" />
+							<p class="relative text-[clamp(2.4rem,5vw,3.25rem)] font-black tracking-tighter text-(--foreground)">
+								{stat.prefix}
+								<span class="text-(--primary)">{stat.value}</span>
+								{stat.suffix}
+							</p>
+							<p class="relative mt-3 max-w-xs text-sm font-bold leading-6 text-(--muted-foreground)">
+								{stat.label}
+							</p>
+						</div>
+					))
+				}
+			</div>
 		</section>
 
 		<!-- INTRO -->
 		<section class="section-padding relative overflow-hidden bg-site">
-		<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-			<div
-			class="diffuse-sphere absolute -left-48 top-10 h-112 w-md rounded-full bg-(--primary)/12 blur-[145px]"
-			aria-hidden="true"
-			>
-			</div>
-
-			<div
-			class="diffuse-sphere diffuse-sphere-delay absolute -right-56 bottom-10 h-128 w-lg rounded-full bg-(--primary)/10 blur-[160px]"
-			aria-hidden="true"
-			>
-			</div>
-
-			<div
-			class="absolute inset-0 bg-linear-to-b from-(--background)/86 via-(--background)/45 to-(--background)/92"
-			>
-			</div>
-		</div>
-
-		<div class="site-container relative">
-			<div
-			class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start xl:gap-10"
-			>
-			<div class="lg:sticky lg:top-32">
-				<div class="max-w-4xl text-left">
-				<p class="section-eyebrow">
-					Custom IT Solutions for Dental Practices
-				</p>
-
-				<h2
-					class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
+			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+				<div
+					class="diffuse-sphere absolute -left-48 top-10 h-112 w-md rounded-full bg-(--primary)/12 blur-[145px]"
+					aria-hidden="true"
 				>
-					Built for the way dental offices actually work.
-				</h2>
+				</div>
 
 				<div
-					class="site-card mt-8 rounded-4xl p-6 text-left md:p-8 lg:p-9"
+					class="diffuse-sphere diffuse-sphere-delay absolute -right-56 bottom-10 h-128 w-lg rounded-full bg-(--primary)/10 blur-[160px]"
+					aria-hidden="true"
 				>
-					<h3 class="text-xl font-black sm:text-2xl">
-					Dental IT support that understands your environment.
-					</h3>
-
-					<p class="mt-4 text-base leading-8">
-					Your dental practice depends on technology across every part
-					of the day: front desk communication, workstations, imaging,
-					servers, backups, cybersecurity, cloud systems, and patient
-					data security. Dental IT brings those needs into one
-					specialized support strategy.
-					</p>
 				</div>
+
+				<div
+					class="absolute inset-0 bg-linear-to-b from-(--background)/86 via-(--background)/45 to-(--background)/92"
+				>
 				</div>
 			</div>
 
-			<div class="grid gap-5 md:grid-cols-2">
-				<div class="site-card rounded-4xl p-6 md:p-7">
-				<Activity class="size-9 text-(--primary)" />
+			<div class="site-container relative">
+				<div
+					class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start xl:gap-10"
+				>
+					<div class="lg:sticky lg:top-32">
+						<div class="max-w-4xl text-left">
+							<p class="section-eyebrow">
+								Custom IT Solutions for Dental Practices
+							</p>
 
-				<h3 class="mt-5 text-lg font-black sm:text-xl">
-					24/7 Software & Hardware Monitoring
-				</h3>
+							<h2
+								class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
+							>
+								Built for the way dental offices actually work.
+							</h2>
 
-				<p class="mt-4 text-sm leading-7">
-					Continuous visibility into system health helps detect CPU,
-					memory, disk, network, and workstation issues before they become
-					operational problems.
-				</p>
-				</div>
+							<div
+								class="site-card mt-8 rounded-4xl p-6 text-left md:p-8 lg:p-9"
+							>
+								<h3 class="text-xl font-black sm:text-2xl">
+									Dental IT support that understands your environment.
+								</h3>
 
-				<div class="site-card rounded-4xl p-6 md:p-7">
-				<Sparkles class="size-9 text-(--primary)" />
+								<p class="mt-4 text-base leading-8">
+									Your dental practice depends on technology across every part
+									of the day: front desk communication, workstations, imaging,
+									servers, backups, cybersecurity, cloud systems, and patient
+									data security. Dental IT brings those needs into one
+									specialized support strategy.
+								</p>
+							</div>
+						</div>
+					</div>
 
-				<h3 class="mt-5 text-lg font-black sm:text-xl">
-					Peace of Mind Starting at $0.99/Day
-				</h3>
+					<div class="grid gap-5 md:grid-cols-2">
+						<div class="site-card rounded-4xl p-6 md:p-7">
+							<Activity class="size-9 text-(--primary)" />
 
-				<p class="mt-4 text-sm leading-7">
-					Proactive maintenance helps keep workstations updated,
-					protected, monitored, and performing at the level your team
-					needs.
-				</p>
-				</div>
+							<h3 class="mt-5 text-lg font-black sm:text-xl">
+								24/7 Software & Hardware Monitoring
+							</h3>
 
-				<div class="site-card rounded-4xl p-6 md:p-7">
-				<ShieldCheck class="size-9 text-(--primary)" />
+							<p class="mt-4 text-sm leading-7">
+								Continuous visibility into system health helps detect CPU,
+								memory, disk, network, and workstation issues before they become
+								operational problems.
+							</p>
+						</div>
 
-				<h3 class="mt-5 text-lg font-black sm:text-xl">
-					Security-First Dental IT Support
-				</h3>
+						<div class="site-card rounded-4xl p-6 md:p-7">
+							<Sparkles class="size-9 text-(--primary)" />
 
-				<p class="mt-4 text-sm leading-7">
-					Protect your practice with cybersecurity-focused support
-					designed to help reduce risks around workstations, patient data,
-					backups, and daily dental technology workflows.
-				</p>
-				</div>
+							<h3 class="mt-5 text-lg font-black sm:text-xl">
+								Peace of Mind Starting at $0.99/Day
+							</h3>
 
-				<div class="site-card rounded-4xl p-6 md:p-7">
-				<DatabaseBackup class="size-9 text-(--primary)" />
+							<p class="mt-4 text-sm leading-7">
+								Proactive maintenance helps keep workstations updated,
+								protected, monitored, and performing at the level your team
+								needs.
+							</p>
+						</div>
 
-				<h3 class="mt-5 text-lg font-black sm:text-xl">
-					Cloud Backup & Recovery Planning
-				</h3>
+						<div class="site-card rounded-4xl p-6 md:p-7">
+							<ShieldCheck class="size-9 text-(--primary)" />
 
-				<p class="mt-4 text-sm leading-7">
-					Keep patient data, imaging files, and business-critical systems
-					protected with backup strategies designed to support fast
-					recovery and minimize practice downtime.
-				</p>
+							<h3 class="mt-5 text-lg font-black sm:text-xl">
+								Security-First Dental IT Support
+							</h3>
+
+							<p class="mt-4 text-sm leading-7">
+								Protect your practice with cybersecurity-focused support
+								designed to help reduce risks around workstations, patient data,
+								backups, and daily dental technology workflows.
+							</p>
+						</div>
+
+						<div class="site-card rounded-4xl p-6 md:p-7">
+							<DatabaseBackup class="size-9 text-(--primary)" />
+
+							<h3 class="mt-5 text-lg font-black sm:text-xl">
+								Cloud Backup & Recovery Planning
+							</h3>
+
+							<p class="mt-4 text-sm leading-7">
+								Keep patient data, imaging files, and business-critical systems
+								protected with backup strategies designed to support fast
+								recovery and minimize practice downtime.
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
-			</div>
-		</div>
 		</section>
 
 		<!-- SERVICES -->
 		<section class="section-padding relative overflow-hidden bg-surface">
-		<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-			<div
-			class="diffuse-sphere absolute -left-44 top-10 h-120 w-120 rounded-full bg-(--primary)/16 blur-[150px]"
-			aria-hidden="true"
-			>
-			</div>
-
-			<div
-			class="diffuse-sphere diffuse-sphere-delay absolute -right-48 top-[35%] h-136 w-136 rounded-full bg-(--primary)/10 blur-[160px]"
-			aria-hidden="true"
-			>
-			</div>
-
-			<div
-			class="absolute left-1/2 top-0 h-112 w-md -translate-x-1/2 rounded-full bg-(--primary)/10 blur-[130px]"
-			>
-			</div>
-
-			<div
-			class="parallax-layer absolute w-full max-w-none opacity-[0.10] blur"
-			data-parallax-speed="-0.012"
-			aria-hidden="true"
-			>
-			<img
-				src="/images/backgrounds/dental-it-network-bg.png"
-				alt=""
-				class="w-full min-w-280"
-				loading="lazy"
-				decoding="async"
-			/>
-			</div>
-
-			<div
-			class="parallax-layer network-float absolute left-1/2 top-52 w-432 max-w-none -translate-x-1/2 opacity-[0.28]"
-			data-parallax-speed="0.018"
-			aria-hidden="true"
-			>
-			<img
-				src="/images/backgrounds/dental-it-network-bg.png"
-				alt=""
-				class="w-full min-w-280"
-				loading="lazy"
-				decoding="async"
-			/>
-			</div>
-
-			<div
-			class="parallax-layer network-float-soft network-float-delay absolute -right-32 top-112 w-232 max-w-none opacity-[0.20]"
-			data-parallax-speed="-0.016"
-			aria-hidden="true"
-			>
-			<img
-				src="/images/backgrounds/dental-it-network-bg.png"
-				alt=""
-				class="w-full"
-				loading="lazy"
-				decoding="async"
-			/>
-			</div>
-
-			<div
-			class="absolute inset-0 bg-linear-to-b from-(--surface)/88 via-(--surface)/48 to-(--surface)/94"
-			>
-			</div>
-		</div>
-
-		<div class="site-container relative">
-			<div class="mx-auto max-w-3xl text-center">
-			<p class="section-eyebrow">Our Services</p>
-
-			<h2
-				class="section-title mx-auto normal-case text-[clamp(2rem,4.2vw,3.8rem)] leading-none"
-			>
-				We got your practice covered.
-			</h2>
-
-			<p class="section-description mx-auto">
-				From managed IT support and cybersecurity to practice deployments,
-				cloud backups, VoIP, web design, SEO, and custom software, Dental IT
-				gives dental practices one expert technology partner.
-			</p>
-			</div>
-
-			<div class="mt-14 lg:mt-16">
-			<div class="mb-7 flex items-center gap-4">
-				<div class="h-px flex-1 bg-(--border)"></div>
-				<h3
-				class="text-center text-xs font-black uppercase tracking-[0.2em] text-(--primary) sm:text-sm sm:tracking-[0.22em]"
+			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+				<div
+					class="diffuse-sphere absolute -left-44 top-10 h-120 w-120 rounded-full bg-(--primary)/16 blur-[150px]"
+					aria-hidden="true"
 				>
-				Tech Support
-				</h3>
-				<div class="h-px flex-1 bg-(--border)"></div>
-			</div>
+				</div>
 
-			<div class="flex flex-wrap justify-center gap-5">
-				{
-				techSupportServices.map(
-					({ title, href, description, icon: Icon }) => (
-					<a
-						href={href}
-						class="service-card group relative flex w-full flex-col overflow-hidden rounded-4xl p-6 transition hover:-translate-y-1 hover:border-(--primary) md:w-[calc(50%-0.625rem)] md:p-7 xl:w-[calc(25%-0.9375rem)]"
-					>
-						<div class="absolute -right-12 -top-12 size-32 rounded-full bg-(--primary)/10 blur-2xl transition group-hover:bg-(--primary)/20" />
-						<Icon class="relative size-10 text-(--primary)" />
-						<h4 class="relative mt-6 text-lg font-black sm:text-xl">
-						{title}
-						</h4>
-						<p class="relative mt-4 text-sm leading-7">{description}</p>
-						<span class="relative mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-(--primary)">
-						Learn More
-						<ArrowRight class="size-4 transition group-hover:translate-x-1" />
-						</span>
-					</a>
-					),
-				)
-				}
-			</div>
-			</div>
-
-			<div class="mt-16 lg:mt-20">
-			<div class="mb-7 flex items-center gap-4">
-				<div class="h-px flex-1 bg-(--border)"></div>
-				<h3
-				class="text-center text-xs font-black uppercase tracking-[0.2em] text-(--primary) sm:text-sm sm:tracking-[0.22em]"
+				<div
+					class="diffuse-sphere diffuse-sphere-delay absolute -right-48 top-[35%] h-136 w-136 rounded-full bg-(--primary)/10 blur-[160px]"
+					aria-hidden="true"
 				>
-				Deployments
-				</h3>
-				<div class="h-px flex-1 bg-(--border)"></div>
-			</div>
+				</div>
 
-			<div class="flex flex-wrap justify-center gap-5">
-				{
-				deploymentServices.map(
-					({ title, href, description, icon: Icon }) => (
-					<a
-						href={href}
-						class="service-card group relative flex w-full flex-col overflow-hidden rounded-4xl p-6 transition hover:-translate-y-1 hover:border-(--primary) md:w-[calc(50%-0.625rem)] md:p-7 xl:w-[calc(25%-0.9375rem)]"
-					>
-						<Icon class="size-10 text-(--primary)" />
-						<h4 class="mt-6 text-lg font-black sm:text-xl">{title}</h4>
-						<p class="mt-4 text-sm leading-7">{description}</p>
-						<span class="mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-(--primary)">
-						Learn More
-						<ArrowRight class="size-4 transition group-hover:translate-x-1" />
-						</span>
-					</a>
-					),
-				)
-				}
-			</div>
-			</div>
-
-			<div class="mt-16 lg:mt-20">
-			<div class="mb-7 flex items-center gap-4">
-				<div class="h-px flex-1 bg-(--border)"></div>
-				<h3
-				class="text-center text-xs font-black uppercase tracking-[0.2em] text-(--primary) sm:text-sm sm:tracking-[0.22em]"
+				<div
+					class="absolute left-1/2 top-0 h-112 w-md -translate-x-1/2 rounded-full bg-(--primary)/10 blur-[130px]"
 				>
-				Dental Practice Solutions
-				</h3>
-				<div class="h-px flex-1 bg-(--border)"></div>
-			</div>
+				</div>
 
-			<div class="flex flex-wrap justify-center gap-5">
-				{
-				practiceSolutions.map(
-					({ title, href, description, icon: Icon }) => (
-					<a
-						href={href}
-						class="service-card group relative flex w-full flex-col overflow-hidden rounded-4xl p-6 transition hover:-translate-y-1 hover:border-(--primary) md:w-[calc(50%-0.625rem)] md:p-7 xl:w-[calc(25%-0.9375rem)]"
-					>
-						<Icon class="relative size-10 text-(--primary)" />
-						<h4 class="relative mt-6 text-base font-black sm:text-lg">
-						{title}
-						</h4>
-						<p class="relative mt-4 text-sm leading-7 text-(--muted-foreground)">
-						{description}
-						</p>
-						<span class="mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-(--primary)">
-						Learn More
-						<ArrowRight class="size-4 transition group-hover:translate-x-1" />
-						</span>
-					</a>
-					),
-				)
-				}
-			</div>
-			</div>
-		</div>
-		</section>
-
-		<!-- PARALLAX FEATURE -->
-<section
-  class="relative overflow-hidden bg-site py-20 lg:py-28 xl:py-32"
-  style="
-    background-image: url('/images/home/dental-practice-bg.webp');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  "
->
-  <!-- Background overlays -->
-  <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-    <!-- Main contrast overlay -->
-    <div
-      class="absolute inset-0 bg-(--background)/50 dark:bg-black/78"
-      aria-hidden="true"
-    >
-    </div>
-
-    <!-- Gradient depth overlay -->
-    <div
-      class="absolute inset-0 bg-linear-to-br from-(--background)/95 via-(--background)/72 to-(--background)/88 dark:from-black/92 dark:via-black/70 dark:to-black/90"
-      aria-hidden="true"
-    >
-    </div>
-
-    <!-- Red brand glow -->
-    <div
-      class="diffuse-sphere absolute -left-44 top-20 h-120 w-120 rounded-full bg-(--primary)/20 blur-[150px]"
-      aria-hidden="true"
-    >
-    </div>
-
-    <!-- <div
-      class="diffuse-sphere diffuse-sphere-delay absolute -right-56 bottom-0 h-[36rem] w-[36rem] rounded-full bg-[var(--primary)]/16 blur-[170px]"
-      aria-hidden="true"
-    >
-    </div> -->
-
-    <!-- Blurred network depth layer -->
-    <div
-      class="parallax-layer absolute left-1/2 bottom-16 w-420 max-w-none -translate-x-1/2 opacity-[0.12] blur-2xl"
-      data-parallax-speed="-0.014"
-      aria-hidden="true"
-    >
-      <img
-        src="/images/backgrounds/dental-it-network-bg.png"
-        alt=""
-        class="w-full min-w-260"
-        loading="lazy"
-        decoding="async"
-      />
-    </div>
-
-    <!-- Sharper animated network layer -->
-    <div
-      class="parallax-layer network-float absolute left-1/2 bottom-32 w-400 max-w-none -translate-x-1/2 opacity-[0.24]"
-      data-parallax-speed="0.02"
-      aria-hidden="true"
-    >
-      <img
-        src="/images/backgrounds/dental-it-network-bg.png"
-        alt=""
-        class="w-full min-w-260"
-        loading="lazy"
-        decoding="async"
-      />
-    </div>
-
-    <!-- Side network detail -->
-    <div
-      class="parallax-layer network-float-soft network-float-delay absolute -left-32 top-20 w-4xl max-w-none opacity-[0.18]"
-      data-parallax-speed="-0.018"
-      aria-hidden="true"
-    >
-      <img
-        src="/images/backgrounds/dental-it-network-bg.png"
-        alt=""
-        class="w-full"
-        loading="lazy"
-        decoding="async"
-      />
-    </div>
-  </div>
-
-  <div class="site-container relative z-10 grid gap-12 lg:grid-cols-2 lg:items-center">
-    <div class="relative mx-auto w-full max-w-xl lg:max-w-none">
-      <div
-        class="grid gap-5 sm:grid-cols-2 lg:block lg:min-h-136 xl:min-h-152"
-      >
-        <div
-          class="parallax-layer lg:absolute lg:left-0 lg:top-0 lg:w-[80%]"
-          data-parallax-speed="0.04"
-        >
-          <div class="glass-panel rounded-4xl p-3">
-            <!-- SEO image recommendation:
-              Replace with:
-              src="/images/home/miami-dental-practice-it-support-team.webp"
-              Suggested alt:
-              "Dental IT support team helping a Miami dental practice"
-            -->
-            <img
-              src="/images/home/miami-dental-practice-it-support-team.webp"
-              alt="Dental IT support team helping a Miami dental practice"
-              class="aspect-4/5 w-full rounded-3xl object-cover"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-        </div>
-
-        <div
-          class="parallax-layer lg:absolute lg:bottom-0 lg:right-0 lg:w-[80%]"
-          data-parallax-speed="-0.035"
-        >
-          <div class="glass-panel rounded-4xl p-3">
-            <!-- SEO image recommendation:
-              Replace with:
-              src="/images/home/dental-office-cybersecurity-monitoring-miami.webp"
-              Suggested alt:
-              "Cybersecurity and monitoring for a dental office in Miami"
-            -->
-            <img
-              src="/images/home/dental-office-cybersecurity-monitoring-miami.webp"
-              alt="Cybersecurity and monitoring for a dental office in Miami"
-              class="aspect-4/5 w-full rounded-3xl object-cover"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <p class="section-eyebrow">Why Dental Clinics Trust Us</p>
-
-      <h2
-        class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
-      >
-        Technology support designed around patient care.
-      </h2>
-
-      <p class="section-description">
-        Downtime, security incidents, slow workstations, failed backups, and
-        disconnected systems can interrupt the patient experience. Dental IT
-        helps your team stay focused, productive, and protected.
-      </p>
-
-      <div class="mt-9 grid gap-4">
-        {
-          whyChoose.map(({ title, description, icon: Icon }) => (
-            <div class="glass-panel glass-highlight flex gap-5 rounded-4xl p-5 sm:p-6">
-              <div class="relative flex size-12 shrink-0 items-center justify-center rounded-2xl bg-(--primary) text-white">
-                <Icon class="size-6" />
-              </div>
-
-              <div class="relative">
-                <h3 class="text-base font-black text-(--foreground) sm:text-lg">
-                  {title}
-                </h3>
-                <p class="mt-2 text-sm leading-7 text-(--muted-foreground)">
-                  {description}
-                </p>
-              </div>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </div>
-</section>
-
-		<!-- PROCESS -->
-		<section class="section-padding relative overflow-hidden bg-surface">
-		<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-			<div
-			class="diffuse-sphere absolute -left-52 top-10 h-128 w-lg rounded-full bg-(--primary)/14 blur-[150px]"
-			aria-hidden="true"
-			>
-			</div>
-
-			<div
-			class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/10 blur-[160px]"
-			aria-hidden="true"
-			>
-			</div>
-
-			<div
-			class="parallax-layer absolute left-1/2 top-24 w-448 max-w-none -translate-x-1/2 opacity-[0.10] blur-3xl"
-			data-parallax-speed="-0.015"
-			aria-hidden="true"
-			>
-			<img
-				src="/images/backgrounds/dental-it-network-bg.png"
-				alt=""
-				class="w-full min-w-280"
-				loading="lazy"
-				decoding="async"
-			/>
-			</div>
-
-			<div
-			class="parallax-layer network-float absolute left-1/2 bottom-8 w-416 max-w-none -translate-x-1/2 opacity-[0.20]"
-			data-parallax-speed="0.018"
-			aria-hidden="true"
-			>
-			<img
-				src="/images/backgrounds/dental-it-network-bg.png"
-				alt=""
-				class="w-full min-w-260"
-				loading="lazy"
-				decoding="async"
-			/>
-			</div>
-
-			<div
-			class="parallax-layer network-float-soft network-float-delay absolute -right-32 top-32 w-216 max-w-none opacity-[0.16]"
-			data-parallax-speed="-0.016"
-			aria-hidden="true"
-			>
-			<img
-				src="/images/backgrounds/dental-it-network-bg.png"
-				alt=""
-				class="w-full"
-				loading="lazy"
-				decoding="async"
-			/>
-			</div>
-
-			<div
-			class="absolute inset-0 bg-linear-to-b from-(--surface)/88 via-(--surface)/48 to-(--surface)/94"
-			>
-			</div>
-		</div>
-
-		<div class="site-container relative">
-			<div class="mx-auto max-w-3xl text-center">
-			<p class="section-eyebrow justify-center">How We Work</p>
-
-			<h2
-				class="section-title mx-auto normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
-			>
-				From assessment to always-on support.
-			</h2>
-
-			<p class="section-description mx-auto">
-				A simple, structured process to help your dental practice improve
-				uptime, security, backups, performance, and long-term technology
-				planning.
-			</p>
-			</div>
-
-			<div class="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-			{
-				process.map((item) => (
-				<article class="site-card group relative overflow-hidden rounded-4xl p-3 transition hover:-translate-y-1 hover:border-(--primary)">
-					<div class="relative overflow-hidden rounded-3xl">
+				<div
+					class="parallax-layer absolute w-full max-w-none opacity-[0.10] blur"
+					data-parallax-speed="-0.012"
+					aria-hidden="true"
+				>
 					<img
-						src={item.image}
-						alt={item.alt}
-						class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-105"
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						class="w-full min-w-280"
 						loading="lazy"
 						decoding="async"
 					/>
+				</div>
 
-					<div class="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent" />
+				<div
+					class="parallax-layer network-float absolute left-1/2 top-52 w-432 max-w-none -translate-x-1/2 opacity-[0.28]"
+					data-parallax-speed="0.018"
+					aria-hidden="true"
+				>
+					<img
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						class="w-full min-w-280"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
 
-					<div class="absolute bottom-4 left-4">
-						<span class="inline-flex rounded-full bg-(--primary) px-3 py-1 text-xs font-black tracking-wide text-white">
-						{item.step}
-						</span>
-					</div>
-					</div>
+				<div
+					class="parallax-layer network-float-soft network-float-delay absolute -right-32 top-112 w-232 max-w-none opacity-[0.20]"
+					data-parallax-speed="-0.016"
+					aria-hidden="true"
+				>
+					<img
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						class="w-full"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
 
-					<div class="p-4">
-					<h3 class="text-xl font-black sm:text-2xl">{item.title}</h3>
-
-					<p class="mt-3 text-sm leading-7">{item.description}</p>
-					</div>
-				</article>
-				))
-			}
+				<div
+					class="absolute inset-0 bg-linear-to-b from-(--surface)/88 via-(--surface)/48 to-(--surface)/94"
+				>
+				</div>
 			</div>
-		</div>
+
+			<div class="site-container relative">
+				<div class="mx-auto max-w-3xl text-center">
+					<p class="section-eyebrow">Our Services</p>
+
+					<h2
+						class="section-title mx-auto normal-case text-[clamp(2rem,4.2vw,3.8rem)] leading-none"
+					>
+						We got your practice covered.
+					</h2>
+
+					<p class="section-description mx-auto">
+						From managed IT support and cybersecurity to practice deployments,
+						cloud backups, VoIP, web design, SEO, and custom software, Dental IT
+						gives dental practices one expert technology partner.
+					</p>
+				</div>
+
+				<div class="mt-14 lg:mt-16">
+					<div class="mb-7 flex items-center gap-4">
+						<div class="h-px flex-1 bg-(--border)"></div>
+						<h3
+							class="text-center text-xs font-black uppercase tracking-[0.2em] text-(--primary) sm:text-sm sm:tracking-[0.22em]"
+						>
+							Tech Support
+						</h3>
+						<div class="h-px flex-1 bg-(--border)"></div>
+					</div>
+
+					<div class="flex flex-wrap justify-center gap-5">
+						{
+							techSupportServices.map(
+								({ title, href, description, icon: Icon }) => (
+									<a
+										href={href}
+										class="service-card group relative flex w-full flex-col overflow-hidden rounded-4xl p-6 transition hover:-translate-y-1 hover:border-(--primary) md:w-[calc(50%-0.625rem)] md:p-7 xl:w-[calc(25%-0.9375rem)]"
+									>
+										<div class="absolute -right-12 -top-12 size-32 rounded-full bg-(--primary)/10 blur-2xl transition group-hover:bg-(--primary)/20" />
+										<Icon class="relative size-10 text-(--primary)" />
+										<h4 class="relative mt-6 text-lg font-black sm:text-xl">
+											{title}
+										</h4>
+										<p class="relative mt-4 text-sm leading-7">
+											{description}
+										</p>
+										<span class="relative mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-(--primary)">
+											Learn More
+											<ArrowRight class="size-4 transition group-hover:translate-x-1" />
+										</span>
+									</a>
+								),
+							)
+						}
+					</div>
+				</div>
+
+				<div class="mt-16 lg:mt-20">
+					<div class="mb-7 flex items-center gap-4">
+						<div class="h-px flex-1 bg-(--border)"></div>
+						<h3
+							class="text-center text-xs font-black uppercase tracking-[0.2em] text-(--primary) sm:text-sm sm:tracking-[0.22em]"
+						>
+							Deployments
+						</h3>
+						<div class="h-px flex-1 bg-(--border)"></div>
+					</div>
+
+					<div class="flex flex-wrap justify-center gap-5">
+						{
+							deploymentServices.map(
+								({ title, href, description, icon: Icon }) => (
+									<a
+										href={href}
+										class="service-card group relative flex w-full flex-col overflow-hidden rounded-4xl p-6 transition hover:-translate-y-1 hover:border-(--primary) md:w-[calc(50%-0.625rem)] md:p-7 xl:w-[calc(25%-0.9375rem)]"
+									>
+										<Icon class="size-10 text-(--primary)" />
+										<h4 class="mt-6 text-lg font-black sm:text-xl">
+											{title}
+										</h4>
+										<p class="mt-4 text-sm leading-7">{description}</p>
+										<span class="mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-(--primary)">
+											Learn More
+											<ArrowRight class="size-4 transition group-hover:translate-x-1" />
+										</span>
+									</a>
+								),
+							)
+						}
+					</div>
+				</div>
+
+				<div class="mt-16 lg:mt-20">
+					<div class="mb-7 flex items-center gap-4">
+						<div class="h-px flex-1 bg-(--border)"></div>
+						<h3
+							class="text-center text-xs font-black uppercase tracking-[0.2em] text-(--primary) sm:text-sm sm:tracking-[0.22em]"
+						>
+							Dental Practice Solutions
+						</h3>
+						<div class="h-px flex-1 bg-(--border)"></div>
+					</div>
+
+					<div class="flex flex-wrap justify-center gap-5">
+						{
+							practiceSolutions.map(
+								({ title, href, description, icon: Icon }) => (
+									<a
+										href={href}
+										class="service-card group relative flex w-full flex-col overflow-hidden rounded-4xl p-6 transition hover:-translate-y-1 hover:border-(--primary) md:w-[calc(50%-0.625rem)] md:p-7 xl:w-[calc(25%-0.9375rem)]"
+									>
+										<Icon class="relative size-10 text-(--primary)" />
+										<h4 class="relative mt-6 text-base font-black sm:text-lg">
+											{title}
+										</h4>
+										<p class="relative mt-4 text-sm leading-7 text-(--muted-foreground)">
+											{description}
+										</p>
+										<span class="mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-(--primary)">
+											Learn More
+											<ArrowRight class="size-4 transition group-hover:translate-x-1" />
+										</span>
+									</a>
+								),
+							)
+						}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PARALLAX FEATURE -->
+		<section
+			class="relative overflow-hidden bg-site py-20 lg:py-28 xl:py-32"
+			style="
+				background-image: url('/images/home/dental-practice-bg.webp');
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+			"
+		>
+			<div class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+				<div
+					class="absolute inset-0 bg-(--background)/50 dark:bg-black/78"
+					aria-hidden="true"
+				>
+				</div>
+
+				<div
+					class="absolute inset-0 bg-linear-to-br from-(--background)/95 via-(--background)/72 to-(--background)/88 dark:from-black/92 dark:via-black/70 dark:to-black/90"
+					aria-hidden="true"
+				>
+				</div>
+
+				<div
+					class="diffuse-sphere absolute -left-44 top-20 h-120 w-120 rounded-full bg-(--primary)/20 blur-[150px]"
+					aria-hidden="true"
+				>
+				</div>
+
+				<div
+					class="parallax-layer absolute left-1/2 bottom-16 w-420 max-w-none -translate-x-1/2 opacity-[0.12] blur-2xl"
+					data-parallax-speed="-0.014"
+					aria-hidden="true"
+				>
+					<img
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						class="w-full min-w-260"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="parallax-layer network-float absolute left-1/2 bottom-32 w-400 max-w-none -translate-x-1/2 opacity-[0.24]"
+					data-parallax-speed="0.02"
+					aria-hidden="true"
+				>
+					<img
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						class="w-full min-w-260"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="parallax-layer network-float-soft network-float-delay absolute -left-32 top-20 w-4xl max-w-none opacity-[0.18]"
+					data-parallax-speed="-0.018"
+					aria-hidden="true"
+				>
+					<img
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						class="w-full"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+			</div>
+
+			<div
+				class="site-container relative z-10 grid gap-12 lg:grid-cols-2 lg:items-center"
+			>
+				<div class="relative mx-auto w-full max-w-xl lg:max-w-none">
+					<div
+						class="grid gap-5 sm:grid-cols-2 lg:block lg:min-h-136 xl:min-h-152"
+					>
+						<div
+							class="parallax-layer lg:absolute lg:left-0 lg:top-0 lg:w-[80%]"
+							data-parallax-speed="0.04"
+						>
+							<div class="glass-panel rounded-4xl p-3">
+								<img
+									src="/images/home/miami-dental-practice-it-support-team.webp"
+									alt="Dental IT support team helping a Miami dental practice"
+									class="aspect-4/5 w-full rounded-3xl object-cover"
+									loading="lazy"
+									decoding="async"
+								/>
+							</div>
+						</div>
+
+						<div
+							class="parallax-layer lg:absolute lg:bottom-0 lg:right-0 lg:w-[80%]"
+							data-parallax-speed="-0.035"
+						>
+							<div class="glass-panel rounded-4xl p-3">
+								<img
+									src="/images/home/dental-office-cybersecurity-monitoring-miami.webp"
+									alt="Cybersecurity and monitoring for a dental office in Miami"
+									class="aspect-4/5 w-full rounded-3xl object-cover"
+									loading="lazy"
+									decoding="async"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<p class="section-eyebrow">Why Dental Clinics Trust Us</p>
+
+					<h2
+						class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
+					>
+						Technology support designed around patient care.
+					</h2>
+
+					<p class="section-description">
+						Downtime, security incidents, slow workstations, failed backups, and
+						disconnected systems can interrupt the patient experience. Dental IT
+						helps your team stay focused, productive, and protected.
+					</p>
+
+					<div class="mt-9 grid gap-4">
+						{
+							whyChoose.map(({ title, description, icon: Icon }) => (
+								<div class="glass-panel glass-highlight flex gap-5 rounded-4xl p-5 sm:p-6">
+									<div class="relative flex size-12 shrink-0 items-center justify-center rounded-2xl bg-(--primary) text-white">
+										<Icon class="size-6" />
+									</div>
+
+									<div class="relative">
+										<h3 class="text-base font-black text-(--foreground) sm:text-lg">
+											{title}
+										</h3>
+										<p class="mt-2 text-sm leading-7 text-(--muted-foreground)">
+											{description}
+										</p>
+									</div>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PROCESS -->
+		<section class="section-padding relative overflow-hidden bg-surface">
+			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+				<div
+					class="diffuse-sphere absolute -left-52 top-10 h-128 w-lg rounded-full bg-(--primary)/14 blur-[150px]"
+					aria-hidden="true"
+				>
+				</div>
+
+				<div
+					class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/10 blur-[160px]"
+					aria-hidden="true"
+				>
+				</div>
+
+				<div
+					class="parallax-layer absolute left-1/2 top-24 w-448 max-w-none -translate-x-1/2 opacity-[0.10] blur-3xl"
+					data-parallax-speed="-0.015"
+					aria-hidden="true"
+				>
+					<img
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						class="w-full min-w-280"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="parallax-layer network-float absolute left-1/2 bottom-8 w-416 max-w-none -translate-x-1/2 opacity-[0.20]"
+					data-parallax-speed="0.018"
+					aria-hidden="true"
+				>
+					<img
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						class="w-full min-w-260"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="parallax-layer network-float-soft network-float-delay absolute -right-32 top-32 w-216 max-w-none opacity-[0.16]"
+					data-parallax-speed="-0.016"
+					aria-hidden="true"
+				>
+					<img
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						class="w-full"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="absolute inset-0 bg-linear-to-b from-(--surface)/88 via-(--surface)/48 to-(--surface)/94"
+				>
+				</div>
+			</div>
+
+			<div class="site-container relative">
+				<div class="mx-auto max-w-3xl text-center">
+					<p class="section-eyebrow justify-center">How We Work</p>
+
+					<h2
+						class="section-title mx-auto normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
+					>
+						From assessment to always-on support.
+					</h2>
+
+					<p class="section-description mx-auto">
+						A simple, structured process to help your dental practice improve
+						uptime, security, backups, performance, and long-term technology
+						planning.
+					</p>
+				</div>
+
+				<div class="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+					{
+						process.map((item) => (
+							<article class="site-card group relative overflow-hidden rounded-4xl p-3 transition hover:-translate-y-1 hover:border-(--primary)">
+								<div class="relative overflow-hidden rounded-3xl">
+									<img
+										src={item.image}
+										alt={item.alt}
+										class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-105"
+										loading="lazy"
+										decoding="async"
+									/>
+
+									<div class="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent" />
+
+									<div class="absolute bottom-4 left-4">
+										<span class="inline-flex rounded-full bg-(--primary) px-3 py-1 text-xs font-black tracking-wide text-white">
+											{item.step}
+										</span>
+									</div>
+								</div>
+
+								<div class="p-4">
+									<h3 class="text-xl font-black sm:text-2xl">
+										{item.title}
+									</h3>
+
+									<p class="mt-3 text-sm leading-7">{item.description}</p>
+								</div>
+							</article>
+						))
+					}
+				</div>
+			</div>
 		</section>
 
 		<!-- FINAL CTA -->
 		<section
-		class="relative overflow-hidden bg-footer py-16 text-(--footer-foreground) md:py-20 lg:py-28"
+			class="relative overflow-hidden bg-footer py-16 text-(--footer-foreground) md:py-20 lg:py-28"
 		>
-		<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-			<div
-			class="diffuse-sphere absolute -left-48 top-0 h-120 w-120 rounded-full bg-(--primary)/18 blur-[150px]"
-			aria-hidden="true"
-			>
-			</div>
-
-			<div
-			class="diffuse-sphere diffuse-sphere-delay absolute -right-48 bottom-0 h-136 w-136 rounded-full bg-(--primary)/14 blur-[160px]"
-			aria-hidden="true"
-			>
-			</div>
-
-			<div
-			class="parallax-layer absolute left-1/2 -bottom-16 w-432 max-w-none -translate-x-1/2 opacity-[0.10] blur-2xl"
-			data-parallax-speed="-0.012"
-			aria-hidden="true"
-			>
-			<img
-				src="/images/backgrounds/dental-it-network-bg.png"
-				alt=""
-				class="w-full min-w-260"
-				loading="lazy"
-				decoding="async"
-			/>
-			</div>
-
-			<div
-			class="parallax-layer network-float absolute left-1/2 -bottom-12 w-400 max-w-none -translate-x-1/2 opacity-[0.20] blur-xl"
-			data-parallax-speed="0.015"
-			aria-hidden="true"
-			>
-			<img
-				src="/images/backgrounds/dental-it-network-bg.png"
-				alt=""
-				class="w-full min-w-260"
-				loading="lazy"
-				decoding="async"
-			/>
-			</div>
-
-			<div
-			class="parallax-layer network-float-soft network-float-delay absolute -right-64 top-6 w-216 max-w-none opacity-[0.18]"
-			data-parallax-speed="-0.014"
-			aria-hidden="true"
-			>
-			<img
-				src="/images/backgrounds/dental-it-network-bg.png"
-				alt=""
-				class="w-full"
-				loading="lazy"
-				decoding="async"
-			/>
-			</div>
-
-			<div
-			class="absolute inset-0 bg-linear-to-b from-(--footer-background)/88 via-(--footer-background)/45 to-(--footer-background)/95"
-			>
-			</div>
-		</div>
-
-		<div class="site-container relative">
-			<div
-			class="glass-panel glass-highlight mx-auto max-w-5xl rounded-4xl p-6 text-center sm:p-8 md:rounded-[2.5rem] md:p-12 lg:p-16"
-			>
-			<p class="section-eyebrow justify-center">
-				Ready to Improve Your Dental IT?
-			</p>
-
-			<h2
-				class="mt-5 text-[clamp(2rem,4.2vw,3.75rem)] font-black leading-none tracking-tighter text-(--footer-foreground)"
-			>
-				Get a free IT assessment for your dental practice.
-			</h2>
-
-			<p
-				class="mx-auto mt-6 max-w-3xl text-base leading-8 text-(--footer-muted) md:text-lg"
-			>
-				Let Dental IT review your current technology, identify risk, and
-				create a clear plan to improve security, backups, performance, and
-				support.
-			</p>
-
-			<div class="mt-9 flex justify-center">
-				<a
-				href="/contact"
-				class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-8 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-[var(--primary-hover)]"
+			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+				<div
+					class="diffuse-sphere absolute -left-48 top-0 h-120 w-120 rounded-full bg-(--primary)/18 blur-[150px]"
+					aria-hidden="true"
 				>
-				Schedule Free Assessment
-				<ArrowRight class="size-4" />
-				</a>
+				</div>
+
+				<div
+					class="diffuse-sphere diffuse-sphere-delay absolute -right-48 bottom-0 h-136 w-136 rounded-full bg-(--primary)/14 blur-[160px]"
+					aria-hidden="true"
+				>
+				</div>
+
+				<div
+					class="parallax-layer absolute left-1/2 -bottom-16 w-432 max-w-none -translate-x-1/2 opacity-[0.10] blur-2xl"
+					data-parallax-speed="-0.012"
+					aria-hidden="true"
+				>
+					<img
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						class="w-full min-w-260"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="parallax-layer network-float absolute left-1/2 -bottom-12 w-400 max-w-none -translate-x-1/2 opacity-[0.20] blur-xl"
+					data-parallax-speed="0.015"
+					aria-hidden="true"
+				>
+					<img
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						class="w-full min-w-260"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="parallax-layer network-float-soft network-float-delay absolute -right-64 top-6 w-216 max-w-none opacity-[0.18]"
+					data-parallax-speed="-0.014"
+					aria-hidden="true"
+				>
+					<img
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						class="w-full"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="absolute inset-0 bg-linear-to-b from-(--footer-background)/88 via-(--footer-background)/45 to-(--footer-background)/95"
+				>
+				</div>
 			</div>
+
+			<div class="site-container relative">
+				<div
+					class="glass-panel glass-highlight mx-auto max-w-5xl rounded-4xl p-6 text-center sm:p-8 md:rounded-[2.5rem] md:p-12 lg:p-16"
+				>
+					<p class="section-eyebrow justify-center">
+						Ready to Improve Your Dental IT?
+					</p>
+
+					<h2
+						class="mt-5 text-[clamp(2rem,4.2vw,3.75rem)] font-black leading-none tracking-tighter text-(--footer-foreground)"
+					>
+						Get a free IT assessment for your dental practice.
+					</h2>
+
+					<p
+						class="mx-auto mt-6 max-w-3xl text-base leading-8 text-(--footer-muted) md:text-lg"
+					>
+						Let Dental IT review your current technology, identify risk, and
+						create a clear plan to improve security, backups, performance, and
+						support.
+					</p>
+
+					<div class="mt-9 flex justify-center">
+						<a
+							href="/contact"
+							class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-8 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
+						>
+							Schedule Free Assessment
+							<ArrowRight class="size-4" />
+						</a>
+					</div>
+				</div>
 			</div>
-		</div>
 		</section>
 	</main>
 
 	<style>
 		@keyframes floatY {
-		0%,
-		100% {
-			transform: translateY(0);
-		}
+			0%,
+			100% {
+				transform: translateY(0);
+			}
 
-		50% {
-			transform: translateY(-14px);
-		}
+			50% {
+				transform: translateY(-14px);
+			}
 		}
 
 		@keyframes networkFloat {
-		0%,
-		100% {
-			translate: 0 0;
-		}
+			0%,
+			100% {
+				translate: 0 0;
+			}
 
-		50% {
-			translate: 0 -22px;
-		}
+			50% {
+				translate: 0 -22px;
+			}
 		}
 
 		@keyframes networkFloatSoft {
-		0%,
-		100% {
-			translate: 0 0;
-			opacity: 0.16;
-		}
+			0%,
+			100% {
+				translate: 0 0;
+				opacity: 0.16;
+			}
 
-		50% {
-			translate: 0 -18px;
-			opacity: 0.28;
-		}
+			50% {
+				translate: 0 -18px;
+				opacity: 0.28;
+			}
 		}
 
 		@keyframes diffusePulse {
-		0%,
-		100% {
-			transform: scale(1);
-			opacity: 0.75;
+			0%,
+			100% {
+				transform: scale(1);
+				opacity: 0.75;
+			}
+
+			50% {
+				transform: scale(1.08);
+				opacity: 1;
+			}
 		}
 
-		50% {
-			transform: scale(1.08);
-			opacity: 1;
-		}
+		@keyframes heroKenBurns {
+			0% {
+				transform: scale(1.04) translate3d(0, 0, 0);
+			}
+
+			100% {
+				transform: scale(1.12) translate3d(-1.5%, -1.5%, 0);
+			}
 		}
 
 		.floating-card {
-		animation: floatY 6s ease-in-out infinite;
+			animation: floatY 6s ease-in-out infinite;
 		}
 
 		.floating-card-delay {
-		animation-delay: -2.5s;
+			animation-delay: -2.5s;
 		}
 
 		.network-float {
-		animation: networkFloat 9s ease-in-out infinite;
-		will-change: translate, transform;
+			animation: networkFloat 9s ease-in-out infinite;
+			will-change: translate, transform;
 		}
 
 		.network-float-soft {
-		animation: networkFloatSoft 11s ease-in-out infinite;
-		will-change: translate, opacity, transform;
+			animation: networkFloatSoft 11s ease-in-out infinite;
+			will-change: translate, opacity, transform;
 		}
 
 		.network-float-delay {
-		animation-delay: -4s;
+			animation-delay: -4s;
 		}
 
 		.diffuse-sphere {
-		animation: diffusePulse 10s ease-in-out infinite;
-		will-change: transform, opacity;
+			animation: diffusePulse 10s ease-in-out infinite;
+			will-change: transform, opacity;
 		}
 
 		.diffuse-sphere-delay {
-		animation-delay: -5s;
+			animation-delay: -5s;
+		}
+
+		.hero-slide {
+			transform: scale(1.04);
+		}
+
+		.hero-slide.is-active {
+			opacity: 1;
+			animation: heroKenBurns 5s ease-out forwards;
+		}
+
+		.hero-slide-dot.is-active {
+			width: 1.5rem;
+			background: var(--primary);
 		}
 
 		@media (max-width: 1279px) {
-		.floating-card {
-			animation: none;
-		}
+			.floating-card {
+				animation: none;
+			}
 		}
 
 		@media (prefers-reduced-motion: reduce) {
-		.floating-card,
-		.network-float,
-		.network-float-soft,
-		.diffuse-sphere {
-			animation: none;
-		}
+			.floating-card,
+			.network-float,
+			.network-float-soft,
+			.diffuse-sphere,
+			.hero-slide.is-active {
+				animation: none;
+			}
+
+			.hero-slide.is-active {
+				transform: scale(1);
+			}
 		}
 	</style>
 
@@ -1045,38 +1136,101 @@ import {
 		const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 		const updateParallax = () => {
-		if (reduceMotion.matches || window.innerWidth < 1024) return;
+			if (reduceMotion.matches || window.innerWidth < 1024) return;
 
-		const scrollY = window.scrollY;
+			const scrollY = window.scrollY;
 
-		parallaxLayers.forEach((layer) => {
-			const speed = Number(layer.getAttribute("data-parallax-speed") || 0);
-			const y = scrollY * speed;
+			parallaxLayers.forEach((layer) => {
+				const speed = Number(layer.getAttribute("data-parallax-speed") || 0);
+				const y = scrollY * speed;
 
-			layer.style.setProperty("--parallax-y", `${y}px`);
-			layer.style.transform = `translate3d(0, var(--parallax-y), 0)`;
-		});
+				layer.style.setProperty("--parallax-y", `${y}px`);
+				layer.style.transform = `translate3d(0, var(--parallax-y), 0)`;
+			});
 		};
 
 		const resetParallax = () => {
-		parallaxLayers.forEach((layer) => {
-			layer.style.removeProperty("--parallax-y");
-			layer.style.transform = "";
-		});
+			parallaxLayers.forEach((layer) => {
+				layer.style.removeProperty("--parallax-y");
+				layer.style.transform = "";
+			});
 		};
 
 		const handleParallax = () => {
-		if (reduceMotion.matches || window.innerWidth < 1024) {
-			resetParallax();
-			return;
-		}
+			if (reduceMotion.matches || window.innerWidth < 1024) {
+				resetParallax();
+				return;
+			}
 
-		updateParallax();
+			updateParallax();
 		};
 
 		handleParallax();
 
 		window.addEventListener("scroll", handleParallax, { passive: true });
 		window.addEventListener("resize", handleParallax);
+
+		const heroSlideshow = document.querySelector("#hero-slideshow");
+
+		if (heroSlideshow) {
+			const slides = Array.from(
+				heroSlideshow.querySelectorAll("[data-hero-slide]"),
+			);
+			const dots = Array.from(heroSlideshow.querySelectorAll("[data-hero-dot]"));
+			const previousButton = heroSlideshow.querySelector(".hero-slide-prev");
+			const nextButton = heroSlideshow.querySelector(".hero-slide-next");
+
+			let currentSlide = 0;
+			let slideTimer;
+
+			const activateSlide = (index) => {
+				currentSlide = (index + slides.length) % slides.length;
+
+				slides.forEach((slide, slideIndex) => {
+					const isActive = slideIndex === currentSlide;
+
+					slide.classList.toggle("is-active", isActive);
+					slide.dataset.active = String(isActive);
+
+					if (isActive) {
+						slide.style.animation = "none";
+						slide.offsetHeight;
+						slide.style.animation = "";
+					}
+				});
+
+				dots.forEach((dot, dotIndex) => {
+					dot.classList.toggle("is-active", dotIndex === currentSlide);
+				});
+
+				heroSlideshow.dataset.currentSlide = String(currentSlide);
+			};
+
+			const goToNextSlide = () => {
+				activateSlide(currentSlide + 1);
+			};
+
+			const goToPreviousSlide = () => {
+				activateSlide(currentSlide - 1);
+			};
+
+			const restartSlideTimer = () => {
+				window.clearInterval(slideTimer);
+				slideTimer = window.setInterval(goToNextSlide, 5000);
+			};
+
+			nextButton?.addEventListener("click", () => {
+				goToNextSlide();
+				restartSlideTimer();
+			});
+
+			previousButton?.addEventListener("click", () => {
+				goToPreviousSlide();
+				restartSlideTimer();
+			});
+
+			activateSlide(0);
+			restartSlideTimer();
+		}
 	</script>
 </MainLayout>
