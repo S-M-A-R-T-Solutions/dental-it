@@ -213,7 +213,7 @@ export const whyChoose = [
 
 export const process = [
     {
-        step: "01",
+        step: "1",
         title: "Assess",
         description:
             "We review your current technology, risks, workstations, network, backups, security, and daily pain points.",
@@ -221,7 +221,7 @@ export const process = [
         alt: "Dental IT assessment for a Miami dental practice",
     },
     {
-        step: "02",
+        step: "2",
         title: "Plan",
         description:
             "We create a clear roadmap focused on uptime, security, compliance support, performance, and budget.",
@@ -229,7 +229,7 @@ export const process = [
         alt: "Dental IT planning for a dental practice in Miami",
     },
     {
-        step: "03",
+        step: "3",
         title: "Deploy",
         description:
             "We implement the right solutions with minimal disruption to your team and patient schedule.",
@@ -237,7 +237,7 @@ export const process = [
         alt: "Dental technology deployment for a Miami dental office",
     },
     {
-        step: "04",
+        step: "4",
         title: "Monitor",
         description:
             "We keep watching, maintaining, updating, and supporting your environment so your practice can keep moving.",
