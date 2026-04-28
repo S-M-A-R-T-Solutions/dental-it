@@ -1,0 +1,268 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import {
+	ArrowRight,
+	Home,
+	Search,
+	PhoneCall,
+	AlertTriangle,
+} from "lucide-astro";
+---
+
+<MainLayout
+	title="Page Not Found | Dental IT"
+	description="The page you are looking for could not be found. Return to Dental IT home page or contact us for help."
+	image="/images/og/dental-it-miami-home-og.jpg"
+	noindex={true}
+>
+	<main class="overflow-hidden">
+		<section class="relative isolate min-h-[calc(100vh-5rem)] overflow-hidden bg-site">
+			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+				<div
+					class="diffuse-sphere absolute -left-52 top-16 h-136 w-136 rounded-full bg-(--primary)/18 blur-[150px]"
+					aria-hidden="true"
+				>
+				</div>
+
+				<div
+					class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-152 w-152 rounded-full bg-(--primary)/14 blur-[170px]"
+					aria-hidden="true"
+				>
+				</div>
+
+				<div
+					class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.08)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-30"
+				>
+				</div>
+
+				<div
+					class="parallax-layer absolute top-24 w-full max-w-none opacity-[0.16] blur"
+					data-parallax-speed="-0.015"
+					aria-hidden="true"
+				>
+					<img
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						class="w-full min-w-280"
+						loading="eager"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="parallax-layer network-float absolute bottom-4 w-full max-w-none opacity-[0.28]"
+					data-parallax-speed="0.02"
+					aria-hidden="true"
+				>
+					<img
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						class="w-full min-w-280"
+						loading="eager"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="absolute inset-0 bg-linear-to-b from-(--background)/94 via-(--background)/58 to-(--background)/94"
+				>
+				</div>
+			</div>
+
+			<div class="site-container grid min-h-[calc(100vh-5rem)] items-center py-16 md:py-20 lg:py-24">
+				<div class="mx-auto max-w-4xl text-center">
+					<div
+						class="mx-auto mt-8 flex size-20 items-center justify-center rounded-4xl bg-(--primary) text-white shadow-[0_24px_70px_rgba(239,35,49,0.35)]"
+					>
+						<AlertTriangle class="size-9" />
+					</div>
+
+					<p
+						class="mt-8 text-[clamp(5rem,16vw,11rem)] font-black leading-none tracking-tighter text-(--primary)"
+					>
+						404
+					</p>
+
+					<h1
+						class="mx-auto mt-4 max-w-4xl text-balance text-[clamp(2.25rem,5vw,4.25rem)] font-black leading-[0.95] tracking-tighter"
+					>
+						This page seems to be offline.
+					</h1>
+
+					<p
+						class="mx-auto mt-7 max-w-2xl text-base leading-8 text-(--muted-foreground) sm:text-lg md:text-xl"
+					>
+						The page you are looking for may have been moved, renamed, or is
+						still being built. You can return home, explore our services, or
+						contact Dental IT for help.
+					</p>
+
+					<div class="mx-auto mt-10 grid max-w-3xl gap-4 text-left sm:grid-cols-3">
+						<a
+							href="/"
+							class="glass-panel glass-highlight group rounded-3xl p-5 transition hover:-translate-y-1 hover:border-(--primary)"
+						>
+							<div class="relative">
+								<Home class="size-8 text-(--primary)" />
+
+								<h2 class="mt-4 text-base font-black text-(--foreground)">
+									Go back home
+								</h2>
+
+								<p class="mt-2 text-sm leading-6 text-(--muted-foreground)">
+									Return to the main Dental IT homepage.
+								</p>
+
+								<span class="mt-5 inline-flex items-center gap-2 text-xs font-black uppercase tracking-wide text-(--primary)">
+									Go Home
+									<ArrowRight class="size-4 transition group-hover:translate-x-1" />
+								</span>
+							</div>
+						</a>
+
+						<a
+							href="/#services"
+							class="glass-panel glass-highlight group rounded-3xl p-5 transition hover:-translate-y-1 hover:border-(--primary)"
+						>
+							<div class="relative">
+								<Search class="size-8 text-(--primary)" />
+
+								<h2 class="mt-4 text-base font-black text-(--foreground)">
+									Explore services
+								</h2>
+
+								<p class="mt-2 text-sm leading-6 text-(--muted-foreground)">
+									Find IT support, cybersecurity, backups, and deployments.
+								</p>
+
+								<span class="mt-5 inline-flex items-center gap-2 text-xs font-black uppercase tracking-wide text-(--primary)">
+									View Services
+									<ArrowRight class="size-4 transition group-hover:translate-x-1" />
+								</span>
+							</div>
+						</a>
+
+						<a
+							href="/contact"
+							class="glass-panel glass-highlight group rounded-3xl p-5 transition hover:-translate-y-1 hover:border-(--primary)"
+						>
+							<div class="relative">
+								<PhoneCall class="size-8 text-(--primary)" />
+
+								<h2 class="mt-4 text-base font-black text-(--foreground)">
+									Need help?
+								</h2>
+
+								<p class="mt-2 text-sm leading-6 text-(--muted-foreground)">
+									Contact Dental IT and we will point you in the right direction.
+								</p>
+
+								<span class="mt-5 inline-flex items-center gap-2 text-xs font-black uppercase tracking-wide text-(--primary)">
+									Contact Us
+									<ArrowRight class="size-4 transition group-hover:translate-x-1" />
+								</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="mt-8">
+						<a
+							href="tel:+13059725760"
+							class="inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-(--primary) transition hover:gap-3"
+						>
+							<PhoneCall class="size-4" />
+							Call (305) 972-5760
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<style>
+		@keyframes networkFloat {
+			0%,
+			100% {
+				translate: 0 0;
+			}
+
+			50% {
+				translate: 0 -22px;
+			}
+		}
+
+		@keyframes diffusePulse {
+			0%,
+			100% {
+				transform: scale(1);
+				opacity: 0.75;
+			}
+
+			50% {
+				transform: scale(1.08);
+				opacity: 1;
+			}
+		}
+
+		.network-float {
+			animation: networkFloat 9s ease-in-out infinite;
+			will-change: translate, transform;
+		}
+
+		.diffuse-sphere {
+			animation: diffusePulse 10s ease-in-out infinite;
+			will-change: transform, opacity;
+		}
+
+		.diffuse-sphere-delay {
+			animation-delay: -5s;
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.network-float,
+			.diffuse-sphere {
+				animation: none;
+			}
+		}
+	</style>
+
+	<script>
+		const parallaxLayers = document.querySelectorAll("[data-parallax-speed]");
+		const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+		const updateParallax = () => {
+			if (reduceMotion.matches || window.innerWidth < 1024) return;
+
+			const scrollY = window.scrollY;
+
+			parallaxLayers.forEach((layer) => {
+				const speed = Number(layer.getAttribute("data-parallax-speed") || 0);
+				const y = scrollY * speed;
+
+				layer.style.setProperty("--parallax-y", `${y}px`);
+				layer.style.transform = `translate3d(0, var(--parallax-y), 0)`;
+			});
+		};
+
+		const resetParallax = () => {
+			parallaxLayers.forEach((layer) => {
+				layer.style.removeProperty("--parallax-y");
+				layer.style.transform = "";
+			});
+		};
+
+		const handleParallax = () => {
+			if (reduceMotion.matches || window.innerWidth < 1024) {
+				resetParallax();
+				return;
+			}
+
+			updateParallax();
+		};
+
+		handleParallax();
+
+		window.addEventListener("scroll", handleParallax, { passive: true });
+		window.addEventListener("resize", handleParallax);
+	</script>
+</MainLayout>
