@@ -183,7 +183,7 @@ const heroSlides = [
 					</div>
 				</div>
 
-				<div class="relative mx-auto w-full max-w-xl lg:max-w-none">
+				<div class="relative mx-auto hidden w-full max-w-xl lg:block lg:max-w-none">
 					<div class="relative">
 						<div class="parallax-layer" data-parallax-speed="0.035">
 							<div
@@ -305,11 +305,11 @@ const heroSlides = [
 		<!-- STATS -->
 		<section class="relative border-y border-(--border) bg-surface">
 			<div
-				class="site-container grid gap-px overflow-hidden py-8 sm:grid-cols-2 lg:grid-cols-4 lg:py-10"
+				class="site-container grid grid-cols-1 gap-px overflow-hidden py-8 sm:grid-cols-2 lg:grid-cols-4 lg:py-10"
 			>
 				{
 					stats.map((stat) => (
-						<div class="group relative row-5 p-5 sm:p-6 lg:p-8">
+						<div class="group relative p-5 sm:p-6 lg:p-8">
 							<div class="absolute inset-0 rounded-2xl bg-(--primary) opacity-0 transition group-hover:opacity-[0.06]" />
 							<p class="relative text-[clamp(2.4rem,5vw,3.25rem)] font-black tracking-tighter text-(--foreground)">
 								{stat.prefix}
@@ -712,39 +712,41 @@ const heroSlides = [
 			</div>
 
 			<div
-				class="site-container relative z-10 grid gap-12 lg:grid-cols-2 lg:items-center"
+				class="site-container relative z-10 grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center"
 			>
-				<div class="relative mx-auto w-full max-w-xl lg:max-w-none">
-					<div
-						class="grid gap-5 sm:grid-cols-2 lg:block lg:min-h-136 xl:min-h-152"
-					>
-						<div
-							class="parallax-layer lg:absolute lg:left-0 lg:top-0 lg:w-[80%]"
-							data-parallax-speed="0.04"
-						>
-							<div class="glass-panel rounded-4xl p-3">
-								<img
-									src="/images/home/miami-dental-practice-it-support-team.webp"
-									alt="Dental IT support team helping a Miami dental practice"
-									class="aspect-4/5 w-full rounded-3xl object-cover"
-									loading="lazy"
-									decoding="async"
-								/>
-							</div>
-						</div>
+				<div class="glass-panel glass-highlight rounded-4xl p-6 sm:p-8 lg:p-10">
+					<div class="relative">
+						<p class="text-sm font-black uppercase tracking-[0.2em] text-(--primary)">
+							Dental IT Advantage
+						</p>
 
-						<div
-							class="parallax-layer lg:absolute lg:bottom-0 lg:right-0 lg:w-[80%]"
-							data-parallax-speed="-0.035"
-						>
-							<div class="glass-panel rounded-4xl p-3">
-								<img
-									src="/images/home/dental-office-cybersecurity-monitoring-miami.webp"
-									alt="Cybersecurity and monitoring for a dental office in Miami"
-									class="aspect-4/5 w-full rounded-3xl object-cover"
-									loading="lazy"
-									decoding="async"
-								/>
+						<h3 class="mt-5 text-[clamp(2rem,4vw,3.5rem)] font-black leading-none tracking-tighter text-(--foreground)">
+							Built to protect uptime, security, and patient care.
+						</h3>
+
+						<p class="mt-6 text-base leading-8 text-(--muted-foreground) md:text-lg">
+							Your practice depends on connected systems every day. Dental IT helps keep
+							workstations, backups, cybersecurity, cloud tools, and support aligned so
+							your team can work with confidence.
+						</p>
+
+						<div class="mt-8 grid gap-4 sm:grid-cols-2">
+							<div class="rounded-3xl border border-(--border) bg-(--card)/70 p-5 backdrop-blur-xl">
+								<p class="text-3xl font-black tracking-tighter text-(--primary)">
+									24/7
+								</p>
+								<p class="mt-2 text-sm font-bold leading-6 text-(--muted-foreground)">
+									System visibility and monitoring support.
+								</p>
+							</div>
+
+							<div class="rounded-3xl border border-(--border) bg-(--card)/70 p-5 backdrop-blur-xl">
+								<p class="text-3xl font-black tracking-tighter text-(--primary)">
+									HIPAA
+								</p>
+								<p class="mt-2 text-sm font-bold leading-6 text-(--muted-foreground)">
+									Security-conscious planning for dental practices.
+								</p>
 							</div>
 						</div>
 					</div>
