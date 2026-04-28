@@ -644,7 +644,7 @@ const process = [
                       {title}
                     </h4>
                     <p class="relative mt-4 text-sm leading-7 text-[var(--muted-foreground)]">
-                      {description}
+                      {description} {description.length > 100 && <span class="text-[var(--primary)]">Learn more about this service.</span>}
                     </p>
                   </a>
                 ),
