@@ -7,6 +7,8 @@ export type NavItem = {
     }[];
 };
 
+const comingSoon = (service: string) => `/coming-soon?service=${encodeURIComponent(service)}`;
+
 export const navItems: NavItem[] = [
     {
         label: "Home",
@@ -16,24 +18,24 @@ export const navItems: NavItem[] = [
         label: "Tech Support",
         href: "/tech-support",
         children: [
-            { label: "Managed IT Support", href: "/tech-support/managed-it-support" },
+            { label: "Managed IT Support", href: comingSoon("Managed IT Support") },
             {
                 label: "Dental Cloud Backups",
-                href: "/tech-support/dental-cloud-backups",
+                href: comingSoon("Dental Cloud Backups"),
             },
-            { label: "Cloud Solutions", href: "/tech-support/cloud-solutions" },
+            { label: "Cloud Solutions", href: comingSoon("Cloud Solutions") },
             {
                 label: "Endpoint Detection Response",
-                href: "/tech-support/endpoint-detection-response",
+                href: comingSoon("Endpoint Detection Response"),
             },
-            { label: "HIPAA Consulting", href: "/tech-support/hipaa-consulting" },
+            { label: "HIPAA Consulting", href: comingSoon("HIPAA Consulting") },
             {
                 label: "Dental Cybersecurity",
-                href: "/tech-support/dental-cybersecurity",
+                href: comingSoon("Dental Cybersecurity"),
             },
             {
                 label: "Proactive Maintenance",
-                href: "/tech-support/proactive-maintenance",
+                href: comingSoon("Proactive Maintenance"),
             },
         ],
     },
@@ -41,16 +43,16 @@ export const navItems: NavItem[] = [
         label: "Deployments",
         href: "/deployments",
         children: [
-            { label: "Practice Startups", href: "/deployments/practice-startups" },
-            { label: "Practice Growth", href: "/deployments/practice-growth" },
-            { label: "Tech Refresh", href: "/deployments/tech-refresh" },
-            { label: "Tech Enhancement", href: "/deployments/tech-enhancement" },
+            { label: "Practice Startups", href: comingSoon("Practice Startups") },
+            { label: "Practice Growth", href: comingSoon("Practice Growth") },
+            { label: "Tech Refresh", href: comingSoon("Tech Refresh") },
+            { label: "Tech Enhancement", href: comingSoon("Tech Enhancement") },
             {
                 label: "Practice Renovation",
-                href: "/deployments/practice-renovation",
+                href: comingSoon("Practice Renovation"),
             },
-            { label: "Tech Assessment", href: "/deployments/tech-assessment" },
-            { label: "VoIP Phone Systems", href: "/deployments/voip-phone-systems" },
+            { label: "Tech Assessment", href: comingSoon("Tech Assessment") },
+            { label: "VoIP Phone Systems", href: comingSoon("VoIP Phone Systems") },
         ],
     },
     {
@@ -59,19 +61,19 @@ export const navItems: NavItem[] = [
         children: [
             {
                 label: "Web Design for Dental Practices",
-                href: "/dental-practice-solutions/web-design-for-dental-practices",
+                href: comingSoon("Web Design for Dental Practices"),
             },
             {
                 label: "Dental SEO Service",
-                href: "/dental-practice-solutions/dental-seo-service",
+                href: comingSoon("Dental SEO Service"),
             },
             {
                 label: "Dental Social Media",
-                href: "/dental-practice-solutions/dental-social-media",
+                href: comingSoon("Dental Social Media"),
             },
             {
                 label: "Custom Software Development",
-                href: "/dental-practice-solutions/custom-software-development",
+                href: comingSoon("Custom Software Development"),
             },
         ],
     },

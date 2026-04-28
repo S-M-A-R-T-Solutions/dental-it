@@ -10,40 +10,40 @@ export const footerColumns = [
     {
         title: "Tech Support",
         links: [
-            { label: "Managed IT Support", href: "/tech-support/managed-it-support" },
+            { label: "Managed IT Support", href: "/coming-soon?service=Managed%20IT%20Support" },
             {
                 label: "Dental Cloud Backups",
-                href: "/tech-support/dental-cloud-backups",
+                href: "/coming-soon?service=Dental%20Cloud%20Backups",
             },
-            { label: "Cloud Solutions", href: "/tech-support/cloud-solutions" },
+            { label: "Cloud Solutions", href: "/coming-soon?service=Cloud%20Solutions" },
             {
                 label: "Endpoint Detection Response",
-                href: "/tech-support/endpoint-detection-response",
+                href: "/coming-soon?service=Endpoint%20Detection%20Response",
             },
-            { label: "HIPAA Consulting", href: "/tech-support/hipaa-consulting" },
+            { label: "HIPAA Consulting", href: "/coming-soon?service=HIPAA%20Consulting" },
             {
                 label: "Dental Cybersecurity",
-                href: "/tech-support/dental-cybersecurity",
+                href: "/coming-soon?service=Dental%20Cybersecurity",
             },
             {
                 label: "Proactive Maintenance",
-                href: "/tech-support/proactive-maintenance",
+                href: "/coming-soon?service=Proactive%20Maintenance",
             },
         ],
     },
     {
         title: "Deployments",
         links: [
-            { label: "Practice Startups", href: "/deployments/practice-startups" },
-            { label: "Practice Growth", href: "/deployments/practice-growth" },
-            { label: "Tech Refresh", href: "/deployments/tech-refresh" },
-            { label: "Tech Enhancement", href: "/deployments/tech-enhancement" },
+            { label: "Practice Startups", href: "/coming-soon?service=Practice%20Startups" },
+            { label: "Practice Growth", href: "/coming-soon?service=Practice%20Growth" },
+            { label: "Tech Refresh", href: "/coming-soon?service=Tech%20Refresh" },
+            { label: "Tech Enhancement", href: "/coming-soon?service=Tech%20Enhancement" },
             {
                 label: "Practice Renovation",
-                href: "/deployments/practice-renovation",
+                href: "/coming-soon?service=Practice%20Renovation",
             },
-            { label: "Tech Assessment", href: "/deployments/tech-assessment" },
-            { label: "VoIP Phone Systems", href: "/deployments/voip-phone-systems" },
+            { label: "Tech Assessment", href: "/coming-soon?service=Tech%20Assessment" },
+            { label: "VoIP Phone Systems", href: "/coming-soon?service=VoIP%20Phone%20Systems" },
         ],
     },
     {
@@ -51,19 +51,19 @@ export const footerColumns = [
         links: [
             {
                 label: "Web Design for Dental Practices",
-                href: "/dental-practice-solutions/web-design-for-dental-practices",
+                href: "/coming-soon?service=Web%20Design%20for%20Dental%20Practices",
             },
             {
                 label: "Dental SEO Service",
-                href: "/dental-practice-solutions/dental-seo-service",
+                href: "/coming-soon?service=Dental%20SEO%20Service",
             },
             {
                 label: "Dental Social Media",
-                href: "/dental-practice-solutions/dental-social-media",
+                href: "/coming-soon?service=Dental%20Social%20Media",
             },
             {
                 label: "Custom Software Development",
-                href: "/dental-practice-solutions/custom-software-development",
+                href: "/coming-soon?service=Custom%20Software%20Development",
             },
         ],
     },

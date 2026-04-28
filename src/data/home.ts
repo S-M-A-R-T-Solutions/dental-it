@@ -43,49 +43,49 @@ export const stats = [
 export const techSupportServices = [
     {
         title: "Managed IT Support",
-        href: "/tech-support/managed-it-support",
+        href: "/coming-soon?service=Managed%20IT%20Support",
         description:
             "Fast, dependable IT support tailored for dental offices, imaging systems, practice management software, and daily clinical workflows.",
         icon: ServerCog,
     },
     {
         title: "Dental Cloud Backups",
-        href: "/tech-support/dental-cloud-backups",
+        href: "/coming-soon?service=Dental%20Cloud%20Backups",
         description:
             "Protect patient data, imaging files, and business-critical systems with secure cloud backup and recovery planning.",
         icon: DatabaseBackup,
     },
     {
         title: "Cloud Solutions",
-        href: "/tech-support/cloud-solutions",
+        href: "/coming-soon?service=Cloud%20Solutions",
         description:
             "Move your practice toward reliable cloud infrastructure designed to reduce downtime and improve accessibility.",
         icon: Cloud,
     },
     {
         title: "Endpoint Detection Response",
-        href: "/tech-support/endpoint-detection-response",
+        href: "/coming-soon?service=Endpoint%20Detection%20Response",
         description:
             "Strengthen every workstation with advanced endpoint protection, monitoring, and rapid response capabilities.",
         icon: Radar,
     },
     {
         title: "HIPAA Consulting",
-        href: "/tech-support/hipaa-consulting",
+        href: "/coming-soon?service=HIPAA%20Consulting",
         description:
             "Get practical guidance to help your dental practice align technology, security, and workflows with HIPAA requirements.",
         icon: ShieldCheck,
     },
     {
         title: "Dental Cybersecurity",
-        href: "/tech-support/dental-cybersecurity",
+        href: "/coming-soon?service=Dental%20Cybersecurity",
         description:
             "Defend your practice from malware, phishing, ransomware, unauthorized access, and preventable security risks.",
         icon: LockKeyhole,
     },
     {
         title: "Proactive Maintenance",
-        href: "/tech-support/proactive-maintenance",
+        href: "/coming-soon?service=Proactive%20Maintenance",
         description:
             "Keep systems updated, monitored, optimized, and ready before small issues become costly downtime.",
         icon: Activity,
@@ -95,49 +95,49 @@ export const techSupportServices = [
 export const deploymentServices = [
     {
         title: "Practice Startups",
-        href: "/deployments/practice-startups",
+        href: "/coming-soon?service=Practice%20Startups",
         description:
             "Build your new dental practice with a technology foundation designed for growth, security, and efficiency.",
         icon: Building2,
     },
     {
         title: "Practice Growth",
-        href: "/deployments/practice-growth",
+        href: "/coming-soon?service=Practice%20Growth",
         description:
             "Scale your technology as your practice adds providers, chairs, operatories, workstations, and new services.",
         icon: Users,
     },
     {
         title: "Tech Refresh",
-        href: "/deployments/tech-refresh",
+        href: "/coming-soon?service=Tech%20Refresh",
         description:
             "Modernize outdated hardware, workstations, network devices, and systems to improve speed and reliability.",
         icon: Cpu,
     },
     {
         title: "Tech Enhancement",
-        href: "/deployments/tech-enhancement",
+        href: "/coming-soon?service=Tech%20Enhancement",
         description:
             "Upgrade key technology areas to boost performance, patient care, security, and team productivity.",
         icon: Zap,
     },
     {
         title: "Practice Renovation",
-        href: "/deployments/practice-renovation",
+        href: "/coming-soon?service=Practice%20Renovation",
         description:
             "Coordinate technology planning during renovations, expansions, room changes, and equipment upgrades.",
         icon: MonitorSmartphone,
     },
     {
         title: "Tech Assessment",
-        href: "/deployments/tech-assessment",
+        href: "/coming-soon?service=Tech%20Assessment",
         description:
             "Evaluate your practice technology, identify risk, document assets, and create a clear improvement roadmap.",
         icon: Search,
     },
     {
         title: "VoIP Phone Systems",
-        href: "/deployments/voip-phone-systems",
+        href: "/coming-soon?service=VoIP%20Phone%20Systems",
         description:
             "Improve front desk communication, call handling, patient experience, and office phone workflows.",
         icon: PhoneCall,
@@ -147,28 +147,28 @@ export const deploymentServices = [
 export const practiceSolutions = [
     {
         title: "Web Design for Dental Practices",
-        href: "/dental-practice-solutions/web-design-for-dental-practices",
+        href: "/coming-soon?service=Web%20Design%20for%20Dental%20Practices",
         description:
             "Modern, conversion-focused dental websites designed to support trust, speed, mobile performance, and local SEO.",
         icon: Globe2,
     },
     {
         title: "Dental SEO Service",
-        href: "/dental-practice-solutions/dental-seo-service",
+        href: "/coming-soon?service=Dental%20SEO%20Service",
         description:
             "Improve visibility for local dental searches with optimized content, technical SEO, and service-focused landing pages.",
         icon: Search,
     },
     {
         title: "Dental Social Media",
-        href: "/dental-practice-solutions/dental-social-media",
+        href: "/coming-soon?service=Dental%20Social%20Media",
         description:
             "Build a stronger online presence with content planning, community engagement, and practice-focused campaigns.",
         icon: Sparkles,
     },
     {
         title: "Custom Software Development",
-        href: "/dental-practice-solutions/custom-software-development",
+        href: "/coming-soon?service=Custom%20Software%20Development",
         description:
             "Create custom tools and workflows that help your team operate faster, smarter, and more efficiently.",
         icon: Laptop,

@@ -1,0 +1,224 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import {
+    ArrowRight,
+    PhoneCall,
+} from "lucide-astro";
+
+const serviceName =
+    Astro.url.searchParams.get("service") ?? "This service page";
+---
+
+<MainLayout
+    title={`${serviceName} Coming Soon | Dental IT`}
+    description={`${serviceName} is coming soon. Dental IT is building this service page for dental practices in Miami and South Florida.`}
+    image="/images/og/dental-it-miami-home-og.jpg"
+>
+    <main class="overflow-hidden">
+        <section
+        class="relative isolate min-h-[calc(100vh-5rem)] overflow-hidden bg-site"
+        >
+        <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+            <div
+            class="diffuse-sphere absolute -left-52 top-16 h-136 w-136 rounded-full bg-(--primary)/18 blur-[150px]"
+            aria-hidden="true"
+            >
+            </div>
+
+            <div
+            class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-152 w-152 rounded-full bg-(--primary)/14 blur-[170px]"
+            aria-hidden="true"
+            >
+            </div>
+
+            <div
+            class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.08)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-30"
+            >
+            </div>
+
+            <div
+            class="parallax-layer absolute top-24 w-full max-w-none opacity-[0.16] blur"
+            data-parallax-speed="-0.015"
+            aria-hidden="true"
+            >
+            <img
+                src="/images/backgrounds/dental-it-network-bg.png"
+                alt=""
+                class="w-full min-w-280"
+                loading="eager"
+                decoding="async"
+            />
+            </div>
+
+            <div
+            class="parallax-layer network-float absolute bottom-4 w-full max-w-none opacity-[0.28]"
+            data-parallax-speed="0.02"
+            aria-hidden="true"
+            >
+            <img
+                src="/images/backgrounds/dental-it-network-bg.png"
+                alt=""
+                class="w-full min-w-280"
+                loading="eager"
+                decoding="async"
+            />
+            </div>
+
+            <div
+            class="absolute inset-0 bg-linear-to-b from-(--background)/94 via-(--background)/58 to-(--background)/94"
+            >
+            </div>
+        </div>
+
+        <div
+            class="site-container grid min-h-[calc(100vh-5rem)] items-center py-16 md:py-20 lg:py-24"
+        >
+            <div class="mx-auto max-w-4xl text-center">
+            <div
+                class="glass-panel mx-auto inline-flex max-w-full items-center gap-3 rounded-full px-4 py-2"
+            >
+                <span
+                class="inline-flex size-2.5 shrink-0 rounded-full bg-(--primary) shadow-[0_0_18px_rgba(239,35,49,0.95)]"
+                ></span>
+
+                <span
+                class="text-xs font-black uppercase tracking-[0.18em] text-(--foreground) sm:tracking-[0.22em]"
+                >
+                Page Coming Soon
+                </span>
+            </div>
+
+            <h1
+                class="mx-auto mt-7 max-w-4xl text-balance text-[clamp(2.35rem,5.5vw,4.75rem)] font-black leading-[0.95] tracking-tighter"
+            >
+                {serviceName} is coming soon.
+            </h1>
+
+            <p
+                class="mx-auto mt-7 max-w-2xl text-base leading-8 text-(--muted-foreground) sm:text-lg md:text-xl"
+            >
+                We are currently building this page so dental practices can get
+                clear, useful information about this service. In the meantime, you
+                can contact Dental IT directly and we will help you with the right
+                next step.
+            </p>
+
+            <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+                <a
+                href="/contact"
+                class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
+                >
+                Get Free IT Assessment
+                <ArrowRight class="size-4" />
+                </a>
+
+                <a
+                href="tel:+13059725760"
+                class="glass-panel inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-sm font-black uppercase tracking-wide text-(--foreground) transition hover:-translate-y-1 hover:border-(--primary) hover:text-(--primary)"
+                >
+                <PhoneCall class="size-4" />
+                Call (305) 972-5760
+                </a>
+            </div>
+
+            <div class="mt-8">
+                <a
+                href="/"
+                class="inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-(--primary) transition hover:gap-3"
+                >
+                Back to Home
+                <ArrowRight class="size-4" />
+                </a>
+            </div>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <style>
+        @keyframes networkFloat {
+        0%,
+        100% {
+            translate: 0 0;
+        }
+
+        50% {
+            translate: 0 -22px;
+        }
+        }
+
+        @keyframes diffusePulse {
+        0%,
+        100% {
+            transform: scale(1);
+            opacity: 0.75;
+        }
+
+        50% {
+            transform: scale(1.08);
+            opacity: 1;
+        }
+        }
+
+        .network-float {
+        animation: networkFloat 9s ease-in-out infinite;
+        will-change: translate, transform;
+        }
+
+        .diffuse-sphere {
+        animation: diffusePulse 10s ease-in-out infinite;
+        will-change: transform, opacity;
+        }
+
+        .diffuse-sphere-delay {
+        animation-delay: -5s;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+        .network-float,
+        .diffuse-sphere {
+            animation: none;
+        }
+        }
+    </style>
+
+    <script>
+        const parallaxLayers = document.querySelectorAll("[data-parallax-speed]");
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+        const updateParallax = () => {
+        if (reduceMotion.matches || window.innerWidth < 1024) return;
+
+        const scrollY = window.scrollY;
+
+        parallaxLayers.forEach((layer) => {
+            const speed = Number(layer.getAttribute("data-parallax-speed") || 0);
+            const y = scrollY * speed;
+
+            layer.style.setProperty("--parallax-y", `${y}px`);
+            layer.style.transform = `translate3d(0, var(--parallax-y), 0)`;
+        });
+        };
+
+        const resetParallax = () => {
+        parallaxLayers.forEach((layer) => {
+            layer.style.removeProperty("--parallax-y");
+            layer.style.transform = "";
+        });
+        };
+
+        const handleParallax = () => {
+        if (reduceMotion.matches || window.innerWidth < 1024) {
+            resetParallax();
+            return;
+        }
+
+        updateParallax();
+        };
+
+        handleParallax();
+
+        window.addEventListener("scroll", handleParallax, { passive: true });
+        window.addEventListener("resize", handleParallax);
+    </script>
+</MainLayout>
