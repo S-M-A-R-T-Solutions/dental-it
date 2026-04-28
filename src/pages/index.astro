@@ -3,252 +3,21 @@ import MainLayout from "../layouts/MainLayout.astro";
 import {
 	ArrowRight,
 	ShieldCheck,
-	ServerCog,
-	Cloud,
 	Activity,
-	LockKeyhole,
-	Stethoscope,
-	Cpu,
-	PhoneCall,
-	Search,
-	MonitorSmartphone,
 	DatabaseBackup,
 	CheckCircle2,
 	Sparkles,
-	Radar,
-	Zap,
-	Building2,
-	Globe2,
-	Users,
-	Laptop,
 } from "lucide-astro";
 
-const stats = [
-	{
-		value: "60+",
-		label: "hours of dedicated support available every week",
-	},
-	{
-		value: "24/7",
-		label: "software, hardware, network, and system monitoring",
-	},
-	{
-		value: "0.99",
-		prefix: "$",
-		suffix: "/day",
-		label: "starting proactive maintenance per workstation",
-	},
-	{
-		value: "100%",
-		label: "dental-focused IT solutions for modern practices",
-	},
-];
-
-const techSupportServices = [
-	{
-		title: "Managed IT Support",
-		href: "/tech-support/managed-it-support",
-		description:
-		"Fast, dependable IT support tailored for dental offices, imaging systems, practice management software, and daily clinical workflows.",
-		icon: ServerCog,
-	},
-	{
-		title: "Dental Cloud Backups",
-		href: "/tech-support/dental-cloud-backups",
-		description:
-		"Protect patient data, imaging files, and business-critical systems with secure cloud backup and recovery planning.",
-		icon: DatabaseBackup,
-	},
-	{
-		title: "Cloud Solutions",
-		href: "/tech-support/cloud-solutions",
-		description:
-		"Move your practice toward reliable cloud infrastructure designed to reduce downtime and improve accessibility.",
-		icon: Cloud,
-	},
-	{
-		title: "Endpoint Detection Response",
-		href: "/tech-support/endpoint-detection-response",
-		description:
-		"Strengthen every workstation with advanced endpoint protection, monitoring, and rapid response capabilities.",
-		icon: Radar,
-	},
-	{
-		title: "HIPAA Consulting",
-		href: "/tech-support/hipaa-consulting",
-		description:
-		"Get practical guidance to help your dental practice align technology, security, and workflows with HIPAA requirements.",
-		icon: ShieldCheck,
-	},
-	{
-		title: "Dental Cybersecurity",
-		href: "/tech-support/dental-cybersecurity",
-		description:
-		"Defend your practice from malware, phishing, ransomware, unauthorized access, and preventable security risks.",
-		icon: LockKeyhole,
-	},
-	{
-		title: "Proactive Maintenance",
-		href: "/tech-support/proactive-maintenance",
-		description:
-		"Keep systems updated, monitored, optimized, and ready before small issues become costly downtime.",
-		icon: Activity,
-	},
-];
-
-const deploymentServices = [
-	{
-		title: "Practice Startups",
-		href: "/deployments/practice-startups",
-		description:
-		"Build your new dental practice with a technology foundation designed for growth, security, and efficiency.",
-		icon: Building2,
-	},
-	{
-		title: "Practice Growth",
-		href: "/deployments/practice-growth",
-		description:
-		"Scale your technology as your practice adds providers, chairs, operatories, workstations, and new services.",
-		icon: Users,
-	},
-	{
-		title: "Tech Refresh",
-		href: "/deployments/tech-refresh",
-		description:
-		"Modernize outdated hardware, workstations, network devices, and systems to improve speed and reliability.",
-		icon: Cpu,
-	},
-	{
-		title: "Tech Enhancement",
-		href: "/deployments/tech-enhancement",
-		description:
-		"Upgrade key technology areas to boost performance, patient care, security, and team productivity.",
-		icon: Zap,
-	},
-	{
-		title: "Practice Renovation",
-		href: "/deployments/practice-renovation",
-		description:
-		"Coordinate technology planning during renovations, expansions, room changes, and equipment upgrades.",
-		icon: MonitorSmartphone,
-	},
-	{
-		title: "Tech Assessment",
-		href: "/deployments/tech-assessment",
-		description:
-		"Evaluate your practice technology, identify risk, document assets, and create a clear improvement roadmap.",
-		icon: Search,
-	},
-	{
-		title: "VoIP Phone Systems",
-		href: "/deployments/voip-phone-systems",
-		description:
-		"Improve front desk communication, call handling, patient experience, and office phone workflows.",
-		icon: PhoneCall,
-	},
-];
-
-const practiceSolutions = [
-	{
-		title: "Web Design for Dental Practices",
-		href: "/dental-practice-solutions/web-design-for-dental-practices",
-		description:
-		"Modern, conversion-focused dental websites designed to support trust, speed, mobile performance, and local SEO.",
-		icon: Globe2,
-	},
-	{
-		title: "Dental SEO Service",
-		href: "/dental-practice-solutions/dental-seo-service",
-		description:
-		"Improve visibility for local dental searches with optimized content, technical SEO, and service-focused landing pages.",
-		icon: Search,
-	},
-	{
-		title: "Dental Social Media",
-		href: "/dental-practice-solutions/dental-social-media",
-		description:
-		"Build a stronger online presence with content planning, community engagement, and practice-focused campaigns.",
-		icon: Sparkles,
-	},
-	{
-		title: "Custom Software Development",
-		href: "/dental-practice-solutions/custom-software-development",
-		description:
-		"Create custom tools and workflows that help your team operate faster, smarter, and more efficiently.",
-		icon: Laptop,
-	},
-];
-
-const trustItems = [
-	"Dental software, imaging, and workstation expertise",
-	"HIPAA-conscious IT planning and documentation",
-	"Cloud backup and disaster recovery strategy",
-	"Cybersecurity-first support for patient data protection",
-	"Technology deployments for startups, expansions, and renovations",
-	"Local support for Miami and South Florida dental practices",
-];
-
-const whyChoose = [
-	{
-		title: "Dental-Focused Expertise",
-		description:
-		"We understand dental workflows, front desk needs, imaging stations, operatories, servers, backups, and the systems your team depends on daily.",
-		icon: Stethoscope,
-	},
-	{
-		title: "Security Without Guesswork",
-		description:
-		"From endpoint protection to backup planning, we help reduce security risks and strengthen the technology protecting your practice.",
-		icon: LockKeyhole,
-	},
-	{
-		title: "Proactive, Not Reactive",
-		description:
-		"Monitoring, maintenance, updates, and reporting help catch issues before they interrupt patient care.",
-		icon: Activity,
-	},
-	{
-		title: "Built for Growth",
-		description:
-		"Whether you are opening, expanding, renovating, or refreshing your technology, we design systems that can scale with your practice.",
-		icon: Building2,
-	},
-];
-
-const process = [
-	{
-		step: "01",
-		title: "Assess",
-		description:
-		"We review your current technology, risks, workstations, network, backups, security, and daily pain points.",
-		image: "/images/home/process-dental-it-assessment-miami.webp",
-		alt: "Dental IT assessment for a Miami dental practice",
-	},
-	{
-		step: "02",
-		title: "Plan",
-		description:
-		"We create a clear roadmap focused on uptime, security, compliance support, performance, and budget.",
-		image: "/images/home/process-dental-it-planning-miami.webp",
-		alt: "Dental IT planning for a dental practice in Miami",
-	},
-	{
-		step: "03",
-		title: "Deploy",
-		description:
-		"We implement the right solutions with minimal disruption to your team and patient schedule.",
-		image: "/images/home/process-dental-technology-deployment-miami.webp",
-		alt: "Dental technology deployment for a Miami dental office",
-	},
-	{
-		step: "04",
-		title: "Monitor",
-		description:
-		"We keep watching, maintaining, updating, and supporting your environment so your practice can keep moving.",
-		image: "/images/home/process-dental-it-monitoring-miami.webp",
-		alt: "Dental IT monitoring for a Miami dental practice",
-	},
-];
+import {
+	stats,
+	techSupportServices,
+	deploymentServices,
+	practiceSolutions,
+	trustItems,
+	whyChoose,
+	process,
+} from "../data/home";
 ---
 
 <MainLayout
@@ -261,19 +30,19 @@ const process = [
 		<section class="relative isolate overflow-hidden bg-site">
 		<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
 			<div
-			class="diffuse-sphere absolute -left-52 top-16 h-[34rem] w-[34rem] rounded-full bg-[var(--primary)]/18 blur-[150px]"
+			class="diffuse-sphere absolute -left-52 top-16 h-136 w-136 rounded-full bg-(--primary)/18 blur-[150px]"
 			aria-hidden="true"
 			>
 			</div>
 
 			<div
-			class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-[38rem] w-[38rem] rounded-full bg-[var(--primary)]/14 blur-[170px]"
+			class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-152 w-152 rounded-full bg-(--primary)/14 blur-[170px]"
 			aria-hidden="true"
 			>
 			</div>
 
 			<div
-			class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.08)_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30"
+			class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.08)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-30"
 			>
 			</div>
 
@@ -285,21 +54,21 @@ const process = [
 			<img
 				src="/images/backgrounds/dental-it-network-bg.png"
 				alt=""
-				class="w-full min-w-[70rem]"
+				class="w-full min-w-280"
 				loading="eager"
 				decoding="async"
 			/>
 			</div>
 
 			<div
-			class="parallax-layer network-float absolute bottom-[1rem] w-full max-w-none -translate-x-1/2 opacity-[0.45]"
+			class="parallax-layer network-float absolute bottom-4 w-full max-w-none -translate-x-1/2 opacity-[0.45]"
 			data-parallax-speed="0.025"
 			aria-hidden="true"
 			>
 			<img
 				src="/images/backgrounds/dental-it-network-bg.png"
 				alt=""
-				class="w-full min-w-[70rem]"
+				class="w-full min-w-280"
 				loading="eager"
 				decoding="async"
 			/>
@@ -320,7 +89,7 @@ const process = [
 			</div>
 
 			<div
-			class="absolute inset-0 bg-gradient-to-b from-[var(--background)]/92 via-[var(--background)]/50 to-[var(--background)]/92"
+			class="absolute inset-0 bg-linear-to-b from-(--background)/92 via-(--background)/50 to-(--background)/92"
 			>
 			</div>
 		</div>
@@ -333,24 +102,24 @@ const process = [
 				class="glass-panel inline-flex max-w-full items-center gap-3 rounded-full px-4 py-2"
 			>
 				<span
-				class="inline-flex size-2.5 shrink-0 rounded-full bg-[var(--primary)] shadow-[0_0_18px_rgba(239,35,49,0.95)]"
+				class="inline-flex size-2.5 shrink-0 rounded-full bg-(--primary) shadow-[0_0_18px_rgba(239,35,49,0.95)]"
 				></span>
 
 				<span
-				class="text-xs font-black uppercase tracking-[0.18em] text-[var(--foreground)] sm:tracking-[0.22em]"
+				class="text-xs font-black uppercase tracking-[0.18em] text-(--foreground) sm:tracking-[0.22em]"
 				>
 				Dental IT Services in Miami, FL
 				</span>
 			</div>
 
 			<h1
-				class="mt-7 max-w-5xl text-balance text-[clamp(2.35rem,5.5vw,4.75rem)] font-black leading-[0.95] tracking-[-0.05em]"
+				class="mt-7 max-w-5xl text-balance text-[clamp(2.35rem,5.5vw,4.75rem)] font-black leading-[0.95] tracking-tighter"
 			>
 				Reliable IT for dental practices that cannot afford downtime.
 			</h1>
 
 			<p
-				class="mt-7 max-w-2xl text-base leading-8 text-[var(--muted-foreground)] sm:text-lg md:text-xl"
+				class="mt-7 max-w-2xl text-base leading-8 text-(--muted-foreground) sm:text-lg md:text-xl"
 			>
 				Dental IT helps Miami and South Florida dental offices stay secure,
 				backed up, compliant, monitored, and supported — so your team can
@@ -360,7 +129,7 @@ const process = [
 			<div class="mt-9 flex flex-col gap-4 sm:flex-row">
 				<a
 				href="/contact"
-				class="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--primary)] px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-[var(--primary-hover)]"
+				class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
 				>
 				Get Free IT Assessment
 				<ArrowRight class="size-4" />
@@ -368,7 +137,7 @@ const process = [
 
 				<a
 				href="/tech-support/managed-it-support"
-				class="glass-panel inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-sm font-black uppercase tracking-wide text-[var(--foreground)] transition hover:-translate-y-1 hover:border-[var(--primary)] hover:text-[var(--primary)]"
+				class="glass-panel inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-sm font-black uppercase tracking-wide text-(--foreground) transition hover:-translate-y-1 hover:border-(--primary) hover:text-(--primary)"
 				>
 				Explore Services
 				<ArrowRight class="size-4" />
@@ -379,8 +148,8 @@ const process = [
 				{
 				trustItems.slice(0, 4).map((item) => (
 					<div class="flex items-start gap-3">
-					<CheckCircle2 class="mt-1 size-5 shrink-0 text-[var(--primary)]" />
-					<p class="text-sm font-bold leading-6 text-[var(--muted-foreground)]">
+					<CheckCircle2 class="mt-1 size-5 shrink-0 text-(--primary)" />
+					<p class="text-sm font-bold leading-6 text-(--muted-foreground)">
 						{item}
 					</p>
 					</div>
@@ -393,7 +162,7 @@ const process = [
 			<div class="relative">
 				<div class="parallax-layer" data-parallax-speed="0.035">
 				<div
-					class="glass-panel glass-highlight relative overflow-hidden rounded-[2rem] p-3 sm:rounded-[2.5rem] sm:p-4"
+					class="glass-panel glass-highlight relative overflow-hidden rounded-4xl p-3 sm:rounded-[2.5rem] sm:p-4"
 				>
 					<!-- SEO image recommendation:
 					Replace with:
@@ -404,7 +173,7 @@ const process = [
 					<img
 					src="/images/home/dental-it-services-miami-dental-office-dashboard.webp"
 					alt="Dental IT services dashboard for a Miami dental practice"
-					class="aspect-[4/4.8] w-full rounded-[1.5rem] object-cover sm:rounded-[2rem] lg:aspect-[4/5]"
+					class="aspect-[4/4.8] w-full rounded-3xl object-cover sm:rounded-4xl lg:aspect-4/5"
 					loading="eager"
 					decoding="async"
 					/>
@@ -413,7 +182,7 @@ const process = [
 					class="absolute inset-x-5 bottom-5 rounded-2xl border border-white/15 bg-black/55 p-4 text-white shadow-2xl backdrop-blur-2xl sm:inset-x-8 sm:bottom-8 sm:rounded-3xl sm:p-5"
 					>
 					<p
-						class="text-xs font-black uppercase tracking-[0.2em] text-[var(--primary)]"
+						class="text-xs font-black uppercase tracking-[0.2em] text-(--primary)"
 					>
 						Live Monitoring
 					</p>
@@ -455,20 +224,20 @@ const process = [
 		</section>
 
 		<!-- STATS -->
-		<section class="relative border-y border-[var(--border)] bg-surface">
+		<section class="relative border-y border-(--border) bg-surface">
 		<div
 			class="site-container grid gap-px overflow-hidden py-8 sm:grid-cols-2 lg:grid-cols-4 lg:py-10"
 		>
 			{
 			stats.map((stat) => (
 				<div class="group relative row-5 p-5 sm:p-6 lg:p-8">
-					<div class="absolute inset-0 bg-(--primary) opacity-0 transition group-hover:opacity-[0.06] rounded-2xl" />
-					<p class="relative text-[clamp(2.4rem,5vw,3.25rem)] font-black tracking-[-0.05em] text-[var(--foreground)]">
+					<div class="absolute inset-0 rounded-2xl bg-(--primary) opacity-0 transition group-hover:opacity-[0.06]" />
+					<p class="relative text-[clamp(2.4rem,5vw,3.25rem)] font-black tracking-tighter text-(--foreground)">
 						{stat.prefix}
-						<span class="text-[var(--primary)]">{stat.value}</span>
+						<span class="text-(--primary)">{stat.value}</span>
 						{stat.suffix}
 					</p>
-					<p class="relative mt-3 max-w-xs text-sm font-bold leading-6 text-[var(--muted-foreground)]">
+					<p class="relative mt-3 max-w-xs text-sm font-bold leading-6 text-(--muted-foreground)">
 						{stat.label}
 					</p>
 				</div>
@@ -481,19 +250,19 @@ const process = [
 		<section class="section-padding relative overflow-hidden bg-site">
 		<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
 			<div
-			class="diffuse-sphere absolute -left-48 top-10 h-[28rem] w-[28rem] rounded-full bg-[var(--primary)]/12 blur-[145px]"
+			class="diffuse-sphere absolute -left-48 top-10 h-112 w-md rounded-full bg-(--primary)/12 blur-[145px]"
 			aria-hidden="true"
 			>
 			</div>
 
 			<div
-			class="diffuse-sphere diffuse-sphere-delay absolute right-[-14rem] bottom-10 h-[32rem] w-[32rem] rounded-full bg-[var(--primary)]/10 blur-[160px]"
+			class="diffuse-sphere diffuse-sphere-delay absolute -right-56 bottom-10 h-128 w-lg rounded-full bg-(--primary)/10 blur-[160px]"
 			aria-hidden="true"
 			>
 			</div>
 
 			<div
-			class="absolute inset-0 bg-gradient-to-b from-[var(--background)]/86 via-[var(--background)]/45 to-[var(--background)]/92"
+			class="absolute inset-0 bg-linear-to-b from-(--background)/86 via-(--background)/45 to-(--background)/92"
 			>
 			</div>
 		</div>
@@ -509,13 +278,13 @@ const process = [
 				</p>
 
 				<h2
-					class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-[1]"
+					class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
 				>
 					Built for the way dental offices actually work.
 				</h2>
 
 				<div
-					class="site-card mt-8 rounded-[2rem] p-6 text-left md:p-8 lg:p-9"
+					class="site-card mt-8 rounded-4xl p-6 text-left md:p-8 lg:p-9"
 				>
 					<h3 class="text-xl font-black sm:text-2xl">
 					Dental IT support that understands your environment.
@@ -533,8 +302,8 @@ const process = [
 			</div>
 
 			<div class="grid gap-5 md:grid-cols-2">
-				<div class="site-card rounded-[2rem] p-6 md:p-7">
-				<Activity class="size-9 text-[var(--primary)]" />
+				<div class="site-card rounded-4xl p-6 md:p-7">
+				<Activity class="size-9 text-(--primary)" />
 
 				<h3 class="mt-5 text-lg font-black sm:text-xl">
 					24/7 Software & Hardware Monitoring
@@ -547,8 +316,8 @@ const process = [
 				</p>
 				</div>
 
-				<div class="site-card rounded-[2rem] p-6 md:p-7">
-				<Sparkles class="size-9 text-[var(--primary)]" />
+				<div class="site-card rounded-4xl p-6 md:p-7">
+				<Sparkles class="size-9 text-(--primary)" />
 
 				<h3 class="mt-5 text-lg font-black sm:text-xl">
 					Peace of Mind Starting at $0.99/Day
@@ -561,8 +330,8 @@ const process = [
 				</p>
 				</div>
 
-				<div class="site-card rounded-[2rem] p-6 md:p-7">
-				<ShieldCheck class="size-9 text-[var(--primary)]" />
+				<div class="site-card rounded-4xl p-6 md:p-7">
+				<ShieldCheck class="size-9 text-(--primary)" />
 
 				<h3 class="mt-5 text-lg font-black sm:text-xl">
 					Security-First Dental IT Support
@@ -575,8 +344,8 @@ const process = [
 				</p>
 				</div>
 
-				<div class="site-card rounded-[2rem] p-6 md:p-7">
-				<DatabaseBackup class="size-9 text-[var(--primary)]" />
+				<div class="site-card rounded-4xl p-6 md:p-7">
+				<DatabaseBackup class="size-9 text-(--primary)" />
 
 				<h3 class="mt-5 text-lg font-black sm:text-xl">
 					Cloud Backup & Recovery Planning
@@ -597,19 +366,19 @@ const process = [
 		<section class="section-padding relative overflow-hidden bg-surface">
 		<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
 			<div
-			class="diffuse-sphere absolute -left-44 top-10 h-[30rem] w-[30rem] rounded-full bg-[var(--primary)]/16 blur-[150px]"
+			class="diffuse-sphere absolute -left-44 top-10 h-120 w-120 rounded-full bg-(--primary)/16 blur-[150px]"
 			aria-hidden="true"
 			>
 			</div>
 
 			<div
-			class="diffuse-sphere diffuse-sphere-delay absolute -right-48 top-[35%] h-[34rem] w-[34rem] rounded-full bg-[var(--primary)]/10 blur-[160px]"
+			class="diffuse-sphere diffuse-sphere-delay absolute -right-48 top-[35%] h-136 w-136 rounded-full bg-(--primary)/10 blur-[160px]"
 			aria-hidden="true"
 			>
 			</div>
 
 			<div
-			class="absolute left-1/2 top-0 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-[var(--primary)]/10 blur-[130px]"
+			class="absolute left-1/2 top-0 h-112 w-md -translate-x-1/2 rounded-full bg-(--primary)/10 blur-[130px]"
 			>
 			</div>
 
@@ -621,28 +390,28 @@ const process = [
 			<img
 				src="/images/backgrounds/dental-it-network-bg.png"
 				alt=""
-				class="w-full min-w-[70rem]"
+				class="w-full min-w-280"
 				loading="lazy"
 				decoding="async"
 			/>
 			</div>
 
 			<div
-			class="parallax-layer network-float absolute left-1/2 top-[13rem] w-[108rem] max-w-none -translate-x-1/2 opacity-[0.28]"
+			class="parallax-layer network-float absolute left-1/2 top-52 w-432 max-w-none -translate-x-1/2 opacity-[0.28]"
 			data-parallax-speed="0.018"
 			aria-hidden="true"
 			>
 			<img
 				src="/images/backgrounds/dental-it-network-bg.png"
 				alt=""
-				class="w-full min-w-[70rem]"
+				class="w-full min-w-280"
 				loading="lazy"
 				decoding="async"
 			/>
 			</div>
 
 			<div
-			class="parallax-layer network-float-soft network-float-delay absolute -right-32 top-[28rem] w-[58rem] max-w-none opacity-[0.20]"
+			class="parallax-layer network-float-soft network-float-delay absolute -right-32 top-112 w-232 max-w-none opacity-[0.20]"
 			data-parallax-speed="-0.016"
 			aria-hidden="true"
 			>
@@ -656,7 +425,7 @@ const process = [
 			</div>
 
 			<div
-			class="absolute inset-0 bg-gradient-to-b from-[var(--surface)]/88 via-[var(--surface)]/48 to-[var(--surface)]/94"
+			class="absolute inset-0 bg-linear-to-b from-(--surface)/88 via-(--surface)/48 to-(--surface)/94"
 			>
 			</div>
 		</div>
@@ -666,7 +435,7 @@ const process = [
 			<p class="section-eyebrow">Our Services</p>
 
 			<h2
-				class="section-title mx-auto normal-case text-[clamp(2rem,4.2vw,3.8rem)] leading-[1]"
+				class="section-title mx-auto normal-case text-[clamp(2rem,4.2vw,3.8rem)] leading-none"
 			>
 				We got your practice covered.
 			</h2>
@@ -680,13 +449,13 @@ const process = [
 
 			<div class="mt-14 lg:mt-16">
 			<div class="mb-7 flex items-center gap-4">
-				<div class="h-px flex-1 bg-[var(--border)]"></div>
+				<div class="h-px flex-1 bg-(--border)"></div>
 				<h3
-				class="text-center text-xs font-black uppercase tracking-[0.2em] text-[var(--primary)] sm:text-sm sm:tracking-[0.22em]"
+				class="text-center text-xs font-black uppercase tracking-[0.2em] text-(--primary) sm:text-sm sm:tracking-[0.22em]"
 				>
 				Tech Support
 				</h3>
-				<div class="h-px flex-1 bg-[var(--border)]"></div>
+				<div class="h-px flex-1 bg-(--border)"></div>
 			</div>
 
 			<div class="flex flex-wrap justify-center gap-5">
@@ -695,15 +464,15 @@ const process = [
 					({ title, href, description, icon: Icon }) => (
 					<a
 						href={href}
-						class="service-card group relative flex w-full flex-col overflow-hidden rounded-[2rem] p-6 transition hover:-translate-y-1 hover:border-[var(--primary)] md:w-[calc(50%-0.625rem)] md:p-7 xl:w-[calc(25%-0.9375rem)]"
+						class="service-card group relative flex w-full flex-col overflow-hidden rounded-4xl p-6 transition hover:-translate-y-1 hover:border-(--primary) md:w-[calc(50%-0.625rem)] md:p-7 xl:w-[calc(25%-0.9375rem)]"
 					>
-						<div class="absolute -right-12 -top-12 size-32 rounded-full bg-[var(--primary)]/10 blur-2xl transition group-hover:bg-[var(--primary)]/20" />
-						<Icon class="relative size-10 text-[var(--primary)]" />
+						<div class="absolute -right-12 -top-12 size-32 rounded-full bg-(--primary)/10 blur-2xl transition group-hover:bg-(--primary)/20" />
+						<Icon class="relative size-10 text-(--primary)" />
 						<h4 class="relative mt-6 text-lg font-black sm:text-xl">
 						{title}
 						</h4>
 						<p class="relative mt-4 text-sm leading-7">{description}</p>
-						<span class="relative mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-[var(--primary)]">
+						<span class="relative mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-(--primary)">
 						Learn More
 						<ArrowRight class="size-4 transition group-hover:translate-x-1" />
 						</span>
@@ -716,13 +485,13 @@ const process = [
 
 			<div class="mt-16 lg:mt-20">
 			<div class="mb-7 flex items-center gap-4">
-				<div class="h-px flex-1 bg-[var(--border)]"></div>
+				<div class="h-px flex-1 bg-(--border)"></div>
 				<h3
-				class="text-center text-xs font-black uppercase tracking-[0.2em] text-[var(--primary)] sm:text-sm sm:tracking-[0.22em]"
+				class="text-center text-xs font-black uppercase tracking-[0.2em] text-(--primary) sm:text-sm sm:tracking-[0.22em]"
 				>
 				Deployments
 				</h3>
-				<div class="h-px flex-1 bg-[var(--border)]"></div>
+				<div class="h-px flex-1 bg-(--border)"></div>
 			</div>
 
 			<div class="flex flex-wrap justify-center gap-5">
@@ -731,12 +500,12 @@ const process = [
 					({ title, href, description, icon: Icon }) => (
 					<a
 						href={href}
-						class="service-card group relative flex w-full flex-col overflow-hidden rounded-[2rem] p-6 transition hover:-translate-y-1 hover:border-[var(--primary)] md:w-[calc(50%-0.625rem)] md:p-7 xl:w-[calc(25%-0.9375rem)]"
+						class="service-card group relative flex w-full flex-col overflow-hidden rounded-4xl p-6 transition hover:-translate-y-1 hover:border-(--primary) md:w-[calc(50%-0.625rem)] md:p-7 xl:w-[calc(25%-0.9375rem)]"
 					>
-						<Icon class="size-10 text-[var(--primary)]" />
+						<Icon class="size-10 text-(--primary)" />
 						<h4 class="mt-6 text-lg font-black sm:text-xl">{title}</h4>
 						<p class="mt-4 text-sm leading-7">{description}</p>
-						<span class="mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-[var(--primary)]">
+						<span class="mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-(--primary)">
 						Learn More
 						<ArrowRight class="size-4 transition group-hover:translate-x-1" />
 						</span>
@@ -749,13 +518,13 @@ const process = [
 
 			<div class="mt-16 lg:mt-20">
 			<div class="mb-7 flex items-center gap-4">
-				<div class="h-px flex-1 bg-[var(--border)]"></div>
+				<div class="h-px flex-1 bg-(--border)"></div>
 				<h3
-				class="text-center text-xs font-black uppercase tracking-[0.2em] text-[var(--primary)] sm:text-sm sm:tracking-[0.22em]"
+				class="text-center text-xs font-black uppercase tracking-[0.2em] text-(--primary) sm:text-sm sm:tracking-[0.22em]"
 				>
 				Dental Practice Solutions
 				</h3>
-				<div class="h-px flex-1 bg-[var(--border)]"></div>
+				<div class="h-px flex-1 bg-(--border)"></div>
 			</div>
 
 			<div class="flex flex-wrap justify-center gap-5">
@@ -764,16 +533,16 @@ const process = [
 					({ title, href, description, icon: Icon }) => (
 					<a
 						href={href}
-						class="service-card group relative flex w-full flex-col overflow-hidden rounded-[2rem] p-6 transition hover:-translate-y-1 hover:border-[var(--primary)] md:w-[calc(50%-0.625rem)] md:p-7 xl:w-[calc(25%-0.9375rem)]"
+						class="service-card group relative flex w-full flex-col overflow-hidden rounded-4xl p-6 transition hover:-translate-y-1 hover:border-(--primary) md:w-[calc(50%-0.625rem)] md:p-7 xl:w-[calc(25%-0.9375rem)]"
 					>
-						<Icon class="relative size-10 text-[var(--primary)]" />
+						<Icon class="relative size-10 text-(--primary)" />
 						<h4 class="relative mt-6 text-base font-black sm:text-lg">
 						{title}
 						</h4>
-						<p class="relative mt-4 text-sm leading-7 text-[var(--muted-foreground)]">
+						<p class="relative mt-4 text-sm leading-7 text-(--muted-foreground)">
 						{description}
 						</p>
-						<span class="mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-[var(--primary)]">
+						<span class="mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-wide text-(--primary)">
 						Learn More
 						<ArrowRight class="size-4 transition group-hover:translate-x-1" />
 						</span>
@@ -798,24 +567,24 @@ const process = [
   "
 >
   <!-- Background overlays -->
-  <div class="pointer-events-none absolute inset-0 -z-0 overflow-hidden">
+  <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
     <!-- Main contrast overlay -->
     <div
-      class="absolute inset-0 bg-[var(--background)]/50 dark:bg-black/78"
+      class="absolute inset-0 bg-(--background)/50 dark:bg-black/78"
       aria-hidden="true"
     >
     </div>
 
     <!-- Gradient depth overlay -->
     <div
-      class="absolute inset-0 bg-gradient-to-br from-[var(--background)]/95 via-[var(--background)]/72 to-[var(--background)]/88 dark:from-black/92 dark:via-black/70 dark:to-black/90"
+      class="absolute inset-0 bg-linear-to-br from-(--background)/95 via-(--background)/72 to-(--background)/88 dark:from-black/92 dark:via-black/70 dark:to-black/90"
       aria-hidden="true"
     >
     </div>
 
     <!-- Red brand glow -->
     <div
-      class="diffuse-sphere absolute -left-44 top-20 h-[30rem] w-[30rem] rounded-full bg-[var(--primary)]/20 blur-[150px]"
+      class="diffuse-sphere absolute -left-44 top-20 h-120 w-120 rounded-full bg-(--primary)/20 blur-[150px]"
       aria-hidden="true"
     >
     </div>
@@ -828,14 +597,14 @@ const process = [
 
     <!-- Blurred network depth layer -->
     <div
-      class="parallax-layer absolute left-1/2 bottom-[4rem] w-[105rem] max-w-none -translate-x-1/2 opacity-[0.12] blur-2xl"
+      class="parallax-layer absolute left-1/2 bottom-16 w-420 max-w-none -translate-x-1/2 opacity-[0.12] blur-2xl"
       data-parallax-speed="-0.014"
       aria-hidden="true"
     >
       <img
         src="/images/backgrounds/dental-it-network-bg.png"
         alt=""
-        class="w-full min-w-[65rem]"
+        class="w-full min-w-260"
         loading="lazy"
         decoding="async"
       />
@@ -843,14 +612,14 @@ const process = [
 
     <!-- Sharper animated network layer -->
     <div
-      class="parallax-layer network-float absolute left-1/2 bottom-[8rem] w-[100rem] max-w-none -translate-x-1/2 opacity-[0.24]"
+      class="parallax-layer network-float absolute left-1/2 bottom-32 w-400 max-w-none -translate-x-1/2 opacity-[0.24]"
       data-parallax-speed="0.02"
       aria-hidden="true"
     >
       <img
         src="/images/backgrounds/dental-it-network-bg.png"
         alt=""
-        class="w-full min-w-[65rem]"
+        class="w-full min-w-260"
         loading="lazy"
         decoding="async"
       />
@@ -858,7 +627,7 @@ const process = [
 
     <!-- Side network detail -->
     <div
-      class="parallax-layer network-float-soft network-float-delay absolute -left-32 top-20 w-[56rem] max-w-none opacity-[0.18]"
+      class="parallax-layer network-float-soft network-float-delay absolute -left-32 top-20 w-4xl max-w-none opacity-[0.18]"
       data-parallax-speed="-0.018"
       aria-hidden="true"
     >
@@ -875,13 +644,13 @@ const process = [
   <div class="site-container relative z-10 grid gap-12 lg:grid-cols-2 lg:items-center">
     <div class="relative mx-auto w-full max-w-xl lg:max-w-none">
       <div
-        class="grid gap-5 sm:grid-cols-2 lg:block lg:min-h-[34rem] xl:min-h-[38rem]"
+        class="grid gap-5 sm:grid-cols-2 lg:block lg:min-h-136 xl:min-h-152"
       >
         <div
           class="parallax-layer lg:absolute lg:left-0 lg:top-0 lg:w-[80%]"
           data-parallax-speed="0.04"
         >
-          <div class="glass-panel rounded-[2rem] p-3">
+          <div class="glass-panel rounded-4xl p-3">
             <!-- SEO image recommendation:
               Replace with:
               src="/images/home/miami-dental-practice-it-support-team.webp"
@@ -891,7 +660,7 @@ const process = [
             <img
               src="/images/home/miami-dental-practice-it-support-team.webp"
               alt="Dental IT support team helping a Miami dental practice"
-              class="aspect-[4/5] w-full rounded-[1.5rem] object-cover"
+              class="aspect-4/5 w-full rounded-3xl object-cover"
               loading="lazy"
               decoding="async"
             />
@@ -902,7 +671,7 @@ const process = [
           class="parallax-layer lg:absolute lg:bottom-0 lg:right-0 lg:w-[80%]"
           data-parallax-speed="-0.035"
         >
-          <div class="glass-panel rounded-[2rem] p-3">
+          <div class="glass-panel rounded-4xl p-3">
             <!-- SEO image recommendation:
               Replace with:
               src="/images/home/dental-office-cybersecurity-monitoring-miami.webp"
@@ -912,7 +681,7 @@ const process = [
             <img
               src="/images/home/dental-office-cybersecurity-monitoring-miami.webp"
               alt="Cybersecurity and monitoring for a dental office in Miami"
-              class="aspect-[4/5] w-full rounded-[1.5rem] object-cover"
+              class="aspect-4/5 w-full rounded-3xl object-cover"
               loading="lazy"
               decoding="async"
             />
@@ -925,7 +694,7 @@ const process = [
       <p class="section-eyebrow">Why Dental Clinics Trust Us</p>
 
       <h2
-        class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-[1]"
+        class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
       >
         Technology support designed around patient care.
       </h2>
@@ -939,16 +708,16 @@ const process = [
       <div class="mt-9 grid gap-4">
         {
           whyChoose.map(({ title, description, icon: Icon }) => (
-            <div class="glass-panel glass-highlight flex gap-5 rounded-[2rem] p-5 sm:p-6">
-              <div class="relative flex size-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--primary)] text-white">
+            <div class="glass-panel glass-highlight flex gap-5 rounded-4xl p-5 sm:p-6">
+              <div class="relative flex size-12 shrink-0 items-center justify-center rounded-2xl bg-(--primary) text-white">
                 <Icon class="size-6" />
               </div>
 
               <div class="relative">
-                <h3 class="text-base font-black text-[var(--foreground)] sm:text-lg">
+                <h3 class="text-base font-black text-(--foreground) sm:text-lg">
                   {title}
                 </h3>
-                <p class="mt-2 text-sm leading-7 text-[var(--muted-foreground)]">
+                <p class="mt-2 text-sm leading-7 text-(--muted-foreground)">
                   {description}
                 </p>
               </div>
@@ -964,47 +733,47 @@ const process = [
 		<section class="section-padding relative overflow-hidden bg-surface">
 		<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
 			<div
-			class="diffuse-sphere absolute -left-52 top-10 h-[32rem] w-[32rem] rounded-full bg-[var(--primary)]/14 blur-[150px]"
+			class="diffuse-sphere absolute -left-52 top-10 h-128 w-lg rounded-full bg-(--primary)/14 blur-[150px]"
 			aria-hidden="true"
 			>
 			</div>
 
 			<div
-			class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-[34rem] w-[34rem] rounded-full bg-[var(--primary)]/10 blur-[160px]"
+			class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/10 blur-[160px]"
 			aria-hidden="true"
 			>
 			</div>
 
 			<div
-			class="parallax-layer absolute left-1/2 top-[6rem] w-[112rem] max-w-none -translate-x-1/2 opacity-[0.10] blur-3xl"
+			class="parallax-layer absolute left-1/2 top-24 w-448 max-w-none -translate-x-1/2 opacity-[0.10] blur-3xl"
 			data-parallax-speed="-0.015"
 			aria-hidden="true"
 			>
 			<img
 				src="/images/backgrounds/dental-it-network-bg.png"
 				alt=""
-				class="w-full min-w-[70rem]"
+				class="w-full min-w-280"
 				loading="lazy"
 				decoding="async"
 			/>
 			</div>
 
 			<div
-			class="parallax-layer network-float absolute left-1/2 bottom-[2rem] w-[104rem] max-w-none -translate-x-1/2 opacity-[0.20]"
+			class="parallax-layer network-float absolute left-1/2 bottom-8 w-416 max-w-none -translate-x-1/2 opacity-[0.20]"
 			data-parallax-speed="0.018"
 			aria-hidden="true"
 			>
 			<img
 				src="/images/backgrounds/dental-it-network-bg.png"
 				alt=""
-				class="w-full min-w-[65rem]"
+				class="w-full min-w-260"
 				loading="lazy"
 				decoding="async"
 			/>
 			</div>
 
 			<div
-			class="parallax-layer network-float-soft network-float-delay absolute -right-32 top-[8rem] w-[54rem] max-w-none opacity-[0.16]"
+			class="parallax-layer network-float-soft network-float-delay absolute -right-32 top-32 w-216 max-w-none opacity-[0.16]"
 			data-parallax-speed="-0.016"
 			aria-hidden="true"
 			>
@@ -1018,7 +787,7 @@ const process = [
 			</div>
 
 			<div
-			class="absolute inset-0 bg-gradient-to-b from-[var(--surface)]/88 via-[var(--surface)]/48 to-[var(--surface)]/94"
+			class="absolute inset-0 bg-linear-to-b from-(--surface)/88 via-(--surface)/48 to-(--surface)/94"
 			>
 			</div>
 		</div>
@@ -1043,20 +812,20 @@ const process = [
 			<div class="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
 			{
 				process.map((item) => (
-				<article class="site-card group relative overflow-hidden rounded-[2rem] p-3 transition hover:-translate-y-1 hover:border-[var(--primary)]">
-					<div class="relative overflow-hidden rounded-[1.5rem]">
+				<article class="site-card group relative overflow-hidden rounded-4xl p-3 transition hover:-translate-y-1 hover:border-(--primary)">
+					<div class="relative overflow-hidden rounded-3xl">
 					<img
 						src={item.image}
 						alt={item.alt}
-						class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
+						class="aspect-4/3 w-full object-cover transition duration-500 group-hover:scale-105"
 						loading="lazy"
 						decoding="async"
 					/>
 
-					<div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+					<div class="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent" />
 
 					<div class="absolute bottom-4 left-4">
-						<span class="inline-flex rounded-full bg-[var(--primary)] px-3 py-1 text-xs font-black tracking-wide text-white">
+						<span class="inline-flex rounded-full bg-(--primary) px-3 py-1 text-xs font-black tracking-wide text-white">
 						{item.step}
 						</span>
 					</div>
@@ -1076,51 +845,51 @@ const process = [
 
 		<!-- FINAL CTA -->
 		<section
-		class="relative overflow-hidden bg-footer py-16 text-[var(--footer-foreground)] md:py-20 lg:py-28"
+		class="relative overflow-hidden bg-footer py-16 text-(--footer-foreground) md:py-20 lg:py-28"
 		>
 		<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
 			<div
-			class="diffuse-sphere absolute -left-48 top-0 h-[30rem] w-[30rem] rounded-full bg-[var(--primary)]/18 blur-[150px]"
+			class="diffuse-sphere absolute -left-48 top-0 h-120 w-120 rounded-full bg-(--primary)/18 blur-[150px]"
 			aria-hidden="true"
 			>
 			</div>
 
 			<div
-			class="diffuse-sphere diffuse-sphere-delay absolute -right-48 bottom-0 h-[34rem] w-[34rem] rounded-full bg-[var(--primary)]/14 blur-[160px]"
+			class="diffuse-sphere diffuse-sphere-delay absolute -right-48 bottom-0 h-136 w-136 rounded-full bg-(--primary)/14 blur-[160px]"
 			aria-hidden="true"
 			>
 			</div>
 
 			<div
-			class="parallax-layer absolute left-1/2 bottom-[-4rem] w-[108rem] max-w-none -translate-x-1/2 opacity-[0.10] blur-2xl"
+			class="parallax-layer absolute left-1/2 -bottom-16 w-432 max-w-none -translate-x-1/2 opacity-[0.10] blur-2xl"
 			data-parallax-speed="-0.012"
 			aria-hidden="true"
 			>
 			<img
 				src="/images/backgrounds/dental-it-network-bg.png"
 				alt=""
-				class="w-full min-w-[65rem]"
+				class="w-full min-w-260"
 				loading="lazy"
 				decoding="async"
 			/>
 			</div>
 
 			<div
-			class="parallax-layer network-float absolute left-1/2 bottom-[-3rem] w-[100rem] max-w-none -translate-x-1/2 opacity-[0.20] blur-xl"
+			class="parallax-layer network-float absolute left-1/2 -bottom-12 w-400 max-w-none -translate-x-1/2 opacity-[0.20] blur-xl"
 			data-parallax-speed="0.015"
 			aria-hidden="true"
 			>
 			<img
 				src="/images/backgrounds/dental-it-network-bg.png"
 				alt=""
-				class="w-full min-w-[65rem]"
+				class="w-full min-w-260"
 				loading="lazy"
 				decoding="async"
 			/>
 			</div>
 
 			<div
-			class="parallax-layer network-float-soft network-float-delay absolute right-[-16rem] top-6 w-[54rem] max-w-none opacity-[0.18]"
+			class="parallax-layer network-float-soft network-float-delay absolute -right-64 top-6 w-216 max-w-none opacity-[0.18]"
 			data-parallax-speed="-0.014"
 			aria-hidden="true"
 			>
@@ -1134,27 +903,27 @@ const process = [
 			</div>
 
 			<div
-			class="absolute inset-0 bg-gradient-to-b from-[var(--footer-background)]/88 via-[var(--footer-background)]/45 to-[var(--footer-background)]/95"
+			class="absolute inset-0 bg-linear-to-b from-(--footer-background)/88 via-(--footer-background)/45 to-(--footer-background)/95"
 			>
 			</div>
 		</div>
 
 		<div class="site-container relative">
 			<div
-			class="glass-panel glass-highlight mx-auto max-w-5xl rounded-[2rem] p-6 text-center sm:p-8 md:rounded-[2.5rem] md:p-12 lg:p-16"
+			class="glass-panel glass-highlight mx-auto max-w-5xl rounded-4xl p-6 text-center sm:p-8 md:rounded-[2.5rem] md:p-12 lg:p-16"
 			>
 			<p class="section-eyebrow justify-center">
 				Ready to Improve Your Dental IT?
 			</p>
 
 			<h2
-				class="mt-5 text-[clamp(2rem,4.2vw,3.75rem)] font-black leading-[1] tracking-[-0.05em] text-[var(--footer-foreground)]"
+				class="mt-5 text-[clamp(2rem,4.2vw,3.75rem)] font-black leading-none tracking-tighter text-(--footer-foreground)"
 			>
 				Get a free IT assessment for your dental practice.
 			</h2>
 
 			<p
-				class="mx-auto mt-6 max-w-3xl text-base leading-8 text-[var(--footer-muted)] md:text-lg"
+				class="mx-auto mt-6 max-w-3xl text-base leading-8 text-(--footer-muted) md:text-lg"
 			>
 				Let Dental IT review your current technology, identify risk, and
 				create a clear plan to improve security, backups, performance, and
@@ -1164,7 +933,7 @@ const process = [
 			<div class="mt-9 flex justify-center">
 				<a
 				href="/contact"
-				class="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--primary)] px-8 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-[var(--primary-hover)]"
+				class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-8 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-[var(--primary-hover)]"
 				>
 				Schedule Free Assessment
 				<ArrowRight class="size-4" />

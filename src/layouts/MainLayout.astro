@@ -4,6 +4,14 @@ import Footer from "../components/layout/Footer.astro";
 
 import "../styles/global.css";
 
+import { siteConfig } from "../data/site";
+import {
+  getAbsoluteUrl,
+  getCanonicalUrl,
+  getPageTitle,
+  getStructuredData,
+} from "../utils/seo";
+
 export interface Props {
   title?: string;
   description?: string;
@@ -15,161 +23,25 @@ export interface Props {
 }
 
 const {
-  title = "Dental IT Services in Miami, FL | Managed IT Support for Dental Practices",
-  description = "Dental IT provides managed IT services, cybersecurity, HIPAA compliance support, cloud backups, and technology solutions for dental practices in Miami and South Florida.",
+  title = siteConfig.defaultTitle,
+  description = siteConfig.defaultDescription,
   canonical,
-  image = "/images/og/dental-it-miami-og.jpg",
+  image = siteConfig.defaultImage,
   type = "website",
   noindex = false,
   theme = "dark",
 } = Astro.props;
 
-const siteName = "Dental IT";
-const siteUrl = "https://itdental.tech";
-const currentUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).toString();
-const absoluteImageUrl = new URL(image, siteUrl).toString();
+const pageTitle = getPageTitle(title);
+const currentUrl = getCanonicalUrl(Astro.url.pathname, canonical);
+const absoluteImageUrl = getAbsoluteUrl(image);
 
-const businessPhone = "+1-305-972-5760";
-const businessPhoneDisplay = "(305) 972-5760";
-const businessEmail = "info@itdental.tech";
-
-const facebookUrl = "https://www.facebook.com/itdentaltech";
-const instagramUrl = "https://www.instagram.com/itdentaltech/";
-
-const pageTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
-
-const structuredData = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "LocalBusiness",
-      "@id": `${siteUrl}/#localbusiness`,
-      name: "Dental IT",
-      alternateName: "Dental IT Powered by SMART Solutions",
-      url: siteUrl,
-      logo: `${siteUrl}/images/logo/dental-it-logo.png`,
-      image: absoluteImageUrl,
-      description:
-        "Dental IT provides managed IT services, cybersecurity, HIPAA compliance support, cloud backups, monitoring, deployments, and technology solutions for dental practices in Miami and South Florida.",
-      telephone: businessPhone,
-      email: businessEmail,
-      priceRange: "$$",
-      areaServed: [
-        {
-          "@type": "City",
-          name: "Miami",
-          address: {
-            "@type": "PostalAddress",
-            addressLocality: "Miami",
-            addressRegion: "FL",
-            addressCountry: "US",
-          },
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "South Florida",
-        },
-      ],
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Miami",
-        addressRegion: "FL",
-        addressCountry: "US",
-      },
-      contactPoint: {
-        "@type": "ContactPoint",
-        telephone: businessPhone,
-        email: businessEmail,
-        contactType: "customer support",
-        areaServed: "US-FL",
-        availableLanguage: ["English", "Spanish"],
-      },
-      sameAs: [facebookUrl, instagramUrl],
-      makesOffer: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Managed IT Support for Dental Practices",
-            serviceType: "Dental IT Support",
-            areaServed: "Miami, FL",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "HIPAA Compliance IT Support",
-            serviceType: "HIPAA Compliance",
-            areaServed: "Miami, FL",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Dental Cybersecurity Services",
-            serviceType: "Cybersecurity",
-            areaServed: "Miami, FL",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Cloud Backups and Disaster Recovery",
-            serviceType: "Cloud Backup",
-            areaServed: "Miami, FL",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Dental Practice Technology Deployments",
-            serviceType: "IT Deployment",
-            areaServed: "Miami, FL",
-          },
-        },
-      ],
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${siteUrl}/#website`,
-      url: siteUrl,
-      name: siteName,
-      description:
-        "Managed IT services, cybersecurity, HIPAA compliance support, cloud backups, and technology solutions for dental practices in Miami and South Florida.",
-      publisher: {
-        "@id": `${siteUrl}/#localbusiness`,
-      },
-      potentialAction: {
-        "@type": "SearchAction",
-        target: `${siteUrl}/search?q={search_term_string}`,
-        "query-input": "required name=search_term_string",
-      },
-      inLanguage: "en-US",
-    },
-    {
-      "@type": "WebPage",
-      "@id": `${currentUrl}#webpage`,
-      url: currentUrl,
-      name: pageTitle,
-      description,
-      isPartOf: {
-        "@id": `${siteUrl}/#website`,
-      },
-      about: {
-        "@id": `${siteUrl}/#localbusiness`,
-      },
-      primaryImageOfPage: {
-        "@type": "ImageObject",
-        url: absoluteImageUrl,
-      },
-      inLanguage: "en-US",
-    },
-  ],
-};
+const structuredData = getStructuredData({
+  currentUrl,
+  pageTitle,
+  description,
+  absoluteImageUrl,
+});
 ---
 
 <!doctype html>
@@ -202,7 +74,7 @@ const structuredData = {
     <meta name="geo.placename" content="Miami" />
     <meta name="ICBM" content="25.7617, -80.1918" />
 
-    <meta property="og:site_name" content={siteName} />
+    <meta property="og:site_name" content={siteConfig.siteName} />
     <meta property="og:type" content={type} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
@@ -226,11 +98,11 @@ const structuredData = {
     />
 
     <meta name="format-detection" content="telephone=yes" />
-    <meta name="contact:phone_number" content={businessPhoneDisplay} />
-    <meta name="contact:email" content={businessEmail} />
+    <meta name="contact:phone_number" content={siteConfig.business.phoneDisplay} />
+    <meta name="contact:email" content={siteConfig.business.email} />
 
-    <link rel="me" href={facebookUrl} />
-    <link rel="me" href={instagramUrl} />
+    <link rel="me" href={siteConfig.social.facebook} />
+    <link rel="me" href={siteConfig.social.instagram} />
 
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />

@@ -1,269 +1,202 @@
 ---
+import { ArrowRight, Mail, Phone, MapPin } from "lucide-astro";
+
 import {
-  ArrowRight,
-  Mail,
-  Phone,
-  MapPin,
-  Facebook,
-  Instagram,
-} from "lucide-astro";
+    phoneNumber,
+    phoneHref,
+    email,
+    emailHref,
+    footerColumns,
+    socialLinks,
+} from "../../data/footer";
 
 const currentYear = new Date().getFullYear();
-
-const phoneNumber = "(305) 972-5760";
-const phoneHref = "tel:+13059725760";
-const email = "info@itdental.tech";
-const emailHref = `mailto:${email}`;
-
-const footerColumns = [
-  {
-    title: "Tech Support",
-    links: [
-      { label: "Managed IT Support", href: "/tech-support/managed-it-support" },
-      { label: "Dental Cloud Backups", href: "/tech-support/dental-cloud-backups" },
-      { label: "Cloud Solutions", href: "/tech-support/cloud-solutions" },
-      {
-        label: "Endpoint Detection Response",
-        href: "/tech-support/endpoint-detection-response",
-      },
-      { label: "HIPAA Consulting", href: "/tech-support/hipaa-consulting" },
-      { label: "Dental Cybersecurity", href: "/tech-support/dental-cybersecurity" },
-      { label: "Proactive Maintenance", href: "/tech-support/proactive-maintenance" },
-    ],
-  },
-  {
-    title: "Deployments",
-    links: [
-      { label: "Practice Startups", href: "/deployments/practice-startups" },
-      { label: "Practice Growth", href: "/deployments/practice-growth" },
-      { label: "Tech Refresh", href: "/deployments/tech-refresh" },
-      { label: "Tech Enhancement", href: "/deployments/tech-enhancement" },
-      { label: "Practice Renovation", href: "/deployments/practice-renovation" },
-      { label: "Tech Assessment", href: "/deployments/tech-assessment" },
-      { label: "VoIP Phone Systems", href: "/deployments/voip-phone-systems" },
-    ],
-  },
-  {
-    title: "Dental Practice Solutions",
-    links: [
-      {
-        label: "Web Design for Dental Practices",
-        href: "/dental-practice-solutions/web-design-for-dental-practices",
-      },
-      {
-        label: "Dental SEO Service",
-        href: "/dental-practice-solutions/dental-seo-service",
-      },
-      {
-        label: "Dental Social Media",
-        href: "/dental-practice-solutions/dental-social-media",
-      },
-      {
-        label: "Custom Software Development",
-        href: "/dental-practice-solutions/custom-software-development",
-      },
-    ],
-  },
-];
-
-const socialLinks = [
-  {
-    label: "Facebook",
-    href: "https://www.facebook.com/itdentaltech",
-    icon: Facebook,
-  },
-  {
-    label: "Instagram",
-    href: "https://www.instagram.com/itdentaltech/",
-    icon: Instagram,
-  },
-];
 ---
 
 <footer
-  class="border-t border-[var(--footer-border)] bg-[var(--footer-background)] text-[var(--footer-foreground)] transition-colors duration-200"
+    class="border-t border-(--footer-border) bg-(--footer-background) text-(--footer-foreground) transition-colors duration-200"
 >
-  <section class="relative overflow-hidden">
-    <div class="pointer-events-none absolute inset-0 opacity-20 dark:opacity-30">
-      <div class="absolute -left-24 top-10 size-72 rounded-full bg-[var(--primary)] blur-[120px]"></div>
-      <div class="absolute -right-24 bottom-0 size-72 rounded-full bg-[var(--primary)] blur-[140px]"></div>
-    </div>
-
-    <div class="site-container relative py-16 lg:py-20">
-      <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-        <div>
-          <p class="mb-4 text-sm font-black uppercase tracking-[0.22em] text-[var(--primary)]">
-            Dental IT Services in Miami, FL
-          </p>
-
-          <h2 class="max-w-3xl text-4xl font-black uppercase leading-[0.95] tracking-[-0.04em] text-[var(--footer-foreground)] md:text-5xl lg:text-6xl">
-            Secure, reliable IT support for modern dental practices.
-          </h2>
-
-          <p class="mt-5 max-w-2xl text-base leading-8 text-[var(--footer-muted)] md:text-lg">
-            Managed IT support, cybersecurity, HIPAA consulting, cloud backups,
-            deployments, and technology solutions built specifically for dental
-            offices in Miami and South Florida.
-          </p>
+    <section class="relative overflow-hidden">
+        <div class="pointer-events-none absolute inset-0 opacity-20 dark:opacity-30">
+        <div class="absolute -left-24 top-10 size-72 rounded-full bg-(--primary) blur-[120px]"></div>
+        <div class="absolute -right-24 bottom-0 size-72 rounded-full bg-(--primary) blur-[140px]"></div>
         </div>
 
-        <div class="rounded-[2rem] border border-[var(--footer-border)] bg-[var(--footer-surface)] p-6 shadow-[0_24px_70px_rgba(0,0,0,0.12)] backdrop-blur-xl md:p-8 dark:shadow-[0_24px_70px_rgba(0,0,0,0.22)]">
-          <p class="text-sm font-black uppercase tracking-[0.2em] text-[var(--footer-muted)]">
-            Ready to improve your dental IT?
-          </p>
+        <div class="site-container relative py-16 lg:py-20">
+        <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+            <p class="mb-4 text-sm font-black uppercase tracking-[0.22em] text-(--primary)">
+                Dental IT Services in Miami, FL
+            </p>
 
-          <h3 class="mt-3 text-2xl font-black text-[var(--footer-foreground)]">
-            Get a free IT assessment for your practice.
-          </h3>
+            <h2 class="max-w-3xl text-4xl font-black uppercase leading-[0.95] tracking-[-0.04em] text-(--footer-foreground) md:text-5xl lg:text-6xl">
+                Secure, reliable IT support for modern dental practices.
+            </h2>
 
-          <p class="mt-3 text-sm leading-7 text-[var(--footer-muted)]">
-            Let Dental IT review your current setup and identify opportunities
-            to improve security, performance, backups, and support.
-          </p>
-
-          <div class="mt-6 flex flex-col gap-3 sm:flex-row">
-            <a
-              href="/contact"
-              class="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--primary)] px-6 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_16px_36px_rgba(239,35,49,0.28)] transition hover:-translate-y-0.5 hover:bg-[var(--primary-hover)]"
-            >
-              Get Free IT Assessment
-              <ArrowRight class="size-4" />
-            </a>
-
-            <a
-              href={phoneHref}
-              class="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--footer-border)] px-6 py-4 text-sm font-black uppercase tracking-wide text-[var(--footer-foreground)] transition hover:border-[var(--primary)] hover:text-[var(--primary)]"
-            >
-              <Phone class="size-4" />
-              {phoneNumber}
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="border-t border-[var(--footer-border)]">
-    <div class="site-container py-12 lg:py-16">
-      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.6fr]">
-        <div>
-          <a href="/" aria-label="Dental IT home page" class="inline-flex">
-            <img
-              src="/logo/logo-light-mode.webp"
-              alt="Dental IT powered by SMART Solutions"
-              class="h-14 w-auto dark:hidden"
-              loading="lazy"
-              decoding="async"
-            />
-
-            <img
-              src="/logo/logo-dark-mode.webp"
-              alt="Dental IT powered by SMART Solutions"
-              class="hidden h-14 w-auto dark:block"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
-
-          <p class="mt-5 max-w-sm text-sm leading-7 text-[var(--footer-muted)]">
-            Dental IT helps dental practices stay secure, compliant, backed up,
-            and supported with technology services designed for the dental
-            industry.
-          </p>
-
-          <div class="mt-6 space-y-3">
-            <a
-              href={phoneHref}
-              class="flex items-center gap-3 text-sm font-bold text-[var(--footer-muted)] transition hover:text-[var(--primary)]"
-            >
-              <span class="inline-flex size-9 items-center justify-center rounded-full bg-[var(--footer-surface)] text-[var(--primary)]">
-                <Phone class="size-4" />
-              </span>
-              {phoneNumber}
-            </a>
-
-            <a
-              href={emailHref}
-              class="flex items-center gap-3 text-sm font-bold text-[var(--footer-muted)] transition hover:text-[var(--primary)]"
-            >
-              <span class="inline-flex size-9 items-center justify-center rounded-full bg-[var(--footer-surface)] text-[var(--primary)]">
-                <Mail class="size-4" />
-              </span>
-              {email}
-            </a>
-
-            <div class="flex items-center gap-3 text-sm font-bold text-[var(--footer-muted)]">
-              <span class="inline-flex size-9 items-center justify-center rounded-full bg-[var(--footer-surface)] text-[var(--primary)]">
-                <MapPin class="size-4" />
-              </span>
-              Miami, FL & South Florida
+            <p class="mt-5 max-w-2xl text-base leading-8 text-(--footer-muted) md:text-lg">
+                Managed IT support, cybersecurity, HIPAA consulting, cloud backups,
+                deployments, and technology solutions built specifically for dental
+                offices in Miami and South Florida.
+            </p>
             </div>
-          </div>
 
-          <div class="mt-6 flex items-center gap-3">
-            {
-              socialLinks.map(({ label, href, icon: Icon }) => (
+            <div class="rounded-4xl border border-(--footer-border) bg-(--footer-surface) p-6 shadow-[0_24px_70px_rgba(0,0,0,0.12)] backdrop-blur-xl md:p-8 dark:shadow-[0_24px_70px_rgba(0,0,0,0.22)]">
+            <p class="text-sm font-black uppercase tracking-[0.2em] text-(--footer-muted)">
+                Ready to improve your dental IT?
+            </p>
+
+            <h3 class="mt-3 text-2xl font-black text-(--footer-foreground)">
+                Get a free IT assessment for your practice.
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-(--footer-muted)">
+                Let Dental IT review your current setup and identify opportunities
+                to improve security, performance, backups, and support.
+            </p>
+
+            <div class="mt-6 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Visit Dental IT on ${label}`}
-                  class="inline-flex size-11 items-center justify-center rounded-full border border-[var(--footer-border)] bg-[var(--footer-surface)] text-[var(--footer-foreground)] transition hover:border-[var(--primary)] hover:bg-[var(--primary)] hover:text-white"
+                href="/contact"
+                class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-6 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_16px_36px_rgba(239,35,49,0.28)] transition hover:-translate-y-0.5 hover:bg-(--primary-hover)"
                 >
-                  <Icon class="size-5" />
+                Get Free IT Assessment
+                <ArrowRight class="size-4" />
                 </a>
-              ))
+
+                <a
+                href={phoneHref}
+                class="inline-flex items-center justify-center gap-2 rounded-full border border-(--footer-border) px-6 py-4 text-sm font-black uppercase tracking-wide text-(--footer-foreground) transition hover:border-(--primary) hover:text-(--primary)"
+                >
+                <Phone class="size-4" />
+                {phoneNumber}
+                </a>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="border-t border-(--footer-border)">
+        <div class="site-container py-12 lg:py-16">
+        <div class="grid gap-10 lg:grid-cols-[0.9fr_1.6fr]">
+            <div>
+            <a href="/" aria-label="Dental IT home page" class="inline-flex">
+                <img
+                src="/logo/logo-light-mode.webp"
+                alt="Dental IT powered by SMART Solutions"
+                class="h-14 w-auto dark:hidden"
+                loading="lazy"
+                decoding="async"
+                />
+
+                <img
+                src="/logo/logo-dark-mode.webp"
+                alt="Dental IT powered by SMART Solutions"
+                class="hidden h-14 w-auto dark:block"
+                loading="lazy"
+                decoding="async"
+                />
+            </a>
+
+            <p class="mt-5 max-w-sm text-sm leading-7 text-(--footer-muted)">
+                Dental IT helps dental practices stay secure, compliant, backed up,
+                and supported with technology services designed for the dental
+                industry.
+            </p>
+
+            <div class="mt-6 space-y-3">
+                <a
+                href={phoneHref}
+                class="flex items-center gap-3 text-sm font-bold text-(--footer-muted) transition hover:text-(--primary)"
+                >
+                <span class="inline-flex size-9 items-center justify-center rounded-full bg-(--footer-surface) text-(--primary)">
+                    <Phone class="size-4" />
+                </span>
+                {phoneNumber}
+                </a>
+
+                <a
+                href={emailHref}
+                class="flex items-center gap-3 text-sm font-bold text-(--footer-muted) transition hover:text-(--primary)"
+                >
+                <span class="inline-flex size-9 items-center justify-center rounded-full bg-(--footer-surface) text-(--primary)">
+                    <Mail class="size-4" />
+                </span>
+                {email}
+                </a>
+
+                <div class="flex items-center gap-3 text-sm font-bold text-(--footer-muted)">
+                <span class="inline-flex size-9 items-center justify-center rounded-full bg-(--footer-surface) text-(--primary)">
+                    <MapPin class="size-4" />
+                </span>
+                Miami, FL & South Florida
+                </div>
+            </div>
+
+            <div class="mt-6 flex items-center gap-3">
+                {
+                socialLinks.map(({ label, href, icon: Icon }) => (
+                    <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit Dental IT on ${label}`}
+                    class="inline-flex size-11 items-center justify-center rounded-full border border-(--footer-border) bg-(--footer-surface) text-(--footer-foreground) transition hover:border-(--primary) hover:bg-(--primary) hover:text-white"
+                    >
+                    <Icon class="size-5" />
+                    </a>
+                ))
+                }
+            </div>
+            </div>
+
+            <div class="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
+            {
+                footerColumns.map((column) => (
+                <div>
+                    <h3 class="text-sm font-black uppercase tracking-[0.2em] text-(--footer-foreground)">
+                    {column.title}
+                    </h3>
+
+                    <ul class="mt-5 space-y-3">
+                    {
+                        column.links.map((link) => (
+                        <li>
+                            <a
+                            href={link.href}
+                            class="text-sm font-bold text-(--footer-muted) transition hover:text-(--primary)"
+                            >
+                            {link.label}
+                            </a>
+                        </li>
+                        ))
+                    }
+                    </ul>
+                </div>
+                ))
             }
-          </div>
+            </div>
         </div>
-
-        <div class="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
-          {
-            footerColumns.map((column) => (
-              <div>
-                <h3 class="text-sm font-black uppercase tracking-[0.2em] text-[var(--footer-foreground)]">
-                  {column.title}
-                </h3>
-
-                <ul class="mt-5 space-y-3">
-                  {
-                    column.links.map((link) => (
-                      <li>
-                        <a
-                          href={link.href}
-                          class="text-sm font-bold text-[var(--footer-muted)] transition hover:text-[var(--primary)]"
-                        >
-                          {link.label}
-                        </a>
-                      </li>
-                    ))
-                  }
-                </ul>
-              </div>
-            ))
-          }
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="border-t border-[var(--footer-border)]">
-    <div class="site-container flex flex-col gap-4 py-6 text-sm text-[var(--footer-muted)] md:flex-row md:items-center md:justify-between">
-      <p>
-        © {currentYear} Dental IT. All rights reserved.
-      </p>
+    <section class="border-t border-(--footer-border)">
+        <div class="site-container flex flex-col gap-4 py-6 text-sm text-(--footer-muted) md:flex-row md:items-center md:justify-between">
+        <p>
+            © {currentYear} Dental IT. All rights reserved.
+        </p>
 
-      <div class="flex flex-wrap items-center gap-x-5 gap-y-2">
-        <a href="/privacy-policy" class="transition hover:text-[var(--primary)]">
-          Privacy Policy
-        </a>
-        <a href="/terms-of-service" class="transition hover:text-[var(--primary)]">
-          Terms of Service
-        </a>
-        <a href="/contact" class="transition hover:text-[var(--primary)]">
-          Contact
-        </a>
-      </div>
-    </div>
-  </section>
+        <div class="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <a href="/privacy-policy" class="transition hover:text-(--primary)">
+            Privacy Policy
+            </a>
+            <a href="/terms-of-service" class="transition hover:text-(--primary)">
+            Terms of Service
+            </a>
+            <a href="/contact" class="transition hover:text-(--primary)">
+            Contact
+            </a>
+        </div>
+        </div>
+    </section>
 </footer>
