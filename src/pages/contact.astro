@@ -126,6 +126,28 @@ const emailHref = `mailto:${email}`;
 						}
 					</div>
 
+                    <div
+						class="glass-panel glass-highlight mt-5 rounded-4xl p-5"
+					>
+						<div class="relative flex items-start gap-4">
+							<span
+								class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-(--primary)/15 text-(--primary)"
+							>
+								<ShieldCheck class="size-6" />
+							</span>
+
+							<div>
+								<p class="text-sm font-black text-(--foreground)">
+									Security-first conversations
+								</p>
+								<p class="mt-2 text-sm leading-7 text-(--muted-foreground)">
+									Please avoid sending passwords, full patient records, or other
+									sensitive data through this form.
+								</p>
+							</div>
+						</div>
+					</div>
+
 					<div class="mt-10 grid gap-4 sm:grid-cols-2">
 						<a
 							href={phoneHref}
@@ -323,28 +345,6 @@ const emailHref = `mailto:${email}`;
 									about your request.
 								</p>
 							</form>
-						</div>
-					</div>
-
-					<div
-						class="glass-panel glass-highlight mt-5 rounded-4xl p-5"
-					>
-						<div class="relative flex items-start gap-4">
-							<span
-								class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-(--primary)/15 text-(--primary)"
-							>
-								<ShieldCheck class="size-6" />
-							</span>
-
-							<div>
-								<p class="text-sm font-black text-(--foreground)">
-									Security-first conversations
-								</p>
-								<p class="mt-2 text-sm leading-7 text-(--muted-foreground)">
-									Please avoid sending passwords, full patient records, or other
-									sensitive data through this form.
-								</p>
-							</div>
 						</div>
 					</div>
 				</div>

@@ -43,7 +43,7 @@ export const stats = [
 export const techSupportServices = [
     {
         title: "Managed IT Support",
-        href: "/coming-soon?service=Managed%20IT%20Support",
+        href: "/tech-support/managed-it-support",
         description:
             "Fast, dependable IT support tailored for dental offices, imaging systems, practice management software, and daily clinical workflows.",
         icon: ServerCog,

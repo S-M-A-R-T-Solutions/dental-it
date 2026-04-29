@@ -550,3 +550,43 @@
         animation-iteration-count: 1 !important;
     }
 }
+
+/* Floating card */
+.floating-card {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Float alternate */
+.floating-card-alt {
+    animation: float-alt 6s ease-in-out infinite;
+}
+
+/* Alternate floating animation */
+@keyframes float-alt {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

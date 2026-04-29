@@ -18,7 +18,7 @@ export const navItems: NavItem[] = [
         label: "Tech Support",
         href: "/tech-support",
         children: [
-            { label: "Managed IT Support", href: comingSoon("Managed IT Support") },
+            { label: "Managed IT Support", href: "/tech-support/managed-it-support" },
             {
                 label: "Dental Cloud Backups",
                 href: comingSoon("Dental Cloud Backups"),
