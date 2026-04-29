@@ -23,15 +23,15 @@ export const navItems: NavItem[] = [
                 label: "Dental Cloud Backups",
                 href: "/tech-support/dental-cloud-backups",
             },
-            { label: "Cloud Solutions", href: comingSoon("Cloud Solutions") },
+            { label: "Cloud Solutions", href: "/tech-support/cloud-solutions" },
             {
                 label: "Endpoint Detection Response",
-                href: comingSoon("Endpoint Detection Response"),
+                href: "/tech-support/endpoint-detection-response",
             },
-            { label: "HIPAA Consulting", href: comingSoon("HIPAA Consulting") },
+            { label: "HIPAA Consulting", href: "/tech-support/hipaa-consulting" },
             {
                 label: "Dental Cybersecurity",
-                href: comingSoon("Dental Cybersecurity"),
+                href: "/tech-support/dental-cybersecurity",
             },
             {
                 label: "Proactive Maintenance",

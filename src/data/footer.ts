@@ -15,15 +15,15 @@ export const footerColumns = [
                 label: "Dental Cloud Backups",
                 href: "/tech-support/dental-cloud-backups",
             },
-            { label: "Cloud Solutions", href: "/coming-soon?service=Cloud%20Solutions" },
+            { label: "Cloud Solutions", href: "/tech-support/cloud-solutions" },
             {
                 label: "Endpoint Detection Response",
-                href: "/coming-soon?service=Endpoint%20Detection%20Response",
+                href: "/tech-support/endpoint-detection-response",
             },
-            { label: "HIPAA Consulting", href: "/coming-soon?service=HIPAA%20Consulting" },
+            { label: "HIPAA Consulting", href: "/tech-support/hipaa-consulting" },
             {
                 label: "Dental Cybersecurity",
-                href: "/coming-soon?service=Dental%20Cybersecurity",
+                href: "/tech-support/dental-cybersecurity",
             },
             {
                 label: "Proactive Maintenance",

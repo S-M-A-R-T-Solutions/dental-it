@@ -56,28 +56,28 @@ export const techSupportServices = [
     },
     {
         title: "Cloud Solutions",
-        href: "/coming-soon?service=Cloud%20Solutions",
+        href: "/tech-support/cloud-solutions",
         description:
             "Move your practice toward reliable cloud infrastructure designed to reduce downtime and improve accessibility.",
         icon: Cloud,
     },
     {
         title: "Endpoint Detection Response",
-        href: "/coming-soon?service=Endpoint%20Detection%20Response",
+        href: "/tech-support/endpoint-detection-response",
         description:
             "Strengthen every workstation with advanced endpoint protection, monitoring, and rapid response capabilities.",
         icon: Radar,
     },
     {
         title: "HIPAA Consulting",
-        href: "/coming-soon?service=HIPAA%20Consulting",
+        href: "/tech-support/hipaa-consulting",
         description:
             "Get practical guidance to help your dental practice align technology, security, and workflows with HIPAA requirements.",
         icon: ShieldCheck,
     },
     {
         title: "Dental Cybersecurity",
-        href: "/coming-soon?service=Dental%20Cybersecurity",
+        href: "/tech-support/dental-cybersecurity",
         description:
             "Defend your practice from malware, phishing, ransomware, unauthorized access, and preventable security risks.",
         icon: LockKeyhole,
