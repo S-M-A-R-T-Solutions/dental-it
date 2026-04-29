@@ -29,8 +29,7 @@ export const stats = [
         label: "software, hardware, network, and system monitoring",
     },
     {
-        value: "0.99",
-        prefix: "$",
+        value: "0.99¢",
         suffix: "/day",
         label: "starting proactive maintenance per workstation",
     },
