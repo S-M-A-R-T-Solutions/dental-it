@@ -10,10 +10,10 @@ export const footerColumns = [
     {
         title: "Tech Support",
         links: [
-            { label: "Managed IT Support", href: "/coming-soon?service=Managed%20IT%20Support" },
+            { label: "Managed IT Support", href: "/tech-support/managed-it-support" },
             {
                 label: "Dental Cloud Backups",
-                href: "/coming-soon?service=Dental%20Cloud%20Backups",
+                href: "/tech-support/dental-cloud-backups",
             },
             { label: "Cloud Solutions", href: "/coming-soon?service=Cloud%20Solutions" },
             {

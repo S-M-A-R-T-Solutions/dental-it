@@ -49,7 +49,7 @@ export const techSupportServices = [
     },
     {
         title: "Dental Cloud Backups",
-        href: "/coming-soon?service=Dental%20Cloud%20Backups",
+        href: "/tech-support/dental-cloud-backups",
         description:
             "Protect patient data, imaging files, and business-critical systems with secure cloud backup and recovery planning.",
         icon: DatabaseBackup,

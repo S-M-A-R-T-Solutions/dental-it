@@ -1,12 +1,11 @@
 ---
+import { Image } from "astro:assets";
 import MainLayout from "../layouts/MainLayout.astro";
 import {
 	ArrowRight,
 	Mail,
 	Phone,
-	MapPin,
 	ShieldCheck,
-	MessageSquare,
 	CheckCircle2,
 } from "lucide-astro";
 
@@ -52,9 +51,11 @@ const emailHref = `mailto:${email}`;
 					data-parallax-speed="-0.015"
 					aria-hidden="true"
 				>
-					<img
+					<Image
 						src="/images/backgrounds/dental-it-network-bg.png"
 						alt=""
+						width={2048}
+						height={620}
 						class="w-full min-w-280"
 						loading="eager"
 						decoding="async"
@@ -66,9 +67,11 @@ const emailHref = `mailto:${email}`;
 					data-parallax-speed="0.02"
 					aria-hidden="true"
 				>
-					<img
+					<Image
 						src="/images/backgrounds/dental-it-network-bg.png"
 						alt=""
+						width={2048}
+						height={620}
 						class="w-full min-w-280"
 						loading="eager"
 						decoding="async"
@@ -126,9 +129,7 @@ const emailHref = `mailto:${email}`;
 						}
 					</div>
 
-                    <div
-						class="glass-panel glass-highlight mt-5 rounded-4xl p-5"
-					>
+					<div class="glass-panel glass-highlight mt-5 rounded-4xl p-5">
 						<div class="relative flex items-start gap-4">
 							<span
 								class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-(--primary)/15 text-(--primary)"
@@ -193,7 +194,6 @@ const emailHref = `mailto:${email}`;
 							</div>
 						</a>
 					</div>
-
 				</div>
 
 				<div class="relative z-10">
@@ -201,10 +201,7 @@ const emailHref = `mailto:${email}`;
 						class="glass-panel glass-highlight rounded-4xl p-6 shadow-card sm:p-8 lg:p-10"
 					>
 						<div class="relative">
-
-							<p
-								class="section-eyebrow"
-							>
+							<p class="section-eyebrow">
 								Send a Message
 							</p>
 
@@ -272,49 +269,51 @@ const emailHref = `mailto:${email}`;
 									</div>
 								</div>
 
-                                <div class="grid gap-5 sm:grid-cols-2">
-                                    <div>
-                                        <label
-                                            for="phone"
-                                            class="mb-2 block text-sm font-black text-(--foreground)"
-                                        >
-                                            Phone Number
-                                        </label>
-                                        <input
-                                            id="phone"
-                                            name="phone"
-                                            type="tel"
-                                            autocomplete="tel"
-                                            placeholder="(305) 000-0000"
-                                        />
-                                    </div>
+								<div class="grid gap-5 sm:grid-cols-2">
+									<div>
+										<label
+											for="phone"
+											class="mb-2 block text-sm font-black text-(--foreground)"
+										>
+											Phone Number
+										</label>
+										<input
+											id="phone"
+											name="phone"
+											type="tel"
+											autocomplete="tel"
+											placeholder="(305) 000-0000"
+										/>
+									</div>
 
-                                    <div>
-                                        <label
-                                            for="best-time-to-call"
-                                            class="mb-2 block text-sm font-black text-(--foreground)"
-                                        >
-                                            What is the best time for us to call you?
-                                        </label>
+									<div>
+										<label
+											for="best-time-to-call"
+											class="mb-2 block text-sm font-black text-(--foreground)"
+										>
+											What is the best time for us to call you?
+										</label>
 
-                                        <select
-                                            id="best-time-to-call"
-                                            name="best-time-to-call"
-                                            required
-                                        >
-                                            <option value="" disabled selected>Select a time window</option>
-                                            <option value="Morning (8:00 am - 11:00 am)">
-                                                Morning (8:00 am - 11:00 am)
-                                            </option>
-                                            <option value="Midday (11:00 am - 2:00 pm)">
-                                                Midday (11:00 am - 2:00 pm)
-                                            </option>
-                                            <option value="Afternoon (2:00 pm - 5:00 pm)">
-                                                Afternoon (2:00 pm - 5:00 pm)
-                                            </option>
-                                        </select>
-                                    </div>
-                                </div>
+										<select
+											id="best-time-to-call"
+											name="best-time-to-call"
+											required
+										>
+											<option value="" disabled selected>
+												Select a time window
+											</option>
+											<option value="Morning (8:00 am - 11:00 am)">
+												Morning (8:00 am - 11:00 am)
+											</option>
+											<option value="Midday (11:00 am - 2:00 pm)">
+												Midday (11:00 am - 2:00 pm)
+											</option>
+											<option value="Afternoon (2:00 pm - 5:00 pm)">
+												Afternoon (2:00 pm - 5:00 pm)
+											</option>
+										</select>
+									</div>
+								</div>
 
 								<div>
 									<label

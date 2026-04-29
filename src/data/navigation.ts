@@ -16,12 +16,12 @@ export const navItems: NavItem[] = [
     },
     {
         label: "Tech Support",
-        href: "/tech-support",
+        href: "#",
         children: [
             { label: "Managed IT Support", href: "/tech-support/managed-it-support" },
             {
                 label: "Dental Cloud Backups",
-                href: comingSoon("Dental Cloud Backups"),
+                href: "/tech-support/dental-cloud-backups",
             },
             { label: "Cloud Solutions", href: comingSoon("Cloud Solutions") },
             {

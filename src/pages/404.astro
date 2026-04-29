@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import MainLayout from "../layouts/MainLayout.astro";
 import {
 	ArrowRight,
@@ -16,7 +17,9 @@ import {
 	noindex={true}
 >
 	<main class="overflow-hidden">
-		<section class="relative isolate min-h-[calc(100vh-5rem)] overflow-hidden bg-site">
+		<section
+			class="relative isolate min-h-[calc(100vh-5rem)] overflow-hidden bg-site"
+		>
 			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
 				<div
 					class="diffuse-sphere absolute -left-52 top-16 h-136 w-136 rounded-full bg-(--primary)/18 blur-[150px]"
@@ -40,9 +43,11 @@ import {
 					data-parallax-speed="-0.015"
 					aria-hidden="true"
 				>
-					<img
+					<Image
 						src="/images/backgrounds/dental-it-network-bg.png"
 						alt=""
+						width={2048}
+						height={620}
 						class="w-full min-w-280"
 						loading="eager"
 						decoding="async"
@@ -54,9 +59,11 @@ import {
 					data-parallax-speed="0.02"
 					aria-hidden="true"
 				>
-					<img
+					<Image
 						src="/images/backgrounds/dental-it-network-bg.png"
 						alt=""
+						width={2048}
+						height={620}
 						class="w-full min-w-280"
 						loading="eager"
 						decoding="async"
@@ -69,7 +76,9 @@ import {
 				</div>
 			</div>
 
-			<div class="site-container grid min-h-[calc(100vh-5rem)] items-center py-16 md:py-20 lg:py-24">
+			<div
+				class="site-container grid min-h-[calc(100vh-5rem)] items-center py-16 md:py-20 lg:py-24"
+			>
 				<div class="mx-auto max-w-4xl text-center">
 					<div
 						class="mx-auto mt-8 flex size-20 items-center justify-center rounded-4xl bg-(--primary) text-white shadow-[0_24px_70px_rgba(239,35,49,0.35)]"

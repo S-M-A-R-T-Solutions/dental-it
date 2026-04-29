@@ -590,3 +590,9 @@
         transform: translateY(0);
     }
 }
+
+@media (max-width: 1023px) {
+	.managed-it-bg-fixed {
+		background-attachment: scroll !important;
+	}
+}

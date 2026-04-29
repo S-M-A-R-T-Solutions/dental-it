@@ -1,166 +1,21 @@
 ---
+import { Image } from "astro:assets";
 import MainLayout from "../../layouts/MainLayout.astro";
 import {
 	ArrowRight,
-	ShieldCheck,
-	Activity,
-	DatabaseBackup,
-	Cloud,
-	GraduationCap,
-	MonitorCog,
-	LockKeyhole,
-	ServerCog,
 	CheckCircle2,
-	Clock,
-	HeartPulse,
-	RefreshCcw,
 	Stethoscope,
-	Zap,
-	FileCheck2,
-	HardDrive,
-	Wifi,
-	Users,
+	ShieldCheck,
 } from "lucide-astro";
 
-const heroHighlights = [
-	"Active monitoring and proactive maintenance",
-	"Dental software, imaging, and workstation support",
-	"Cybersecurity-first support for patient data protection",
-	"HIPAA-conscious IT planning and documentation",
-];
-
-const technicalSupportServices = [
-	{
-		title: "Active Monitoring and Proactive Maintenance",
-		description:
-			"We offer active monitoring to help prevent issues before they affect your practice, supporting continuous operation without unnecessary disruptions.",
-		icon: Activity,
-	},
-	{
-		title: "Custom Software Management",
-		description:
-			"Our team helps keep dental management software, imaging applications, and network systems up to date, stable, and performing efficiently.",
-		icon: MonitorCog,
-	},
-	{
-		title: "Advanced Cybersecurity Measures",
-		description:
-			"Protect sensitive patient data with cybersecurity solutions designed around real-time threat detection, rapid response, antivirus strategy, and endpoint protection.",
-		icon: LockKeyhole,
-	},
-	{
-		title: "Data Backup and Recovery",
-		description:
-			"We help safeguard patient records, imaging files, and essential practice information with backup strategies designed to support quick recovery.",
-		icon: DatabaseBackup,
-	},
-	{
-		title: "Cloud Services",
-		description:
-			"Improve flexibility and accessibility with cloud services that support secure access to systems and data, remote workflows, and reliable data management.",
-		icon: Cloud,
-	},
-	{
-		title: "Training and Education",
-		description:
-			"Keep your staff confident with practical technology guidance, security awareness, and support for the tools your dental practice uses every day.",
-		icon: GraduationCap,
-	},
-];
-
-const whyChooseDentalIT = [
-	{
-		title: "Unlimited Workstations",
-		description:
-			"Unlimited workstation plans are available to help your practice receive technical support at a flat rate while scaling more predictably.",
-		icon: ServerCog,
-	},
-	{
-		title: "Software Management",
-		description:
-			"We support integrations, updates, proactive troubleshooting, and system performance so your technology setup keeps running smoothly.",
-		icon: RefreshCcw,
-	},
-	{
-		title: "Unwavering Commitment to Compliance",
-		description:
-			"We help your practice align IT planning with HIPAA-conscious safeguards, documentation, security policies, and operational best practices.",
-		icon: FileCheck2,
-	},
-	{
-		title: "Advanced Security Measures",
-		description:
-			"Protect patient data with layered security measures including real-time threat detection, antivirus protection, endpoint defense, and response planning.",
-		icon: ShieldCheck,
-	},
-];
-
-const managedItNeeds = [
-	{
-		title: "Minimize Downtime",
-		description:
-			"Unplanned outages and slow systems can cost revenue and patient trust. Proactive support helps keep your practice online.",
-		icon: Clock,
-	},
-	{
-		title: "Maintain HIPAA Compliance",
-		description:
-			"Regular reviews, security updates, access planning, and documentation help support privacy and security expectations for dental practices.",
-		icon: FileCheck2,
-	},
-	{
-		title: "Protect Patient Data",
-		description:
-			"With cyber threats on the rise, strong security, reliable backups, and rapid incident response planning are essential.",
-		icon: LockKeyhole,
-	},
-	{
-		title: "Stay Current with Technology",
-		description:
-			"We help manage updates, patches, integrations, and new technology so your practice can keep using efficient, modern tools.",
-		icon: Zap,
-	},
-	{
-		title: "Focus on Patient Care",
-		description:
-			"Delegate IT problems to a dental-focused support partner so your team can spend more time delivering exceptional care.",
-		icon: HeartPulse,
-	},
-];
-
-const dentalTechnologyAreas = [
-	{
-		title: "Workstations & Operatories",
-		description:
-			"Support for the computers and devices your clinical team depends on across treatment rooms and front desk workflows.",
-		icon: MonitorCog,
-	},
-	{
-		title: "Servers, Network & Wi-Fi",
-		description:
-			"Planning, maintenance, and troubleshooting for the infrastructure that keeps your practice connected and productive.",
-		icon: Wifi,
-	},
-	{
-		title: "Dental Imaging & Software",
-		description:
-			"Support for imaging stations, practice management software, integrations, updates, and daily workflow reliability.",
-		icon: Stethoscope,
-	},
-	{
-		title: "Backups & Data Protection",
-		description:
-			"Backup planning, recovery strategy, and security-focused protection for patient records and business-critical systems.",
-		icon: HardDrive,
-	},
-];
-
-const complianceSeoItems = [
-	"Administrative safeguards for policies, access planning, training, risk review, and operational security.",
-	"Physical safeguards for devices, workstations, offices, and technology access points.",
-	"Technical safeguards for access control, monitoring, encryption planning, backup strategy, and secure systems.",
-	"Risk-aware documentation to support stronger decision-making around electronic protected health information.",
-];
+import {
+	heroHighlights,
+	technicalSupportServices,
+	whyChooseDentalIT,
+	managedItNeeds,
+	dentalTechnologyAreas,
+	complianceSeoItems,
+} from "../../data/managed-it-support";
 ---
 
 <MainLayout
@@ -173,13 +28,13 @@ const complianceSeoItems = [
 		<section class="relative isolate overflow-hidden bg-site">
 			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
 				<div
-					class="diffuse-sphere absolute -left-52 top-16 h-136 w-136 rounded-full bg-(--primary)/18 blur-[150px]"
+					class="floating-card diffuse-sphere absolute -left-52 top-16 h-136 w-136 rounded-full bg-(--primary)/25 blur-[150px]"
 					aria-hidden="true"
 				>
 				</div>
 
 				<div
-					class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-152 w-152 rounded-full bg-(--primary)/14 blur-[170px]"
+					class="floating-card-alt diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-152 w-152 rounded-full bg-(--primary)/25 blur-[170px]"
 					aria-hidden="true"
 				>
 				</div>
@@ -194,9 +49,11 @@ const complianceSeoItems = [
 					data-parallax-speed="-0.015"
 					aria-hidden="true"
 				>
-					<img
+					<Image
 						src="/images/backgrounds/dental-it-network-bg.png"
 						alt=""
+						width={2048}
+						height={620}
 						class="w-full min-w-280"
 						loading="eager"
 						decoding="async"
@@ -208,9 +65,11 @@ const complianceSeoItems = [
 					data-parallax-speed="0.025"
 					aria-hidden="true"
 				>
-					<img
+					<Image
 						src="/images/backgrounds/dental-it-network-bg.png"
 						alt=""
+						width={2048}
+						height={620}
 						class="w-full min-w-280"
 						loading="eager"
 						decoding="async"
@@ -288,7 +147,6 @@ const complianceSeoItems = [
 					</div>
 				</div>
 
-				<!-- Desktop two-image panel -->
 				<div class="relative mx-auto hidden w-full max-w-xl lg:block lg:max-w-none">
 					<div
 						class="grid gap-5 sm:grid-cols-2 lg:block lg:min-h-136 xl:min-h-152"
@@ -298,11 +156,15 @@ const complianceSeoItems = [
 							data-parallax-speed="0.04"
 						>
 							<div class="glass-panel rounded-4xl p-3">
-								<img
+								<Image
 									src="/images/managed-it-services/managed-it-services-hero-1.webp"
 									alt="Dental IT support team helping a Miami dental practice"
+									width={900}
+									height={1125}
+									format="webp"
+									quality="high"
 									class="aspect-4/5 w-full rounded-3xl object-cover"
-									loading="lazy"
+									loading="eager"
 									decoding="async"
 								/>
 							</div>
@@ -313,11 +175,15 @@ const complianceSeoItems = [
 							data-parallax-speed="-0.035"
 						>
 							<div class="glass-panel rounded-4xl p-3">
-								<img
+								<Image
 									src="/images/managed-it-services/managed-it-services-hero-2.webp"
 									alt="Cybersecurity and monitoring for a dental office in Miami"
+									width={900}
+									height={1125}
+									format="webp"
+									quality="high"
 									class="aspect-4/5 w-full rounded-3xl object-cover"
-									loading="lazy"
+									loading="eager"
 									decoding="async"
 								/>
 							</div>
@@ -329,6 +195,27 @@ const complianceSeoItems = [
 
 		<!-- WHO WE ARE -->
 		<section class="section-padding relative overflow-hidden bg-surface">
+			<!-- Gradient depth overlay -->
+			<div
+				class="absolute inset-0 bg-linear-to-br from-(--surface)/78 via-(--surface)/45 to-(--surface)/72 dark:from-black/78 dark:via-black/48 dark:to-black/82"
+				aria-hidden="true"
+			>
+			</div>
+
+			<!-- Secondary glow -->
+			<div
+				class="floating-card-alt diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/14 blur-[160px]"
+				aria-hidden="true"
+			>
+			</div>
+
+			<!-- a low color technological grid background pattern -->
+			<div
+				class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.06)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-85"
+				aria-hidden="true"
+			>
+			</div>
+
 			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
 				<div
 					class="diffuse-sphere absolute -left-48 top-10 h-112 w-md rounded-full bg-(--primary)/12 blur-[145px]"
@@ -442,9 +329,11 @@ const complianceSeoItems = [
 					data-parallax-speed="0.018"
 					aria-hidden="true"
 				>
-					<img
+					<Image
 						src="/images/backgrounds/dental-it-network-bg.png"
 						alt=""
+						width={2048}
+						height={620}
 						class="w-full min-w-280"
 						loading="lazy"
 						decoding="async"
@@ -508,20 +397,43 @@ const complianceSeoItems = [
 
 		<!-- TAKING CARE / WHY CHOOSE -->
 		<section class="section-padding relative overflow-hidden bg-surface">
-			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+			<div class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+				<!-- Gradient depth overlay -->
 				<div
-					class="diffuse-sphere absolute -left-52 top-10 h-128 w-lg rounded-full bg-(--primary)/14 blur-[150px]"
+					class="absolute inset-0 bg-linear-to-br from-(--surface)/78 via-(--surface)/45 to-(--surface)/72 dark:from-black/78 dark:via-black/48 dark:to-black/82"
+					aria-hidden="true"
+				>
+				</div>
+
+				<!-- Red brand glow -->
+				<div
+					class="floating-card diffuse-sphere absolute -left-52 top-10 h-128 w-lg rounded-full bg-(--primary)/20 blur-[150px]"
+					aria-hidden="true"
+				>
+				</div>
+
+				<!-- Secondary glow -->
+				<div
+					class="floating-card-alt diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/14 blur-[160px]"
+					aria-hidden="true"
+				>
+				</div>
+
+				<!-- Low color technological grid background pattern -->
+				<div
+					class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.06)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-85"
 					aria-hidden="true"
 				>
 				</div>
 
 				<div
 					class="absolute inset-0 bg-linear-to-b from-(--surface)/90 via-(--surface)/55 to-(--surface)/94"
+					aria-hidden="true"
 				>
 				</div>
 			</div>
 
-			<div class="site-container relative">
+			<div class="site-container relative z-10">
 				<div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
 					<div class="lg:sticky lg:top-32">
 						<p class="section-eyebrow">Taking Care of Your Technology</p>
@@ -649,6 +561,13 @@ const complianceSeoItems = [
 
 				<div
 					class="diffuse-sphere absolute -left-44 top-20 h-120 w-120 rounded-full bg-(--primary)/20 blur-[150px]"
+					aria-hidden="true"
+				>
+				</div>
+
+				<!-- a low color technological grid background pattern -->
+				<div
+					class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.06)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-85"
 					aria-hidden="true"
 				>
 				</div>
@@ -783,9 +702,11 @@ const complianceSeoItems = [
 					data-parallax-speed="0.015"
 					aria-hidden="true"
 				>
-					<img
+					<Image
 						src="/images/backgrounds/dental-it-network-bg.png"
 						alt=""
+						width={2048}
+						height={620}
 						class="w-full min-w-260"
 						loading="lazy"
 						decoding="async"
@@ -797,6 +718,13 @@ const complianceSeoItems = [
 				>
 				</div>
 			</div>
+
+			<!-- a low color technological grid background pattern -->
+				<div
+					class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.06)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-85"
+					aria-hidden="true"
+				>
+				</div>
 
 			<div class="site-container relative">
 				<div
