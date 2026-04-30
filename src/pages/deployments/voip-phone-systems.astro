@@ -1,22 +1,29 @@
 ---
 import { Image } from "astro:assets";
 import MainLayout from "../../layouts/MainLayout.astro";
-import { ArrowRight, CheckCircle2, TrendingUp } from "lucide-astro";
+import {
+  ArrowRight,
+  CheckCircle2,
+  PhoneCall,
+  ShieldCheck,
+  Sparkles,
+} from "lucide-astro";
 
 import {
   heroHighlights,
-  growthServices,
-  whyChooseGrowth,
-  growthChallenges,
-  growthTechnologyAreas,
-  growthPlanningItems,
-  growthStats,
-} from "../../data/practice-growth";
+  includedServices,
+  whyChooseVoip,
+  communicationNeeds,
+  technologyAreas,
+  complianceItems,
+  partnershipItems,
+  consultationItems,
+} from "../../data/voip-phone-systems";
 ---
 
 <MainLayout
-  title="Practice Growth IT Services for Dental Practices in Miami, FL"
-  description="Dental IT helps growing dental practices scale technology with IT roadmapping, multi-site network design, cloud solutions, data migration, hardware scaling, monitoring, and cybersecurity-conscious support."
+  title="VoIP Phone Systems for Dental Practices in Miami, FL"
+  description="Dental IT provides VoIP phone systems for dental practices in Miami and South Florida, including 3CX-powered phone systems, call routing, call queues, IVR, mobile apps, live chat, AI reports, video conferencing, and communication integrations."
   image="/images/og/dental-it-miami-home-og.jpg"
 >
   <main class="overflow-hidden">
@@ -92,23 +99,23 @@ import {
             <span
               class="text-xs font-black uppercase tracking-[0.18em] text-(--foreground) sm:tracking-[0.22em]"
             >
-              Deployments / Practice Growth
+              Deployments / VoIP Phone Systems
             </span>
           </div>
 
           <h1
             class="mt-7 max-w-5xl text-balance text-[clamp(2.4rem,5.8vw,5rem)] font-black leading-[0.95] tracking-tighter"
           >
-            Scale your dental practice with strategic IT expansion.
+            VoIP phone systems powered by 3CX.
           </h1>
 
           <p
             class="mt-7 max-w-2xl text-base leading-8 text-(--muted-foreground) sm:text-lg md:text-xl"
           >
-            As your practice grows, your technology needs to keep pace. Dental
-            IT helps expanding dental offices add operatories, providers,
-            workstations, cloud services, systems, and locations with less
-            downtime and better long-term planning.
+            Dental IT helps dental practices modernize voice communication with
+            3CX-powered VoIP phone systems, call queues, IVR, reporting, mobile
+            apps, website live chat, AI reports, integrations, and video
+            conferencing.
           </p>
 
           <div class="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -116,15 +123,15 @@ import {
               href="/contact"
               class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
             >
-              Get Free Assessment
+              Get Free Quote
               <ArrowRight class="size-4" />
             </a>
 
             <a
-              href="#growth-services"
+              href="#included"
               class="glass-panel inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-sm font-black uppercase tracking-wide text-(--foreground) transition hover:-translate-y-1 hover:border-(--primary) hover:text-(--primary)"
             >
-              Explore Growth Services
+              Explore Phone Systems
               <ArrowRight class="size-4" />
             </a>
           </div>
@@ -141,6 +148,23 @@ import {
               ))
             }
           </div>
+          <!-- Badge with 3CX Partnership -->
+          <div class="mt-6 flex items-center gap-3">
+            <Image
+              src="/images/voip-phone-systems/3cx-partnership-badge.webp"
+              alt="3CX Partner Badge"
+              width={120}
+              height={60}
+              format="webp"
+              quality="high"
+              class="h-auto w-32 object-contain"
+              loading="lazy"
+              decoding="async"
+            />
+            <p class="text-sm font-bold leading-6 text-(--muted-foreground)">
+              Proud <a class="text-(--primary)" href="https://www.3cx.com/" target="_blank" rel="noopener noreferrer">3CX Partner</a> with expertise in deploying and supporting phone systems for dental practices.
+            </p>
+          </div>
         </div>
 
         <div
@@ -155,8 +179,8 @@ import {
             >
               <div class="glass-panel rounded-4xl p-3">
                 <Image
-                  src="/images/practice-growth/practice-growth-hero-1.webp"
-                  alt="Technology planning for a growing dental practice"
+                  src="/images/voip-phone-systems/voip-phone-systems-hero-1.webp"
+                  alt="VoIP phone system dashboard for a dental practice"
                   width={900}
                   height={1125}
                   format="webp"
@@ -174,8 +198,8 @@ import {
             >
               <div class="glass-panel rounded-4xl p-3">
                 <Image
-                  src="/images/practice-growth/practice-growth-hero-2.webp"
-                  alt="Multi-location dental practice IT growth support"
+                  src="/images/voip-phone-systems/voip-phone-systems-hero-2.webp"
+                  alt="Dental office front desk using a modern VoIP phone system"
                   width={900}
                   height={1125}
                   format="webp"
@@ -191,7 +215,7 @@ import {
       </div>
     </section>
 
-    <!-- INTRO / READY TO GROW SMARTLY -->
+    <!-- INTRO / 3CX PARTNERSHIP -->
     <section class="section-padding relative overflow-hidden bg-surface">
       <div
         class="absolute inset-0 bg-linear-to-br from-(--surface)/78 via-(--surface)/45 to-(--surface)/72 dark:from-black/78 dark:via-black/48 dark:to-black/82"
@@ -214,24 +238,26 @@ import {
       <div class="site-container relative">
         <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p class="section-eyebrow">Ready to Grow Smartly?</p>
+            <p class="section-eyebrow">
+              Take Control of Your Voice Communications
+            </p>
 
             <h2
               class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
             >
-              Power the next chapter of your practice.
+              Break free from per-user phone system pricing.
             </h2>
 
             <p class="section-description">
-              Growth creates new technology pressure: more users, more devices,
-              more imaging needs, more data, more security expectations, and
-              more chances for disruption. Dental IT helps you scale with a
-              clear plan instead of reacting after problems appear.
+              Through our advanced partnership with 3CX, Dental IT helps dental
+              practices build a streamlined communications system with more
+              control, flexible management, no long-term contracts, and a lower
+              cost structure than many traditional providers.
             </p>
 
             <div class="mt-8 grid gap-3">
               {
-                growthPlanningItems.map((item) => (
+                consultationItems.map((item) => (
                   <div class="flex items-start gap-3">
                     <CheckCircle2 class="mt-1 size-5 shrink-0 text-(--primary)" />
                     <p class="text-sm font-bold leading-6 text-(--muted-foreground)">
@@ -247,29 +273,32 @@ import {
             class="glass-panel glass-highlight rounded-4xl p-6 sm:p-8 lg:p-10"
           >
             <div class="relative">
-              <TrendingUp class="size-10 text-(--primary)" />
+              <Sparkles class="size-10 text-(--primary)" />
 
               <h3 class="mt-6 text-2xl font-black tracking-tighter sm:text-3xl">
-                Growth requires more than adding equipment.
+                Proud partners with 3CX.
               </h3>
 
               <p class="mt-5 text-base leading-8 text-(--muted-foreground)">
-                A growing dental practice needs technology that can support more
-                people, more rooms, more data, and more patient care activity
-                without creating bottlenecks. That means planning
-                infrastructure, security, workflows, vendor coordination, and
-                support together.
+                3CX gives your practice a flexible phone system experience with
+                call center features, mobile apps, desktop apps, integrations,
+                live chat, reporting, and video conferencing. Dental IT helps
+                you deploy, configure, and support it around your dental
+                workflow.
               </p>
 
               <div class="mt-7 grid gap-4 sm:grid-cols-3">
                 {
-                  growthStats.map((stat) => (
+                  partnershipItems.map(({ title, description, icon: Icon }) => (
                     <div class="rounded-3xl border border-(--border) bg-(--card)/70 p-5 backdrop-blur-xl">
-                      <p class="text-2xl font-black tracking-tighter text-(--primary)">
-                        {stat.value}
+                      <Icon class="size-7 text-(--primary)" />
+
+                      <p class="mt-4 text-2xl font-black tracking-tighter text-(--primary)">
+                        {title}
                       </p>
+
                       <p class="mt-2 text-sm font-bold leading-6 text-(--muted-foreground)">
-                        {stat.label}
+                        {description}
                       </p>
                     </div>
                   ))
@@ -281,9 +310,9 @@ import {
       </div>
     </section>
 
-    <!-- WHAT PRACTICE GROWTH SERVICE INCLUDES -->
+    <!-- INCLUDED SERVICES -->
     <section
-      id="growth-services"
+      id="included"
       class="section-padding relative overflow-hidden bg-site"
     >
       <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -318,25 +347,25 @@ import {
       <div class="site-container relative">
         <div class="mx-auto max-w-3xl text-center">
           <p class="section-eyebrow justify-center">
-            What Our Practice Growth Service Includes
+            What Our VoIP Phone Systems Include
           </p>
 
           <h2
             class="section-title mx-auto normal-case text-[clamp(2rem,4.2vw,3.8rem)] leading-none"
           >
-            IT support for every stage of expansion.
+            A complete communications platform for your dental office.
           </h2>
 
           <p class="section-description mx-auto">
-            From IT roadmapping and multi-site networking to cloud scalability,
-            data migration, workflow automation, and ongoing support, Dental IT
-            helps your growing practice expand with confidence.
+            From cost savings and number migration to call center features, live
+            chat, AI reports, and mobile communication, Dental IT helps your
+            practice modernize how patients reach your team.
           </p>
         </div>
 
-        <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {
-            growthServices.map(({ title, description, icon: Icon }) => (
+            includedServices.map(({ title, description, icon: Icon }) => (
               <article class="service-card group relative overflow-hidden rounded-4xl p-6 transition hover:-translate-y-1 hover:border-(--primary) md:p-7">
                 <div class="absolute -right-12 -top-12 size-32 rounded-full bg-(--primary)/10 blur-2xl transition group-hover:bg-(--primary)/20" />
 
@@ -403,19 +432,18 @@ import {
       <div class="site-container relative z-10">
         <div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div class="lg:sticky lg:top-32">
-            <p class="section-eyebrow">Taking Care of Your Technology</p>
+            <p class="section-eyebrow">Proud Partners With 3CX</p>
 
             <h2
               class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
             >
-              Why choose our practice growth services?
+              Why choose our phone systems?
             </h2>
 
             <p class="section-description">
-              Practice growth requires coordination, planning, and support. We
-              help dental offices make technology decisions that align with
-              expansion goals, staff productivity, patient experience, and
-              long-term reliability.
+              Dental IT designs VoIP systems that support your front desk, call
+              center, team communication, website conversations, and remote work
+              needs with the flexibility of 3CX.
             </p>
 
             <div class="mt-8">
@@ -431,30 +459,28 @@ import {
 
           <div class="grid gap-5 md:grid-cols-2">
             {
-              whyChooseGrowth.map(
-                ({ title, description, icon: Icon }, index) => (
-                  <article
-                    class:list={[
-                      "glass-panel glass-highlight rounded-4xl p-6 md:p-7",
-                      index === whyChooseGrowth.length - 1 && "md:col-span-2",
-                    ]}
-                  >
-                    <div class="relative">
-                      <div class="flex size-12 items-center justify-center rounded-2xl bg-(--primary) text-white">
-                        <Icon class="size-6" />
-                      </div>
-
-                      <h3 class="mt-6 text-lg font-black uppercase tracking-tight sm:text-xl">
-                        {title}
-                      </h3>
-
-                      <p class="mt-4 text-sm leading-7 text-(--muted-foreground)">
-                        {description}
-                      </p>
+              whyChooseVoip.map(({ title, description, icon: Icon }, index) => (
+                <article
+                  class:list={[
+                    "glass-panel glass-highlight rounded-4xl p-6 md:p-7",
+                    index === whyChooseVoip.length - 1 && "md:col-span-2",
+                  ]}
+                >
+                  <div class="relative">
+                    <div class="flex size-12 items-center justify-center rounded-2xl bg-(--primary) text-white">
+                      <Icon class="size-6" />
                     </div>
-                  </article>
-                ),
-              )
+
+                    <h3 class="mt-6 text-lg font-black uppercase tracking-tight sm:text-xl">
+                      {title}
+                    </h3>
+
+                    <p class="mt-4 text-sm leading-7 text-(--muted-foreground)">
+                      {description}
+                    </p>
+                  </div>
+                </article>
+              ))
             }
           </div>
         </div>
@@ -478,24 +504,25 @@ import {
 
       <div class="site-container relative">
         <div class="mx-auto max-w-3xl text-center">
-          <p class="section-eyebrow justify-center">Growth IT Coverage</p>
+          <p class="section-eyebrow justify-center">
+            Dental Communication Coverage
+          </p>
 
           <h2
             class="section-title mx-auto normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
           >
-            Technology areas that need to scale with your practice.
+            Support for the communication tools your practice depends on.
           </h2>
 
           <p class="section-description mx-auto">
-            Practice growth affects more than one system. Your workstations,
-            network, cloud services, storage, backups, imaging files, and
-            security all need to scale together.
+            A modern dental phone system should help your team answer, route,
+            track, and manage patient communication more effectively.
           </p>
         </div>
 
         <div class="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
           {
-            growthTechnologyAreas.map(({ title, description, icon: Icon }) => (
+            technologyAreas.map(({ title, description, icon: Icon }) => (
               <article class="service-card group relative overflow-hidden rounded-4xl p-6 transition hover:-translate-y-1 hover:border-(--primary)">
                 <div class="absolute -right-12 -top-12 size-32 rounded-full bg-(--primary)/10 blur-2xl transition group-hover:bg-(--primary)/20" />
 
@@ -513,11 +540,11 @@ import {
       </div>
     </section>
 
-    <!-- WHY PRACTICE GROWTH IS A CHALLENGE -->
+    <!-- WHY NEED VOIP -->
     <section
       class="relative overflow-hidden bg-site py-20 lg:py-28 xl:py-32"
       style="
-				background-image: url('/images/practice-growth/practice-growth-background.webp');
+				background-image: url('/images/voip-phone-systems/voip-phone-systems-background.webp');
 				background-size: cover;
 				background-position: center center;
 				background-repeat: no-repeat;
@@ -549,26 +576,25 @@ import {
       <div class="site-container relative z-10">
         <div class="mx-auto max-w-3xl text-center">
           <p class="section-eyebrow justify-center">
-            Why Practice Growth Is a Challenge
+            Why Does Your Dental Practice Need VoIP?
           </p>
 
           <h2
             class="section-title mx-auto normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
           >
-            Scaling without planning can create preventable IT problems.
+            Patient communication should be easier to manage.
           </h2>
 
           <p class="section-description mx-auto">
-            Adding locations, staff, systems, equipment, and data can expose
-            weaknesses in your current technology environment. Dental IT helps
-            you grow without creating unnecessary downtime, security gaps, or
-            workflow bottlenecks.
+            A well-structured phone system can help your dental practice route
+            incoming calls, reduce missed opportunities, assign calls to the
+            right team members, and collect messages through IVR workflows.
           </p>
         </div>
 
         <div class="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-5">
           {
-            growthChallenges.map(({ title, description, icon: Icon }) => (
+            communicationNeeds.map(({ title, description, icon: Icon }) => (
               <article class="glass-panel glass-highlight rounded-4xl p-6 text-left">
                 <div class="relative">
                   <Icon class="size-9 text-(--primary)" />
@@ -582,6 +608,75 @@ import {
               </article>
             ))
           }
+        </div>
+      </div>
+    </section>
+
+    <!-- REPORTING / WORKFLOW -->
+    <section class="section-padding relative overflow-hidden bg-surface">
+      <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div
+          class="diffuse-sphere absolute -left-52 top-10 h-128 w-lg rounded-full bg-(--primary)/12 blur-[150px]"
+          aria-hidden="true"
+        >
+        </div>
+
+        <div
+          class="absolute inset-0 bg-linear-to-b from-(--surface)/90 via-(--surface)/58 to-(--surface)/94"
+        >
+        </div>
+      </div>
+
+      <div class="site-container relative">
+        <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div>
+            <p class="section-eyebrow">Ready To Improve Your Call Center?</p>
+
+            <h2
+              class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
+            >
+              Route calls, track performance, and improve patient communication.
+            </h2>
+
+            <p class="section-description">
+              With the right VoIP setup, your practice can better funnel
+              incoming calls, assign patients to the correct team members,
+              collect voice messages, support live chat, and use reporting to
+              understand communication performance.
+            </p>
+          </div>
+
+          <div
+            class="glass-panel glass-highlight rounded-4xl p-6 sm:p-8 lg:p-10"
+          >
+            <div class="relative">
+              <PhoneCall class="size-10 text-(--primary)" />
+
+              <h3 class="mt-6 text-2xl font-black tracking-tighter sm:text-3xl">
+                Modern communication for the modern dental front desk.
+              </h3>
+
+              <p class="mt-5 text-base leading-8 text-(--muted-foreground)">
+                Your phone system can become more than a dial tone. Dental IT
+                helps structure call routing, queues, voicemail, mobile access,
+                chat, integrations, and reporting so your team has better
+                visibility and control.
+              </p>
+
+              <div class="mt-7 grid gap-3">
+                {
+                  complianceItems.map((item) => (
+                    <div class="flex items-start gap-3">
+                      <CheckCircle2 class="mt-1 size-5 shrink-0 text-(--primary)" />
+                      <p class="text-sm font-bold leading-6 text-(--muted-foreground)">
+                        {item}
+                      </p>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -635,20 +730,22 @@ import {
         <div
           class="glass-panel glass-highlight mx-auto max-w-5xl rounded-4xl p-6 text-center sm:p-8 md:rounded-[2.5rem] md:p-12 lg:p-16"
         >
-          <p class="section-eyebrow justify-center">Ready to grow smarter?</p>
+          <p class="section-eyebrow justify-center">
+            Ready to improve your voice communications?
+          </p>
 
           <h2
             class="mt-5 text-[clamp(2rem,4.2vw,3.75rem)] font-black leading-none tracking-tighter text-(--footer-foreground)"
           >
-            Get a free growth assessment for your dental practice.
+            Get a free VoIP phone system assessment.
           </h2>
 
           <p
             class="mx-auto mt-6 max-w-3xl text-base leading-8 text-(--footer-muted) md:text-lg"
           >
-            Let Dental IT review your current technology environment and create
-            a clear plan to support your next operatories, providers, systems,
-            or locations.
+            Let Dental IT review your current phone system and help you plan a
+            3CX-powered communication setup with call routing, queues, mobile
+            apps, reporting, integrations, live chat, and video conferencing.
           </p>
 
           <div class="mt-9 flex flex-col justify-center gap-4 sm:flex-row">

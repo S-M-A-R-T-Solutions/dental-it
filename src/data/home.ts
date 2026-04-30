@@ -94,49 +94,49 @@ export const techSupportServices = [
 export const deploymentServices = [
     {
         title: "Practice Startups",
-        href: "/coming-soon?service=Practice%20Startups",
+        href: "/deployments/practice-startups",
         description:
             "Build your new dental practice with a technology foundation designed for growth, security, and efficiency.",
         icon: Building2,
     },
     {
         title: "Practice Growth",
-        href: "/coming-soon?service=Practice%20Growth",
+        href: "/deployments/practice-growth",
         description:
             "Scale your technology as your practice adds providers, chairs, operatories, workstations, and new services.",
         icon: Users,
     },
     {
         title: "Tech Refresh",
-        href: "/coming-soon?service=Tech%20Refresh",
+        href: "/deployments/tech-refresh",
         description:
             "Modernize outdated hardware, workstations, network devices, and systems to improve speed and reliability.",
         icon: Cpu,
     },
     {
         title: "Tech Enhancement",
-        href: "/coming-soon?service=Tech%20Enhancement",
+        href: "/deployments/tech-enhancement",
         description:
             "Upgrade key technology areas to boost performance, patient care, security, and team productivity.",
         icon: Zap,
     },
     {
         title: "Practice Renovation",
-        href: "/coming-soon?service=Practice%20Renovation",
+        href: "/deployments/practice-renovation",
         description:
             "Coordinate technology planning during renovations, expansions, room changes, and equipment upgrades.",
         icon: MonitorSmartphone,
     },
     {
         title: "Tech Assessment",
-        href: "/coming-soon?service=Tech%20Assessment",
+        href: "/deployments/tech-assessment",
         description:
             "Evaluate your practice technology, identify risk, document assets, and create a clear improvement roadmap.",
         icon: Search,
     },
     {
         title: "VoIP Phone Systems",
-        href: "/coming-soon?service=VoIP%20Phone%20Systems",
+        href: "/deployments/voip-phone-systems",
         description:
             "Improve front desk communication, call handling, patient experience, and office phone workflows.",
         icon: PhoneCall,
@@ -146,28 +146,28 @@ export const deploymentServices = [
 export const practiceSolutions = [
     {
         title: "Web Design for Dental Practices",
-        href: "/coming-soon?service=Web%20Design%20for%20Dental%20Practices",
+        href: "/dental-practice-solutions/dental-web-design",
         description:
             "Modern, conversion-focused dental websites designed to support trust, speed, mobile performance, and local SEO.",
         icon: Globe2,
     },
     {
         title: "Dental SEO Service",
-        href: "/coming-soon?service=Dental%20SEO%20Service",
+        href: "/dental-practice-solutions/dental-seo-service",
         description:
             "Improve visibility for local dental searches with optimized content, technical SEO, and service-focused landing pages.",
         icon: Search,
     },
     {
         title: "Dental Social Media",
-        href: "/coming-soon?service=Dental%20Social%20Media",
+        href: "/dental-practice-solutions/dental-social-media",
         description:
             "Build a stronger online presence with content planning, community engagement, and practice-focused campaigns.",
         icon: Sparkles,
     },
     {
         title: "Custom Software Development",
-        href: "/coming-soon?service=Custom%20Software%20Development",
+        href: "/dental-practice-solutions/custom-software-development",
         description:
             "Create custom tools and workflows that help your team operate faster, smarter, and more efficiently.",
         icon: Laptop,

@@ -44,15 +44,15 @@ export const navItems: NavItem[] = [
         href: "#",
         children: [
             { label: "Practice Startups", href: "/deployments/practice-startups" },
-            { label: "Practice Growth", href: comingSoon("Practice Growth") },
-            { label: "Tech Refresh", href: comingSoon("Tech Refresh") },
-            { label: "Tech Enhancement", href: comingSoon("Tech Enhancement") },
+            { label: "Practice Growth", href: "/deployments/practice-growth" },
+            { label: "Tech Refresh", href: "/deployments/tech-refresh" },
+            { label: "Tech Enhancement", href: "/deployments/tech-enhancement" },
             {
                 label: "Practice Renovation",
-                href: comingSoon("Practice Renovation"),
+                href: "/deployments/practice-renovation",
             },
-            { label: "Tech Assessment", href: comingSoon("Tech Assessment") },
-            { label: "VoIP Phone Systems", href: comingSoon("VoIP Phone Systems") },
+            { label: "Tech Assessment", href: "/deployments/tech-assessment" },
+            { label: "VoIP Phone Systems", href: "/deployments/voip-phone-systems" },
         ],
     },
     {
@@ -61,19 +61,19 @@ export const navItems: NavItem[] = [
         children: [
             {
                 label: "Web Design for Dental Practices",
-                href: comingSoon("Web Design for Dental Practices"),
+                href: "/dental-practice-solutions/dental-web-design",
             },
             {
                 label: "Dental SEO Service",
-                href: comingSoon("Dental SEO Service"),
+                href: "/dental-practice-solutions/dental-seo-service",
             },
             {
                 label: "Dental Social Media",
-                href: comingSoon("Dental Social Media"),
+                href: "/dental-practice-solutions/dental-social-media",
             },
             {
                 label: "Custom Software Development",
-                href: comingSoon("Custom Software Development"),
+                href: "/dental-practice-solutions/custom-software-development",
             },
         ],
     },

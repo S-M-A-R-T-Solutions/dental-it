@@ -34,16 +34,16 @@ export const footerColumns = [
     {
         title: "Deployments",
         links: [
-            { label: "Practice Startups", href: "/coming-soon?service=Practice%20Startups" },
-            { label: "Practice Growth", href: "/coming-soon?service=Practice%20Growth" },
-            { label: "Tech Refresh", href: "/coming-soon?service=Tech%20Refresh" },
-            { label: "Tech Enhancement", href: "/coming-soon?service=Tech%20Enhancement" },
+            { label: "Practice Startups", href: "/deployments/practice-startups" },
+            { label: "Practice Growth", href: "/deployments/practice-growth" },
+            { label: "Tech Refresh", href: "/deployments/tech-refresh" },
+            { label: "Tech Enhancement", href: "/deployments/tech-enhancement" },
             {
                 label: "Practice Renovation",
-                href: "/coming-soon?service=Practice%20Renovation",
+                href: "/deployments/practice-renovation",
             },
-            { label: "Tech Assessment", href: "/coming-soon?service=Tech%20Assessment" },
-            { label: "VoIP Phone Systems", href: "/coming-soon?service=VoIP%20Phone%20Systems" },
+            { label: "Tech Assessment", href: "/deployments/tech-assessment" },
+            { label: "VoIP Phone Systems", href: "/deployments/voip-phone-systems" },
         ],
     },
     {
@@ -51,19 +51,19 @@ export const footerColumns = [
         links: [
             {
                 label: "Web Design for Dental Practices",
-                href: "/coming-soon?service=Web%20Design%20for%20Dental%20Practices",
+                href: "/dental-practice-solutions/dental-web-design",
             },
             {
                 label: "Dental SEO Service",
-                href: "/coming-soon?service=Dental%20SEO%20Service",
+                href: "/dental-practice-solutions/dental-seo-service",
             },
             {
                 label: "Dental Social Media",
-                href: "/coming-soon?service=Dental%20Social%20Media",
+                href: "/dental-practice-solutions/dental-social-media",
             },
             {
                 label: "Custom Software Development",
-                href: "/coming-soon?service=Custom%20Software%20Development",
+                href: "/dental-practice-solutions/custom-software-development",
             },
         ],
     },

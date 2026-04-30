@@ -4,889 +4,905 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import { ArrowRight, CheckCircle2 } from "lucide-astro";
 
 import {
-	heroHighlights,
-	cybersecurityStats,
-	cybersecurityServices,
-	ciaTriangle,
-	whyChooseDentalIT,
-	cybersecurityCoverageAreas,
-	cybersecurityNeeds,
-	cybersecuritySeoItems,
-	finalCtaBullets,
-} from "../../data/dentalCybersecurity";
+  heroHighlights,
+  cybersecurityStats,
+  cybersecurityServices,
+  ciaTriangle,
+  whyChooseDentalIT,
+  cybersecurityCoverageAreas,
+  cybersecurityNeeds,
+  cybersecuritySeoItems,
+  finalCtaBullets,
+} from "../../data/dental-cybersecurity";
 ---
 
 <MainLayout
-	title="Dental Cybersecurity Services in Miami, FL"
-	description="Dental IT provides cybersecurity services for dental practices in Miami and South Florida, including antivirus deployment, ransomware defense, firewall hardening, email filtering, vulnerability scanning, 24/7 monitoring, and HIPAA-conscious protection."
-	image="/images/og/dental-it-miami-home-og.jpg"
+  title="Dental Cybersecurity Services in Miami, FL"
+  description="Dental IT provides cybersecurity services for dental practices in Miami and South Florida, including antivirus deployment, ransomware defense, firewall hardening, email filtering, vulnerability scanning, 24/7 monitoring, and HIPAA-conscious protection."
+  image="/images/og/dental-it-miami-home-og.jpg"
 >
-	<main class="overflow-hidden">
-		<!-- HERO -->
-		<section class="relative isolate overflow-hidden bg-site">
-			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-				<div
-					class="floating-card diffuse-sphere absolute -left-52 top-16 h-136 w-136 rounded-full bg-(--primary)/25 blur-[150px]"
-					aria-hidden="true"
-				>
-				</div>
-
-				<div
-					class="floating-card-alt diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-152 w-152 rounded-full bg-(--primary)/25 blur-[170px]"
-					aria-hidden="true"
-				>
-				</div>
-
-				<div
-					class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.08)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-30"
-				>
-				</div>
-
-				<div
-					class="parallax-layer absolute top-40 w-full max-w-none opacity-[0.28] blur"
-					data-parallax-speed="-0.015"
-					aria-hidden="true"
-				>
-					<Image
-						src="/images/backgrounds/dental-it-network-bg.png"
-						alt=""
-						width={2048}
-						height={620}
-						class="w-full min-w-280"
-						loading="eager"
-						decoding="async"
-					/>
-				</div>
-
-				<div
-					class="parallax-layer network-float absolute bottom-4 w-full max-w-none opacity-[0.35]"
-					data-parallax-speed="0.025"
-					aria-hidden="true"
-				>
-					<Image
-						src="/images/backgrounds/dental-it-network-bg.png"
-						alt=""
-						width={2048}
-						height={620}
-						class="w-full min-w-280"
-						loading="eager"
-						decoding="async"
-					/>
-				</div>
-
-				<div
-					class="absolute inset-0 bg-linear-to-b from-(--background)/92 via-(--background)/55 to-(--background)/94"
-				>
-				</div>
-			</div>
-
-			<div
-				class="site-container grid min-h-[calc(100vh-5rem)] items-center gap-12 py-16 md:py-20 lg:grid-cols-[1.02fr_0.98fr] lg:py-24"
-			>
-				<div class="relative z-10">
-					<div
-						class="glass-panel inline-flex max-w-full items-center gap-3 rounded-full px-4 py-2"
-					>
-						<span
-							class="inline-flex size-2.5 shrink-0 rounded-full bg-(--primary) shadow-[0_0_18px_rgba(239,35,49,0.95)]"
-						></span>
-
-						<span
-							class="text-xs font-black uppercase tracking-[0.18em] text-(--foreground) sm:tracking-[0.22em]"
-						>
-							Tech Support / Dental Cybersecurity
-						</span>
-					</div>
-
-					<h1
-						class="mt-7 max-w-5xl text-balance text-[clamp(2.4rem,5.8vw,5rem)] font-black leading-[0.95] tracking-tighter"
-					>
-						Dental cybersecurity for modern practices.
-					</h1>
-
-					<p
-						class="mt-7 max-w-2xl text-base leading-8 text-(--muted-foreground) sm:text-lg md:text-xl"
-					>
-						Dental IT helps protect dental practices from viruses, malware,
-						ransomware, phishing, unauthorized access, and security disruptions
-						so your team can focus on patient care.
-					</p>
-
-					<div class="mt-9 flex flex-col gap-4 sm:flex-row">
-						<a
-							href="/contact"
-							class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
-						>
-							Get Free Assessment
-							<ArrowRight class="size-4" />
-						</a>
-
-						<a
-							href="#cybersecurity-services"
-							class="glass-panel inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-sm font-black uppercase tracking-wide text-(--foreground) transition hover:-translate-y-1 hover:border-(--primary) hover:text-(--primary)"
-						>
-							Explore Protection
-							<ArrowRight class="size-4" />
-						</a>
-					</div>
-
-					<div class="mt-10 grid gap-3 sm:grid-cols-2">
-						{
-							heroHighlights.map((item) => (
-								<div class="flex items-start gap-3">
-									<CheckCircle2 class="mt-1 size-5 shrink-0 text-(--primary)" />
-									<p class="text-sm font-bold leading-6 text-(--muted-foreground)">
-										{item}
-									</p>
-								</div>
-							))
-						}
-					</div>
-				</div>
-
-				<div class="relative mx-auto hidden w-full max-w-xl lg:block lg:max-w-none">
-					<div
-						class="grid gap-5 sm:grid-cols-2 lg:block lg:min-h-136 xl:min-h-152"
-					>
-						<div
-							class="parallax-layer floating-card lg:absolute lg:left-0 lg:-top-15 lg:w-[80%]"
-							data-parallax-speed="0.04"
-						>
-							<div class="glass-panel rounded-4xl p-3">
-								<Image
-									src="/images/dental-cybersecurity/dental-cybersecurity-hero-1.webp"
-									alt="Dental cybersecurity monitoring dashboard for a Miami dental practice"
-									width={900}
-									height={1125}
-									format="webp"
-									quality="high"
-									class="aspect-4/5 w-full rounded-3xl object-cover"
-									loading="eager"
-									decoding="async"
-								/>
-							</div>
-						</div>
-
-						<div
-							class="parallax-layer floating-card-alt lg:absolute lg:-bottom-15 lg:-right-30 lg:w-[80%]"
-							data-parallax-speed="-0.035"
-						>
-							<div class="glass-panel rounded-4xl p-3">
-								<Image
-									src="/images/dental-cybersecurity/dental-cybersecurity-hero-2.webp"
-									alt="Cybersecurity protection for dental office workstations and patient data"
-									width={900}
-									height={1125}
-									format="webp"
-									quality="high"
-									class="aspect-4/5 w-full rounded-3xl object-cover"
-									loading="eager"
-									decoding="async"
-								/>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- CYBERSECURITY INTRO -->
-		<section class="section-padding relative overflow-hidden bg-surface">
-			<div
-				class="absolute inset-0 bg-linear-to-br from-(--surface)/78 via-(--surface)/45 to-(--surface)/72 dark:from-black/78 dark:via-black/48 dark:to-black/82"
-				aria-hidden="true"
-			>
-			</div>
-
-			<div
-				class="floating-card-alt diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/14 blur-[160px]"
-				aria-hidden="true"
-			>
-			</div>
-
-			<div
-				class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.06)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-85"
-				aria-hidden="true"
-			>
-			</div>
-
-			<div class="site-container relative">
-				<div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-					<div>
-						<p class="section-eyebrow">
-							Proactive Threat Protection & Antivirus Solutions
-						</p>
-
-						<h2
-							class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
-						>
-							Security engineered for dental practices.
-						</h2>
-
-						<p class="section-description">
-							Your dental office depends on secure workstations, reliable
-							software, protected patient records, safe email, stable networks,
-							and fast recovery. Dental cybersecurity brings those pieces into a
-							single protection strategy.
-						</p>
-
-						<div class="mt-8 grid gap-3">
-							{
-								finalCtaBullets.map((item) => (
-									<div class="flex items-start gap-3">
-										<CheckCircle2 class="mt-1 size-5 shrink-0 text-(--primary)" />
-										<p class="text-sm font-bold leading-6 text-(--muted-foreground)">
-											{item}
-										</p>
-									</div>
-								))
-							}
-						</div>
-					</div>
-
-					<div class="glass-panel glass-highlight rounded-4xl p-6 sm:p-8 lg:p-10">
-						<div class="relative">
-							<p class="section-eyebrow">Security Visibility</p>
-
-							<h3 class="mt-6 text-2xl font-black tracking-tighter sm:text-3xl">
-								Protect endpoints, networks, email, and patient data.
-							</h3>
-
-							<p class="mt-5 text-base leading-8 text-(--muted-foreground)">
-								Dental IT helps practices combine antivirus, endpoint detection,
-								firewall hardening, email filtering, vulnerability management,
-								monitoring, and recovery planning.
-							</p>
-
-							<div class="mt-7 grid gap-4 sm:grid-cols-3">
-								{
-									cybersecurityStats.map((stat) => (
-										<div class="rounded-3xl border border-(--border) bg-(--card)/70 p-5 backdrop-blur-xl">
-											<p class="text-3xl font-black tracking-tighter text-(--primary)">
-												{stat.value}
-											</p>
-											<p class="mt-2 text-sm font-bold leading-6 text-(--muted-foreground)">
-												{stat.label}
-											</p>
-										</div>
-									))
-								}
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- WHAT CYBERSECURITY SERVICES INCLUDE -->
-		<section
-			id="cybersecurity-services"
-			class="section-padding relative overflow-hidden bg-site"
-		>
-			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-				<div
-					class="diffuse-sphere diffuse-sphere-delay absolute -right-48 top-[20%] h-136 w-136 rounded-full bg-(--primary)/10 blur-[160px]"
-					aria-hidden="true"
-				>
-				</div>
-
-				<div
-					class="parallax-layer network-float absolute left-1/2 top-52 w-432 max-w-none -translate-x-1/2 opacity-[0.16]"
-					data-parallax-speed="0.018"
-					aria-hidden="true"
-				>
-					<Image
-						src="/images/backgrounds/dental-it-network-bg.png"
-						alt=""
-						width={2048}
-						height={620}
-						class="w-full min-w-280"
-						loading="lazy"
-						decoding="async"
-					/>
-				</div>
-
-				<div
-					class="absolute inset-0 bg-linear-to-b from-(--background)/90 via-(--background)/58 to-(--background)/94"
-				>
-				</div>
-			</div>
-
-			<div class="site-container relative">
-				<div class="mx-auto max-w-3xl text-center">
-					<p class="section-eyebrow justify-center">
-						What Our Cybersecurity Services Include
-					</p>
-
-					<h2
-						class="section-title mx-auto normal-case text-[clamp(2rem,4.2vw,3.8rem)] leading-none"
-					>
-						Layered protection for your entire dental IT environment.
-					</h2>
-
-					<p class="section-description mx-auto">
-						From endpoint protection and ransomware defense to email filtering,
-						firewall hardening, vulnerability scanning, and 24/7 monitoring,
-						Dental IT helps reduce cyber risk across the practice.
-					</p>
-				</div>
-
-				<div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-					{
-						cybersecurityServices.map(({ title, description, icon: Icon }) => (
-							<article class="service-card group relative overflow-hidden rounded-4xl p-6 transition hover:-translate-y-1 hover:border-(--primary) md:p-7">
-								<div class="absolute -right-12 -top-12 size-32 rounded-full bg-(--primary)/10 blur-2xl transition group-hover:bg-(--primary)/20" />
-
-								<Icon class="relative size-10 text-(--primary)" />
-
-								<h3 class="relative mt-6 text-lg font-black sm:text-xl">
-									{title}
-								</h3>
-
-								<p class="relative mt-4 text-sm leading-7 text-(--muted-foreground)">
-									{description}
-								</p>
-							</article>
-						))
-					}
-				</div>
-
-				<div class="mt-12 flex justify-center">
-					<a
-						href="/contact"
-						class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
-					>
-						Get a Free Quote
-						<ArrowRight class="size-4" />
-					</a>
-				</div>
-			</div>
-		</section>
-
-		<!-- CIA TRIANGLE -->
-		<section class="section-padding relative overflow-hidden bg-surface">
-			<div
-				class="absolute inset-0 bg-linear-to-br from-(--surface)/78 via-(--surface)/45 to-(--surface)/72 dark:from-black/78 dark:via-black/48 dark:to-black/82"
-				aria-hidden="true"
-			>
-			</div>
-
-			<div
-				class="floating-card diffuse-sphere absolute -left-52 top-10 h-128 w-lg rounded-full bg-(--primary)/20 blur-[150px]"
-				aria-hidden="true"
-			>
-			</div>
-
-			<div
-				class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.06)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-85"
-				aria-hidden="true"
-			>
-			</div>
-
-			<div class="site-container relative z-10">
-				<div class="mx-auto max-w-3xl text-center">
-					<p class="section-eyebrow justify-center">
-						The CIA Triangle: Our Security Foundation
-					</p>
-
-					<h2
-						class="section-title mx-auto normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
-					>
-						Confidentiality, integrity, and availability.
-					</h2>
-
-					<p class="section-description mx-auto">
-						A strong cybersecurity strategy should protect who can access data,
-						preserve the accuracy of systems and records, and keep technology
-						available when your team needs it.
-					</p>
-				</div>
-
-				<div class="mt-12 grid gap-5 lg:grid-cols-3">
-					{
-						ciaTriangle.map(({ title, description, icon: Icon }) => (
-							<article class="glass-panel glass-highlight rounded-4xl p-6 md:p-7">
-								<div class="relative">
-									<div class="flex size-12 items-center justify-center rounded-2xl bg-(--primary) text-white">
-										<Icon class="size-6" />
-									</div>
-
-									<h3 class="mt-6 text-lg font-black uppercase tracking-tight sm:text-xl">
-										{title}
-									</h3>
-
-									<p class="mt-4 text-sm leading-7 text-(--muted-foreground)">
-										{description}
-									</p>
-								</div>
-							</article>
-						))
-					}
-				</div>
-
-				<div class="mt-12 flex justify-center">
-					<a
-						href="/contact"
-						class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
-					>
-						Schedule Cybersecurity Assessment
-						<ArrowRight class="size-4" />
-					</a>
-				</div>
-			</div>
-		</section>
-
-		<!-- TAKING CARE / WHY CHOOSE -->
-		<section class="section-padding relative overflow-hidden bg-surface">
-			<div class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-				<div
-					class="absolute inset-0 bg-linear-to-br from-(--surface)/78 via-(--surface)/45 to-(--surface)/72 dark:from-black/78 dark:via-black/48 dark:to-black/82"
-					aria-hidden="true"
-				>
-				</div>
-
-				<div
-					class="floating-card diffuse-sphere absolute -left-52 top-10 h-128 w-lg rounded-full bg-(--primary)/20 blur-[150px]"
-					aria-hidden="true"
-				>
-				</div>
-
-				<div
-					class="floating-card-alt diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/14 blur-[160px]"
-					aria-hidden="true"
-				>
-				</div>
-
-				<div
-					class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.06)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-85"
-					aria-hidden="true"
-				>
-				</div>
-
-				<div
-					class="absolute inset-0 bg-linear-to-b from-(--surface)/90 via-(--surface)/55 to-(--surface)/94"
-					aria-hidden="true"
-				>
-				</div>
-			</div>
-
-			<div class="site-container relative z-10">
-				<div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-					<div class="lg:sticky lg:top-32">
-						<p class="section-eyebrow">Why Choose Our Security Services?</p>
-
-						<h2
-							class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
-						>
-							Dental-focused cybersecurity with layered defense.
-						</h2>
-
-						<p class="section-description">
-							Cybersecurity is strongest when protection, monitoring,
-							documentation, recovery, and compliance-aware planning work
-							together. Dental IT helps your practice build that security layer.
-						</p>
-
-						<div class="mt-8">
-							<a
-								href="/contact"
-								class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
-							>
-								Schedule Free Assessment
-								<ArrowRight class="size-4" />
-							</a>
-						</div>
-					</div>
-
-					<div class="grid gap-5 md:grid-cols-2">
-						{
-							whyChooseDentalIT.map(({ title, description, icon: Icon }) => (
-								<article class="glass-panel glass-highlight rounded-4xl p-6 md:p-7">
-									<div class="relative">
-										<div class="flex size-12 items-center justify-center rounded-2xl bg-(--primary) text-white">
-											<Icon class="size-6" />
-										</div>
-
-										<h3 class="mt-6 text-lg font-black uppercase tracking-tight sm:text-xl">
-											{title}
-										</h3>
-
-										<p class="mt-4 text-sm leading-7 text-(--muted-foreground)">
-											{description}
-										</p>
-									</div>
-								</article>
-							))
-						}
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- CYBERSECURITY COVERAGE AREAS -->
-		<section class="section-padding relative overflow-hidden bg-site">
-			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-				<div
-					class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/10 blur-[160px]"
-					aria-hidden="true"
-				>
-				</div>
-
-				<div
-					class="absolute inset-0 bg-linear-to-b from-(--background)/90 via-(--background)/56 to-(--background)/94"
-				>
-				</div>
-			</div>
-
-			<div class="site-container relative">
-				<div class="mx-auto max-w-3xl text-center">
-					<p class="section-eyebrow justify-center">Cybersecurity Coverage</p>
-
-					<h2
-						class="section-title mx-auto normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
-					>
-						Protection for the attack surfaces dental practices depend on.
-					</h2>
-
-					<p class="section-description mx-auto">
-						Every workstation, email inbox, network device, cloud tool, and
-						backup strategy can affect your security posture. Dental IT helps
-						bring those areas into one security plan.
-					</p>
-				</div>
-
-				<div class="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-					{
-						cybersecurityCoverageAreas.map(({ title, description, icon: Icon }) => (
-							<article class="service-card group relative overflow-hidden rounded-4xl p-6 transition hover:-translate-y-1 hover:border-(--primary)">
-								<div class="absolute -right-12 -top-12 size-32 rounded-full bg-(--primary)/10 blur-2xl transition group-hover:bg-(--primary)/20" />
-
-								<Icon class="relative size-9 text-(--primary)" />
-
-								<h3 class="relative mt-5 text-lg font-black">{title}</h3>
-
-								<p class="relative mt-3 text-sm leading-7 text-(--muted-foreground)">
-									{description}
-								</p>
-							</article>
-						))
-					}
-				</div>
-			</div>
-		</section>
-
-		<!-- WHY NEED CYBERSECURITY -->
-		<section
-			class="relative overflow-hidden bg-site py-20 lg:py-28 xl:py-32"
-			style="
+  <main class="overflow-hidden">
+    <!-- HERO -->
+    <section class="relative isolate overflow-hidden bg-site">
+      <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div
+          class="floating-card diffuse-sphere absolute -left-52 top-16 h-136 w-136 rounded-full bg-(--primary)/25 blur-[150px]"
+          aria-hidden="true"
+        >
+        </div>
+
+        <div
+          class="floating-card-alt diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-152 w-152 rounded-full bg-(--primary)/25 blur-[170px]"
+          aria-hidden="true"
+        >
+        </div>
+
+        <div
+          class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.08)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-30"
+        >
+        </div>
+
+        <div
+          class="parallax-layer absolute top-40 w-full max-w-none opacity-[0.28] blur"
+          data-parallax-speed="-0.015"
+          aria-hidden="true"
+        >
+          <Image
+            src="/images/backgrounds/dental-it-network-bg.png"
+            alt=""
+            width={2048}
+            height={620}
+            class="w-full min-w-280"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+
+        <div
+          class="parallax-layer network-float absolute bottom-4 w-full max-w-none opacity-[0.35]"
+          data-parallax-speed="0.025"
+          aria-hidden="true"
+        >
+          <Image
+            src="/images/backgrounds/dental-it-network-bg.png"
+            alt=""
+            width={2048}
+            height={620}
+            class="w-full min-w-280"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+
+        <div
+          class="absolute inset-0 bg-linear-to-b from-(--background)/92 via-(--background)/55 to-(--background)/94"
+        >
+        </div>
+      </div>
+
+      <div
+        class="site-container grid min-h-[calc(100vh-5rem)] items-center gap-12 py-16 md:py-20 lg:grid-cols-[1.02fr_0.98fr] lg:py-24"
+      >
+        <div class="relative z-10">
+          <div
+            class="glass-panel inline-flex max-w-full items-center gap-3 rounded-full px-4 py-2"
+          >
+            <span
+              class="inline-flex size-2.5 shrink-0 rounded-full bg-(--primary) shadow-[0_0_18px_rgba(239,35,49,0.95)]"
+            ></span>
+
+            <span
+              class="text-xs font-black uppercase tracking-[0.18em] text-(--foreground) sm:tracking-[0.22em]"
+            >
+              Tech Support / Dental Cybersecurity
+            </span>
+          </div>
+
+          <h1
+            class="mt-7 max-w-5xl text-balance text-[clamp(2.4rem,5.8vw,5rem)] font-black leading-[0.95] tracking-tighter"
+          >
+            Dental cybersecurity for modern practices.
+          </h1>
+
+          <p
+            class="mt-7 max-w-2xl text-base leading-8 text-(--muted-foreground) sm:text-lg md:text-xl"
+          >
+            Dental IT helps protect dental practices from viruses, malware,
+            ransomware, phishing, unauthorized access, and security disruptions
+            so your team can focus on patient care.
+          </p>
+
+          <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
+            >
+              Get Free Assessment
+              <ArrowRight class="size-4" />
+            </a>
+
+            <a
+              href="#cybersecurity-services"
+              class="glass-panel inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-sm font-black uppercase tracking-wide text-(--foreground) transition hover:-translate-y-1 hover:border-(--primary) hover:text-(--primary)"
+            >
+              Explore Protection
+              <ArrowRight class="size-4" />
+            </a>
+          </div>
+
+          <div class="mt-10 grid gap-3 sm:grid-cols-2">
+            {
+              heroHighlights.map((item) => (
+                <div class="flex items-start gap-3">
+                  <CheckCircle2 class="mt-1 size-5 shrink-0 text-(--primary)" />
+                  <p class="text-sm font-bold leading-6 text-(--muted-foreground)">
+                    {item}
+                  </p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div
+          class="relative mx-auto hidden w-full max-w-xl lg:block lg:max-w-none"
+        >
+          <div
+            class="grid gap-5 sm:grid-cols-2 lg:block lg:min-h-136 xl:min-h-152"
+          >
+            <div
+              class="parallax-layer floating-card lg:absolute lg:left-0 lg:-top-15 lg:w-[80%]"
+              data-parallax-speed="0.04"
+            >
+              <div class="glass-panel rounded-4xl p-3">
+                <Image
+                  src="/images/dental-cybersecurity/dental-cybersecurity-hero-1.webp"
+                  alt="Dental cybersecurity monitoring dashboard for a Miami dental practice"
+                  width={900}
+                  height={1125}
+                  format="webp"
+                  quality="high"
+                  class="aspect-4/5 w-full rounded-3xl object-cover"
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
+            </div>
+
+            <div
+              class="parallax-layer floating-card-alt lg:absolute lg:-bottom-15 lg:-right-30 lg:w-[80%]"
+              data-parallax-speed="-0.035"
+            >
+              <div class="glass-panel rounded-4xl p-3">
+                <Image
+                  src="/images/dental-cybersecurity/dental-cybersecurity-hero-2.webp"
+                  alt="Cybersecurity protection for dental office workstations and patient data"
+                  width={900}
+                  height={1125}
+                  format="webp"
+                  quality="high"
+                  class="aspect-4/5 w-full rounded-3xl object-cover"
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CYBERSECURITY INTRO -->
+    <section class="section-padding relative overflow-hidden bg-surface">
+      <div
+        class="absolute inset-0 bg-linear-to-br from-(--surface)/78 via-(--surface)/45 to-(--surface)/72 dark:from-black/78 dark:via-black/48 dark:to-black/82"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div
+        class="floating-card-alt diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/14 blur-[160px]"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div
+        class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.06)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-85"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div class="site-container relative">
+        <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <p class="section-eyebrow">
+              Proactive Threat Protection & Antivirus Solutions
+            </p>
+
+            <h2
+              class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
+            >
+              Security engineered for dental practices.
+            </h2>
+
+            <p class="section-description">
+              Your dental office depends on secure workstations, reliable
+              software, protected patient records, safe email, stable networks,
+              and fast recovery. Dental cybersecurity brings those pieces into a
+              single protection strategy.
+            </p>
+
+            <div class="mt-8 grid gap-3">
+              {
+                finalCtaBullets.map((item) => (
+                  <div class="flex items-start gap-3">
+                    <CheckCircle2 class="mt-1 size-5 shrink-0 text-(--primary)" />
+                    <p class="text-sm font-bold leading-6 text-(--muted-foreground)">
+                      {item}
+                    </p>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+
+          <div
+            class="glass-panel glass-highlight rounded-4xl p-6 sm:p-8 lg:p-10"
+          >
+            <div class="relative">
+              <p class="section-eyebrow">Security Visibility</p>
+
+              <h3 class="mt-6 text-2xl font-black tracking-tighter sm:text-3xl">
+                Protect endpoints, networks, email, and patient data.
+              </h3>
+
+              <p class="mt-5 text-base leading-8 text-(--muted-foreground)">
+                Dental IT helps practices combine antivirus, endpoint detection,
+                firewall hardening, email filtering, vulnerability management,
+                monitoring, and recovery planning.
+              </p>
+
+              <div class="mt-7 grid gap-4 sm:grid-cols-3">
+                {
+                  cybersecurityStats.map((stat) => (
+                    <div class="rounded-3xl border border-(--border) bg-(--card)/70 p-5 backdrop-blur-xl">
+                      <p class="text-3xl font-black tracking-tighter text-(--primary)">
+                        {stat.value}
+                      </p>
+                      <p class="mt-2 text-sm font-bold leading-6 text-(--muted-foreground)">
+                        {stat.label}
+                      </p>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT CYBERSECURITY SERVICES INCLUDE -->
+    <section
+      id="cybersecurity-services"
+      class="section-padding relative overflow-hidden bg-site"
+    >
+      <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div
+          class="diffuse-sphere diffuse-sphere-delay absolute -right-48 top-[20%] h-136 w-136 rounded-full bg-(--primary)/10 blur-[160px]"
+          aria-hidden="true"
+        >
+        </div>
+
+        <div
+          class="parallax-layer network-float absolute left-1/2 top-52 w-432 max-w-none -translate-x-1/2 opacity-[0.16]"
+          data-parallax-speed="0.018"
+          aria-hidden="true"
+        >
+          <Image
+            src="/images/backgrounds/dental-it-network-bg.png"
+            alt=""
+            width={2048}
+            height={620}
+            class="w-full min-w-280"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+
+        <div
+          class="absolute inset-0 bg-linear-to-b from-(--background)/90 via-(--background)/58 to-(--background)/94"
+        >
+        </div>
+      </div>
+
+      <div class="site-container relative">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="section-eyebrow justify-center">
+            What Our Cybersecurity Services Include
+          </p>
+
+          <h2
+            class="section-title mx-auto normal-case text-[clamp(2rem,4.2vw,3.8rem)] leading-none"
+          >
+            Layered protection for your entire dental IT environment.
+          </h2>
+
+          <p class="section-description mx-auto">
+            From endpoint protection and ransomware defense to email filtering,
+            firewall hardening, vulnerability scanning, and 24/7 monitoring,
+            Dental IT helps reduce cyber risk across the practice.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {
+            cybersecurityServices.map(({ title, description, icon: Icon }) => (
+              <article class="service-card group relative overflow-hidden rounded-4xl p-6 transition hover:-translate-y-1 hover:border-(--primary) md:p-7">
+                <div class="absolute -right-12 -top-12 size-32 rounded-full bg-(--primary)/10 blur-2xl transition group-hover:bg-(--primary)/20" />
+
+                <Icon class="relative size-10 text-(--primary)" />
+
+                <h3 class="relative mt-6 text-lg font-black sm:text-xl">
+                  {title}
+                </h3>
+
+                <p class="relative mt-4 text-sm leading-7 text-(--muted-foreground)">
+                  {description}
+                </p>
+              </article>
+            ))
+          }
+        </div>
+
+        <div class="mt-12 flex justify-center">
+          <a
+            href="/contact"
+            class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
+          >
+            Get a Free Quote
+            <ArrowRight class="size-4" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CIA TRIANGLE -->
+    <section class="section-padding relative overflow-hidden bg-surface">
+      <div
+        class="absolute inset-0 bg-linear-to-br from-(--surface)/78 via-(--surface)/45 to-(--surface)/72 dark:from-black/78 dark:via-black/48 dark:to-black/82"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div
+        class="floating-card diffuse-sphere absolute -left-52 top-10 h-128 w-lg rounded-full bg-(--primary)/20 blur-[150px]"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div
+        class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.06)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-85"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div class="site-container relative z-10">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="section-eyebrow justify-center">
+            The CIA Triangle: Our Security Foundation
+          </p>
+
+          <h2
+            class="section-title mx-auto normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
+          >
+            Confidentiality, integrity, and availability.
+          </h2>
+
+          <p class="section-description mx-auto">
+            A strong cybersecurity strategy should protect who can access data,
+            preserve the accuracy of systems and records, and keep technology
+            available when your team needs it.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-5 lg:grid-cols-3">
+          {
+            ciaTriangle.map(({ title, description, icon: Icon }) => (
+              <article class="glass-panel glass-highlight rounded-4xl p-6 md:p-7">
+                <div class="relative">
+                  <div class="flex size-12 items-center justify-center rounded-2xl bg-(--primary) text-white">
+                    <Icon class="size-6" />
+                  </div>
+
+                  <h3 class="mt-6 text-lg font-black uppercase tracking-tight sm:text-xl">
+                    {title}
+                  </h3>
+
+                  <p class="mt-4 text-sm leading-7 text-(--muted-foreground)">
+                    {description}
+                  </p>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+
+        <div class="mt-12 flex justify-center">
+          <a
+            href="/contact"
+            class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
+          >
+            Schedule Cybersecurity Assessment
+            <ArrowRight class="size-4" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAKING CARE / WHY CHOOSE -->
+    <section class="section-padding relative overflow-hidden bg-surface">
+      <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <div
+          class="absolute inset-0 bg-linear-to-br from-(--surface)/78 via-(--surface)/45 to-(--surface)/72 dark:from-black/78 dark:via-black/48 dark:to-black/82"
+          aria-hidden="true"
+        >
+        </div>
+
+        <div
+          class="floating-card diffuse-sphere absolute -left-52 top-10 h-128 w-lg rounded-full bg-(--primary)/20 blur-[150px]"
+          aria-hidden="true"
+        >
+        </div>
+
+        <div
+          class="floating-card-alt diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/14 blur-[160px]"
+          aria-hidden="true"
+        >
+        </div>
+
+        <div
+          class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.06)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-85"
+          aria-hidden="true"
+        >
+        </div>
+
+        <div
+          class="absolute inset-0 bg-linear-to-b from-(--surface)/90 via-(--surface)/55 to-(--surface)/94"
+          aria-hidden="true"
+        >
+        </div>
+      </div>
+
+      <div class="site-container relative z-10">
+        <div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+          <div class="lg:sticky lg:top-32">
+            <p class="section-eyebrow">Why Choose Our Security Services?</p>
+
+            <h2
+              class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
+            >
+              Dental-focused cybersecurity with layered defense.
+            </h2>
+
+            <p class="section-description">
+              Cybersecurity is strongest when protection, monitoring,
+              documentation, recovery, and compliance-aware planning work
+              together. Dental IT helps your practice build that security layer.
+            </p>
+
+            <div class="mt-8">
+              <a
+                href="/contact"
+                class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
+              >
+                Schedule Free Assessment
+                <ArrowRight class="size-4" />
+              </a>
+            </div>
+          </div>
+
+          <div class="grid gap-5 md:grid-cols-2">
+            {
+              whyChooseDentalIT.map(
+                ({ title, description, icon: Icon }, index) => (
+                  <article
+                    class:list={[
+                      "glass-panel glass-highlight rounded-4xl p-6 md:p-7",
+                      index === whyChooseDentalIT.length - 1 && "md:col-span-2",
+                    ]}
+                  >
+                    <div class="relative">
+                      <div class="flex size-12 items-center justify-center rounded-2xl bg-(--primary) text-white">
+                        <Icon class="size-6" />
+                      </div>
+
+                      <h3 class="mt-6 text-lg font-black uppercase tracking-tight sm:text-xl">
+                        {title}
+                      </h3>
+
+                      <p class="mt-4 text-sm leading-7 text-(--muted-foreground)">
+                        {description}
+                      </p>
+                    </div>
+                  </article>
+                ),
+              )
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CYBERSECURITY COVERAGE AREAS -->
+    <section class="section-padding relative overflow-hidden bg-site">
+      <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div
+          class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/10 blur-[160px]"
+          aria-hidden="true"
+        >
+        </div>
+
+        <div
+          class="absolute inset-0 bg-linear-to-b from-(--background)/90 via-(--background)/56 to-(--background)/94"
+        >
+        </div>
+      </div>
+
+      <div class="site-container relative">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="section-eyebrow justify-center">Cybersecurity Coverage</p>
+
+          <h2
+            class="section-title mx-auto normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
+          >
+            Protection for the attack surfaces dental practices depend on.
+          </h2>
+
+          <p class="section-description mx-auto">
+            Every workstation, email inbox, network device, cloud tool, and
+            backup strategy can affect your security posture. Dental IT helps
+            bring those areas into one security plan.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          {
+            cybersecurityCoverageAreas.map(
+              ({ title, description, icon: Icon }) => (
+                <article class="service-card group relative overflow-hidden rounded-4xl p-6 transition hover:-translate-y-1 hover:border-(--primary)">
+                  <div class="absolute -right-12 -top-12 size-32 rounded-full bg-(--primary)/10 blur-2xl transition group-hover:bg-(--primary)/20" />
+
+                  <Icon class="relative size-9 text-(--primary)" />
+
+                  <h3 class="relative mt-5 text-lg font-black">{title}</h3>
+
+                  <p class="relative mt-3 text-sm leading-7 text-(--muted-foreground)">
+                    {description}
+                  </p>
+                </article>
+              ),
+            )
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY NEED CYBERSECURITY -->
+    <section
+      class="relative overflow-hidden bg-site py-20 lg:py-28 xl:py-32"
+      style="
 				background-image: url('/images/dental-cybersecurity/dental-cybersecurity-background.webp');
 				background-size: cover;
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-attachment: fixed;
 			"
-		>
-			<div class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-				<div class="absolute inset-0 bg-(--background)/70 dark:bg-black/82">
-				</div>
+    >
+      <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <div class="absolute inset-0 bg-(--background)/70 dark:bg-black/82">
+        </div>
 
-				<div
-					class="absolute inset-0 bg-linear-to-br from-(--background)/95 via-(--background)/76 to-(--background)/92 dark:from-black/94 dark:via-black/74 dark:to-black/92"
-				>
-				</div>
+        <div
+          class="absolute inset-0 bg-linear-to-br from-(--background)/95 via-(--background)/76 to-(--background)/92 dark:from-black/94 dark:via-black/74 dark:to-black/92"
+        >
+        </div>
 
-				<div
-					class="diffuse-sphere absolute -left-44 top-20 h-120 w-120 rounded-full bg-(--primary)/20 blur-[150px]"
-					aria-hidden="true"
-				>
-				</div>
+        <div
+          class="diffuse-sphere absolute -left-44 top-20 h-120 w-120 rounded-full bg-(--primary)/20 blur-[150px]"
+          aria-hidden="true"
+        >
+        </div>
 
-				<div
-					class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.06)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-85"
-					aria-hidden="true"
-				>
-				</div>
-			</div>
+        <div
+          class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.06)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-85"
+          aria-hidden="true"
+        >
+        </div>
+      </div>
 
-			<div class="site-container relative z-10">
-				<div class="mx-auto max-w-3xl text-center">
-					<p class="section-eyebrow justify-center">
-						Why Does Your Dental Practice Need Cybersecurity?
-					</p>
+      <div class="site-container relative z-10">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="section-eyebrow justify-center">
+            Why Does Your Dental Practice Need Cybersecurity?
+          </p>
 
-					<h2
-						class="section-title mx-auto normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
-					>
-						Because a single attack can interrupt care and damage trust.
-					</h2>
+          <h2
+            class="section-title mx-auto normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
+          >
+            Because a single attack can interrupt care and damage trust.
+          </h2>
 
-					<p class="section-description mx-auto">
-						Ransomware, malware, phishing, stolen credentials, and unauthorized
-						access can threaten patient data, daily operations, compliance, and
-						your practice reputation.
-					</p>
-				</div>
+          <p class="section-description mx-auto">
+            Ransomware, malware, phishing, stolen credentials, and unauthorized
+            access can threaten patient data, daily operations, compliance, and
+            your practice reputation.
+          </p>
+        </div>
 
-				<div class="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-5">
-					{
-						cybersecurityNeeds.map(({ title, description, icon: Icon }) => (
-							<article class="glass-panel glass-highlight rounded-4xl p-6 text-left">
-								<div class="relative">
-									<Icon class="size-9 text-(--primary)" />
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-5">
+          {
+            cybersecurityNeeds.map(({ title, description, icon: Icon }) => (
+              <article class="glass-panel glass-highlight rounded-4xl p-6 text-left">
+                <div class="relative">
+                  <Icon class="size-9 text-(--primary)" />
 
-									<h3 class="mt-5 text-lg font-black">{title}</h3>
+                  <h3 class="mt-5 text-lg font-black">{title}</h3>
 
-									<p class="mt-3 text-sm leading-7 text-(--muted-foreground)">
-										{description}
-									</p>
-								</div>
-							</article>
-						))
-					}
-				</div>
-			</div>
-		</section>
+                  <p class="mt-3 text-sm leading-7 text-(--muted-foreground)">
+                    {description}
+                  </p>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
 
-		<!-- CYBERSECURITY SEO SECTION -->
-		<section class="section-padding relative overflow-hidden bg-surface">
-			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-				<div
-					class="diffuse-sphere absolute -left-52 top-10 h-128 w-lg rounded-full bg-(--primary)/12 blur-[150px]"
-					aria-hidden="true"
-				>
-				</div>
+    <!-- CYBERSECURITY SEO SECTION -->
+    <section class="section-padding relative overflow-hidden bg-surface">
+      <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div
+          class="diffuse-sphere absolute -left-52 top-10 h-128 w-lg rounded-full bg-(--primary)/12 blur-[150px]"
+          aria-hidden="true"
+        >
+        </div>
 
-				<div
-					class="absolute inset-0 bg-linear-to-b from-(--surface)/90 via-(--surface)/58 to-(--surface)/94"
-				>
-				</div>
-			</div>
+        <div
+          class="absolute inset-0 bg-linear-to-b from-(--surface)/90 via-(--surface)/58 to-(--surface)/94"
+        >
+        </div>
+      </div>
 
-			<div class="site-container relative">
-				<div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-					<div>
-						<p class="section-eyebrow">HIPAA-Conscious Cybersecurity</p>
+      <div class="site-container relative">
+        <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div>
+            <p class="section-eyebrow">HIPAA-Conscious Cybersecurity</p>
 
-						<h2
-							class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
-						>
-							Security support for patient data protection.
-						</h2>
+            <h2
+              class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
+            >
+              Security support for patient data protection.
+            </h2>
 
-						<p class="section-description">
-							Dental practices rely on electronic protected health information
-							across practice management systems, imaging platforms, servers,
-							workstations, backups, cloud tools, and communication systems.
-							Cybersecurity helps protect that environment from preventable
-							threats.
-						</p>
-					</div>
+            <p class="section-description">
+              Dental practices rely on electronic protected health information
+              across practice management systems, imaging platforms, servers,
+              workstations, backups, cloud tools, and communication systems.
+              Cybersecurity helps protect that environment from preventable
+              threats.
+            </p>
+          </div>
 
-					<div class="glass-panel glass-highlight rounded-4xl p-6 sm:p-8 lg:p-10">
-						<div class="relative">
-							<p class="section-eyebrow">Security Framework</p>
+          <div
+            class="glass-panel glass-highlight rounded-4xl p-6 sm:p-8 lg:p-10"
+          >
+            <div class="relative">
+              <p class="section-eyebrow">Security Framework</p>
 
-							<h3 class="mt-6 text-2xl font-black tracking-tighter sm:text-3xl">
-								Endpoint protection, monitoring, filtering, recovery, and response.
-							</h3>
+              <h3 class="mt-6 text-2xl font-black tracking-tighter sm:text-3xl">
+                Endpoint protection, monitoring, filtering, recovery, and
+                response.
+              </h3>
 
-							<p class="mt-5 text-base leading-8 text-(--muted-foreground)">
-								A stronger cybersecurity posture combines prevention, detection,
-								network hardening, patching, safe email, backups, documentation,
-								and rapid remediation planning.
-							</p>
+              <p class="mt-5 text-base leading-8 text-(--muted-foreground)">
+                A stronger cybersecurity posture combines prevention, detection,
+                network hardening, patching, safe email, backups, documentation,
+                and rapid remediation planning.
+              </p>
 
-							<div class="mt-7 grid gap-3">
-								{
-									cybersecuritySeoItems.map((item) => (
-										<div class="flex items-start gap-3">
-											<CheckCircle2 class="mt-1 size-5 shrink-0 text-(--primary)" />
-											<p class="text-sm font-bold leading-6 text-(--muted-foreground)">
-												{item}
-											</p>
-										</div>
-									))
-								}
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+              <div class="mt-7 grid gap-3">
+                {
+                  cybersecuritySeoItems.map((item) => (
+                    <div class="flex items-start gap-3">
+                      <CheckCircle2 class="mt-1 size-5 shrink-0 text-(--primary)" />
+                      <p class="text-sm font-bold leading-6 text-(--muted-foreground)">
+                        {item}
+                      </p>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<!-- FINAL CTA -->
-		<section
-			class="relative overflow-hidden bg-footer py-16 text-(--footer-foreground) md:py-20 lg:py-28"
-		>
-			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-				<div
-					class="diffuse-sphere absolute -left-48 top-0 h-120 w-120 rounded-full bg-(--primary)/18 blur-[150px]"
-					aria-hidden="true"
-				>
-				</div>
+    <!-- FINAL CTA -->
+    <section
+      class="relative overflow-hidden bg-footer py-16 text-(--footer-foreground) md:py-20 lg:py-28"
+    >
+      <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div
+          class="diffuse-sphere absolute -left-48 top-0 h-120 w-120 rounded-full bg-(--primary)/18 blur-[150px]"
+          aria-hidden="true"
+        >
+        </div>
 
-				<div
-					class="diffuse-sphere diffuse-sphere-delay absolute -right-48 bottom-0 h-136 w-136 rounded-full bg-(--primary)/14 blur-[160px]"
-					aria-hidden="true"
-				>
-				</div>
+        <div
+          class="diffuse-sphere diffuse-sphere-delay absolute -right-48 bottom-0 h-136 w-136 rounded-full bg-(--primary)/14 blur-[160px]"
+          aria-hidden="true"
+        >
+        </div>
 
-				<div
-					class="parallax-layer network-float absolute left-1/2 -bottom-12 w-400 max-w-none -translate-x-1/2 opacity-[0.16] blur-xl"
-					data-parallax-speed="0.015"
-					aria-hidden="true"
-				>
-					<Image
-						src="/images/backgrounds/dental-it-network-bg.png"
-						alt=""
-						width={2048}
-						height={620}
-						class="w-full min-w-260"
-						loading="lazy"
-						decoding="async"
-					/>
-				</div>
+        <div
+          class="parallax-layer network-float absolute left-1/2 -bottom-12 w-400 max-w-none -translate-x-1/2 opacity-[0.16] blur-xl"
+          data-parallax-speed="0.015"
+          aria-hidden="true"
+        >
+          <Image
+            src="/images/backgrounds/dental-it-network-bg.png"
+            alt=""
+            width={2048}
+            height={620}
+            class="w-full min-w-260"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
 
-				<div
-					class="absolute inset-0 bg-linear-to-b from-(--footer-background)/88 via-(--footer-background)/45 to-(--footer-background)/95"
-				>
-				</div>
-			</div>
+        <div
+          class="absolute inset-0 bg-linear-to-b from-(--footer-background)/88 via-(--footer-background)/45 to-(--footer-background)/95"
+        >
+        </div>
+      </div>
 
-			<div
-				class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.06)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-85"
-				aria-hidden="true"
-			>
-			</div>
+      <div
+        class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.06)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-85"
+        aria-hidden="true"
+      >
+      </div>
 
-			<div class="site-container relative">
-				<div
-					class="glass-panel glass-highlight mx-auto max-w-5xl rounded-4xl p-6 text-center sm:p-8 md:rounded-[2.5rem] md:p-12 lg:p-16"
-				>
-					<p class="section-eyebrow justify-center">
-						Ready to fortify your practice?
-					</p>
+      <div class="site-container relative">
+        <div
+          class="glass-panel glass-highlight mx-auto max-w-5xl rounded-4xl p-6 text-center sm:p-8 md:rounded-[2.5rem] md:p-12 lg:p-16"
+        >
+          <p class="section-eyebrow justify-center">
+            Ready to fortify your practice?
+          </p>
 
-					<h2
-						class="mt-5 text-[clamp(2rem,4.2vw,3.75rem)] font-black leading-none tracking-tighter text-(--footer-foreground)"
-					>
-						Get a free cybersecurity assessment for your dental practice.
-					</h2>
+          <h2
+            class="mt-5 text-[clamp(2rem,4.2vw,3.75rem)] font-black leading-none tracking-tighter text-(--footer-foreground)"
+          >
+            Get a free cybersecurity assessment for your dental practice.
+          </h2>
 
-					<p
-						class="mx-auto mt-6 max-w-3xl text-base leading-8 text-(--footer-muted) md:text-lg"
-					>
-						Let Dental IT review your current security posture and build a clear
-						plan for endpoint protection, ransomware defense, monitoring,
-						firewall hardening, email filtering, and recovery readiness.
-					</p>
+          <p
+            class="mx-auto mt-6 max-w-3xl text-base leading-8 text-(--footer-muted) md:text-lg"
+          >
+            Let Dental IT review your current security posture and build a clear
+            plan for endpoint protection, ransomware defense, monitoring,
+            firewall hardening, email filtering, and recovery readiness.
+          </p>
 
-					<div class="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
-						<a
-							href="/contact"
-							class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-8 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
-						>
-							Schedule Free Assessment
-							<ArrowRight class="size-4" />
-						</a>
+          <div class="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-8 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
+            >
+              Schedule Free Assessment
+              <ArrowRight class="size-4" />
+            </a>
 
-						<a
-							href="tel:+13059725760"
-							class="glass-panel inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-sm font-black uppercase tracking-wide text-(--footer-foreground) transition hover:-translate-y-1 hover:border-(--primary) hover:text-(--primary)"
-						>
-							Call (305) 972-5760
-							<ArrowRight class="size-4" />
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-	</main>
+            <a
+              href="tel:+13059725760"
+              class="glass-panel inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-sm font-black uppercase tracking-wide text-(--footer-foreground) transition hover:-translate-y-1 hover:border-(--primary) hover:text-(--primary)"
+            >
+              Call (305) 972-5760
+              <ArrowRight class="size-4" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-	<style>
-		@keyframes networkFloat {
-			0%,
-			100% {
-				translate: 0 0;
-			}
+  <style>
+    @keyframes networkFloat {
+      0%,
+      100% {
+        translate: 0 0;
+      }
 
-			50% {
-				translate: 0 -22px;
-			}
-		}
+      50% {
+        translate: 0 -22px;
+      }
+    }
 
-		@keyframes diffusePulse {
-			0%,
-			100% {
-				transform: scale(1);
-				opacity: 0.75;
-			}
+    @keyframes diffusePulse {
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.75;
+      }
 
-			50% {
-				transform: scale(1.08);
-				opacity: 1;
-			}
-		}
+      50% {
+        transform: scale(1.08);
+        opacity: 1;
+      }
+    }
 
-		.network-float {
-			animation: networkFloat 9s ease-in-out infinite;
-			will-change: translate, transform;
-		}
+    .network-float {
+      animation: networkFloat 9s ease-in-out infinite;
+      will-change: translate, transform;
+    }
 
-		.diffuse-sphere {
-			animation: diffusePulse 10s ease-in-out infinite;
-			will-change: transform, opacity;
-		}
+    .diffuse-sphere {
+      animation: diffusePulse 10s ease-in-out infinite;
+      will-change: transform, opacity;
+    }
 
-		.diffuse-sphere-delay {
-			animation-delay: -5s;
-		}
+    .diffuse-sphere-delay {
+      animation-delay: -5s;
+    }
 
-		@media (prefers-reduced-motion: reduce) {
-			.network-float,
-			.diffuse-sphere {
-				animation: none;
-			}
-		}
-	</style>
+    @media (prefers-reduced-motion: reduce) {
+      .network-float,
+      .diffuse-sphere {
+        animation: none;
+      }
+    }
+  </style>
 
-	<script>
-		const parallaxLayers = document.querySelectorAll("[data-parallax-speed]");
-		const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  <script>
+    const parallaxLayers = document.querySelectorAll("[data-parallax-speed]");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-		const updateParallax = () => {
-			if (reduceMotion.matches || window.innerWidth < 1024) return;
+    const updateParallax = () => {
+      if (reduceMotion.matches || window.innerWidth < 1024) return;
 
-			const scrollY = window.scrollY;
+      const scrollY = window.scrollY;
 
-			parallaxLayers.forEach((layer) => {
-				const speed = Number(layer.getAttribute("data-parallax-speed") || 0);
-				const y = scrollY * speed;
+      parallaxLayers.forEach((layer) => {
+        const speed = Number(layer.getAttribute("data-parallax-speed") || 0);
+        const y = scrollY * speed;
 
-				layer.style.setProperty("--parallax-y", `${y}px`);
-				layer.style.transform = `translate3d(0, var(--parallax-y), 0)`;
-			});
-		};
+        layer.style.setProperty("--parallax-y", `${y}px`);
+        layer.style.transform = `translate3d(0, var(--parallax-y), 0)`;
+      });
+    };
 
-		const resetParallax = () => {
-			parallaxLayers.forEach((layer) => {
-				layer.style.removeProperty("--parallax-y");
-				layer.style.transform = "";
-			});
-		};
+    const resetParallax = () => {
+      parallaxLayers.forEach((layer) => {
+        layer.style.removeProperty("--parallax-y");
+        layer.style.transform = "";
+      });
+    };
 
-		const handleParallax = () => {
-			if (reduceMotion.matches || window.innerWidth < 1024) {
-				resetParallax();
-				return;
-			}
+    const handleParallax = () => {
+      if (reduceMotion.matches || window.innerWidth < 1024) {
+        resetParallax();
+        return;
+      }
 
-			updateParallax();
-		};
+      updateParallax();
+    };
 
-		handleParallax();
+    handleParallax();
 
-		window.addEventListener("scroll", handleParallax, { passive: true });
-		window.addEventListener("resize", handleParallax);
-	</script>
+    window.addEventListener("scroll", handleParallax, { passive: true });
+    window.addEventListener("resize", handleParallax);
+  </script>
 </MainLayout>
