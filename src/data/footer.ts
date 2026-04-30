@@ -27,7 +27,7 @@ export const footerColumns = [
             },
             {
                 label: "Proactive Maintenance",
-                href: "/coming-soon?service=Proactive%20Maintenance",
+                href: "/tech-support/proactive-maintenance",
             },
         ],
     },

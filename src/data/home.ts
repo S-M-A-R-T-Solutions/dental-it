@@ -29,7 +29,7 @@ export const stats = [
         label: "software, hardware, network, and system monitoring",
     },
     {
-        value: "0.99¢",
+        value: "99¢",
         suffix: "/day",
         label: "starting proactive maintenance per workstation",
     },
@@ -84,7 +84,7 @@ export const techSupportServices = [
     },
     {
         title: "Proactive Maintenance",
-        href: "/coming-soon?service=Proactive%20Maintenance",
+        href: "/tech-support/proactive-maintenance",
         description:
             "Keep systems updated, monitored, optimized, and ready before small issues become costly downtime.",
         icon: Activity,

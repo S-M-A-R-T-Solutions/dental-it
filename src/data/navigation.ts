@@ -35,7 +35,7 @@ export const navItems: NavItem[] = [
             },
             {
                 label: "Proactive Maintenance",
-                href: comingSoon("Proactive Maintenance"),
+                href: "/tech-support/proactive-maintenance",
             },
         ],
     },
