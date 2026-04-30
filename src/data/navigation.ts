@@ -41,9 +41,9 @@ export const navItems: NavItem[] = [
     },
     {
         label: "Deployments",
-        href: "/deployments",
+        href: "#",
         children: [
-            { label: "Practice Startups", href: comingSoon("Practice Startups") },
+            { label: "Practice Startups", href: "/deployments/practice-startups" },
             { label: "Practice Growth", href: comingSoon("Practice Growth") },
             { label: "Tech Refresh", href: comingSoon("Tech Refresh") },
             { label: "Tech Enhancement", href: comingSoon("Tech Enhancement") },
@@ -57,7 +57,7 @@ export const navItems: NavItem[] = [
     },
     {
         label: "Dental Practice Solutions",
-        href: "/dental-practice-solutions",
+        href: "#",
         children: [
             {
                 label: "Web Design for Dental Practices",
