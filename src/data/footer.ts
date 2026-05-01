@@ -47,23 +47,23 @@ export const footerColumns = [
         ],
     },
     {
-        title: "Dental Practice Solutions",
+        title: "Practice Technology",
         links: [
             {
                 label: "Web Design for Dental Practices",
-                href: "/dental-practice-solutions/dental-web-design",
+                href: "/practice-technology/dental-web-design",
             },
             {
                 label: "Dental SEO Service",
-                href: "/dental-practice-solutions/dental-seo-service",
+                href: "/practice-technology/dental-seo-service",
             },
             {
                 label: "Dental Social Media",
-                href: "/dental-practice-solutions/dental-social-media",
+                href: "/practice-technology/dental-social-media",
             },
             {
                 label: "Custom Software Development",
-                href: "/dental-practice-solutions/custom-software-development",
+                href: "/practice-technology/custom-software-development",
             },
         ],
     },

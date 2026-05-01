@@ -16,7 +16,7 @@ export const navItems: NavItem[] = [
     },
     {
         label: "Tech Support",
-        href: "#",
+        href: "/tech-support",
         children: [
             { label: "Managed IT Support", href: "/tech-support/managed-it-support" },
             {
@@ -41,7 +41,7 @@ export const navItems: NavItem[] = [
     },
     {
         label: "Deployments",
-        href: "#",
+        href: "/deployments",
         children: [
             { label: "Practice Startups", href: "/deployments/practice-startups" },
             { label: "Practice Growth", href: "/deployments/practice-growth" },
@@ -56,24 +56,24 @@ export const navItems: NavItem[] = [
         ],
     },
     {
-        label: "Dental Practice Solutions",
-        href: "#",
+        label: "Practice Technology",
+        href: "/practice-technology",
         children: [
             {
                 label: "Web Design for Dental Practices",
-                href: "/dental-practice-solutions/dental-web-design",
+                href: "/practice-technology/dental-web-design",
             },
             {
                 label: "Dental SEO Service",
-                href: "/dental-practice-solutions/dental-seo-service",
+                href: "/practice-technology/dental-seo-service",
             },
             {
                 label: "Dental Social Media",
-                href: "/dental-practice-solutions/dental-social-media",
+                href: "/practice-technology/dental-social-media",
             },
             {
                 label: "Custom Software Development",
-                href: "/dental-practice-solutions/custom-software-development",
+                href: "/practice-technology/custom-software-development",
             },
         ],
     },
