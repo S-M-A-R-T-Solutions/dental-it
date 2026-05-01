@@ -42,28 +42,28 @@ export const stats = [
 export const practiceSolutions = [
 	{
 		title: "Web Design for Dental Practices",
-		href: "/dental-practice-solutions/dental-web-design",
+		href: "/practice-technology/dental-web-design",
 		description:
 			"Modern, conversion-focused dental websites designed to support trust, speed, mobile performance, and local SEO.",
 		icon: Globe2,
 	},
 	{
 		title: "Dental SEO Service",
-		href: "/dental-practice-solutions/dental-seo-service",
+		href: "/practice-technology/dental-seo-service",
 		description:
 			"Improve visibility for local dental searches with optimized content, technical SEO, and service-focused landing pages.",
 		icon: Search,
 	},
 	{
 		title: "Dental Social Media",
-		href: "/dental-practice-solutions/dental-social-media",
+		href: "/practice-technology/dental-social-media",
 		description:
 			"Build a stronger online presence with content planning, community engagement, and practice-focused campaigns.",
 		icon: Sparkles,
 	},
 	{
 		title: "Custom Software Development",
-		href: "/dental-practice-solutions/custom-software-development",
+		href: "/practice-technology/custom-software-development",
 		description:
 			"Create custom tools and workflows that help your team operate faster, smarter, and more efficiently.",
 		icon: Laptop,
