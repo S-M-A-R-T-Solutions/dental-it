@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import MainLayout from "../../layouts/MainLayout.astro";
+import TrustProofBlock from "../../components/sections/TrustProofBlock.astro";
+import { supportedPlatforms } from "../../data/home";
 
 import {
 	ArrowRight,
@@ -14,6 +16,7 @@ import {
 	trustItems,
 	introCards,
 	whyChoose,
+	managedItProofItems,
 } from "../../data/tech-support";
 ---
 
@@ -588,6 +591,15 @@ import {
 				</div>
 			</div>
 		</section>
+
+		<TrustProofBlock
+			eyebrow="Managed IT Trust Points"
+			title="IT support built around the systems dental practices depend on."
+			description="Dental IT focuses on practical support, monitoring, maintenance, security, backups, and dental-specific workflows instead of generic business IT."
+			platforms={supportedPlatforms}
+			proofItems={managedItProofItems}
+		/>
+
 	</main>
 
 	<script>

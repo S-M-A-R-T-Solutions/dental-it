@@ -65,14 +65,11 @@ const structuredData = getStructuredData({
 
     <meta name="author" content="Dental IT" />
     <meta name="publisher" content="Dental IT" />
-    <meta
-      name="keywords"
-      content="Dental IT Miami, dental IT services Miami FL, managed IT support for dental offices, HIPAA IT support Miami, dental cybersecurity Miami, dental cloud backups, dental practice IT support, South Florida dental IT, IT support for dentists Miami, dental office cybersecurity"
-    />
+    <meta name="keywords" content={siteConfig.keywords} />
 
-    <meta name="geo.region" content="US-FL" />
-    <meta name="geo.placename" content="Miami" />
-    <meta name="ICBM" content="25.7617, -80.1918" />
+    <meta name="geo.region" content={siteConfig.location.geoRegion} />
+    <meta name="geo.placename" content={siteConfig.location.geoPlaceName} />
+    <meta name="ICBM" content={siteConfig.location.coordinates} />
 
     <meta property="og:site_name" content={siteConfig.siteName} />
     <meta property="og:type" content={type} />
@@ -82,7 +79,7 @@ const structuredData = getStructuredData({
     <meta property="og:image" content={absoluteImageUrl} />
     <meta
       property="og:image:alt"
-      content="Dental IT services for dental practices in Miami, Florida"
+      content="Dental IT services for dental practices across South Florida"
     />
     <meta property="og:locale" content="en_US" />
 

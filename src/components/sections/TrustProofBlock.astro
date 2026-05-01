@@ -1,0 +1,130 @@
+---
+import {
+	Activity,
+	CheckCircle2,
+	DatabaseBackup,
+	LockKeyhole,
+	MapPin,
+	MonitorCheck,
+	ShieldCheck,
+	Stethoscope,
+} from "lucide-astro";
+
+type ProofItem = {
+	title: string;
+	description: string;
+	icon: "monitoring" | "security" | "backup" | "hipaa" | "dental" | "serviceArea";
+};
+
+type Props = {
+	eyebrow?: string;
+	title?: string;
+	description?: string;
+	proofItems: ProofItem[];
+	platforms?: string[];
+};
+
+const {
+	eyebrow = "Built for Dental Practices",
+	title = "Dental IT support your practice can verify before you commit.",
+	description = "Our work is focused on the systems, security needs, and daily workflows dental teams depend on to keep patients moving and data protected.",
+	proofItems,
+	platforms = [],
+} = Astro.props;
+
+const icons = {
+	monitoring: Activity,
+	security: LockKeyhole,
+	backup: DatabaseBackup,
+	hipaa: ShieldCheck,
+	dental: Stethoscope,
+	serviceArea: MapPin,
+};
+
+const fallbackIcon = CheckCircle2;
+---
+
+<section class="section-padding relative overflow-hidden bg-site">
+	<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+		<div
+			class="diffuse-sphere absolute -left-48 top-10 h-112 w-112 rounded-full bg-(--primary)/12 blur-[145px]"
+			aria-hidden="true"
+		>
+		</div>
+
+		<div
+			class="diffuse-sphere diffuse-sphere-delay absolute -right-56 bottom-10 h-128 w-128 rounded-full bg-(--primary)/10 blur-[160px]"
+			aria-hidden="true"
+		>
+		</div>
+
+		<div
+			class="absolute inset-0 bg-linear-to-b from-(--background)/92 via-(--background)/55 to-(--background)/94"
+		>
+		</div>
+	</div>
+
+	<div class="site-container relative">
+		<div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+			<div class="max-w-3xl">
+				<p class="section-eyebrow">{eyebrow}</p>
+
+				<h2
+					class="section-title normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
+				>
+					{title}
+				</h2>
+
+				<p class="section-description">
+					{description}
+				</p>
+
+				{
+					platforms.length > 0 && (
+						<div class="mt-8 rounded-4xl border border-(--border) bg-(--card)/70 p-6 shadow-soft backdrop-blur-xl sm:p-7">
+							<div class="flex items-center gap-3">
+								<MonitorCheck class="size-6 text-(--primary)" />
+
+								<h3 class="text-lg font-black text-(--foreground)">
+									Dental systems and platforms we support
+								</h3>
+							</div>
+
+							<div class="mt-5 flex flex-wrap gap-3">
+								{platforms.map((platform) => (
+									<span class="rounded-full border border-(--border) bg-(--background)/70 px-4 py-2 text-xs font-black uppercase tracking-[0.14em] text-(--muted-foreground)">
+										{platform}
+									</span>
+								))}
+							</div>
+						</div>
+					)
+				}
+			</div>
+
+			<div class="grid gap-5 sm:grid-cols-2">
+				{
+					proofItems.map((item) => {
+						const Icon = icons[item.icon] ?? fallbackIcon;
+
+						return (
+							<article class="glass-panel glass-highlight rounded-4xl p-6 sm:p-7">
+								<div class="flex size-12 items-center justify-center rounded-2xl bg-(--primary) text-white">
+									<Icon class="size-6" />
+								</div>
+
+								<h3 class="mt-5 text-lg font-black text-(--foreground)">
+									{item.title}
+								</h3>
+
+								<p class="mt-4 text-sm leading-7 text-(--muted-foreground)">
+									{item.description}
+								</p>
+							</article>
+						);
+					})
+				}
+			</div>
+		</div>
+	</div>
+</section>

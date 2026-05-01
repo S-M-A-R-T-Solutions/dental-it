@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import MainLayout from "../layouts/MainLayout.astro";
+import TrustProofBlock from "../components/sections/TrustProofBlock.astro";
 
 import {
 	ArrowRight,
@@ -18,10 +19,12 @@ import {
 	heroSlides,
 	techSupportServices,
 	deploymentServices,
-	practiceSolutions,
 	trustItems,
 	whyChoose,
 	process,
+	supportedPlatforms,
+	practiceSolutions,
+	homepageProofItems,
 } from "../data/home.ts";
 ---
 
@@ -1106,6 +1109,15 @@ import {
 				</div>
 			</div>
 		</section>
+
+		<!-- TRUST PROOF -->
+		<TrustProofBlock
+			eyebrow="Why Practices Trust Dental IT"
+			title="Proof points built around real dental technology needs."
+			description="Before a practice trusts an IT partner, they need to know that partner understands dental software, patient data, workstations, imaging, backups, monitoring, and local support needs."
+			proofItems={homepageProofItems}
+			platforms={supportedPlatforms}
+		/>
 
 		<!-- FINAL CTA -->
 		<section

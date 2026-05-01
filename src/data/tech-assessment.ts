@@ -231,3 +231,23 @@ export const consultationItems = [
     "Identify security, compliance, performance, and workflow risks before they become larger problems.",
     "Receive actionable recommendations for optimization, remediation, upgrades, and long-term planning.",
 ];
+
+export const primaryCta = {
+	label: "Schedule Technology Assessment",
+	href: "/contact/",
+	secondaryLabel: "Call (305) 972-5760",
+	secondaryHref: "tel:+13059725760",
+};
+
+export const semTrustBlock = {
+	eyebrow: "Technology clarity before you invest",
+	title: "A practical IT assessment for dental practices planning smarter upgrades.",
+	description:
+		"Dental IT reviews your infrastructure, workstations, network, security, backups, performance, and workflows so your practice can prioritize improvements with confidence.",
+	items: [
+		"Infrastructure inventory across hardware, software, network devices, and workstations",
+		"Security, compliance, backup, and performance review",
+		"Workflow impact analysis for clinical and administrative teams",
+		"Prioritized recommendations for upgrades, risk reduction, and planning",
+	],
+};

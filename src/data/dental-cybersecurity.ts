@@ -213,3 +213,23 @@ export const finalCtaBullets = [
 ];
 
 export { CheckCircle2, ShieldCheck, TriangleAlert };
+
+export const primaryCta = {
+	label: "Schedule Free Cybersecurity Assessment",
+	href: "/contact/",
+	secondaryLabel: "Call (305) 972-5760",
+	secondaryHref: "tel:+13059725760",
+};
+
+export const semTrustBlock = {
+	eyebrow: "Dental cybersecurity support",
+	title: "Protection for the systems, data, and workflows your dental practice depends on.",
+	description:
+		"Dental IT helps practices strengthen protection across endpoints, firewalls, email, backups, monitoring, and response planning with cybersecurity support built around dental environments.",
+	items: [
+		"Endpoint protection for front desk, clinical, imaging, and administrative workstations",
+		"Firewall, secure Wi-Fi, email filtering, phishing defense, and access planning",
+		"24/7 monitoring visibility and incident response planning",
+		"HIPAA-conscious cybersecurity support for electronic patient data",
+	],
+};

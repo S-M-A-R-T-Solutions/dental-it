@@ -11,6 +11,33 @@ import {
 	Building2,
 } from "lucide-astro";
 
+export const managedItProofItems = [
+	{
+		title: "Dental Workflow Support",
+		description:
+			"Support is focused around dental workstations, imaging computers, front desk systems, operatories, servers, networks, and practice management software.",
+		icon: "dental",
+	},
+	{
+		title: "Monitoring and Maintenance",
+		description:
+			"Managed IT support includes proactive visibility into system health, performance issues, workstation reliability, and downtime risks.",
+		icon: "monitoring",
+	},
+	{
+		title: "Backup and Recovery Awareness",
+		description:
+			"Support includes attention to backup status, recovery planning, and business-critical systems that dental practices cannot afford to lose.",
+		icon: "backup",
+	},
+	{
+		title: "Security-Conscious Support",
+		description:
+			"We help dental teams reduce preventable risks around endpoints, access, patient data, software, and day-to-day technology use.",
+		icon: "security",
+	},
+];
+
 export const heroImage = {
 	src: "/images/home/hero-dental-it-dashboard-miami-01.webp",
 	alt: "Dental IT services dashboard for a Miami dental practice",

@@ -3,10 +3,10 @@ export const siteConfig = {
     siteUrl: "https://itdental.tech",
 
     defaultTitle:
-        "Dental IT Services in Miami, FL | Managed IT Support for Dental Practices",
+        "Dental IT Services for South Florida Dental Practices | Managed IT Support",
 
     defaultDescription:
-        "Dental IT provides managed IT services, cybersecurity, HIPAA compliance support, cloud backups, and technology solutions for dental practices in Miami and South Florida.",
+        "Dental IT provides managed IT services, cybersecurity, HIPAA compliance support, cloud backups, deployments, and technology solutions for dental practices across South Florida.",
 
     defaultImage: "/images/og/dental-it-miami-og.jpg",
 
@@ -30,11 +30,21 @@ export const siteConfig = {
         region: "FL",
         country: "US",
         geoRegion: "US-FL",
-        geoPlaceName: "Miami",
+        geoPlaceName: "South Florida",
         coordinates: "25.7617, -80.1918",
-        areaServed: "Miami, FL",
+        areaServed: [
+            "South Florida",
+            "Miami",
+            "Fort Lauderdale",
+            "West Palm Beach",
+            "Naples",
+            "Tampa",
+            "Florida Keys",
+        ],
+        serviceAreaDescription:
+            "Serving dental practices across South Florida, from Tampa to the Florida Keys.",
     },
 
     keywords:
-        "Dental IT Miami, dental IT services Miami FL, managed IT support for dental offices, HIPAA IT support Miami, dental cybersecurity Miami, dental cloud backups, dental practice IT support, South Florida dental IT, IT support for dentists Miami, dental office cybersecurity",
+        "South Florida dental IT, dental IT services South Florida, managed IT support for dental offices, HIPAA IT support South Florida, dental cybersecurity South Florida, dental cloud backups, dental practice IT support, Miami dental IT, Fort Lauderdale dental IT, West Palm Beach dental IT, Tampa dental IT, Florida Keys dental IT, IT support for dentists",
 };

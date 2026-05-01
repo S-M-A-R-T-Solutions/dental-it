@@ -156,3 +156,23 @@ export const complianceSeoItems = [
     "Technical safeguards for access control, monitoring, encryption planning, backup strategy, and secure systems.",
     "Risk-aware documentation to support stronger decision-making around electronic protected health information.",
 ];
+
+export const primaryCta = {
+	label: "Schedule Free IT Assessment",
+	href: "/contact/",
+	secondaryLabel: "Call (305) 972-5760",
+	secondaryHref: "tel:+13059725760",
+};
+
+export const semTrustBlock = {
+	eyebrow: "Built for dental practices",
+	title: "Managed IT support designed around uptime, security, and patient care.",
+	description:
+		"Dental IT supports the systems dental practices rely on every day, including workstations, servers, Wi-Fi, dental software, imaging workflows, backups, cybersecurity, and HIPAA-conscious documentation.",
+	items: [
+		"Active monitoring and proactive maintenance for practice technology",
+		"Support for dental software, imaging stations, workstations, servers, and networks",
+		"Cybersecurity-first IT planning for patient data protection",
+		"HIPAA-conscious support, documentation, and safeguard planning",
+	],
+};

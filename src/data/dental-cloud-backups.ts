@@ -201,3 +201,23 @@ export const finalCtaBullets = [
 ];
 
 export { CheckCircle2 };
+
+export const primaryCta = {
+	label: "Schedule Backup Assessment",
+	href: "/contact/",
+	secondaryLabel: "Call (305) 972-5760",
+	secondaryHref: "tel:+13059725760",
+};
+
+export const semTrustBlock = {
+	eyebrow: "Backup and recovery readiness",
+	title: "Cloud backup planning for dental practices that cannot afford data loss.",
+	description:
+		"Dental IT helps protect patient records, imaging files, servers, workstations, and business-critical practice data with local and cloud backup strategies designed for secure recovery.",
+	items: [
+		"Local and cloud backup planning for patient records, imaging, and practice systems",
+		"Encrypted off-site storage, retention, versioning, and restore testing",
+		"Ransomware-aware recovery planning for dental practice continuity",
+		"Backup reporting and documentation to support HIPAA-conscious operations",
+	],
+};

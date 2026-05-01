@@ -21,6 +21,19 @@ export const getCanonicalUrl = (pathname: string, canonical?: string) => {
     return canonical ?? new URL(pathname, siteConfig.siteUrl).toString();
 };
 
+const getAreaServedSchema = () => {
+    const { location } = siteConfig;
+
+    const areas = Array.isArray(location.areaServed)
+        ? location.areaServed
+        : [location.areaServed];
+
+    return areas.map((area) => ({
+        "@type": area === "South Florida" ? "AdministrativeArea" : "Place",
+        name: area,
+    }));
+};
+
 export const getStructuredData = ({
     currentUrl,
     pageTitle,
@@ -28,6 +41,8 @@ export const getStructuredData = ({
     absoluteImageUrl,
 }: StructuredDataOptions) => {
     const { siteName, siteUrl, business, social, location } = siteConfig;
+
+    const areaServedSchema = getAreaServedSchema();
 
     return {
         "@context": "https://schema.org",
@@ -41,26 +56,11 @@ export const getStructuredData = ({
                 logo: getAbsoluteUrl(business.logo),
                 image: absoluteImageUrl,
                 description:
-                    "Dental IT provides managed IT services, cybersecurity, HIPAA compliance support, cloud backups, monitoring, deployments, and technology solutions for dental practices in Miami and South Florida.",
+                    "Dental IT provides managed IT services, cybersecurity, HIPAA compliance support, cloud backups, monitoring, deployments, and technology solutions for dental practices across South Florida.",
                 telephone: business.phone,
                 email: business.email,
                 priceRange: business.priceRange,
-                areaServed: [
-                    {
-                        "@type": "City",
-                        name: location.city,
-                        address: {
-                            "@type": "PostalAddress",
-                            addressLocality: location.city,
-                            addressRegion: location.region,
-                            addressCountry: location.country,
-                        },
-                    },
-                    {
-                        "@type": "AdministrativeArea",
-                        name: "South Florida",
-                    },
-                ],
+                areaServed: areaServedSchema,
                 address: {
                     "@type": "PostalAddress",
                     addressLocality: location.city,
@@ -83,7 +83,7 @@ export const getStructuredData = ({
                             "@type": "Service",
                             name: "Managed IT Support for Dental Practices",
                             serviceType: "Dental IT Support",
-                            areaServed: location.areaServed,
+                            areaServed: areaServedSchema,
                         },
                     },
                     {
@@ -92,7 +92,7 @@ export const getStructuredData = ({
                             "@type": "Service",
                             name: "HIPAA Compliance IT Support",
                             serviceType: "HIPAA Compliance",
-                            areaServed: location.areaServed,
+                            areaServed: areaServedSchema,
                         },
                     },
                     {
@@ -101,7 +101,7 @@ export const getStructuredData = ({
                             "@type": "Service",
                             name: "Dental Cybersecurity Services",
                             serviceType: "Cybersecurity",
-                            areaServed: location.areaServed,
+                            areaServed: areaServedSchema,
                         },
                     },
                     {
@@ -110,7 +110,7 @@ export const getStructuredData = ({
                             "@type": "Service",
                             name: "Cloud Backups and Disaster Recovery",
                             serviceType: "Cloud Backup",
-                            areaServed: location.areaServed,
+                            areaServed: areaServedSchema,
                         },
                     },
                     {
@@ -119,7 +119,7 @@ export const getStructuredData = ({
                             "@type": "Service",
                             name: "Dental Practice Technology Deployments",
                             serviceType: "IT Deployment",
-                            areaServed: location.areaServed,
+                            areaServed: areaServedSchema,
                         },
                     },
                 ],
@@ -130,7 +130,7 @@ export const getStructuredData = ({
                 url: siteUrl,
                 name: siteName,
                 description:
-                    "Managed IT services, cybersecurity, HIPAA compliance support, cloud backups, and technology solutions for dental practices in Miami and South Florida.",
+                    "Managed IT services, cybersecurity, HIPAA compliance support, cloud backups, and technology solutions for dental practices across South Florida.",
                 publisher: {
                     "@id": `${siteUrl}/#localbusiness`,
                 },

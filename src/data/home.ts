@@ -176,6 +176,48 @@ export const deploymentServices = [
     },
 ];
 
+export const supportedPlatforms = [
+	"Dentrix",
+	"Open Dental",
+	"Eaglesoft",
+	"Carestream",
+	"Dexis",
+	"iTero",
+	"Windows Workstations",
+	"Servers",
+	"VoIP",
+	"Cloud Backups",
+	"Firewalls",
+	"Endpoint Security",
+];
+
+export const homepageProofItems = [
+	{
+		title: "Dental Environment Expertise",
+		description:
+			"We support the systems dental teams rely on every day, including front desk workstations, imaging computers, operatories, servers, networks, backups, and cloud tools.",
+		icon: "dental",
+	},
+	{
+		title: "Monitoring-Focused Support",
+		description:
+			"Our support model emphasizes visibility into workstation health, network performance, software issues, hardware problems, and preventable downtime risks.",
+		icon: "monitoring",
+	},
+	{
+		title: "Cybersecurity and HIPAA Support",
+		description:
+			"We help practices strengthen endpoint security, reduce preventable risks, support HIPAA-conscious workflows, and protect patient data.",
+		icon: "hipaa",
+	},
+	{
+		title: "Miami and South Florida Coverage",
+		description:
+			"Dental IT supports dental practices across Miami and South Florida with local knowledge, remote support, and technology planning for growing offices.",
+		icon: "serviceArea",
+	},
+];
+
 export const practiceSolutions = [
     {
         title: "Web Design",

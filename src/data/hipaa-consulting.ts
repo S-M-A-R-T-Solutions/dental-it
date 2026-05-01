@@ -184,3 +184,23 @@ export const finalCtaBullets = [
 ];
 
 export { CheckCircle2, FileCheck2, ShieldCheck, Zap };
+
+export const primaryCta = {
+	label: "Schedule HIPAA Consultation",
+	href: "/contact/",
+	secondaryLabel: "Call (305) 972-5760",
+	secondaryHref: "tel:+13059725760",
+};
+
+export const semTrustBlock = {
+	eyebrow: "HIPAA support for dental offices",
+	title: "Practical HIPAA consulting connected to your real technology environment.",
+	description:
+		"Dental IT helps dental practices review risks, organize documentation, improve safeguards, train staff, and connect HIPAA-conscious planning to the systems that store or access patient information.",
+	items: [
+		"HIPAA risk assessment and gap analysis for dental technology environments",
+		"Policy, procedure, training, and documentation support",
+		"Administrative, physical, and technical safeguard planning",
+		"Security controls, audit preparation, reporting, and remediation guidance",
+	],
+};

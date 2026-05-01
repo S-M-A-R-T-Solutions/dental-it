@@ -12,6 +12,8 @@ import {
 	hipaaNeeds,
 	complianceSeoItems,
 	finalCtaBullets,
+	primaryCta,
+	semTrustBlock,
 } from "../../data/hipaa-consulting";
 ---
 
@@ -136,18 +138,18 @@ import {
 
 					<div class="mt-9 flex flex-col gap-4 sm:flex-row">
 						<a
-							href="/contact"
+							href={primaryCta.href}
 							class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
 						>
-							Get Free HIPAA Assessment
+							{primaryCta.label}
 							<ArrowRight class="size-4" />
 						</a>
 
 						<a
-							href="#hipaa-services"
+							href={primaryCta.secondaryHref}
 							class="glass-panel inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-sm font-black uppercase tracking-wide text-(--foreground) transition hover:-translate-y-1 hover:border-(--primary) hover:text-(--primary)"
 						>
-							Explore Services
+							{primaryCta.secondaryLabel}
 							<ArrowRight class="size-4" />
 						</a>
 					</div>
@@ -207,6 +209,78 @@ import {
 								/>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SEM TRUST BLOCK -->
+		<section class="relative overflow-hidden bg-surface py-12 md:py-16">
+			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+				<div
+					class="diffuse-sphere absolute -left-48 top-10 h-112 w-md rounded-full bg-(--primary)/12 blur-[145px]"
+					aria-hidden="true"
+				>
+				</div>
+
+				<div
+					class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/10 blur-[160px]"
+					aria-hidden="true"
+				>
+				</div>
+
+				<div
+					class="absolute inset-0 bg-linear-to-b from-(--surface)/94 via-(--surface)/72 to-(--surface)/94"
+					aria-hidden="true"
+				>
+				</div>
+			</div>
+
+			<div class="site-container relative">
+				<div class="glass-panel glass-highlight rounded-4xl p-6 sm:p-8 lg:p-10">
+					<div class="grid gap-8 lg:grid-cols-2 lg:items-start">
+						<div>
+							<p class="section-eyebrow">{semTrustBlock.eyebrow}</p>
+
+							<h2
+								class="mt-4 text-[clamp(1.8rem,3.4vw,3rem)] font-black leading-none tracking-tighter text-(--foreground)"
+							>
+								{semTrustBlock.title}
+							</h2>
+
+							<p class="mt-5 text-base leading-8 text-(--muted-foreground)">
+								{semTrustBlock.description}
+							</p>
+						</div>
+
+						<div class="grid gap-3 sm:grid-cols-2">
+							{
+								semTrustBlock.items.map((item) => (
+									<div class="rounded-3xl border border-(--border) bg-(--card)/70 p-5 backdrop-blur-xl">
+										<div class="flex items-start gap-3">
+											<CheckCircle2 class="mt-1 size-5 shrink-0 text-(--primary)" />
+											<p class="text-sm font-bold leading-6 text-(--muted-foreground)">
+												{item}
+											</p>
+										</div>
+									</div>
+								))
+							}
+						</div>
+					</div>
+
+					<div class="mt-8 flex flex-col gap-4 border-t border-(--border) pt-8 sm:flex-row sm:items-center sm:justify-between">
+						<p class="text-sm font-bold leading-6 text-(--muted-foreground)">
+							Serving dental practices in Miami, South Florida, and surrounding Florida markets.
+						</p>
+
+						<a
+							href={primaryCta.href}
+							class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-6 py-3 text-xs font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.28)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
+						>
+							{primaryCta.label}
+							<ArrowRight class="size-4" />
+						</a>
 					</div>
 				</div>
 			</div>
