@@ -2,7 +2,6 @@ import {
 	CheckCircle2,
 	LockKeyhole,
 	ShieldCheck,
-	type LucideIcon,
 } from "lucide-astro";
 
 export const lastUpdated = "May 1, 2026";
