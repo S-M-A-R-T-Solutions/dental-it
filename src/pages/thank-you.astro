@@ -1,0 +1,284 @@
+---
+import { Image } from "astro:assets";
+import MainLayout from "../layouts/MainLayout.astro";
+import {
+	ArrowRight,
+	CheckCircle2,
+	Home,
+	Mail,
+	Phone,
+	ShieldCheck,
+} from "lucide-astro";
+
+const phoneNumber = "(305) 972-5760";
+const phoneHref = "tel:+13059725760";
+const email = "info@itdental.tech";
+const emailHref = `mailto:${email}`;
+
+const nextSteps = [
+	"We will review your message and contact you as soon as possible.",
+	"Please avoid sending passwords, full patient records, or sensitive data by email.",
+	"If your practice has an urgent IT issue, calling is the fastest option.",
+];
+---
+
+<MainLayout
+	title="Thank You | Dental IT"
+	description="Thank you for contacting Dental IT. We received your message and will follow up about your dental practice technology needs."
+	image="/images/og/dental-it-miami-home-og.jpg"
+>
+	<main class="overflow-hidden">
+		<section class="relative isolate overflow-hidden">
+			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+				<div
+					class="diffuse-sphere absolute -left-52 top-16 h-136 w-136 rounded-full bg-(--primary)/18 blur-[150px]"
+					aria-hidden="true"
+				>
+				</div>
+
+				<div
+					class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-152 w-152 rounded-full bg-(--primary)/14 blur-[170px]"
+					aria-hidden="true"
+				>
+				</div>
+
+				<div
+					class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.08)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-30"
+				>
+				</div>
+
+				<div
+					class="parallax-layer network-float absolute top-32 w-full max-w-none blur"
+					data-parallax-speed="-0.015"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full min-w-280"
+						loading="eager"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="parallax-layer network-float-alt absolute bottom-4 w-full max-w-none opacity-[0.28]"
+					data-parallax-speed="0.02"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full min-w-280"
+						loading="eager"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="absolute inset-0 bg-linear-to-b from-(--background)/94 via-(--background)/58 to-(--background)/94"
+				>
+				</div>
+			</div>
+
+			<div
+				class="site-container grid min-h-[calc(100vh-5rem)] items-center py-16 md:py-20 lg:py-24"
+			>
+				<div class="mx-auto max-w-4xl text-center">
+
+					<div
+						class="mx-auto mt-8 flex size-20 items-center justify-center rounded-4xl bg-(--primary)/15 text-(--primary) shadow-[0_0_60px_rgba(239,35,49,0.28)]"
+					>
+						<CheckCircle2 class="size-10" />
+					</div>
+
+					<h1
+						class="mt-7 text-balance text-[clamp(2.35rem,5.5vw,4.75rem)] font-black leading-[0.95] tracking-tighter"
+					>
+						Thank you for contacting Dental IT.
+					</h1>
+
+					<p
+						class="mx-auto mt-7 max-w-2xl text-base leading-8 text-(--muted-foreground) sm:text-lg md:text-xl"
+					>
+						We received your message. A member of our team will follow up to
+						learn more about your dental practice technology needs and help you
+						plan the next step.
+					</p>
+
+					<div class="mt-10 grid gap-4 text-left md:grid-cols-3">
+						{
+							nextSteps.map((item) => (
+								<div class="glass-panel glass-highlight rounded-4xl p-5">
+									<div class="relative flex items-start gap-4">
+										<span class="mt-1 flex size-8 shrink-0 items-center justify-center rounded-full bg-(--primary)/15 text-(--primary)">
+											<CheckCircle2 class="size-4" />
+										</span>
+
+										<p class="text-sm font-bold leading-7 text-(--muted-foreground)">
+											{item}
+										</p>
+									</div>
+								</div>
+							))
+						}
+					</div>
+					<div class="glass-panel glass-highlight mt-6 w-full rounded-4xl p-5 text-left">
+						<div class="relative flex items-start gap-4">
+							<span
+								class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-(--primary)/15 text-(--primary)"
+							>
+								<ShieldCheck class="size-6" />
+							</span>
+
+							<div>
+								<p class="text-sm font-black text-(--foreground)">
+									Need immediate help?
+								</p>
+								<p class="mt-2 text-sm leading-7 text-(--muted-foreground)">
+									If your practice is experiencing downtime, a security concern,
+									or an urgent technology issue, please call us directly.
+								</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+						<a
+							href="/"
+							class="inline-flex items-center justify-center gap-2 rounded-full bg-(--primary) px-8 py-4 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_42px_rgba(239,35,49,0.32)] transition hover:-translate-y-1 hover:bg-(--primary-hover)"
+						>
+							<Home class="size-4" />
+							Back to Home
+						</a>
+
+						<a
+							href={phoneHref}
+							class="glass-panel inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-sm font-black uppercase tracking-wide text-(--foreground) transition hover:-translate-y-1 hover:border-(--primary)"
+						>
+							<Phone class="size-4 text-(--primary)" />
+							{phoneNumber}
+						</a>
+
+						<a
+							href={emailHref}
+							class="glass-panel inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-sm font-black uppercase tracking-wide text-(--foreground) transition hover:-translate-y-1 hover:border-(--primary)"
+						>
+							<Mail class="size-4 text-(--primary)" />
+							Email Us
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<style>
+		@keyframes networkFloat {
+			0%,
+			100% {
+				translate: 0 0;
+			}
+
+			50% {
+				translate: 0 -22px;
+			}
+		}
+
+		@keyframes networkFloatAlt {
+			0%,
+			100% {
+				translate: 0 0;
+			}
+
+			50% {
+				translate: 0 -18px;
+			}
+		}
+
+		@keyframes diffusePulse {
+			0%,
+			100% {
+				transform: scale(1);
+				opacity: 0.75;
+			}
+
+			50% {
+				transform: scale(1.08);
+				opacity: 1;
+			}
+		}
+
+		.network-float {
+			animation: networkFloat 9s ease-in-out infinite;
+			will-change: translate, transform;
+		}
+
+		.network-float-alt {
+			animation: networkFloatAlt 7s ease-in-out infinite;
+			will-change: translate, transform;
+		}
+
+		.diffuse-sphere {
+			animation: diffusePulse 10s ease-in-out infinite;
+			will-change: transform, opacity;
+		}
+
+		.diffuse-sphere-delay {
+			animation-delay: -5s;
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.network-float,
+			.network-float-alt,
+			.diffuse-sphere {
+				animation: none;
+			}
+		}
+	</style>
+
+	<script>
+		const parallaxLayers = document.querySelectorAll("[data-parallax-speed]");
+		const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+		const updateParallax = () => {
+			if (reduceMotion.matches || window.innerWidth < 1024) return;
+
+			const scrollY = window.scrollY;
+
+			parallaxLayers.forEach((layer) => {
+				const speed = Number(layer.getAttribute("data-parallax-speed") || 0);
+				const y = scrollY * speed;
+
+				layer.style.setProperty("--parallax-y", `${y}px`);
+				layer.style.transform = `translate3d(0, var(--parallax-y), 0)`;
+			});
+		};
+
+		const resetParallax = () => {
+			parallaxLayers.forEach((layer) => {
+				layer.style.removeProperty("--parallax-y");
+				layer.style.transform = "";
+			});
+		};
+
+		const handleParallax = () => {
+			if (reduceMotion.matches || window.innerWidth < 1024) {
+				resetParallax();
+				return;
+			}
+
+			updateParallax();
+		};
+
+		handleParallax();
+
+		window.addEventListener("scroll", handleParallax, { passive: true });
+		window.addEventListener("resize", handleParallax);
+	</script>
+</MainLayout>
