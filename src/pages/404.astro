@@ -18,11 +18,11 @@ import {
 >
 	<main class="overflow-hidden">
 		<section
-			class="relative isolate min-h-[calc(100vh-5rem)] overflow-hidden bg-site"
+			class="relative isolate min-h-[calc(100vh-5rem)] overflow-hidden"
 		>
 			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
 				<div
-					class="diffuse-sphere absolute -left-52 top-16 h-136 w-136 rounded-full bg-(--primary)/18 blur-[150px]"
+					class="diffuse-sphere absolute -left-52 top-16 h-136 w-136 rounded-full blur-[150px]"
 					aria-hidden="true"
 				>
 				</div>
@@ -39,7 +39,7 @@ import {
 				</div>
 
 				<div
-					class="parallax-layer absolute top-24 w-full max-w-none opacity-[0.16] blur"
+					class="parallax-layer network-float absolute top-24 w-full max-w-none blur"
 					data-parallax-speed="-0.015"
 					aria-hidden="true"
 				>
@@ -55,7 +55,7 @@ import {
 				</div>
 
 				<div
-					class="parallax-layer network-float absolute bottom-4 w-full max-w-none opacity-[0.28]"
+					class="parallax-layer networkFloatAlt absolute bottom-4 w-full max-w-none opacity-[0.75]"
 					data-parallax-speed="0.02"
 					aria-hidden="true"
 				>
@@ -200,6 +200,17 @@ import {
 			}
 		}
 
+		@keyframes networkFloatAlt {
+			0%,
+			100% {
+				translate: 0 0;
+			}
+
+			50% {
+				translate: 0 -18px;
+			}
+		}
+
 		@keyframes diffusePulse {
 			0%,
 			100% {
@@ -215,6 +226,11 @@ import {
 
 		.network-float {
 			animation: networkFloat 9s ease-in-out infinite;
+			will-change: translate, transform;
+		}
+
+		.networkFloatAlt {
+			animation: networkFloatAlt 7s ease-in-out infinite;
 			will-change: translate, transform;
 		}
 

@@ -31,13 +31,13 @@ import {
 		<section class="relative isolate overflow-hidden bg-site">
 			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
 				<div
-					class="floating-card diffuse-sphere absolute -left-52 top-16 h-136 w-136 rounded-full bg-(--primary)/25 blur-[150px]"
+					class="diffuse-sphere absolute -left-52 top-16 h-136 w-136 rounded-full bg-(--primary)/18 blur-[150px]"
 					aria-hidden="true"
 				>
 				</div>
 
 				<div
-					class="floating-card-alt diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-152 w-152 rounded-full bg-(--primary)/25 blur-[170px]"
+					class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-152 w-152 rounded-full bg-(--primary)/14 blur-[170px]"
 					aria-hidden="true"
 				>
 				</div>
@@ -48,8 +48,10 @@ import {
 				</div>
 
 				<div
-					class="parallax-layer absolute top-40 w-full max-w-none opacity-[0.28] blur"
+					class="network-scroll-opacity parallax-layer absolute top-40 w-full max-w-none blur"
 					data-parallax-speed="-0.015"
+					data-scroll-opacity-start="0.45"
+					data-scroll-opacity-end="1"
 					aria-hidden="true"
 				>
 					<Image
@@ -64,8 +66,10 @@ import {
 				</div>
 
 				<div
-					class="parallax-layer network-float absolute bottom-4 w-full max-w-none opacity-[0.35]"
+					class="network-scroll-opacity parallax-layer network-float absolute bottom-4 w-full max-w-none -translate-x-1/2"
 					data-parallax-speed="0.025"
+					data-scroll-opacity-start="0.45"
+					data-scroll-opacity-end="1"
 					aria-hidden="true"
 				>
 					<Image
@@ -74,6 +78,24 @@ import {
 						width={2048}
 						height={620}
 						class="w-full min-w-280"
+						loading="eager"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="network-scroll-opacity parallax-layer network-float-soft network-float-delay absolute top-10 w-full max-w-none blur"
+					data-parallax-speed="-0.018"
+					data-scroll-opacity-start="0.12"
+					data-scroll-opacity-end="1"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full"
 						loading="eager"
 						decoding="async"
 					/>
@@ -197,22 +219,71 @@ import {
 
 		<!-- INTRO -->
 		<section class="section-padding relative overflow-hidden bg-surface">
-			<div
-				class="absolute inset-0 bg-linear-to-br from-(--surface)/78 via-(--surface)/45 to-(--surface)/72 dark:from-black/78 dark:via-black/48 dark:to-black/82"
-				aria-hidden="true"
-			>
-			</div>
+			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+				<div
+					class="absolute inset-0 bg-linear-to-br from-(--surface)/78 via-(--surface)/45 to-(--surface)/72 dark:from-black/78 dark:via-black/48 dark:to-black/82"
+					aria-hidden="true"
+				>
+				</div>
 
-			<div
-				class="floating-card-alt diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/14 blur-[160px]"
-				aria-hidden="true"
-			>
-			</div>
+				<div
+					class="diffuse-sphere absolute -left-48 top-10 h-112 w-md rounded-full bg-(--primary)/12 blur-[145px]"
+					aria-hidden="true"
+				>
+				</div>
 
-			<div
-				class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.06)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-85"
-				aria-hidden="true"
-			>
+				<div
+					class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/14 blur-[160px]"
+					aria-hidden="true"
+				>
+				</div>
+
+				<div
+					class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.06)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-85"
+					aria-hidden="true"
+				>
+				</div>
+
+				<div
+					class="network-scroll-opacity parallax-layer absolute left-1/2 top-12 w-432 max-w-none -translate-x-1/2 blur-2xl"
+					data-parallax-speed="-0.012"
+					data-scroll-opacity-start="0.03"
+					data-scroll-opacity-end="0.12"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full min-w-260"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="network-scroll-opacity parallax-layer network-float-soft network-float-delay absolute -right-40 bottom-8 w-240 max-w-none blur-xl"
+					data-parallax-speed="-0.016"
+					data-scroll-opacity-start="0.04"
+					data-scroll-opacity-end="0.18"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="absolute inset-0 bg-linear-to-b from-(--surface)/90 via-(--surface)/50 to-(--surface)/94"
+				>
+				</div>
 			</div>
 
 			<div class="site-container relative">
@@ -292,9 +363,15 @@ import {
 		<!-- INCLUDED SERVICES -->
 		<section
 			id="included"
-			class="section-padding relative overflow-hidden bg-site"
+			class="section-padding relative overflow-hidden"
 		>
 			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+				<div
+					class="diffuse-sphere absolute -left-44 top-10 h-120 w-120 rounded-full bg-(--primary)/16 blur-[150px]"
+					aria-hidden="true"
+				>
+				</div>
+
 				<div
 					class="diffuse-sphere diffuse-sphere-delay absolute -right-48 top-[20%] h-136 w-136 rounded-full bg-(--primary)/10 blur-[160px]"
 					aria-hidden="true"
@@ -302,8 +379,15 @@ import {
 				</div>
 
 				<div
-					class="parallax-layer network-float absolute left-1/2 top-52 w-432 max-w-none -translate-x-1/2 opacity-[0.16]"
-					data-parallax-speed="0.018"
+					class="absolute left-1/2 top-0 h-112 w-md -translate-x-1/2 rounded-full bg-(--primary)/10 blur-[130px]"
+				>
+				</div>
+
+				<div
+					class="parallax-layer absolute w-full max-w-none blur"
+					data-parallax-speed="-0.012"
+					data-scroll-opacity-start="0.02"
+					data-scroll-opacity-end="0.1"
 					aria-hidden="true"
 				>
 					<Image
@@ -312,6 +396,42 @@ import {
 						width={2048}
 						height={620}
 						class="w-full min-w-280"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="parallax-layer network-float absolute left-1/2 top-52 w-432 max-w-none -translate-x-1/2"
+					data-parallax-speed="0.018"
+					data-scroll-opacity-start="0.08"
+					data-scroll-opacity-end="0.28"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full min-w-280"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="network-scroll-opacity parallax-layer network-float-soft network-float-delay absolute -right-32 top-112 w-232 max-w-none"
+					data-parallax-speed="-0.016"
+					data-scroll-opacity-start="0.04"
+					data-scroll-opacity-end="0.2"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full"
 						loading="lazy"
 						decoding="async"
 					/>
@@ -384,13 +504,13 @@ import {
 				</div>
 
 				<div
-					class="floating-card diffuse-sphere absolute -left-52 top-10 h-128 w-lg rounded-full bg-(--primary)/20 blur-[150px]"
+					class="diffuse-sphere absolute -left-52 top-10 h-128 w-lg rounded-full bg-(--primary)/14 blur-[150px]"
 					aria-hidden="true"
 				>
 				</div>
 
 				<div
-					class="floating-card-alt diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/14 blur-[160px]"
+					class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/10 blur-[160px]"
 					aria-hidden="true"
 				>
 				</div>
@@ -399,6 +519,60 @@ import {
 					class="absolute inset-0 bg-[linear-gradient(to_right,rgba(127,127,127,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(127,127,127,0.06)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-85"
 					aria-hidden="true"
 				>
+				</div>
+
+				<div
+					class="network-scroll-opacity parallax-layer absolute left-1/2 top-24 w-512 max-w-none -translate-x-1/2 blur-2xl"
+					data-parallax-speed="-0.015"
+					data-scroll-opacity-start="0.03"
+					data-scroll-opacity-end="0.14"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full min-w-280"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="network-scroll-opacity parallax-layer network-float absolute left-1/2 bottom-8 w-416 max-w-none -translate-x-1/2 blur-3xl"
+					data-parallax-speed="0.018"
+					data-scroll-opacity-start="0.06"
+					data-scroll-opacity-end="0.22"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full min-w-260"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="network-scroll-opacity parallax-layer network-float-soft network-float-delay absolute -right-32 top-32 w-216 max-w-none blur-3xl"
+					data-parallax-speed="-0.016"
+					data-scroll-opacity-start="0.04"
+					data-scroll-opacity-end="0.16"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full"
+						loading="lazy"
+						decoding="async"
+					/>
 				</div>
 
 				<div
@@ -467,12 +641,72 @@ import {
 		</section>
 
 		<!-- TECHNOLOGY AREAS -->
-		<section class="section-padding relative overflow-hidden bg-site">
+		<section class="section-padding relative overflow-hidden">
 			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+				<div
+					class="diffuse-sphere absolute -left-44 top-10 h-120 w-120 rounded-full bg-(--primary)/14 blur-[150px]"
+					aria-hidden="true"
+				>
+				</div>
+
 				<div
 					class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/10 blur-[160px]"
 					aria-hidden="true"
 				>
+				</div>
+
+				<div
+					class="parallax-layer absolute left-1/2 top-20 w-512 max-w-none -translate-x-1/2 blur-md"
+					data-parallax-speed="-0.015"
+					data-scroll-opacity-start="0.03"
+					data-scroll-opacity-end="0.16"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-512 min-w-280"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="network-scroll-opacity parallax-layer network-float absolute left-1/2 bottom-8 w-416 max-w-none -translate-x-1/2 blur-3xl"
+					data-parallax-speed="0.018"
+					data-scroll-opacity-start="0.06"
+					data-scroll-opacity-end="0.2"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full min-w-260"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="network-scroll-opacity parallax-layer network-float-soft network-float-delay absolute -right-32 top-32 w-216 max-w-none blur-3xl"
+					data-parallax-speed="-0.016"
+					data-scroll-opacity-start="0.04"
+					data-scroll-opacity-end="0.16"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full"
+						loading="lazy"
+						decoding="async"
+					/>
 				</div>
 
 				<div
@@ -549,6 +783,78 @@ import {
 					aria-hidden="true"
 				>
 				</div>
+
+				<div
+					class="network-scroll-opacity parallax-layer absolute bottom-16 left-1/2 w-420 max-w-none -translate-x-1/2 blur-2xl"
+					data-parallax-speed="-0.014"
+					data-scroll-opacity-start="0.12"
+					data-scroll-opacity-end="0.24"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full min-w-260"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="network-scroll-opacity parallax-layer network-float absolute bottom-32 left-1/2 w-400 max-w-none -translate-x-1/2"
+					data-parallax-speed="0.02"
+					data-scroll-opacity-start="0.20"
+					data-scroll-opacity-end="0.36"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full min-w-260"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="network-scroll-opacity parallax-layer network-float absolute bottom-64 left-1/2 w-512 max-w-none -translate-x-1/2 blur-sm"
+					data-parallax-speed="0.02"
+					data-scroll-opacity-start="0.20"
+					data-scroll-opacity-end="0.36"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full min-w-260"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="network-scroll-opacity parallax-layer network-float-soft network-float-delay absolute -left-32 top-20 w-4xl max-w-none"
+					data-parallax-speed="-0.018"
+					data-scroll-opacity-start="0.14"
+					data-scroll-opacity-end="0.28"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
 			</div>
 
 			<div class="site-container relative z-10">
@@ -597,6 +903,48 @@ import {
 					class="diffuse-sphere absolute -left-52 top-10 h-128 w-lg rounded-full bg-(--primary)/12 blur-[150px]"
 					aria-hidden="true"
 				>
+				</div>
+
+				<div
+					class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/10 blur-[160px]"
+					aria-hidden="true"
+				>
+				</div>
+
+				<div
+					class="network-scroll-opacity parallax-layer absolute left-1/2 top-20 w-512 max-w-none -translate-x-1/2 blur-2xl"
+					data-parallax-speed="-0.014"
+					data-scroll-opacity-start="0.03"
+					data-scroll-opacity-end="0.14"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full min-w-280"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="network-scroll-opacity parallax-layer network-float-soft network-float-delay absolute -right-32 top-32 w-216 max-w-none blur-3xl"
+					data-parallax-speed="-0.016"
+					data-scroll-opacity-start="0.04"
+					data-scroll-opacity-end="0.16"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full"
+						loading="lazy"
+						decoding="async"
+					/>
 				</div>
 
 				<div
@@ -687,8 +1035,10 @@ import {
 				</div>
 
 				<div
-					class="parallax-layer network-float absolute left-1/2 -bottom-12 w-400 max-w-none -translate-x-1/2 opacity-[0.16] blur-xl"
-					data-parallax-speed="0.015"
+					class="network-scroll-opacity parallax-layer absolute left-1/2 -bottom-16 w-432 max-w-none -translate-x-1/2 blur-2xl"
+					data-parallax-speed="-0.012"
+					data-scroll-opacity-start="0.03"
+					data-scroll-opacity-end="0.1"
 					aria-hidden="true"
 				>
 					<Image
@@ -697,6 +1047,42 @@ import {
 						width={2048}
 						height={620}
 						class="w-full min-w-260"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="network-scroll-opacity parallax-layer network-float absolute left-1/2 -bottom-12 w-400 max-w-none -translate-x-1/2 blur-4xl"
+					data-parallax-speed="0.015"
+					data-scroll-opacity-start="0.06"
+					data-scroll-opacity-end="0.2"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full min-w-260"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="network-scroll-opacity parallax-layer network-float-soft network-float-delay absolute -right-64 top-6 w-216 max-w-none blur-3xl"
+					data-parallax-speed="-0.014"
+					data-scroll-opacity-start="0.04"
+					data-scroll-opacity-end="0.18"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-full"
 						loading="lazy"
 						decoding="async"
 					/>
@@ -759,6 +1145,17 @@ import {
 	</main>
 
 	<style>
+		@keyframes floatY {
+			0%,
+			100% {
+				transform: translateY(0);
+			}
+
+			50% {
+				transform: translateY(-14px);
+			}
+		}
+
 		@keyframes networkFloat {
 			0%,
 			100% {
@@ -767,6 +1164,19 @@ import {
 
 			50% {
 				translate: 0 -22px;
+			}
+		}
+
+		@keyframes networkFloatSoft {
+			0%,
+			100% {
+				translate: 0 0;
+				opacity: 0.16;
+			}
+
+			50% {
+				translate: 0 -18px;
+				opacity: 0.28;
 			}
 		}
 
@@ -783,9 +1193,33 @@ import {
 			}
 		}
 
+		.floating-card {
+			animation: floatY 6s ease-in-out infinite;
+		}
+
+		.floating-card-alt {
+			animation: floatY 7s ease-in-out infinite;
+			animation-delay: -2.5s;
+		}
+
 		.network-float {
 			animation: networkFloat 9s ease-in-out infinite;
 			will-change: translate, transform;
+		}
+
+		.network-float-soft {
+			animation: networkFloatSoft 11s ease-in-out infinite;
+			will-change: translate, opacity, transform;
+		}
+
+		.network-float-delay {
+			animation-delay: -4s;
+		}
+
+		.network-scroll-opacity {
+			opacity: var(--network-scroll-opacity, 1);
+			transition: opacity 1500ms linear;
+			will-change: opacity, transform;
 		}
 
 		.diffuse-sphere {
@@ -797,19 +1231,58 @@ import {
 			animation-delay: -5s;
 		}
 
+		@media (max-width: 1279px) {
+			.floating-card,
+			.floating-card-alt {
+				animation: none;
+			}
+		}
+
 		@media (prefers-reduced-motion: reduce) {
+			.floating-card,
+			.floating-card-alt,
 			.network-float,
+			.network-float-soft,
 			.diffuse-sphere {
 				animation: none;
+			}
+
+			.network-scroll-opacity {
+				transition: none;
 			}
 		}
 	</style>
 
 	<script>
 		const parallaxLayers = document.querySelectorAll("[data-parallax-speed]");
+		const scrollOpacityLayers = document.querySelectorAll(".network-scroll-opacity");
 		const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+		const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+		const updateScrollOpacity = () => {
+			const scrollY = window.scrollY;
+			const viewportHeight = window.innerHeight || 1;
+
+			scrollOpacityLayers.forEach((layer) => {
+				const startOpacity = Number(
+					layer.getAttribute("data-scroll-opacity-start") || 0.08,
+				);
+				const endOpacity = Number(
+					layer.getAttribute("data-scroll-opacity-end") || 0.45,
+				);
+
+				const fadeDistance = viewportHeight * 0.85;
+				const progress = clamp(scrollY / fadeDistance, 0, 1);
+				const opacity = startOpacity + (endOpacity - startOpacity) * progress;
+
+				layer.style.setProperty("--network-scroll-opacity", String(opacity));
+			});
+		};
+
 		const updateParallax = () => {
+			updateScrollOpacity();
+
 			if (reduceMotion.matches || window.innerWidth < 1024) return;
 
 			const scrollY = window.scrollY;
@@ -831,6 +1304,8 @@ import {
 		};
 
 		const handleParallax = () => {
+			updateScrollOpacity();
+
 			if (reduceMotion.matches || window.innerWidth < 1024) {
 				resetParallax();
 				return;

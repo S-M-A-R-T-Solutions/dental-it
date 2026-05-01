@@ -27,7 +27,7 @@ const emailHref = `mailto:${email}`;
 	image="/images/og/dental-it-miami-home-og.jpg"
 >
 	<main class="overflow-hidden">
-		<section class="relative isolate overflow-hidden bg-site">
+		<section class="relative isolate overflow-hidden">
 			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
 				<div
 					class="diffuse-sphere absolute -left-52 top-16 h-136 w-136 rounded-full bg-(--primary)/18 blur-[150px]"
@@ -47,7 +47,7 @@ const emailHref = `mailto:${email}`;
 				</div>
 
 				<div
-					class="parallax-layer absolute top-32 w-full max-w-none opacity-[0.18] blur"
+					class="parallax-layer network-float absolute top-32 w-full max-w-none blur"
 					data-parallax-speed="-0.015"
 					aria-hidden="true"
 				>
@@ -63,7 +63,7 @@ const emailHref = `mailto:${email}`;
 				</div>
 
 				<div
-					class="parallax-layer network-float absolute bottom-4 w-full max-w-none opacity-[0.28]"
+					class="parallax-layer network-float-alt absolute bottom-4 w-full max-w-none opacity-[0.28]"
 					data-parallax-speed="0.02"
 					aria-hidden="true"
 				>
@@ -363,6 +363,17 @@ const emailHref = `mailto:${email}`;
 			}
 		}
 
+		@keyframes networkFloatAlt {
+			0%,
+			100% {
+				translate: 0 0;
+			}
+
+			50% {
+				translate: 0 -18px;
+			}
+		}
+
 		@keyframes diffusePulse {
 			0%,
 			100% {
@@ -378,6 +389,11 @@ const emailHref = `mailto:${email}`;
 
 		.network-float {
 			animation: networkFloat 9s ease-in-out infinite;
+			will-change: translate, transform;
+		}
+
+		.network-float-alt {
+			animation: networkFloatAlt 7s ease-in-out infinite;
 			will-change: translate, transform;
 		}
 
