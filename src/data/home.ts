@@ -19,6 +19,39 @@ import {
     Laptop,
 } from "lucide-astro";
 
+export const heroSlides = [
+	{
+		src: "/images/home/hero-dental-it-dashboard-miami-01.webp",
+		alt: "Dental IT services dashboard for a Miami dental practice",
+		width: 1200,
+		height: 1500,
+	},
+	{
+		src: "/images/home/hero-dental-office-monitoring-miami-02.webp",
+		alt: "Dental office technology monitoring in Miami",
+		width: 1200,
+		height: 1500,
+	},
+	{
+		src: "/images/home/hero-dental-cybersecurity-miami-03.webp",
+		alt: "Dental cybersecurity protection for a Miami dental office",
+		width: 1200,
+		height: 1500,
+	},
+	{
+		src: "/images/home/hero-dental-cloud-backup-miami-04.webp",
+		alt: "Cloud backup and recovery planning for a Miami dental practice",
+		width: 1200,
+		height: 1500,
+	},
+	{
+		src: "/images/home/hero-dental-it-support-team-miami-05.webp",
+		alt: "Dental IT support team helping a Miami dental practice",
+		width: 1200,
+		height: 1500,
+	},
+];
+
 export const stats = [
     {
         value: "60+",

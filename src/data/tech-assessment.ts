@@ -31,6 +31,41 @@ export const heroHighlights = [
     "Actionable recommendations with upgrade priorities",
 ];
 
+export const process = [
+    {
+        step: "1",
+        title: "Assess",
+        description:
+            "We review your current technology, risks, workstations, network, backups, security, and daily pain points.",
+        image: "/images/home/process-dental-it-assessment-miami.webp",
+        alt: "Dental IT assessment for a Miami dental practice",
+    },
+    {
+        step: "2",
+        title: "Plan",
+        description:
+            "We create a clear roadmap focused on uptime, security, compliance support, performance, and budget.",
+        image: "/images/home/process-dental-it-planning-miami.webp",
+        alt: "Dental IT planning for a dental practice in Miami",
+    },
+    {
+        step: "3",
+        title: "Deploy",
+        description:
+            "We implement the right solutions with minimal disruption to your team and patient schedule.",
+        image: "/images/home/process-dental-technology-deployment-miami.webp",
+        alt: "Dental technology deployment for a Miami dental office",
+    },
+    {
+        step: "4",
+        title: "Monitor",
+        description:
+            "We keep watching, maintaining, updating, and supporting your environment so your practice can keep moving.",
+        image: "/images/home/process-dental-it-monitoring-miami.webp",
+        alt: "Dental IT monitoring for a Miami dental practice",
+    },
+];
+
 export const includedServices = [
     {
         title: "Infrastructure Inventory & Audit",

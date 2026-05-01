@@ -4,6 +4,8 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import {
 	ArrowRight,
 	CheckCircle2,
+	ChevronLeft,
+	ChevronRight,
 	LayoutDashboard,
 	ShieldCheck,
 	SearchCheck,
@@ -18,6 +20,7 @@ import {
 	complianceItems,
 	clarityItems,
 	consultationItems,
+	process,
 } from "../../data/tech-assessment";
 ---
 
@@ -191,6 +194,182 @@ import {
 								/>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+				<!-- PROCESS -->
+		<section class="section-padding relative overflow-hidden bg-(--surface)/40">
+			<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+				<div
+					class="diffuse-sphere absolute -left-52 top-10 h-128 w-lg rounded-full bg-(--primary)/14 blur-[150px]"
+					aria-hidden="true"
+				>
+				</div>
+
+				<div
+					class="diffuse-sphere diffuse-sphere-delay absolute -right-52 bottom-10 h-136 w-136 rounded-full bg-(--primary)/10 blur-[160px]"
+					aria-hidden="true"
+				>
+				</div>
+
+				<div
+					class="parallax-layer absolute left-1/2 top-96 w-512 max-w-none -translate-x-1/2 opacity-[0.18] blur-sm"
+					data-parallax-speed="-0.015"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={2048}
+						height={620}
+						class="w-512 min-w-280"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="parallax-layer network-float absolute left-1/2 bottom-8 w-416 max-w-none -translate-x-1/2 opacity-[0.16] blur-3xl"
+					data-parallax-speed="0.018"
+					aria-hidden="true"
+				>
+					<Image
+						src="/images/backgrounds/dental-it-network-bg.png"
+						alt=""
+						width={4096}
+						height={620}
+						class="w-full min-w-260"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+
+				<div
+					class="absolute inset-0 bg-linear-to-b from-(--surface)/88 via-(--surface)/48 to-(--surface)/94"
+				>
+				</div>
+			</div>
+
+			<div class="site-container relative">
+				<div class="mx-auto max-w-3xl text-center">
+					<p class="section-eyebrow justify-center">
+						Our Assessment Process
+					</p>
+
+					<h2
+						class="section-title mx-auto normal-case text-[clamp(2rem,4vw,3.6rem)] leading-none"
+					>
+						From technology review to a clear action plan.
+					</h2>
+
+					<p class="section-description mx-auto">
+						A structured process to help your dental practice understand risks,
+						performance issues, security gaps, infrastructure needs, and the next
+						steps that matter most.
+					</p>
+				</div>
+
+				<div
+					id="process-carousel"
+					class="relative mt-12"
+					data-current-slide="0"
+				>
+					<div class="overflow-hidden rounded-4xl">
+						<div
+							class="process-track flex transition-transform duration-500 ease-out"
+							data-process-track
+						>
+							{
+								process.map((item) => (
+									<div class="w-full shrink-0 px-2" data-process-slide>
+										<article class="group relative overflow-hidden rounded-4xl border border-white/20 bg-white/6 p-3 backdrop-blur-2xl lg:rounded-[2.5rem]">
+											<div class="pointer-events-none absolute inset-0 rounded-[inherit] bg-linear-to-br from-white/18 via-black/4 to-(--primary)/10" />
+
+											<div class="pointer-events-none absolute left-6 top-6 h-24 w-24 rounded-full border border-white/25 opacity-60" />
+
+											<div class="pointer-events-none absolute right-8 top-8 h-px w-32 bg-linear-to-r from-transparent via-(--primary) to-transparent opacity-70" />
+
+											<div class="pointer-events-none absolute bottom-0 right-0 h-44 w-64 bg-[radial-gradient(circle_at_center,rgba(239,35,49,0.18)_1px,transparent_1.5px)] bg-size-[14px_14px] opacity-70" />
+
+											<div class="relative grid overflow-hidden rounded-[1.6rem] lg:grid-cols-[1.1fr_0.9fr]">
+												<div class="relative min-h-80 overflow-hidden lg:min-h-[30rem]">
+													<Image
+														src={item.image}
+														alt={item.alt}
+														width={1200}
+														height={900}
+														format="webp"
+														quality="high"
+														class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+														loading="lazy"
+														decoding="async"
+													/>
+
+													<div class="absolute inset-0 bg-linear-to-br from-white/10 via-black/10 to-(--primary)/25" />
+													<div class="absolute inset-0 bg-linear-to-t from-black/65 via-black/20 to-white/20" />
+
+													<div class="pointer-events-none absolute -left-16 top-12 h-80 w-80 rounded-full border border-(--primary)/45 opacity-70 shadow-[0_0_80px_rgba(239,35,49,0.35)]" />
+
+													<div class="pointer-events-none absolute inset-5 rounded-[1.25rem] border border-white/20" />
+												</div>
+
+												<div class="relative flex min-h-80 flex-col justify-center bg-(--card) p-8 backdrop-blur-xl dark:bg-black/70 md:p-10 lg:min-h-[30rem] lg:p-12">
+													<div class="pointer-events-none absolute left-0 top-1/2 h-20 w-px -translate-y-1/2 bg-linear-to-b from-transparent via-(--primary) to-transparent" />
+
+													<p class="text-xs font-black uppercase tracking-[0.32em] text-(--primary)">
+														How We Work
+													</p>
+
+													<h3 class="mt-5 text-[clamp(2.4rem,6vw,4.5rem)] font-black leading-none tracking-tighter text-(--foreground)">
+														{item.title}
+													</h3>
+
+													<div class="mt-5 h-px w-32 bg-linear-to-r from-(--primary) via-(--primary)/60 to-transparent" />
+
+													<p class="mt-8 max-w-md text-base leading-8 text-(--muted-foreground) md:text-lg">
+														{item.description}
+													</p>
+												</div>
+											</div>
+										</article>
+									</div>
+								))
+							}
+						</div>
+					</div>
+
+					<div class="mt-8 flex items-center justify-center gap-4">
+						<button
+							type="button"
+							class="process-prev inline-flex size-12 items-center justify-center rounded-full border border-(--border) bg-(--card) text-(--foreground) shadow-soft transition hover:border-(--primary) hover:bg-(--primary) hover:text-white"
+							aria-label="Previous process step"
+						>
+							<ChevronLeft class="size-5" />
+						</button>
+
+						<div class="flex items-center gap-2" aria-hidden="true">
+							{
+								process.map((_, index) => (
+									<span
+										class:list={[
+											"process-dot size-2 rounded-full bg-(--muted)/40 transition-all duration-300",
+											index === 0 && "is-active",
+										]}
+										data-process-dot
+									/>
+								))
+							}
+						</div>
+
+						<button
+							type="button"
+							class="process-next inline-flex size-12 items-center justify-center rounded-full border border-(--border) bg-(--card) text-(--foreground) shadow-soft transition hover:border-(--primary) hover:bg-(--primary) hover:text-white"
+							aria-label="Next process step"
+						>
+							<ChevronRight class="size-5" />
+						</button>
 					</div>
 				</div>
 			</div>
@@ -774,6 +953,10 @@ import {
 	</main>
 
 	<style>
+		.process-dot.is-active {
+			width: 1.5rem;
+			background: var(--primary);
+		}
 		@keyframes networkFloat {
 			0%,
 			100% {
@@ -817,12 +1000,75 @@ import {
 			.diffuse-sphere {
 				animation: none;
 			}
+
+			.process-track {
+				transition: none;
+			}
 		}
 	</style>
 
 	<script>
 		const parallaxLayers = document.querySelectorAll("[data-parallax-speed]");
 		const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+				const processCarousel = document.querySelector("#process-carousel");
+
+		if (processCarousel) {
+			const track = processCarousel.querySelector("[data-process-track]");
+			const slides = Array.from(
+				processCarousel.querySelectorAll("[data-process-slide]"),
+			);
+			const dots = Array.from(
+				processCarousel.querySelectorAll("[data-process-dot]"),
+			);
+			const previousButton = processCarousel.querySelector(".process-prev");
+			const nextButton = processCarousel.querySelector(".process-next");
+
+			let currentSlide = 0;
+			let processTimer;
+
+			const updateCarousel = () => {
+				if (!track || slides.length === 0) return;
+
+				currentSlide = (currentSlide + slides.length) % slides.length;
+
+				track.style.transform = `translate3d(-${currentSlide * 100}%, 0, 0)`;
+
+				dots.forEach((dot, index) => {
+					dot.classList.toggle("is-active", index === currentSlide);
+				});
+
+				processCarousel.dataset.currentSlide = String(currentSlide);
+			};
+
+			const goToNextProcessSlide = () => {
+				currentSlide += 1;
+				updateCarousel();
+			};
+
+			const goToPreviousProcessSlide = () => {
+				currentSlide -= 1;
+				updateCarousel();
+			};
+
+			const restartProcessTimer = () => {
+				window.clearInterval(processTimer);
+				processTimer = window.setInterval(goToNextProcessSlide, 5000);
+			};
+
+			nextButton?.addEventListener("click", () => {
+				goToNextProcessSlide();
+				restartProcessTimer();
+			});
+
+			previousButton?.addEventListener("click", () => {
+				goToPreviousProcessSlide();
+				restartProcessTimer();
+			});
+
+			updateCarousel();
+			restartProcessTimer();
+		}
 
 		const updateParallax = () => {
 			if (reduceMotion.matches || window.innerWidth < 1024) return;
